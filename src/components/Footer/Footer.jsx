@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import { GiFlatHammer, GiAxeSword, GiCrossShield } from "react-icons/gi";
 
 // This is one of our simplest components
 // It doesn't have local state, so it can be a function component.
@@ -7,7 +8,12 @@ import './Footer.css';
 // or even care what the redux state is, so it doesn't need 'connect()'
 
 function Footer() {
-  return <footer>&copy; Prime Digital Academy</footer>;
+  return (
+      <footer>
+    <p id="copyrightLine"><GiCrossShield size="1.5em"/>Project by: Franck Bushbaum (<a href="mailto:franck.bushbaum@yahoo.com">Email</a> | 
+    <a href="https://github.com/EldryMG" target="_blank">Github</a>)<GiCrossShield size="1.5em"/></p>
+      </footer>
+  )
 }
 
 export default Footer;

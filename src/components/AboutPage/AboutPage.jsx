@@ -6,12 +6,18 @@ import React from 'react';
 // or even care what the redux state is'
 
 function AboutPage() {
+
+
+
   return (
+    <>
     <div className="container">
       <div>
         <p>This about page is for anyone to read!</p>
       </div>
-    </div>
+    </div> 
+
+  </>
   );
 }
 

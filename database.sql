@@ -16,7 +16,7 @@ CREATE TABLE "user" (
 
 CREATE TABLE "workout_type" (
     "id" SERIAL PRIMARY KEY,
-    "description" NUMERIC NOT NULL,
+    "description" VARCHAR(9) UNIQUE NOT NULL,
 );
 
 CREATE TABLE "workout" (

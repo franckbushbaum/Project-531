@@ -19,6 +19,8 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
+import { GiFlatHammer, GiAxeSword, GiCrossShield } from "react-icons/gi";
+import One from '../One/One.jsx'
 
 import './App.css';
 
@@ -35,6 +37,7 @@ function App() {
     <Router>
       <div>
         <Nav />
+        
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
@@ -57,7 +60,7 @@ function App() {
             exact
             path="/user"
           >
-            <UserPage />
+            <One />
           </ProtectedRoute>
 
           <ProtectedRoute
@@ -114,6 +117,9 @@ function App() {
           <Route>
             <h1>404</h1>
           </Route>
+          <Route exact path="/one">
+            <One />
+         </Route>
         </Switch>
         <Footer />
       </div>
