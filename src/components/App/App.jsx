@@ -22,6 +22,7 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import One from '../One/One.jsx';
 import Chest from '../Chest/Chest.jsx';
 import Legs from '../Legs/Legs.jsx';
+import Three from '../Three/Three.jsx';
 
 import './App.css';
 
@@ -127,6 +128,13 @@ function App() {
             path="/legs"
           >
             <Legs />
+          </Route>
+
+          <Route
+            exact
+            path="/three"
+          >
+            <Three />
           </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}
