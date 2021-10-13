@@ -9,41 +9,46 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 function One() {
-    const  history = useHistory();
+    const history = useHistory();
+    const dispatch = useDispatch();
 
-    const [ workoutType, setWorkoutType] = useState('');
+    const [workoutType, setWorkoutType] = useState([]);
 
     const handleChange = (event) => {
         setWorkoutType(event.target.value);
         console.log('workoutType value is ', workoutType);
-        if(event.target.value === 'chest'){
+        if (event.target.value === 1) {
             history.push('/chest');
-        } else if (event.target.value === 'legs'){
+        } else if (event.target.value === 2) {
             history.push('/legs');
         }
-      };
+        dispatch({
+            type: 'SET_WORKOUT_TYPE_ID',
+            payload: event.target.value
+        })
+    };
 
     return (
         <>
             <p>Under Construction...</p>
             <div className="select-menu">
-            <Box sx={{ minWidth: 150 }} style={{ backgroundColor:"red"}} >
-                <FormControl sx={{ m: 1, minWidth: 150 }}>
-                    <InputLabel style={{ backgroundColor:"black"}} id="pick">Pick a workout</InputLabel>
-                    <Select
-                        labelId="pick"
-                        id="demo-simple-select"
-                        value={workoutType}
-                        label="workout"
-                        onChange={handleChange}
-                    >
-                        <MenuItem value="chest">Chest</MenuItem>
-                        <MenuItem value="legs">Legs</MenuItem>
-                        <MenuItem value="shoulders">Shoulders</MenuItem>
-                        <MenuItem value="back">Back</MenuItem>
-                    </Select>
-                </FormControl>
-            </Box>
+                <Box sx={{ minWidth: 150 }} style={{ backgroundColor: "red" }} >
+                    <FormControl sx={{ m: 1, minWidth: 150 }}>
+                        <InputLabel style={{ backgroundColor: "black" }} id="pick">Pick a workout</InputLabel>
+                        <Select
+                            labelId="pick"
+                            id="demo-simple-select"
+                            value={''}
+                            label="workout"
+                            onChange={handleChange}
+                        >
+                            <MenuItem value={1}>Chest</MenuItem>
+                            <MenuItem value={2}>Legs</MenuItem>
+                            <MenuItem value={3}>Shoulders</MenuItem>
+                            <MenuItem value={4}>Back</MenuItem>
+                        </Select>
+                    </FormControl>
+                </Box>
             </div>
         </>
 

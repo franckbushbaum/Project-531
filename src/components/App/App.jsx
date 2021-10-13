@@ -38,7 +38,7 @@ function App() {
     <Router>
       <div>
         <Nav />
-        
+
         <Switch>
           {/* Visiting localhost:3000 will redirect to localhost:3000/home */}
           <Redirect exact from="/" to="/home" />
@@ -114,25 +114,25 @@ function App() {
               <LandingPage />
             }
           </Route>
-          
-          <Route 
-              exact 
-              path="/chest"
+
+          <Route
+            exact
+            path="/chest"
           >
             <Chest />
-         </Route>
+          </Route>
 
-         <Route 
-              exact 
-              path="/legs"
+          <Route
+            exact
+            path="/legs"
           >
             <Legs />
-         </Route>
+          </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
             <h1>OOOPS</h1>
-         </Route>
+          </Route>
         </Switch>
         <Footer />
       </div>

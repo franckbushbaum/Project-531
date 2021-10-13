@@ -1,3 +1,19 @@
+the actual README
+
+-[x] Create routing for 1st page. ~4 hours (Was lost concerning the boilerplate values they gave us)
+-[x] Create button for first page, that goes to first and second page (testing) ~2hr
+-[x] Create a best guess of table, with testing values ~1.5hr
+-[x] Creat basic layout for second page. (Lots to improve upon in CSS, I think flexbox will work well but tonight has revealed how little I know about grid.) ~2 hr
+-[x] Added signature to footer. ~10 mins
+-[x]
+-[x]
+-[x]
+-[x]
+-[x]
+-[x]
+-[x]
+-[x]
+-[x]
 
 # EDA Project
 This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`).

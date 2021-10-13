@@ -9,10 +9,6 @@ CREATE TABLE "user" (
     "password" VARCHAR (1000) NOT NULL
 );
 
-CREATE TABLE "user" (
-    "id" SERIAL PRIMARY KEY,
-    "name" VARCHAR (80) UNIQUE NOT NULL,
-);
 
 CREATE TABLE "workout_type" (
     "id" SERIAL PRIMARY KEY,
@@ -28,6 +24,6 @@ CREATE TABLE "workout" (
     "weight" INT NOT NULL,
     "set" INT NOT NULL,
     "reps" INT NOT NULL,
-    "created_at" DATE,
+    "created_at" DATE
 
 );
