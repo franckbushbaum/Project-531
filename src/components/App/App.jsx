@@ -19,8 +19,9 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-import { GiFlatHammer, GiAxeSword, GiCrossShield } from "react-icons/gi";
-import One from '../One/One.jsx'
+import One from '../One/One.jsx';
+import Chest from '../Chest/Chest.jsx';
+import Legs from '../Legs/Legs.jsx';
 
 import './App.css';
 
@@ -55,8 +56,9 @@ function App() {
             Visiting localhost:3000/user will show the UserPage if the user is logged in.
             If the user is not logged in, the ProtectedRoute will show the LoginPage (component).
             Even though it seems like they are different pages, the user is always on localhost:3000/user */}
+
           <ProtectedRoute
-            // logged in shows UserPage else shows LoginPage
+            // logged in shows Page 1 else shows LoginPage
             exact
             path="/user"
           >
@@ -112,13 +114,24 @@ function App() {
               <LandingPage />
             }
           </Route>
+          
+          <Route 
+              exact 
+              path="/chest"
+          >
+            <Chest />
+         </Route>
+
+         <Route 
+              exact 
+              path="/legs"
+          >
+            <Legs />
+         </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}
           <Route>
-            <h1>404</h1>
-          </Route>
-          <Route exact path="/one">
-            <One />
+            <h1>OOOPS</h1>
          </Route>
         </Switch>
         <Footer />

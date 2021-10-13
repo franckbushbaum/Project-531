@@ -9,6 +9,11 @@ body {
   margin: 0px;
 }
 
+.select-menu {
+  display: flex;
+  justify-content: center;
+}
+
 img {
   display: inline-block;
   max-width: 100%;

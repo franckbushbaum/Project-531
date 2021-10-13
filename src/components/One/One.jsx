@@ -1,37 +1,50 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
+import { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
 function One() {
+    const  history = useHistory();
+
+    const [ workoutType, setWorkoutType] = useState('');
 
     const handleChange = (event) => {
-        setAge(event.target.value);
+        setWorkoutType(event.target.value);
+        console.log('workoutType value is ', workoutType);
+        if(event.target.value === 'chest'){
+            history.push('/chest');
+        } else if (event.target.value === 'legs'){
+            history.push('/legs');
+        }
       };
-      
+
     return (
         <>
             <p>Under Construction...</p>
-
-            <Box sx={{ minWidth: 120 }}>
+            <div className="select-menu">
+            <Box sx={{ minWidth: 150 }} style={{ backgroundColor:"red"}} >
                 <FormControl sx={{ m: 1, minWidth: 150 }}>
-                    <InputLabel id="pick">Pick a workout</InputLabel>
+                    <InputLabel style={{ backgroundColor:"black"}} id="pick">Pick a workout</InputLabel>
                     <Select
                         labelId="pick"
                         id="demo-simple-select"
-                        value='0'
-                        label="Age"
+                        value={workoutType}
+                        label="workout"
                         onChange={handleChange}
                     >
-                        <MenuItem value={1}>Chest</MenuItem>
-                        <MenuItem value={2}>Legs</MenuItem>
-                        <MenuItem value={3}>Shoulders</MenuItem>
-                        <MenuItem value={4}>Back</MenuItem>
+                        <MenuItem value="chest">Chest</MenuItem>
+                        <MenuItem value="legs">Legs</MenuItem>
+                        <MenuItem value="shoulders">Shoulders</MenuItem>
+                        <MenuItem value="back">Back</MenuItem>
                     </Select>
                 </FormControl>
             </Box>
+            </div>
         </>
 
     );
