@@ -1,7 +1,19 @@
 import React, { useState } from 'react';
 import './Chest.css';
-
+import { useHistory } from 'react-router';
 function Chest(){
+
+    const history = useHistory();
+
+    const handleClick = (event) => {
+        console.log('in handleClick', event.target.className)
+        if (event.target.className === 'back-button'){
+            history.push('/user')
+        } else if (event.target.className === 'new-button'){
+            history.push('/three')
+        }
+    }
+
     return(
         <>
         <p>This is the chest page</p>
@@ -37,8 +49,8 @@ function Chest(){
                 maxime?
             </div>
             <div className="nav-buttons">
-            <button className="back-button">Back</button>
-            <button className="new-button">New</button>
+            <button onClick={handleClick} className="back-button">Back</button>
+            <button onClick={handleClick} className="new-button">New</button>
             </div>
         </div>
         </>
