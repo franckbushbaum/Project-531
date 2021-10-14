@@ -22,6 +22,7 @@ function One() {
         } else if (event.target.value === 2) {
             history.push('/legs');
         }
+// To one.reducer.js.
         dispatch({
             type: 'SET_WORKOUT_TYPE_ID',
             payload: event.target.value

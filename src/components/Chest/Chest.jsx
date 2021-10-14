@@ -7,10 +7,13 @@ function Chest(){
 
     const handleClick = (event) => {
         console.log('in handleClick', event.target.className)
-        if (event.target.className === 'back-button'){
-            history.push('/user')
-        } else if (event.target.className === 'new-button'){
-            history.push('/three')
+        switch (event.target.className){
+            case 'back-button':
+                return history.push('/user')
+                break;
+            case 'new-button':
+                history.push('/three')
+                break;
         }
     }
 
