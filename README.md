@@ -5,9 +5,9 @@ the actual README
 -[x] Create a best guess of table, with testing values ~1.5hr
 -[x] Creat basic layout for second page. (Lots to improve upon in CSS, I think flexbox will work well but tonight has revealed how little I know about grid.) ~2 hr
 -[x] Added signature to footer. ~10 mins
--[x]
--[x]
--[x]
+-[x] Base functionality of page three complete. ~4 hours.
+-[x] Successfully push input values into useState. (This was a challenge.  New to switch statements and new to Material UI...In using Material UI for the dropdown menu, I ran into an unexpected issue with the syntax where grabbing the value's id was not immediately apparent.  As soon as I find out how to grab that value, the switch statement should also come together.) ~3 hours
+-[x] Create and dispatch object data. (As of writing this, this involves updating the database with new values not included in the scope, but it is still early in the game and no time has been wasted.)
 -[x]
 -[x]
 -[x]
