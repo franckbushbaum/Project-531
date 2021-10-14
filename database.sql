@@ -21,9 +21,14 @@ CREATE TABLE "workout" (
     "workout_type_id" INT REFERENCES "workout_type",
     "one_rep_max" INT NOT NULL,
     "week" INT NOT NULL,
-    "weight" INT NOT NULL,
-    "set" INT NOT NULL,
-    "reps" INT NOT NULL,
+    "weight_one" INT NOT NULL,
+    "set_one" INT NOT NULL,
+    "reps_one" INT NOT NULL,
+    "weight_two" INT NOT NULL,
+    "set_two" INT NOT NULL,
+    "reps_two" INT NOT NULL,
+    "weight_three" INT NOT NULL,
+    "set_three" INT NOT NULL,
+    "reps_three" INT NOT NULL,
     "created_at" DATE
-
 );
