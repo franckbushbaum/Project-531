@@ -4,10 +4,9 @@ import axios from 'axios';
 function* addWorkout(action){
     // console.log('First saga wired up', action.payload)
     try {
-        console.log('what is ACTION', action);
         const newWorkout = action.payload;
-        console.log('what is NEWWORKOUT', newWorkout);
         yield axios.post('/api/workout', newWorkout);
+        //is where I need the id
       } catch(err) {
         console.log(err)
       }
@@ -15,6 +14,7 @@ function* addWorkout(action){
 
 function* addWorkoutSaga(){
     yield takeLatest('NEW_WORKOUT', addWorkout)
+
 }
 
 export default addWorkoutSaga;

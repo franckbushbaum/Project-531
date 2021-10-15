@@ -11,12 +11,15 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Box from '@mui/material/Box';
 import { FaHome } from "react-icons/fa";
+import ThreeItem from '../ThreeItem/ThreeItem.jsx'
+
 
 function Three() {
 
     const history = useHistory();
     const dispatch = useDispatch();
     const workoutTypeId = useSelector(store => store.workoutTypeId);
+    const theWorkouts = useSelector(store => store.fetchWorkout);
 
     const [inputValue, setInputValue] = useState({one_rep_max: '' ,
                                                     week: ''});
@@ -37,14 +40,14 @@ function Three() {
 
     };
 
-    let objectData 
+    let objectData; 
 
     const handleSubmit = () => {
         console.log('in function this is inputValue', inputValue);
         console.log('in function this is inputValue.week', inputValue.week);
         console.log('in function this is inputValue.one_rep_max', inputValue.one_rep_max);
 //objectData will be dispatched to index.js, it is the completed workout.
-        let objectData = {workout_type_id: workoutTypeId,
+            objectData = {workout_type_id: workoutTypeId,
             one_rep_max: parseInt(inputValue.one_rep_max),
             week: inputValue.week,
             weight_one: '',
@@ -56,7 +59,8 @@ function Three() {
             weight_three: '',
             set_three: 3,
             reps_three: '',
-           };
+        }
+           
 
 //This is all the logic done to complete the workout. These values are pushed into objectData before objectData is pushed
 //to indexjs. the Template can be found here: http://www.powerliftingtowin.com/wp-content/uploads/2014/05/Original-531-Program.jpg
@@ -88,10 +92,11 @@ function Three() {
                 type: 'NEW_WORKOUT',
                 payload: objectData
         })
-    };
 
+        dispatch({ type: 'FETCH_WORKOUT'})
+    }
     const goBack = () => {
-        history.push('/three')
+        history.push('/chest')
     }
 
     return (
@@ -145,6 +150,13 @@ function Three() {
             <div className="nav-page-three"></div>
         </div>
         <p>{JSON.stringify(workoutTypeId)}</p>
+        <p>the workouts: {JSON.stringify(theWorkouts)}</p>
+
+        <p>the workouts mapped:{theWorkouts.map(workout => {
+            return(
+            <ul><li>{workout.workout_id}</li></ul>);   
+        })}</p>
+        
     </>
     );
 }
