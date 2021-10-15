@@ -6,6 +6,7 @@ function* fetchWorkout(){
     // console.log('WHAT IS ACTION', action)
     const theWorkout = yield axios.get('/api/workout');
     yield put({type: 'SET_WORKOUT', payload: theWorkout.data})
+    console.log('WHAT IS THEWORKOUT',theWorkout.data);
     } catch {
         console.log('fetchworkout error', error);
     }

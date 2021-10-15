@@ -146,17 +146,26 @@ function Three() {
                 <input type='submit' value='Submit' />
             </form>
             
-            <div className="display"></div>
-            <div className="nav-page-three"></div>
+            
         </div>
         <p>{JSON.stringify(workoutTypeId)}</p>
         <p>the workouts: {JSON.stringify(theWorkouts)}</p>
-
+        <div className="display">
         <p>the workouts mapped:{theWorkouts.map(workout => {
-            return(
-            <ul><li>{workout.workout_id}</li></ul>);   
+            return(<ul>
+                    <li>{workout.workout_id}</li>
+                    <li>{workout.weight_one}</li>
+                    <li>{workout.weight_two}</li>
+                    <li>{workout.weight_three}</li>
+                    <li>{workout.reps_one}</li>
+                    <li>{workout.reps_two}</li>
+                    <li>{workout.reps_three}</li>
+
+                    </ul>);   
         })}</p>
-        
+
+        </div>
+        <div className="nav-page-three"></div>
     </>
     );
 }
