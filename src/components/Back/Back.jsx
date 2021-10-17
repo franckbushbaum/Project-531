@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import './Chest.css';
 import { useHistory } from 'react-router';
 
-function Chest(){
+function Back(){
 
     const history = useHistory();
 
@@ -20,7 +19,7 @@ function Chest(){
 
     return(
         <>
-        <p>This is the chest page</p>
+        <p>This is the BACK page</p>
         <div className="container">
             <div className="header">
                 <div className="header-title">
@@ -61,4 +60,4 @@ function Chest(){
     );
 }
 
-export default Chest;
+export default Back;

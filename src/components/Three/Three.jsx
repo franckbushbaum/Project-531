@@ -87,14 +87,15 @@ function Three() {
                 objectData.reps_three = 1; 
             };
             
-       console.log(objectData)
         dispatch({
                 type: 'NEW_WORKOUT',
                 payload: objectData
-        })
+        });setTimeout(() => {
+            dispatch({type: 'FETCH_WORKOUT'})
+        }, 3000);
 
-        dispatch({ type: 'FETCH_WORKOUT'})
     }
+
     const goBack = () => {
         history.push('/chest')
     }
@@ -151,18 +152,18 @@ function Three() {
         <p>{JSON.stringify(workoutTypeId)}</p>
         <p>the workouts: {JSON.stringify(theWorkouts)}</p>
         <div className="display">
-        <p>the workouts mapped:{theWorkouts.map(workout => {
-            return(<ul>
-                    <li>{workout.workout_id}</li>
-                    <li>{workout.weight_one}</li>
-                    <li>{workout.weight_two}</li>
-                    <li>{workout.weight_three}</li>
-                    <li>{workout.reps_one}</li>
-                    <li>{workout.reps_two}</li>
-                    <li>{workout.reps_three}</li>
-
-                    </ul>);   
-        })}</p>
+        <p>the workouts mapped:</p>
+            {theWorkouts.map(workout => {
+                
+            return(<ThreeItem workout_id={workout.workout_id} 
+                            weight_one={workout.weight_one} 
+                            weight_two={workout.weight_two} 
+                            weight_three={workout.weight_three} 
+                            reps_one={workout.reps_one} 
+                            reps_two={workout.reps_two} 
+                            reps_three={workout.reps_three} 
+                        />);   
+        })}
 
         </div>
         <div className="nav-page-three"></div>

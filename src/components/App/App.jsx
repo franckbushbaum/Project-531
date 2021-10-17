@@ -22,9 +22,13 @@ import RegisterPage from '../RegisterPage/RegisterPage';
 import One from '../One/One.jsx';
 import Chest from '../Chest/Chest.jsx';
 import Legs from '../Legs/Legs.jsx';
+import Shoulders from '../Shoulders/Shoulders.jsx';
+import Back from '../Back/Back.jsx';
 import Three from '../Three/Three.jsx';
+import Four from '../Four/Four.jsx';
 
 import './App.css';
+
 
 function App() {
   const dispatch = useDispatch();
@@ -132,9 +136,30 @@ function App() {
 
           <Route
             exact
+            path="/shoulders"
+          >
+            <Shoulders />
+          </Route>
+
+          <Route
+            exact
+            path="/back"
+          >
+            <Back />
+          </Route>
+
+          <Route
+            exact
             path="/three"
           >
             <Three />
+          </Route>
+
+          <Route
+            exact
+            path="/four"
+          >
+            <Four />
           </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}

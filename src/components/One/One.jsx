@@ -16,11 +16,14 @@ function One() {
 
     const handleChange = (event) => {
         setWorkoutType(event.target.value);
-        console.log('workoutType value is ', workoutType);
         if (event.target.value === 1) {
             history.push('/chest');
         } else if (event.target.value === 2) {
             history.push('/legs');
+        } else if (event.target.value === 3){
+            history.push('/shoulders');
+        } else if (event.target.value === 4){
+            history.push('/back');
         }
 // To one.reducer.js.
         dispatch({

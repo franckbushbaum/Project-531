@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.post('/', rejectUnauthenticated, (req, res) => {
     // console.log('REQ.USER:', req.user)
-    // console.log('REQ.BODY', req.body)
+    console.log('REQ.BODY', req.body)
     const user=req.user.id;
     const workoutId=req.body.workout_type_id;
     const oneRepMax=req.body.one_rep_max;
@@ -35,10 +35,12 @@ router.post('/', rejectUnauthenticated, (req, res) => {
 });
 
 router.get('/', rejectUnauthenticated, (req ,res) => {
-    const queryText = 'SELECT * FROM workout;';
+    const queryText = `SELECT * FROM workout
+                        ORDER BY workout_id DESC
+                        LIMIT 1;`;
     pool.query(queryText)
     .then(result => {
-        console.log('GET ROUTE result.rows', result.rows)
+        console.log('GET NEWEST? RESULT result.rows', result.rows)
         res.send(result.rows);
     })
     .catch((error) => {

@@ -8,12 +8,15 @@ the actual README
 -[x] Base functionality of page three complete. ~4 hours.
 -[x] Successfully push input values into useState. (This was a challenge.  New to switch statements and new to Material UI...In using Material UI for the dropdown menu, I ran into an unexpected issue with the syntax where grabbing the value's id was not immediately apparent.  As soon as I find out how to grab that value, the switch statement should also come together.) ~3 hours
 -[x] Create and dispatch object data. (As of writing this, this involves updating the database with new values not included in the scope, but it is still early in the game and no time has been wasted.)
--[x]
--[x]
--[x]
--[x]
--[x]
--[x]
+Friday:
+-[x] Posted the workouts added to the DOM.
+-[x] Destructured the workout list into workout items
+-[x] Append only the new workout
+-[] Create a table for the new workout
+-[] Edit functionality in new workout
+-[] History page has data from last workouts
+-[] History page has a delete function
+-[] Link up the remaining 3 bodyparts to also be able to post a workout.
 
 # EDA Project
 This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`).
