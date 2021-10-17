@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
@@ -9,6 +9,9 @@ import Swal from 'sweetalert2'
 function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, reps_two, reps_three}) {
     const dispatch = useDispatch();
     const history = useHistory();
+
+   const [first, setFirst] = useState(true); 
+    
 
     const changeState = () => {
         console.log(`we're in!`)
@@ -22,8 +25,16 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
         Swal.fire({
             title: 'Workout Deleted!',
             icon: 'success',
-            confirmButtonText: 'Cool'
+            confirmButtonText: 'Cool',
+            background: 'black',
+            backdrop: `
+                rgba(0,0,123,0.4)
+                url("https://c.tenor.com/LoXuYGcyMxgAAAAC/just-do-it-shia-la-beouf.gif")
+                left top
+                no-repeat
+                        `
           })
+        setFirst(!first)
     };
 
     // useEffect(() => {
@@ -37,8 +48,7 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
 
     return(
         <>
-        <p>WORKOUT</p>
-
+        { first ? 
         <table key={workout_id}>
             <thead>
                 <tr>
@@ -63,13 +73,20 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
                     <td>{weight_three}</td>
                     <td>{reps_three}<Button onClick={changeState}><BiEdit size="20px" /></Button></td>
                 </tr>
-            </tbody>
-        </table>
-        <Button variant="contained" 
+                <tr>
+                    <td>
+                    <Button variant="contained" 
                                 size="small" 
                                 color="secondary" 
                                 style={{ fontSize: 17, borderRadius:"29px"}}  
                                 onClick={deleteWorkout}><BsTrashFill color="black" style= {{borderRadius: "50%"}}/></Button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        : <p>sleepy HERO</p>}
+        
+                                               
     </>
     );
 }
