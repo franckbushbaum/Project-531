@@ -4,8 +4,6 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 router.post('/', rejectUnauthenticated, (req, res) => {
-    // console.log('REQ.USER:', req.user)
-    console.log('REQ.BODY', req.body)
     const user=req.user.id;
     const workoutId=req.body.workout_type_id;
     const oneRepMax=req.body.one_rep_max;
@@ -23,10 +21,8 @@ router.post('/', rejectUnauthenticated, (req, res) => {
                     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
                     RETURNING "workout_id";`;
     pool.query(sqlText, [user, workoutId, oneRepMax, week, weight1, set1, reps1, weight2, set2, reps2, weight3, set3, reps3])
-    .then((result) => {
-        // console.log('OR new workout id is', result.rows[0].workout_id)
-        res.sendStatus(200)
-        // res.send(result.rows[0].workout_id)
+    .then((result) => {       
+        res.sendStatus(200) 
     })
     .catch((error) => {
         console.log('SERVER SIDE DOWN', error)
@@ -40,13 +36,29 @@ router.get('/', rejectUnauthenticated, (req ,res) => {
                         LIMIT 1;`;
     pool.query(queryText)
     .then(result => {
-        console.log('GET NEWEST? RESULT result.rows', result.rows)
         res.send(result.rows);
     })
     .catch((error) => {
         console.log('ERROR COMPLETING REQUEST', error);
         res.sendStatus
     })
-})
+});
+
+router.delete('/:id', rejectUnauthenticated, (req, res) => {
+    console.log('delete req is',req.params)
+    console.log('delete req user is',req.user)
+    const workoutId = req.params.id;
+    const userId= req.user.id;
+    const queryText =  `DELETE from "workout" WHERE 
+                        ("workout_id" = $1 AND "user_id" = $2)`;
+    pool.query(queryText, [workoutId, userId])
+        .then((result) => {
+            res.sendStatus(201);
+        })
+        .catch((error) => {
+            console.log('Error deleting workout', error);
+            res.sendStatus(500);
+        })
+});
 
 module.exports = router;

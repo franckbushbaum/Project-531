@@ -94,6 +94,9 @@ function Three() {
             dispatch({type: 'FETCH_WORKOUT'})
         }, 3000);
 
+      
+      
+
     }
 
     const goBack = () => {

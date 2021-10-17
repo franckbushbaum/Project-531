@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import { BsArrowRightShort, BsTrashFill } from "react-icons/bs";
 import { BiEdit } from "react-icons/bi";
+import Swal from 'sweetalert2'
 
 function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, reps_two, reps_three}) {
     const dispatch = useDispatch();
@@ -18,7 +19,12 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
         console.log(`what is workout_id..`, workout_id);
         let id = workout_id;
         dispatch({type: 'REMOVE_WORKOUT', payload: id})
-    }
+        Swal.fire({
+            title: 'Workout Deleted!',
+            icon: 'success',
+            confirmButtonText: 'Cool'
+          })
+    };
 
     // useEffect(() => {
     //     dispatch({ type: 'FETCH_WORKOUT', payload: workout.workout_id });

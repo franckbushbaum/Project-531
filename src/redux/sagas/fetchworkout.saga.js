@@ -3,10 +3,10 @@ import axios from 'axios';
 
 function* fetchWorkout(){
     try{
-    // console.log('WHAT IS ACTION', action)
     const theWorkout = yield axios.get('/api/workout');
     yield put({type: 'SET_WORKOUT', payload: theWorkout.data})
-    } catch {
+    console.log('WHAT IS GET RETURNING?..' ,theWorkout.data)
+    } catch(error) {
         console.log('fetchworkout error', error);
     }
 }
