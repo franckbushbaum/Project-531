@@ -21,11 +21,10 @@ function Three() {
     const workoutTypeId = useSelector(store => store.workoutTypeId);
     const theWorkouts = useSelector(store => store.fetchWorkout);
 
-    const [inputValue, setInputValue] = useState({one_rep_max: '' ,
-                                                    week: ''});
+    const [inputValue, setInputValue] = useState({one_rep_max: '' , week: ''});
 
 
-
+//Set first value. Switch statement in case we want to combine setValues and setValuesToo at a later time.
     const setValues = (event) => {
         console.log('in setValues', event.target.className);
         switch(event.target.className) {
@@ -34,13 +33,14 @@ function Three() {
                 break;
          }
     }
-
+//Set second value.
     const setValuesToo = (event) => {
-        setInputValue({...inputValue, week: event.target.value})
+        setInputValue({...inputValue, week: event.target.value});
 
     };
 
     let objectData; 
+
 
     const handleSubmit = () => {
         console.log('in function this is inputValue', inputValue);
@@ -60,7 +60,7 @@ function Three() {
             set_three: 3,
             reps_three: '',
         }
-           
+        
 
 //This is all the logic done to complete the workout. These values are pushed into objectData before objectData is pushed
 //to indexjs. the Template can be found here: http://www.powerliftingtowin.com/wp-content/uploads/2014/05/Original-531-Program.jpg
@@ -86,13 +86,17 @@ function Three() {
                 objectData.reps_two = 3;
                 objectData.reps_three = 1; 
             };
-            
+
+         
+//Dispatch to POST data to database, wait 3 seconds, GET workout from database.           
         dispatch({
                 type: 'NEW_WORKOUT',
                 payload: objectData
         });setTimeout(() => {
             dispatch({type: 'FETCH_WORKOUT'})
         }, 3000);
+//Clear input field.
+        setInputValue({...inputValue, one_rep_max: '', week: ''});
 
       
       
@@ -100,7 +104,8 @@ function Three() {
     }
 
     const goBack = () => {
-        history.push('/chest')
+        history.push('/user')
+        dispatch({type: 'UNSET_WORKOUT'})
     }
 
     return (
@@ -153,7 +158,6 @@ function Three() {
             
         </div>
         <p>{JSON.stringify(workoutTypeId)}</p>
-        <p>the workouts: {JSON.stringify(theWorkouts)}</p>
         <div className="display">
         <p>the workouts mapped:</p>
             {theWorkouts.map(workout => {
@@ -165,6 +169,7 @@ function Three() {
                             reps_one={workout.reps_one} 
                             reps_two={workout.reps_two} 
                             reps_three={workout.reps_three} 
+                            workout_type_id={workout.workout_type_id}
                         />);   
         })}
 

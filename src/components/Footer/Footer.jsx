@@ -10,8 +10,7 @@ import { GiFlatHammer, GiAxeSword, GiCrossShield } from "react-icons/gi";
 function Footer() {
   return (
       <footer className="footer">
-    <p id="copyrightLine"><GiCrossShield size="1.5em"/>Project by: Franck Bushbaum (<a href="mailto:franck.bushbaum@yahoo.com">Email</a> | 
-    <a href="https://github.com/EldryMG" target="_blank">Github</a>)<GiCrossShield size="1.5em"/></p>
+    <p id="copyrightLine"><GiCrossShield size="1.5em"/>Project by: Franck Bushbaum<GiCrossShield size="1.5em"/></p>
       </footer>
   )
 }

@@ -1,0 +1,20 @@
+.select-menu{
+    /* outline: 2px solid red; */
+}
+
+.select-menu:hover{
+    cursor: pointer;
+    opacity: 40;
+    transform: scale(1.05);
+    transition: all 2s ease;
+}
+
+
+
+html{
+    background-image: url(https://images.unsplash.com/photo-1610011722905-a2d4b5fca8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover; 
+}

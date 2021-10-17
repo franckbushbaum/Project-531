@@ -6,7 +6,7 @@ import { BsArrowRightShort, BsTrashFill } from "react-icons/bs";
 import { BiEdit } from "react-icons/bi";
 import Swal from 'sweetalert2'
 
-function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, reps_two, reps_three}) {
+function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, reps_two, reps_three, workout_type_id}) {
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -17,11 +17,20 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
         console.log(`we're in!`)
     }
 
+
+//This one gets messy.. on click, the function will delete from the database, then a conditional statement will render something else, and
+//send the other to whichever Bodypart page he/she originated from.
+
     const deleteWorkout = () => {
         console.log(`in DELETE Button`);
         console.log(`what is workout_id..`, workout_id);
         let id = workout_id;
-        dispatch({type: 'REMOVE_WORKOUT', payload: id})
+
+        //Removes workout from the database.
+        dispatch({type: 'REMOVE_WORKOUT', payload: id});
+
+        //Removes workout from the DOM.
+        dispatch({type: 'UNSET_WORKOUT'});
         Swal.fire({
             title: 'Workout Deleted!',
             icon: 'success',
@@ -34,11 +43,32 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
                 no-repeat
                         `
           })
-        setFirst(!first)
+        setFirst(!first);
+        // ;setTimeout(() => {
+        //     switch (workout_type_id){
+        //         case 1:
+        //             return history.push('/user')
+        //             break;
+        //         case 2:
+        //             history.push('/user')
+        //             break;
+        //         case 3:
+        //             return history.push('/user')
+        //             break;
+        //         case 4:
+        //             return history.push('/user')
+        //             break;
+        //     }
+        // }, 1500);
     };
 
-    // useEffect(() => {
-    //     dispatch({ type: 'FETCH_WORKOUT', payload: workout.workout_id });
+    //  useEffect(() => {
+    //     dispatch({ type: 'CLEAR_IT', payload: {weight_one: '',
+    //                                             reps_one: '',
+    //                                             weight_two: '',
+    //                                             reps_two: '',
+    //                                             weight_three: '',
+    //                                             reps_three: ''}});
     // }, []);
 
     // const renderWorkout = () => {
@@ -48,7 +78,8 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
 
     return(
         <>
-        { first ? 
+        {JSON.stringify(workout_type_id)}
+        {/* { first ?  */}
         <table key={workout_id}>
             <thead>
                 <tr>
@@ -71,7 +102,7 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
                 <tr>
                     <td>3</td>
                     <td>{weight_three}</td>
-                    <td>{reps_three}<Button onClick={changeState}><BiEdit size="20px" /></Button></td>
+                    <td>{reps_three}<Button onClick={changeState}><BiEdit size="22px" /></Button></td>
                 </tr>
                 <tr>
                     <td>
@@ -84,7 +115,7 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
                 </tr>
             </tbody>
         </table>
-        : <p>sleepy HERO</p>}
+        // : <p>Workout Deleted!</p>}
         
                                                
     </>
