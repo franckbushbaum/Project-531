@@ -14,7 +14,10 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
     }
 
     const deleteWorkout = () => {
-        console.log(`in DELETE Button`)
+        console.log(`in DELETE Button`);
+        console.log(`what is workout_id..`, workout_id);
+        let id = workout_id;
+        dispatch({type: 'REMOVE_WORKOUT', payload: id})
     }
 
     // useEffect(() => {
