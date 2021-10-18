@@ -23,6 +23,14 @@ function Three() {
 
     const [inputValue, setInputValue] = useState({one_rep_max: '' , week: ''});
 
+    const [updateButton, setUpdateButton] = useState(true);
+
+    // const button = document.querySelector("button.testing")
+
+    // button.addEventListener("click", e => {
+    //     console.log(e);
+    // })
+
 
 //Set first value. Switch statement in case we want to combine setValues and setValuesToo at a later time.
     const setValues = (event) => {
@@ -110,6 +118,8 @@ function Three() {
 
     return (
     <>
+        {/* { updateButton ? <p></p> : <button>Edit</button>}
+        <button className="testing">test button</button> */}
         <div className="container-page-three">
             <div className="home-button">
                 <div className="the-button">

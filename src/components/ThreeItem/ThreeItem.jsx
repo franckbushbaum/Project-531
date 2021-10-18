@@ -10,16 +10,41 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
     const dispatch = useDispatch();
     const history = useHistory();
 
-   const [first, setFirst] = useState(true); 
+   const [editMode, setEditMode] = useState(true); 
+
+   const [calcReps, setCalcReps] = useState(reps_three);
+
+
     
 
     const changeState = () => {
-        console.log(`we're in!`)
+        setEditMode(!editMode);
+    }
+
+    const addReps = (x) => {
+        // console.log(reps_three);
+        // console.log('so what is action?', x);
+        setCalcReps(calcReps + 1);
+    }
+
+    const subtractReps = (x) => {
+        // console.log(reps_three);
+        // console.log('so what is action?', x);
+        setCalcReps(calcReps - 1);
+    }
+
+    const handleUpdate = () => {
+        console.log('what is calcReps', calcReps);
+        console.log('what is workout_id', workout_id);
+         dispatch({type: 'EDIT_REPS', payload: {'weight_three': calcReps,
+                                                'workout_id': workout_id}})
     }
 
 
-//This one gets messy.. on click, the function will delete from the database, then a conditional statement will render something else, and
-//send the other to whichever Bodypart page he/she originated from.
+
+
+// Function that removes workout from database and renders the page without it.
+// Not the cleanest way go about this, but it works!
 
     const deleteWorkout = () => {
         console.log(`in DELETE Button`);
@@ -43,7 +68,7 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
                 no-repeat
                         `
           })
-        setFirst(!first);
+        
         // ;setTimeout(() => {
         //     switch (workout_type_id){
         //         case 1:
@@ -79,13 +104,13 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
     return(
         <>
         {JSON.stringify(workout_type_id)}
-        {/* { first ?  */}
         <table key={workout_id}>
             <thead>
                 <tr>
                     <th>Set</th>
                     <th>Weight</th>
                     <th>Reps</th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
@@ -93,16 +118,22 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
                     <td>1</td>
                     <td>{weight_one}</td>
                     <td>{reps_one}</td>
+                    {/* <td>{ editMode ? <p></p> : <p>+</p>}</td> */}
                 </tr>
                 <tr>
                     <td>2</td>
                     <td>{weight_two}</td>
                     <td>{reps_two}</td>
+                    {/* <td>{ editMode ? <p></p> : <p>+</p>}</td> */}
                 </tr>
                 <tr>
                     <td>3</td>
                     <td>{weight_three}</td>
-                    <td>{reps_three}<Button onClick={changeState}><BiEdit size="22px" /></Button></td>
+                    <td>{calcReps}</td>
+                    {/* <td>{addToReps}</td> */}
+                    <td>{ editMode ? <p></p> : <p><button onClick={() => addReps()}>+</button>
+                                                    <button onClick={() => subtractReps()}>-</button>
+                                                    <button onClick={handleUpdate}>Submit</button></p>}</td>
                 </tr>
                 <tr>
                     <td>
@@ -112,12 +143,10 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
                                 style={{ fontSize: 17, borderRadius:"29px"}}  
                                 onClick={deleteWorkout}><BsTrashFill color="black" style= {{borderRadius: "50%"}}/></Button>
                     </td>
+                    <td><Button onClick={changeState}><BiEdit size="22px" /></Button></td>
                 </tr>
             </tbody>
-        </table>
-        // : <p>Workout Deleted!</p>}
-        
-                                               
+        </table>                                   
     </>
     );
 }
