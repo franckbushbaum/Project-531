@@ -11,7 +11,7 @@ body {
   display:flex;
   justify-content: center;
   width: 100%;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'JetBrains Mono', monospace;
   margin: 0px;
 }
 

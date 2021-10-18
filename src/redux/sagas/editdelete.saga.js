@@ -9,12 +9,25 @@ function* removeWorkout(action){
         yield put({type: 'DELETE_WORKED'});
 
     } catch(err){
-        console.log('ERROR in EDITDELETE saga!')
+        console.log('ERROR in EDITDELETE saga!',err)
+    }
+}
+
+function* editWorkout(action){
+    console.log('in Edit Workout', action.payload);
+    console.log('what is this' ,action.payload.weight_three);
+    console.log('and this',action.payload.workout_id);
+    try{
+        const workoutId = action.payload.workout_id;
+        yield axios.put(`/api/workout/${workoutId}`, action.payload);
+    } catch(error){
+        console.log('ERROR in EDIT WORKOUT', error)
     }
 }
 
 function* editDeleteSaga(){
     yield takeLatest('REMOVE_WORKOUT', removeWorkout)
+    yield takeLatest('EDIT_REPS', editWorkout)
 
 }
 

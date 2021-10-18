@@ -46,7 +46,7 @@ router.get('/', rejectUnauthenticated, (req ,res) => {
 
 router.delete('/:id', rejectUnauthenticated, (req, res) => {
     console.log('delete req is',req.params)
-    console.log('delete req user is',req.user)
+    // console.log('delete req user is',req.user)
     const workoutId = req.params.id;
     const userId= req.user.id;
     const queryText =  `DELETE from "workout" WHERE 
@@ -60,5 +60,11 @@ router.delete('/:id', rejectUnauthenticated, (req, res) => {
             res.sendStatus(500);
         })
 });
+
+router.put('/:id', rejectUnauthenticated, (req, res) => {
+    // console.log('update req is', req.params);
+    // console.log('update req.body.weight_three is', req.body.weight_three);
+    // console.log('update req user is', req.user);
+})
 
 module.exports = router;
