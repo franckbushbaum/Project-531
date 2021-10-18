@@ -1,21 +1,22 @@
-.container{
-    padding: 2rem;
+.container {
     display: grid;
-    /* justify-content: center; */
-    justify-content: space-around;
-    /* background-color: rgb(133, 124, 102); */
-    flex-direction:column;
-    gap: 20px;    
+    grid-template-rows: 1fr 1fr 4fr 4fr;
 }
 
-.container > * {
-    align-self: center;
-    flex-basis:100%;
+.archive-button {
+    padding-left: 776px; 
 }
 
-.header-title{
+
+.header{
    /* background-color: aqua; */
-   height: 10%;
+    display: flex;
+    justify-content: center;
+    outline: 3px solid red
+}
+
+.header-title {
+    
 }
 
 

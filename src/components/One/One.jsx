@@ -39,7 +39,8 @@ function One() {
             <div className="card">
                     <Box className="select-menu" sx={{ minWidth: 100, maxWidth: 300, minHeight:300, borderRadius: 7, }} style={{ backgroundColor: "#000000d0" }} >
                         <FormControl sx={{ m: 10, minWidth: 150 }}>
-                            <InputLabel style={{ backgroundColor: "black" }} id="pick">Pick a workout</InputLabel>
+                            <InputLabel style={{ backgroundColor: "black",
+                                                 }} id="pick">Pick a workout</InputLabel>
                             <Select
                                 style={{backgroundColor:"violet"}}
                                 labelId="pick"

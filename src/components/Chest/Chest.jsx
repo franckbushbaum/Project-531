@@ -20,19 +20,14 @@ function Chest(){
 
     return(
         <>
-        <p>This is the chest page</p>
         <div className="container">
+        <div className="archive-button">
+                    <button >Archive</button>
+                </div>
             <div className="header">
                 <div className="header-title">
                     {/* GET route to post last workout */}
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ducimus pariatur optio. 
-                    Incidunt consequatur eos expedita temporibus numquam quas itaque voluptates? Suscipit impedit 
-                    debitis iusto, tenetur officia quis nulla alias quasi eaque ut possimus? Assumenda non aut id 
-                    debitis nesciunt recusandae corrupti modi similique autem consequatur, maiores odio architecto 
-                    facere.
-                </div>
-                <div>
-                    <button className="archive-button">Archive</button>
+                    <h1>CHEST</h1>
                 </div>
             </div>
             <div className="last-workout">

@@ -15,7 +15,7 @@ function* removeWorkout(action){
 
 function* editWorkout(action){
     console.log('in Edit Workout', action.payload);
-    console.log('what is this' ,action.payload.weight_three);
+    console.log('what is this' ,action.payload.reps_three);
     console.log('and this',action.payload.workout_id);
     try{
         const workoutId = action.payload.workout_id;

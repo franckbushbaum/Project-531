@@ -36,15 +36,24 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
     const handleUpdate = () => {
         console.log('what is calcReps', calcReps);
         console.log('what is workout_id', workout_id);
-         dispatch({type: 'EDIT_REPS', payload: {'weight_three': calcReps,
-                                                'workout_id': workout_id}})
+         dispatch({type: 'EDIT_REPS', payload: {'reps_three': calcReps,
+                                                'workout_id': workout_id}});
+                                                
+        Swal.fire({
+        title: 'Workout Submitted!',
+        icon: 'success',
+        confirmButtonText: 'Cool',
+        background: 'white',
+            
+        });
     }
 
 
 
 
-// Function that removes workout from database and renders the page without it.
-// Not the cleanest way go about this, but it works!
+// Function that removes workout from database, renders the page without it.
+// Finally, it will send the user back to the first page to restart.  If I have enough time, 
+// I'd like to keep he/she on this page.
 
     const deleteWorkout = () => {
         console.log(`in DELETE Button`);
@@ -67,7 +76,8 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
                 left top
                 no-repeat
                         `
-          })
+          });
+          history.push('/user');
         
         // ;setTimeout(() => {
         //     switch (workout_type_id){

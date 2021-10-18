@@ -62,9 +62,24 @@ router.delete('/:id', rejectUnauthenticated, (req, res) => {
 });
 
 router.put('/:id', rejectUnauthenticated, (req, res) => {
-    // console.log('update req is', req.params);
-    // console.log('update req.body.weight_three is', req.body.weight_three);
-    // console.log('update req user is', req.user);
-})
+    console.log('update req.params.workout_id is', req.params.workout_id);
+    console.log('update req.body.reps_three is', req.body.reps_three);
+    console.log('update req.body.workout_id is', req.body.workout_id);
+    console.log('update req user is', req.user);
+    const userId = req.user.id;
+    const workoutId=req.body.workout_id;
+    const reps_three = req.body.reps_three;
+     const queryText = `UPDATE "workout" SET "reps_three" = $1
+                                            WHERE "user_id" = $2 
+                                            AND "workout_id" = $3`;
+    pool.query(queryText, [reps_three, userId, workoutId])
+    .then ((result) => {
+        res.sendStatus(201);
+    })
+    .catch((error) => {
+        console.log('Error updating workout', error);
+        res.sendStatus(500);
+    })
+});
 
 module.exports = router;

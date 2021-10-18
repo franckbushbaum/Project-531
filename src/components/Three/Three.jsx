@@ -135,7 +135,8 @@ function Three() {
                     className="input-field"
                     label="Enter One Rep Max"
                     variant="outlined"
-                    style={{ backgroundColor: '#dbe3de' }}
+                    style={{ backgroundColor: '#dbe3de',
+                        fontFamily: "jetBrains Mono" }}
                     id="number"
                     required
                     placeholder="One Rep Max"

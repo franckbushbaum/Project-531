@@ -16,7 +16,14 @@ Friday:
 
 Saturday:
 -[x] Create a table for the new workout
--[] Edit functionality in new workout (I'm not sure if I should have 1 saga, or many, I'm going to do a combination of both -- the Edit/Delete will have their own saga, for practice sake.)
+-[x] Edit functionality in new workout (I'm not sure if I should have 1 saga, or many, I'm going to do a combination of both -- the Edit/Delete will have their own saga, for practice sake.)
+-[x] Properly linking all pages. Clearing inputs, adding an Edit button with addition and subtraction functionality.
+-[x] Discovered and added Sweet Alerts. (All of Saturday and Sunday involved a great deal of practicing ternary operators and conditional rendering, ~7 hours on that alone over the 2 days.)
+
+Monday:
+-[x] PUT req to server completed and tested.
+- [] Basic CSS layout for page 2s completed.
+- [] Data cursor on /user page... this may be much more complicated than it looks..
 -[] History page has data from last workouts
 -[] History page has a delete function
 -[] Link up the remaining 3 bodyparts to also be able to post a workout.
