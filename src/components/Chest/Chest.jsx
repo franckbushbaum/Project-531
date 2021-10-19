@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Chest.css';
 import { useHistory } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
+import { IoFingerPrintOutline } from "react-icons/io5";
 
 function Chest(){
 
     const history = useHistory();
+    const dispatch = useDispatch();
+
+    const theWorkouts = useSelector(store => store.fetchWorkout);
 
     const handleClick = (event) => {
         console.log('in handleClick', event.target.className)
@@ -16,14 +21,20 @@ function Chest(){
                 history.push('/three')
                 break;
         }
-    }
+    };
+
+    useEffect(() => {
+        dispatch({ type: 'FETCH_WORKOUT' });
+    }, []);
 
     return(
         <>
+        {/* <p>{JSON.stringify(theWorkouts)}</p> */}
         <div className="container">
         <div className="archive-button">
-                    <button >Archive</button>
-                </div>
+                    <button className="archive-child" >Archive <IoFingerPrintOutline/></button>
+        <div className="move"></div>
+        </div>
             <div className="header">
                 <div className="header-title">
                     {/* GET route to post last workout */}
