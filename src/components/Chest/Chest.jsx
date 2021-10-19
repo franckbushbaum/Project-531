@@ -2,7 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './Chest.css';
 import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
-import { IoFingerPrintOutline } from "react-icons/io5";
+import { IoFingerPrintOutline, IoArrowForwardSharp } from "react-icons/io5";
+import { CgArrowRightR } from "react-icons/cg";
 
 function Chest(){
 
@@ -32,7 +33,7 @@ function Chest(){
         {/* <p>{JSON.stringify(theWorkouts)}</p> */}
         <div className="container">
         <div className="archive-button">
-                    <button className="archive-child" >Archive <IoFingerPrintOutline/></button>
+                    <button className="archive-child" >Archive    <IoFingerPrintOutline/></button>
         <div className="move"></div>
         </div>
             <div className="header">
@@ -60,7 +61,7 @@ function Chest(){
             </div>
             <div className="nav-buttons">
             <button onClick={handleClick} className="back-button">Back</button>
-            <button onClick={handleClick} className="new-button">New</button>
+            <button onClick={handleClick} className="new-button">continue&nbsp;<CgArrowRightR text="continue" size={40}  /></button>
             </div>
         </div>
         </>
