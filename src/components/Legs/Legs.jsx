@@ -10,7 +10,7 @@ function Legs(){
     const history = useHistory();
     const dispatch = useDispatch();
 
-    const theWorkouts = useSelector(store => store.fetchWorkout);
+    const recentWorkout = useSelector(store => store.recentWorkout);
 
     const handleClick = (event) => {
         console.log('in handleClick', event.target.className)
@@ -30,7 +30,6 @@ function Legs(){
 
     return(
         <>
-        {/* <p>{JSON.stringify(theWorkouts)}</p> */}
         <div className="container">
         <div className="archive-button">
                     <button className="archive-child" >Archive    <IoFingerPrintOutline/></button>
@@ -43,13 +42,33 @@ function Legs(){
                 </div>
             </div>
             <div className="last-workout">
-                LAST WORKOUT:Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, accusantium. Aliquam expedita eum possimus. Eius voluptates, rem inventore voluptatibus 
-                beatae quibusdam earum nihil labore non magni quidem nobis cumque iure reiciendis quo cum dolorem quisquam mollitia aut soluta 
-                dolore minima, molestiae neque autem. Possimus temporibus, aliquam sapiente cumque adipisci in recusandae, natus voluptates 
-                accusantium dolores, laudantium reiciendis. Quae dignissimos modi tempora harum repellat? Sapiente alias rem doloremque aperiam 
-                blanditiis maxime porro laboriosam nesciunt iusto molestias atque id, magni animi perspiciatis. Beatae reprehenderit ullam quaerat 
-                pariatur consequatur dolorum harum non corporis, quam distinctio temporibus praesentium architecto quidem numquam quae nostrum 
-                maxime?
+             <table key={recentWorkout.workout_id}>
+                <thead>
+                 <tr>
+                        <th>Set</th>
+                        <th>Weight</th>
+                        <th>Reps</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                    <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>{recentWorkout.weight_one}</td>
+                        <td>{recentWorkout.reps_one}</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>{recentWorkout.weight_two}</td>
+                        <td>{recentWorkout.reps_two}</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>{recentWorkout.weight_three}</td>
+                        <td>{recentWorkout.reps_three}</td>
+                    </tr>
+                </tbody>
+            </table>                                   
             </div>
             <div className="current">ONE REP MAX: Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, accusantium. Aliquam expedita eum possimus. Eius voluptates, rem inventore voluptatibus 
                 beatae quibusdam earum nihil labore non magni quidem nobis cumque iure reiciendis quo cum dolorem quisquam mollitia aut soluta 

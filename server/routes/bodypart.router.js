@@ -4,9 +4,9 @@ const pool = require('../modules/pool');
 const router = express.Router();
 
 router.get('/:id', rejectUnauthenticated, (req ,res) => {
-    console.log('req.params is', req.params);
-    console.log('req.user is', req.user);
-    console.log('req.body is', req.body);
+    // console.log('req.params is', req.params);
+    // console.log('req.user is', req.user);
+    // console.log('req.body is', req.body);
     const queryText = `SELECT * FROM workout
                         WHERE workout_type_id = $1
                         ORDER BY workout_id DESC

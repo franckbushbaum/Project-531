@@ -7,8 +7,7 @@ function* fetchBodypart(action){
         console.log('what is action.payload in this context?', action.payload);
         const workoutType = action.payload;
         const mostRecentWorkout = yield axios.get(`/api/bodypart/${workoutType}`);
-        yield put({type: 'DATA_FOR_SECOND_PAGE', payload: mostRecentWorkout.data})
-    // console.log('WHAT IS GET RETURNING?..' ,theWorkout.data)
+        yield put({type: 'DATA_FOR_SECOND_PAGE', payload: mostRecentWorkout.data[0]});
     } catch(error) {
         console.log('fetchBodypart', error);
     }
