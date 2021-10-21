@@ -114,6 +114,7 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
     return(
         <>
         {JSON.stringify(workout_type_id)}
+        <div className="table">
         <table key={workout_id}>
             <thead>
                 <tr>
@@ -147,16 +148,17 @@ function ThreeItem({workout_id, weight_one, weight_two, weight_three, reps_one, 
                 </tr>
                 <tr>
                     <td>
-                    <Button variant="contained" 
-                                size="small" 
-                                color="secondary" 
-                                style={{ fontSize: 17, borderRadius:"29px"}}  
+                    <Button className="delete-button"  
+                                size="medium" 
+                                
+                                  
                                 onClick={deleteWorkout}><BsTrashFill color="black" style= {{borderRadius: "50%"}}/></Button>
                     </td>
-                    <td><Button onClick={changeState}><BiEdit size="22px" /></Button></td>
+                    <td colSpan="2"><Button className="edit-button" onClick={changeState}><BiEdit size="22px" /></Button></td>
                 </tr>
             </tbody>
-        </table>                                   
+        </table>
+        </div>                                   
     </>
     );
 }

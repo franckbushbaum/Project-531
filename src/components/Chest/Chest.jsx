@@ -33,6 +33,7 @@ function Chest() {
         <>
             <div className="container">
                 <div className="archive-button">
+                    <p className="corner"></p>
                     <button className="archive-child" >Archive    <IoFingerPrintOutline /></button>
                     <div className="move"></div>
                 </div>
@@ -42,18 +43,19 @@ function Chest() {
                         </div>
                 </div>
                 <div className="last-workout">
-                <p>Last Workout: {moment(recentWorkout.created_at).format('MMM Do YY')}</p>
                 <p>Last Workout: {moment(recentWorkout.created_at).startOf('day').fromNow()}</p>
                     <table key={recentWorkout.workout_id}>
                         <thead>
                             <tr>
-                                <th>Set</th>
-                                <th>Weight</th>
-                                <th>Reps</th>
-                                <th></th>
+                                <th colSpan="3"><p>{moment(recentWorkout.created_at).format('MMM Do YY')}</p></th>
                             </tr>
                         </thead>
                         <tbody>
+                            <tr>
+                                <td>Set</td>
+                                <td>Weight</td>
+                                <td>Reps</td>
+                            </tr>
                             <tr>
                                 <td>1</td>
                                 <td>{recentWorkout.weight_one}</td>
@@ -73,7 +75,8 @@ function Chest() {
                     </table>
                 </div>
                 <div className="current">
-                    ONE REP MAX: {recentWorkout.one_rep_max}
+                    ONE REP MAX: {recentWorkout.one_rep_max}<br/>
+                    WEEK: {recentWorkout.week}
                 </div>
                 <div className="nav-buttons">
                     <button onClick={handleClick} className="back-button"><CgArrowLeftR text="continue" size={40} />&nbsp;Back</button>

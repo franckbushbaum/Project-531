@@ -1,3 +1,19 @@
-table, th, td {
-    border: 1px solid black;
-  }
+.container-page-three{
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction:column;
+  margin: 30px;
+  /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+  background: #00000083;
+  /* background-color: rgb(42, 165, 165); */ 
+
+  transition: scale(1.00) .8s ease;
+}
+
+.container-page-three:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 1s ease;
+}
+

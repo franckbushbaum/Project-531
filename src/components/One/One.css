@@ -2,19 +2,34 @@
     /* outline: 2px solid red; */
 }
 
-.select-menu:hover{
-    cursor: pointer;
-    opacity: 40;
-    transform: scale(1.05);
-    transition: all 2s ease;
-}
+
+.select-menu{
+    /* background-color: aqua; */
+     display: flex;
+     border-radius: 15px;
+     margin: 10px;
+     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+     background: #00000083;
+     /* background-color: rgb(42, 165, 165); */
+ }
+ 
+ .select-menu:hover {
+     cursor: pointer;
+     transform: scale(1.05);
+     transition: all 1s ease;
+ }
 
 
 
 html{
-    background-image: url(https://images.unsplash.com/photo-1610011722905-a2d4b5fca8c0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+    background-image: url(https://images.unsplash.com/photo-1610322231968-31322d42851f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2836&q=80);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; 
+    /* background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(110,36,68,0.8057598039215687) 50%, rgba(2,16,19,1) 100%); */
 }
+
+
+/* https://source.unsplash.com/1600x900/?cyberpunk */

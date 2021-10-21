@@ -35,14 +35,13 @@ function One() {
 
     return (
         <>
-            
-            <div className="card">
-                    <Box className="select-menu" sx={{ minWidth: 100, maxWidth: 300, minHeight:300, borderRadius: 7, }} style={{ backgroundColor: "#000000d0" }} >
-                        <FormControl sx={{ m: 10, minWidth: 150 }}>
-                            <InputLabel style={{ backgroundColor: "black",
-                                                 }} id="pick">Pick a workout</InputLabel>
+            <div className="container">
+                <div className="card">
+                    <Box className="select-menu" sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, }} >
+                        <FormControl sx={{ m: 7, minWidth: 150 }}>
+                            <InputLabel id="pick">Pick a workout</InputLabel>
                             <Select
-                                style={{backgroundColor:"violet"}}
+
                                 labelId="pick"
                                 id="demo-simple-select"
                                 value={''}
@@ -56,8 +55,9 @@ function One() {
                             </Select>
                         </FormControl>
                     </Box>
+                </div>
             </div>
-            
+
         </>
 
     );

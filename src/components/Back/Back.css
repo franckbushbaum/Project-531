@@ -1,34 +1,35 @@
+
 .container {
     display: grid;
-    gap: 2em;
-    grid-template-rows: 1fr 1fr 4fr 4fr;
+    gap: 1em;
+    grid-template-rows: .6fr .4fr 3.5fr 0.6fr 0.6fr;
 }
 
-.archive-button {
+.last-workout {
+    color:rgba(211,78,78,0.91);
+}
+
+table, th, td {
+    border: .5px solid rgba(211,78,78,0.91);
+    color: rgba(211,78,78,0.91);
+    text-align: center;
+  }
+
+  .archive-button {
     border: solid;
+    border-radius: 15px;
     resize: none;
+    height:65px;
     border-width: 2px;
     border-color: #00d3f8;
     display: flex;
     justify-content: right;
-    clip-path: polygon(100% 0, 100% 53%, 96.5% 100%, 0 100%, 0 0);
-
 }
 
-.archive-button::after{
-    content: "";
-    width: 50px;
-    height: 93px;
-    position: relative;
-    transform: rotate(45deg);
-    top: 55px;
-    left: 12px;
-    
 
-    border-width: 2px;
-    border-style: solid;
-    border-color: #68d2ec;
-}
+
+
+
 
 
 .archive-child{
@@ -68,23 +69,63 @@
 .header{
    /* background-color: aqua; */
     display: flex;
-    justify-content: center;
-    outline: 3px solid red
+    border-radius: 15px;
+    margin: 10px;
+    /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+    background: #00000083;
+    /* background-color: rgb(42, 165, 165); */
 }
 
-.header-title {
-    
+.header:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s ease;
 }
+
+.header-title{
+    justify-content: center;
+}
+
+
 
 
 .last-workout{
+    border-radius: 15px;
+    font-size: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction:column;
+    margin: 30px;
+    /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+    background: #00000083;
+    /* background-color: rgb(42, 165, 165); */ 
 
+    transition: scale(1.00) .8s ease;
+}
+
+.last-workout:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s ease;
+}
+
+
+.current{
+    border-radius: 15px;
+    font-size: 19px;
+    display: flex;
+    flex-direction:column;
+    margin: 30px;
+    /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+    background: #00000083;
+    /* background-color: rgb(42, 165, 165); */
    
 }
 
-.current{
-    
-   
+.current:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    transition: all 1s ease;
 }
 
 .nav-buttons{
@@ -148,13 +189,4 @@
 
     /* background, blends nicely if this is a button and the button is customized.., otherwise leave it out. */
     /* background: rgb(0,0,0,0.25)*/ 
-}
-
-.move {
-    background-color: cadetblue;
-    width: 50px;
-    height:50px;
-    position: absolute;
-    top: 420px;
-    left: 510px;
 }
