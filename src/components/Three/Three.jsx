@@ -1,6 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import { TextField } from '@material-ui/core';
@@ -115,6 +115,10 @@ function Three() {
         history.push('/user')
         dispatch({type: 'UNSET_WORKOUT'})
     }
+
+    useEffect(() => {
+        dispatch({ type: 'UNSET_WORKOUT'});
+    }, []);
 
     return (
     <>

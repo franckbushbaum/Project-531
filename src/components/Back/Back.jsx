@@ -1,9 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import './Back.css';
 import { useHistory } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
+import { IoFingerPrintOutline, IoArrowForwardSharp } from "react-icons/io5";
+import { CgArrowRightR, CgArrowLeftR} from "react-icons/cg";
 
 function Back(){
 
     const history = useHistory();
+    const dispatch = useDispatch();
+
+    const theWorkouts = useSelector(store => store.fetchWorkout);
 
     const handleClick = (event) => {
         console.log('in handleClick', event.target.className)
@@ -15,23 +22,24 @@ function Back(){
                 history.push('/three')
                 break;
         }
-    }
+    };
+
+    useEffect(() => {
+        dispatch({ type: 'FETCH_BODYPART_WORKOUT', payload: 4 });
+    }, []);
 
     return(
         <>
-        <p>This is the BACK page</p>
+        {/* <p>{JSON.stringify(theWorkouts)}</p> */}
         <div className="container">
+        <div className="archive-button">
+                    <button className="archive-child" >Archive    <IoFingerPrintOutline/></button>
+        <div className="move"></div>
+        </div>
             <div className="header">
                 <div className="header-title">
                     {/* GET route to post last workout */}
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ducimus pariatur optio. 
-                    Incidunt consequatur eos expedita temporibus numquam quas itaque voluptates? Suscipit impedit 
-                    debitis iusto, tenetur officia quis nulla alias quasi eaque ut possimus? Assumenda non aut id 
-                    debitis nesciunt recusandae corrupti modi similique autem consequatur, maiores odio architecto 
-                    facere.
-                </div>
-                <div>
-                    <button className="archive-button">Archive</button>
+                    <h1>BACK</h1>
                 </div>
             </div>
             <div className="last-workout">
@@ -52,8 +60,8 @@ function Back(){
                 maxime?
             </div>
             <div className="nav-buttons">
-            <button onClick={handleClick} className="back-button">Back</button>
-            <button onClick={handleClick} className="new-button">New</button>
+            <button onClick={handleClick} className="back-button"><CgArrowLeftR text="continue" size={40}  />&nbsp;Back</button>
+            <button onClick={handleClick} className="new-button">continue&nbsp;<CgArrowRightR text="continue" size={40}  /></button>
             </div>
         </div>
         </>

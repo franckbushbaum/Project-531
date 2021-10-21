@@ -3,7 +3,8 @@ import errors from './errors.reducer';
 import user from './user.reducer';
 import workoutTypeId from './one.reducer';
 import fetchWorkout from './oneWorkout.reducer';
-import deleteWorkout from './delete.reducer'
+import deleteWorkout from './delete.reducer';
+import recentWorkout from './recent.reducer';
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -17,6 +18,7 @@ const rootReducer = combineReducers({
   workoutTypeId,
   fetchWorkout,
   deleteWorkout,
+  recentWorkout,
 });
 
 export default rootReducer;
