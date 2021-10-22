@@ -25,6 +25,11 @@ function Legs() {
         }
     };
 
+    const toArchive = () => {
+        history.push('/four');
+        dispatch({type: 'ARCHIVE_INITIATE', payload: 2})
+    }
+
     useEffect(() => {
         dispatch({ type: 'FETCH_BODYPART_WORKOUT', payload: 2 });
     }, []);
@@ -34,7 +39,7 @@ function Legs() {
             <div className="container">
                 <div className="archive-button">
                     <p className="corner"></p>
-                    <button className="archive-child" >Archive    <IoFingerPrintOutline /></button>
+                    <button onClick={toArchive} className="archive-child" >Archive    <IoFingerPrintOutline /></button>
                     <div className="move"></div>
                 </div>
                 <div className="header">

@@ -1,5 +1,96 @@
-table, th, td {
-    border: 1px solid rgba(211,78,78,0.91);
-    color: rgba(211,78,78,0.91);
-    text-align: center;
+.table-container{
+  border-radius: 15px;
+  padding: 30px;
+  display: flex;
+  flex-direction:column;
+  justify-content: center;
+  margin: 20px;
+  height: 450px;
+  width: 560px;
+  /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+  background: #00000083;
+  /* background-color: rgb(42, 165, 165); */ 
+
+  transition: scale(1.00) .8s ease;
+}
+
+.table-container:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: all 1s ease;
+}
+
+
+
+.delete-button, .edit-button{
+  display: flex;
+  justify-content: center;
+  background-color:transparent;
+  padding: 0;
+  margin:0;
+  border: none;
+  height:30%;
+  height:33px;
+  text-transform: uppercase;
+  font-size: 33px;
+  color: rgba(211, 78, 78, 0.781);
+  text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
+  cursor:pointer;
+  
+  /* Animation */
+  transition: color .4s linear;
   }
+
+.delete-button:hover,
+.delete-button:hover::after{
+    color: #00d3f8;
+    border-color: #00d3f8;
+
+    transition: color 0.23s linear;
+
+    /* background, blends nicely if this is a button, otherwise leave it out. */
+    /* background: rgb(0,0,0,0.25) */
+}
+
+.edit-button:hover,
+.edit-button:hover::after{
+    color: #00d3f8;
+    border-color: #00d3f8;
+
+    transition: color 0.23s linear;
+
+    /* background, blends nicely if this is a button, otherwise leave it out. */
+    /* background: rgb(0,0,0,0.25) */
+}
+
+  .table {
+    text-align: center;
+    position: relative;
+    left: 15px;
+  }
+
+  .archive-child{
+    background-color: transparent;
+    border: none;
+    height:30%;
+    margin: 22px;
+    text-transform: uppercase;
+    font-size: 19px;
+    color: rgba(211, 78, 78, 0.781);
+    text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
+    cursor:pointer;
+
+    /* Animation */
+    transition: color .4s linear;
+}
+
+.archive-child:hover,
+.archive-child:hover::after{
+    color: #00d3f8;
+    border-color: #00d3f8;
+
+    transition: color 0.23s linear;
+
+    /* background, blends nicely if this is a button, otherwise leave it out. */
+    /* background: rgb(0,0,0,0.25) */
+}

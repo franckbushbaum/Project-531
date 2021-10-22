@@ -21,6 +21,23 @@ router.get('/:id', rejectUnauthenticated, (req ,res) => {
     })
 });
 
+router.get('/archive/:id', rejectUnauthenticated, (req,res) => {
+    console.log('req.params is', req.params);
+    const queryText = `SELECT * FROM workout
+                        WHERE workout_type_id = $1
+                        ORDER BY workout_id DESC
+                        LIMIT 8;`;
+    pool.query(queryText, [req.params.id])
+    .then(result => {
+        res.send(result.rows);
+    })
+    .catch((error) => {
+        console.log('ERROR COMPLETING REQUEST', error);
+        res.sendStatus
+    })
+});
+
+
 
 
 

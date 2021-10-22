@@ -12,9 +12,11 @@ body {
 }
 
 table, th, td {
-    border: 1px solid rgba(211, 78, 78, 0.91);
+    border: 1px solid rgba(211,78,78,0.91);
     color: rgba(211,78,78,0.91);
     text-align: center;
+    height:60px;
+    width: 520px;
   }
 
   .archive-button {
@@ -68,14 +70,11 @@ table, th, td {
 
 
 .header{
-   /* background-color: aqua; */
     display: flex;
     justify-content: center;
     border-radius: 15px;
     margin: 30px;
-    /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
     background: #00000083;
-    /* background-color: rgb(42, 165, 165); */ 
 }
 
 .header-title{

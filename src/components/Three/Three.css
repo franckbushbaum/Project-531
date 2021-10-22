@@ -1,19 +1,102 @@
+.page-three-actual{
+  display: grid;
+  grid-template-rows: 1fr 11fr;
+  justify-content: center;
+}
+
+.display{
+  display: grid;
+  justify-content: center;
+}
+
+.container-forms {
+  padding-left: 5px;
+}
+
+.table {
+  text-align: center;
+}
 .container-page-three{
+  display: grid;
+  height: 300px;
+  min-width: 340px;
+  min-height: 402px;
   border-radius: 15px;
   padding: 30px;
-  display: flex;
-  flex-direction:column;
-  margin: 30px;
-  /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+  padding-bottom: 10px;
+  justify-content: left;
+  outline-color: rgba(211,78,78,0.91);
+  margin: 40px;
+  margin-left: 0px;
   background: #00000083;
-  /* background-color: rgb(42, 165, 165); */ 
-
   transition: scale(1.00) .8s ease;
 }
 
-.container-page-three:hover {
-  cursor: pointer;
-  transform: scale(1.05);
-  transition: all 1s ease;
+.input-field {
+  border-color: rgba(211,78,78,0.91);
+  border-radius: 15px;
+  width: 130px;
+}
+
+.submit-form-button{
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  padding-top: 5px;
+  margin:0;
+  border: none;
+  height:30%;
+  height:30px;
+  text-transform: uppercase;
+  font-size: 19px;
+  color: rgba(211, 78, 78, 0.781);
+  text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
+  cursor:pointer;
+  
+  /* Animation */
+  transition: color .4s linear;
+  }
+  
+  .submit-form-button:hover,
+  .submit-form-button:hover::after{
+  color: #00d3f8;
+  border-color: #00d3f8;
+  
+  transition: color 0.23s linear;
+  
+  /* background, blends nicely if this is a button, otherwise leave it out. */
+  /* background: rgb(0,0,0,0.25) */
+  }
+
+
+
+.the-button{
+display: flex;
+justify-content: center;
+background-color:transparent;
+padding: 0;
+margin:0;
+border: none;
+height:30%;
+height:30px;
+text-transform: uppercase;
+font-size: 19px;
+color: rgba(211, 78, 78, 0.781);
+text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
+cursor:pointer;
+
+/* Animation */
+transition: color .4s linear;
+}
+
+.the-button:hover,
+.the-button:hover::after{
+color: #00d3f8;
+border-color: #00d3f8;
+
+transition: color 0.23s linear;
+
+/* background, blends nicely if this is a button, otherwise leave it out. */
+/* background: rgb(0,0,0,0.25) */
 }
 
