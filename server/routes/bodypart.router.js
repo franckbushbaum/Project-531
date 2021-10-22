@@ -29,6 +29,7 @@ router.get('/archive/:id', rejectUnauthenticated, (req,res) => {
                         LIMIT 8;`;
     pool.query(queryText, [req.params.id])
     .then(result => {
+        console.log('WHAT IS RESULT.ROWS', result.rows)
         res.send(result.rows);
     })
     .catch((error) => {

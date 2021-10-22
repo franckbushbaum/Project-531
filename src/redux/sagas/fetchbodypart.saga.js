@@ -16,7 +16,9 @@ function* getArchive(action){
     try{
         const archiveId = action.payload;
         const archiveList = yield axios.get(`/api/bodypart/archive/${archiveId}`);
-        // yield put({'ARCHIVE_DATA', payload: archiveList})
+        console.log('what is archiveList?', archiveList);
+        yield put({type: 'ARCHIVE_DATA', payload: archiveList})
+        console.log('what is archiveList?', archiveList);
     } catch(error){
         console.log('error in fetchbodypart saga, getArchive', error)
     }
