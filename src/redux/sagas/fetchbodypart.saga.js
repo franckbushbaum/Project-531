@@ -12,13 +12,13 @@ function* fetchBodypart(action){
 }
 
 function* getArchive(action){
-    console.log('what is archives action?', action)
+    // console.log('what is archives action?', action)
     try{
         const archiveId = action.payload;
         const archiveList = yield axios.get(`/api/bodypart/archive/${archiveId}`);
-        console.log('what is archiveList?', archiveList);
-        yield put({type: 'ARCHIVE_DATA', payload: archiveList})
-        console.log('what is archiveList?', archiveList);
+        console.log('WHAT IS ARCHIVELIST?', archiveList.data);
+        yield put({type: 'ARCHIVE_DATA', payload: archiveList.data})
+        console.log('WHAT IS ARCHIVELIST?', archiveList.data);
     } catch(error){
         console.log('error in fetchbodypart saga, getArchive', error)
     }

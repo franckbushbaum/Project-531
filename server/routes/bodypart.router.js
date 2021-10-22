@@ -22,14 +22,14 @@ router.get('/:id', rejectUnauthenticated, (req ,res) => {
 });
 
 router.get('/archive/:id', rejectUnauthenticated, (req,res) => {
-    console.log('req.params is', req.params);
+    // console.log('req.params is', req.params);
     const queryText = `SELECT * FROM workout
                         WHERE workout_type_id = $1
                         ORDER BY workout_id DESC
                         LIMIT 8;`;
     pool.query(queryText, [req.params.id])
     .then(result => {
-        console.log('WHAT IS RESULT.ROWS', result.rows)
+        // console.log('WHAT IS RESULT.ROWS', result.rows)
         res.send(result.rows);
     })
     .catch((error) => {
@@ -37,12 +37,6 @@ router.get('/archive/:id', rejectUnauthenticated, (req,res) => {
         res.sendStatus
     })
 });
-
-
-
-
-
-
 
 
 module.exports = router;
