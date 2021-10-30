@@ -1,8 +1,9 @@
 
 .container {
     display: grid;
-    gap: 1em;
-    grid-template-rows: .6fr .4fr 3.5fr 0.6fr 0.6fr;
+    padding: 0;
+    gap: 2em;
+    grid-template-rows: .4fr .4fr 3.5fr 0.6fr 0.6fr;
 }
 
 .last-workout {
@@ -72,7 +73,6 @@ table, th, td {
    /* background-color: aqua; */
     display: flex;
     border-radius: 15px;
-    margin: 10px;
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
     background: #00000083;
     /* background-color: rgb(42, 165, 165); */

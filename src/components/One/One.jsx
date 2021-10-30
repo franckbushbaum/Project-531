@@ -37,11 +37,11 @@ function One() {
         <>
             <div className="container">
                 <div className="card">
-                    <Box className="select-menu" sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, }} >
-                        <FormControl sx={{ m: 7, minWidth: 150 }}>
-                            <InputLabel id="pick">Pick a workout</InputLabel>
+                    <Box className="select-menu" sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, color: 'secondary'  }} >
+                        <FormControl sx={{ m: 7, minWidth: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
+                            <InputLabel  color="secondary">Pick a workout</InputLabel>
                             <Select
-
+                                color="secondary"
                                 labelId="pick"
                                 id="demo-simple-select"
                                 value={''}

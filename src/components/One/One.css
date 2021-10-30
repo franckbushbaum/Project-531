@@ -8,15 +8,18 @@
      display: flex;
      border-radius: 15px;
      margin: 10px;
+     width: 750px;
      /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
      background: #00000083;
      /* background-color: rgb(42, 165, 165); */
+     transition-property: all;
+     transition-duration: 500ms;
  }
  
- .select-menu:hover {
+ .select-menu:hover,
+ .select-menu:hover::after {
      cursor: pointer;
-     transform: scale(1.05);
-     transition: all 1s ease;
+     /* transition: all 1s ease; */
  }
 
 

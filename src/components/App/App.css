@@ -1,8 +1,6 @@
 html,
 body,
 #react-root {
-  height: 100%;
-  width: 100%;
   display: flex;
   justify-content: center;
 }
@@ -10,9 +8,13 @@ body,
 body {
   display:flex;
   justify-content: center;
-  width: 100%;
+  width: 120%;
   font-family: 'JetBrains Mono', monospace;
   margin: 0px;
+}
+
+.all-the-things{
+  width: auto;
 }
 
 
@@ -31,7 +33,7 @@ Container
 -------------------------------------------------------------------------------- */
 
 .container {
-  padding: 20px;
+  padding-top: 40px;
 }
 
 /* --------------------------------------------------------------------------------

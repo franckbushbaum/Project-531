@@ -3,10 +3,10 @@ body {
 }
 .container {
     display: grid;
-    gap: 1em;
-    grid-template-rows: 1fr .5fr 3.5fr 0.7fr;
+    padding: 0;
+    gap: 2em;
+    grid-template-rows: .4fr .4fr 3.5fr 0.6fr 0.6fr;
 }
-
 .last-workout {
     color:rgba(211,78,78,0.91);
 }

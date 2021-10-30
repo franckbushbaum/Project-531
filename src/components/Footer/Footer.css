@@ -1,5 +1,12 @@
 .footer {
+  display: flex;
+  justify-content: center;
   bottom: 0;
   margin-top: 100px;
-  font-size:small;
+  font-size:medium;
+}
+
+.signature {
+  justify-content: center;
+  color: rgba(211,78,78,0.91);
 }

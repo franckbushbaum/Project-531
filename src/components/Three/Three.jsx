@@ -104,7 +104,7 @@ function Three() {
             payload: objectData
         }); setTimeout(() => {
             dispatch({ type: 'FETCH_WORKOUT' })
-        }, 3000);
+        }, 1000);
         //Clear input field.
         setInputValue({ ...inputValue, one_rep_max: '', week: '' });
 
@@ -130,7 +130,7 @@ function Three() {
             <button className="the-button" onClick={goBack}><FaHome size="40px" /></button>
             <div className="container-page-three">
                 <form className="container-forms" onSubmit={handleSubmit}>
-                    <TextField
+                    <TextField style={{m: 5, backgroundColor: 'gray', color: 'gray', minWidth: 180, }}
                         className="input-field"
                         label="Enter One Rep Max"
                         variant="outlined"
@@ -141,11 +141,12 @@ function Three() {
                         onChange={setValues}
                     />
                     <div className="select-week">
-                    <Box sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, }} >
-                        <FormControl sx={{ m: 7, minWidth: 100 }}>
+                    <Box sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, height: 150, borderRadius: 7, color: 'secondary'  }} >
+                        <FormControl sx={{ minWidth: 180, width: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
                             <InputLabel >Select Week</InputLabel>
                             <Select
-                                labelId="week"
+                                label="Select Week"
+                                placeholder="Select Week"
                                 id="week"
                                 value={inputValue.week}
                                 label="workout"

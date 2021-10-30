@@ -1,6 +1,7 @@
 .page-three-actual{
   display: grid;
   grid-template-rows: 1fr 11fr;
+  gap: 2em;
   justify-content: center;
 }
 
@@ -10,26 +11,22 @@
 }
 
 .container-forms {
-  padding-left: 5px;
+  height:100px;
+  width: 100px;
 }
 
 .table {
   text-align: center;
 }
-.container-page-three{
+
+.container-page-three {
   display: grid;
-  height: 300px;
-  min-width: 340px;
-  min-height: 402px;
-  border-radius: 15px;
-  padding: 30px;
-  padding-bottom: 10px;
-  justify-content: left;
-  outline-color: rgba(211,78,78,0.91);
-  margin: 40px;
-  margin-left: 0px;
   background: #00000083;
-  transition: scale(1.00) .8s ease;
+  border-radius: 15px;
+  padding: 50px;
+  height: 200px;
+  width: 50px;
+  min-width: 535px;
 }
 
 .input-field {
@@ -78,7 +75,6 @@ padding: 0;
 margin:0;
 border: none;
 height:30%;
-height:30px;
 text-transform: uppercase;
 font-size: 19px;
 color: rgba(211, 78, 78, 0.781);

@@ -3,9 +3,11 @@ import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import { BsArrowRightShort, BsTrashFill } from "react-icons/bs";
+import { IoFingerPrintOutline, IoArrowForwardSharp } from "react-icons/io5";
 import { BiEdit } from "react-icons/bi";
 import Swal from 'sweetalert2';
 import './ThreeItem.css';
+import { TiPlusOutline, TiMinusOutline, TiChevronRightOutline } from "react-icons/ti";
 import moment from 'moment';
 
 function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one, reps_two, reps_three, created_at, workout_type_id }) {
@@ -84,38 +86,12 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
                         `
         });
         history.push('/user');
-
-        // ;setTimeout(() => {
-        //     switch (workout_type_id){
-        //         case 1:
-        //             return history.push('/user')
-        //             break;
-        //         case 2:
-        //             history.push('/user')
-        //             break;
-        //         case 3:
-        //             return history.push('/user')
-        //             break;
-        //         case 4:
-        //             return history.push('/user')
-        //             break;
-        //     }
-        // }, 1500);
     };
 
-    //  useEffect(() => {
-    //     dispatch({ type: 'CLEAR_IT', payload: {weight_one: '',
-    //                                             reps_one: '',
-    //                                             weight_two: '',
-    //                                             reps_two: '',
-    //                                             weight_three: '',
-    //                                             reps_three: ''}});
-    // }, []);
-
-    // const renderWorkout = () => {
-    // dispatch({ type: 'FETCH_WORKOUT'});
-    // history.push('/four')
-    // }
+    const toArchive = () => {
+        history.push('/four');
+        dispatch({type: 'ARCHIVE_INITIATE', payload: workout_type_id})
+    }
 
     return (
         <>
@@ -150,9 +126,9 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
                             <td>{weight_three}</td>
                             <td>{calcReps}</td>
                             {/* <td>{addToReps}</td> */}
-                            <td>{editMode ? <p></p> : <p><button onClick={() => addReps()}>+</button>
-                                <button onClick={() => subtractReps()}>-</button>
-                                <button onClick={handleUpdate}>Submit</button></p>}</td>
+                            <td>{editMode ? <p></p> : <p><button className="edit-buttons" onClick={() => addReps()}><TiPlusOutline /></button>
+                                <button className="edit-buttons" onClick={() => subtractReps()}><TiMinusOutline /></button>
+                                <button className="edit-buttons" onClick={handleUpdate}><TiChevronRightOutline /></button></p>}</td>
                         </tr>
                         <tr>
                             <td>
@@ -164,6 +140,7 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
                     </tbody>
                 </table>
             </div>
+            <button onClick={toArchive} className="page-three-archive-button">Archive  <IoFingerPrintOutline /></button>
         </>
     );
 }
