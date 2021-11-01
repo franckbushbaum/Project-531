@@ -1,6 +1,5 @@
 ![Alt Text](https://media3.giphy.com/media/Xl2FpESIc1fWBlDhHs/giphy.gif?cid=790b7611f5cb753355ee7d28ec880206c841962a469d8693&amp;rid=giphy.gif)
 
-<iframe src="https://giphy.com/embed/Xl2FpESIc1fWBlDhHs" width="480" height="60" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Xl2FpESIc1fWBlDhHs">via GIPHY</a></p>
 Tuesday & Wednesday:
 - [x] Create routing for 1st page. ~4 hours
 - [x] Create button for first page, that goes to first and second page (testing) ~2hr
@@ -39,7 +38,7 @@ In the future:
 This version uses React, Redux, Express, Passport, and PostgreSQL (a full list of dependencies can be found in `package.json`).
 
 
-## Deployment
+## Deployment (Future goal.)
 
 1. Create a new Heroku project
 1. Link the Heroku project to the project GitHub Repo
@@ -49,6 +48,3 @@ This version uses React, Redux, Express, Passport, and PostgreSQL (a full list o
 1. Add an environment variable for `SERVER_SESSION_SECRET` with a nice random string for security
 1. In the deploy section, select manual deploy
 
-## Update Documentation
-
-Customize this ReadMe and the code comments in this project to read less like a starter repo and more like a project. Here is an example: https://gist.github.com/PurpleBooth/109311bb0361f32d87a2
