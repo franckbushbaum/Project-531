@@ -1,4 +1,4 @@
-the actual README
+<iframe src="https://giphy.com/embed/Xl2FpESIc1fWBlDhHs" width="480" height="60" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Xl2FpESIc1fWBlDhHs">via GIPHY</a></p>
 Tuesday & Wednesday:
 - [x] Create routing for 1st page. ~4 hours (Was lost concerning the boilerplate values they gave us)
 - [x] Create button for first page, that goes to first and second page (testing) ~2hr
