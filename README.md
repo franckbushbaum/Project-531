@@ -1,9 +1,11 @@
+![Alt Text](https://media3.giphy.com/media/Xl2FpESIc1fWBlDhHs/giphy.gif?cid=790b7611f5cb753355ee7d28ec880206c841962a469d8693&amp;rid=giphy.gif)
+
 <iframe src="https://giphy.com/embed/Xl2FpESIc1fWBlDhHs" width="480" height="60" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/Xl2FpESIc1fWBlDhHs">via GIPHY</a></p>
 Tuesday & Wednesday:
-- [x] Create routing for 1st page. ~4 hours (Was lost concerning the boilerplate values they gave us)
+- [x] Create routing for 1st page. ~4 hours
 - [x] Create button for first page, that goes to first and second page (testing) ~2hr
 - [x] Create a best guess of table, with testing values ~1.5hr
-- [x] Creat basic layout for second page. (Lots to improve upon in CSS, I think flexbox will work well but tonight has revealed how little I know about grid.) ~2 hr
+- [x] Create basic layout for second page. (Lots to improve upon in CSS, I think flexbox will work well but tonight has revealed how little I know about grid.) ~2 hr
 - [x] Added signature to footer. ~10 mins
 - [x] Base functionality of page three complete. ~4 hours.
 - [x] Successfully push input values into useState. (This was a challenge.  New to switch statements and new to Material UI...In using Material UI for the dropdown menu, I ran into an unexpected issue with the syntax where grabbing the value's id was not immediately apparent.  As soon as I find out how to grab that value, the switch statement should also come together.) ~3 hours
