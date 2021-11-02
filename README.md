@@ -2,7 +2,7 @@
 
 ![Alt Text](https://media3.giphy.com/media/Xl2FpESIc1fWBlDhHs/giphy.gif?cid=790b7611f5cb753355ee7d28ec880206c841962a469d8693&amp;rid=giphy.gif)
 
-Tuesday & Wednesday:
+####Tuesday & Wednesday:
 - [x] Create routing for 1st page. ~4 hours
 - [x] Create button for first page, that goes to first and second page (testing) ~2hr
 - [x] Create a best guess of table, with testing values ~1.5hr
@@ -12,18 +12,18 @@ Tuesday & Wednesday:
 - [x] Successfully push input values into useState. (This was a challenge.  New to switch statements and new to Material UI...In using Material UI for the dropdown menu, I ran into an unexpected issue with the syntax where grabbing the value's id was not immediately apparent.  As soon as I find out how to grab that value, the switch statement should also come together.) ~3 hours
 - [x] Create and dispatch object data. (As of writing this, this involves updating the database with new values not included in the scope, but it is still early in the game and no time has been wasted.)
 
-Friday:
+####Friday:
 - [x] Posted the workouts added to the DOM.
 - [x] Destructured the workout list into workout items
 - [x] Append only the new workout.  ~14 hour day... lots of lessons learned!
 
-Saturday:
+####Saturday:
 - [x] Create a table for the new workout
 - [x] Edit functionality in new workout (I'm not sure if I should have 1 saga, or many, I'm going to do a combination of both -- the Edit/Delete will have their own saga, for practice sake.)
 - [x] Properly linking all pages. Clearing inputs, adding an Edit button with addition and subtraction functionality.
 - [x] Discovered and added Sweet Alerts. (All of Saturday and Sunday involved a great deal of practicing ternary operators and conditional rendering, ~7 hours on that alone over the 2 days.)
 
-Monday:
+####Monday:
 - [x] PUT req to server completed and tested.
 - [x] Basic CSS layout for page 2s completed.
 - [x] Data cursor on /user page... this may be much more complicated than it looks.
