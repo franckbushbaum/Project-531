@@ -19,7 +19,11 @@
 <img src="./pics/pagethreemockup.png" style="float: left; margin-right: 5px">
 <img src="./pics/pagefourmockup.png" style="float: left; margin-right: 5px">
 
-### Step 2. Datapath.
+### Step 2. Datapath using [Lucidchart](https://www.lucidchart.com/pages/)
+
+- This was the original concept schematic for how the data would flow behind the scenes.  I had known that there would be some unforseen things to add, and boy was I right. In reality, there are probably twice as many GET, POST, and DELETE routes as originally planned (and more are coming.) This is forgiveable on such a small, linear solo project; I would find it invaluable to do multiple iterations in group projects to keep everyone on the same page and speaking the same language.
+<img src="./pics/Datapath.png" style="float: left; margin-right: 5px">
+
 
 
 ### Tuesday & Wednesday:
