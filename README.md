@@ -2,7 +2,7 @@
 
 ![Alt Text](https://media3.giphy.com/media/Xl2FpESIc1fWBlDhHs/giphy.gif?cid=790b7611f5cb753355ee7d28ec880206c841962a469d8693&amp;rid=giphy.gif)
 
-### A workout app for the popular workout template, [Jim Wendler's 5/3/1](https://www.jimwendler.com/collections/books-programs/products/5-3-1-second-edition-hard-copy).
+### A workout app for the popular workout template, [Jim Wendler's 5/3/1!](https://www.jimwendler.com/collections/books-programs/products/5-3-1-second-edition-hard-copy).
 ---
 ### Prerequisites <br />
 
