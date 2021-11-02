@@ -1,3 +1,5 @@
+# Design inspired by the popular RTS game Starcraft and, to a lesser extent, Cyberpunk 2077.
+
 ![Alt Text](https://media3.giphy.com/media/Xl2FpESIc1fWBlDhHs/giphy.gif?cid=790b7611f5cb753355ee7d28ec880206c841962a469d8693&amp;rid=giphy.gif)
 
 Tuesday & Wednesday:
