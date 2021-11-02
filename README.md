@@ -12,7 +12,14 @@
 
 ---
 
-Step 1. Mockups
+### Step 1. Design.
+
+<img src="./pics/pageonemockup.png" style="float: left; margin-right: 5px"> 
+<img src="./pics/pagetwomockup.png" style="float: left; margin-right: 5px">
+<img src="./pics/pagethreemockup.png" style="float: left; margin-right: 5px">
+<img src="./pics/pagefourmockup.png" style="float: left; margin-right: 5px">
+
+### Step 2. Datapath.
 
 
 ### Tuesday & Wednesday:
