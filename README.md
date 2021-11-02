@@ -1,6 +1,19 @@
-### *Design inspired by the popular RTS game Starcraft and, to a lesser extent, Cyberpunk 2077.*
+ *Design inspired by the popular RTS game Starcraft and, to a lesser extent, Cyberpunk 2077.*
 
 ![Alt Text](https://media3.giphy.com/media/Xl2FpESIc1fWBlDhHs/giphy.gif?cid=790b7611f5cb753355ee7d28ec880206c841962a469d8693&amp;rid=giphy.gif)
+
+### A workout app for the popular workout template, [Jim Wendler's 5/3/1](https://www.jimwendler.com/collections/books-programs/products/5-3-1-second-edition-hard-copy).
+---
+### Prerequisites <br />
+
+-Internet browser (e.g. Chrome, Firefox, Safari)<br />
+-Node.js<br />
+-PostgreSQL<br />
+
+---
+
+Step 1. Mockups
+
 
 ### Tuesday & Wednesday:
 - [x] Create routing for 1st page. ~4 hours
