@@ -30,7 +30,7 @@ Monday:
 
 In the future:
 - [] Dress up your GitHub for visitors.
-- [] Deploye to Heroku.
+- [] Deploy to Heroku.
 
 
 # EDA Project
