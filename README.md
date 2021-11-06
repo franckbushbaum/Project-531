@@ -2,17 +2,73 @@
 
 ![Alt Text](https://media3.giphy.com/media/Xl2FpESIc1fWBlDhHs/giphy.gif?cid=790b7611f5cb753355ee7d28ec880206c841962a469d8693&amp;rid=giphy.gif)
 
-### A workout app for the popular workout template, [Jim Wendler's 5/3/1](https://www.jimwendler.com/collections/books-programs/products/5-3-1-second-edition-hard-copy).
+### A workout app for the popular workout template, [Jim Wendler's 5/3/1](https://www.jimwendler.com/collections/books-programs/products/5-3-1-second-edition-hard-copy) !
 ---
 ### Prerequisites <br />
 
--Internet browser (e.g. Chrome, Firefox, Safari)<br />
--Node.js<br />
--PostgreSQL<br />
+- Internet browser (e.g. Chrome, Firefox, Safari)<br />
+- Node.js<br />
+- PostgreSQL<br />
 
 ---
 
-Step 1. Mockups
+<!-- # Installation -->
+---
+<!-- - Create a database using the provided .sql file (title the DB <b>`magic_beans`</b>)
+- Run the queries in the included `database.sql` file
+- Run `npm install` from the project root directory
+- Run `npm run server` to run the node server
+- In a separate terminal tab, run `npm run client` to launch the React app
+<br />
+<br /> -->
+
+---
+
+### Time <br />
+
+- 2 weeks
+
+---
+
+### Step 1. Design
+
+<img src="./pics/pageonemockup.png" style="float: left; margin-right: 5px"> 
+<img src="./pics/pagetwomockup.png" style="float: left; margin-right: 5px">
+<img src="./pics/pagethreemockup.png" style="float: left; margin-right: 5px">
+<img src="./pics/pagefourmockup.png" style="float: left; margin-right: 5px">
+
+---
+
+### Step 2. Datapath using [Lucidchart](https://www.lucidchart.com/pages/)
+
+- This was the original concept schematic for how the data would flow behind the scenes.  I was confident I had all the data routes figured out, and was impressed by how wrong I actually was. As of writing, there are twice as many GET, POST, and DELETE routes as originally planned (and more are coming.) This is forgiveable on such a small, linear solo project; I would find it invaluable to do multiple iterations in group projects to keep everyone on the same page and speaking the same language.
+<img src="./pics/Datapath.png" style="float: left; margin-right: 5px">
+
+---
+
+### Final
+### Page 1 - Choose a workout! This variation of 5/3/1 has 4 options (4 bodyparts, each trained once a week)
+<img src="./pics/page1.png" style="float: left; margin-right: 5px">
+
+### Page 2 - User sees his/her last workout, the week they are in the cycle, and the date they worked out the bodypart last. (for this example, lets imagine it the one rep max was 150lbs in week 1.)
+
+![Alt Text](https://media0.giphy.com/media/517d0YECnGOW5cp3j5/giphy.gif?cid=790b7611e57929580c441ea3f37b1b388a3e9c91652fa4e0&rid=giphy.gif)
+
+### Page 3 - User inputs the data of the next workout; 150 lbs for week 2. The workout generates and they are able to update a new PR. I discovered it was more user-friendly to also have a delete workout button on this table as well.
+
+![Alt Text](https://media.giphy.com/media/p2ZXVOUL0qg7LSL5pq/giphy.gif)
+
+![Alt Text](https://media.giphy.com/media/Radng7gYfKKWeFw98E/giphy.gif)
+
+### Page 4 - History page. The user can see their past workouts for that bodypart. (Only 1 available workout for me so far, but many more to come!) Users can also delete workouts from this page. 
+
+![Alt Text](https://media.giphy.com/media/HWb7zFeQcK85WZKKN8/giphy.gif)
+
+---
+
+
+
+
 
 
 ### Tuesday & Wednesday:
