@@ -18,10 +18,10 @@ function Four() {
         // console.log('whut is id..', id);
         // console.log('whut is workout_type..', workout_type_id);
         dispatch({ type: 'REMOVE_WORKOUT', payload: id });
-        dispatch({type: 'ARCHIVE_INITIATE', payload: workout_type_id});
+        dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id});
 
         Swal.fire({
-            title: 'TJFP!',
+            title: 'Workout Deleted!',
             icon: 'success',
             confirmButtonText: 'Cool',
             background: 'black',
@@ -50,7 +50,7 @@ function Four() {
                 return (
                     <div className="individual-table-container">
                         <div className="individual-table">
-                            {/* <p>{JSON.stringify(workout.workout_id)}</p> */}
+                            <p>{JSON.stringify(workout.workout_id)}</p>
                             <table key={workout.workout_id} className="page-four-table">
                                 <thead>
                                     <tr>
@@ -86,7 +86,7 @@ function Four() {
                                     </tr>
                                 </tbody>
                             </table>
-                            <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill /></button>
+                            <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
                         </div>
                     </div>)
             })}

@@ -16,7 +16,6 @@ function* getArchive(action){
     try{
         const archiveId = action.payload;
         const archiveList = yield axios.get(`/api/bodypart/archive/${archiveId}`);
-        console.log('WHAT IS ARCHIVELIST?', archiveList.data);
         yield put({type: 'ARCHIVE_DATA', payload: archiveList.data})
         console.log('WHAT IS ARCHIVELIST?', archiveList.data);
     } catch(error){
