@@ -4,6 +4,11 @@
 
 ### A workout app for the popular workout template, [Jim Wendler's 5/3/1](https://www.jimwendler.com/collections/books-programs/products/5-3-1-second-edition-hard-copy) !
 ---
+### Sprint duration <br />
+
+- 2 weeks
+---
+
 ### Prerequisites <br />
 
 - Internet browser (e.g. Chrome, Firefox, Safari)<br />
@@ -19,12 +24,6 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 - Run `npm install` from the project root directory
 - Run `npm run server` to run the node server
 - In a separate terminal tab, run `npm run client` to launch the React app
-
----
-
-### Sprint duration <br />
-
-- 2 weeks
 
 ---
 
