@@ -22,7 +22,7 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 
 ---
 
-### Time <br />
+### Sprint duration <br />
 
 - 2 weeks
 
