@@ -16,6 +16,7 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
 
     const [editMode, setEditMode] = useState(true);
 
+    const [repsTwo, setRepsTwo] = useState(reps_two);
     const [calcReps, setCalcReps] = useState(reps_three);
 
 
@@ -29,19 +30,30 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
         // console.log(reps_three);
         // console.log('so what is action?', x);
         setCalcReps(calcReps + 1);
-    }
+    };
 
     const subtractReps = (x) => {
         // console.log(reps_three);
         // console.log('so what is action?', x);
         setCalcReps(calcReps - 1);
-    }
+    };
+
+    const addRepsAgain = (y) => {
+        console.log('what is reps_two', reps_two)
+        setRepsTwo(repsTwo + 1);
+    };
+
+    const subtractRepsAgain = () => {
+        console.log('what is reps_two', reps_two)
+        setRepsTwo(repsTwo - 1);
+    };
 
     const handleUpdate = () => {
         console.log('what is calcReps', calcReps);
         console.log('what is workout_id', workout_id);
         dispatch({
-            type: 'EDIT_REPS', payload: {
+            type: 'EDIT_REPS', 
+            payload: {
                 'reps_three': calcReps,
                 'workout_id': workout_id
             }
@@ -118,8 +130,9 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
                         <tr>
                             <td>2</td>
                             <td>{weight_two}</td>
-                            <td>{reps_two}</td>
-                            {/* <td>{ editMode ? <p></p> : <p>+</p>}</td> */}
+                            <td>{repsTwo}</td>
+                            <td>{editMode ? <p></p> : <p><button className="edit-buttons" onClick={() => addRepsAgain()}><TiPlusOutline /></button>
+                                <button className="edit-buttons" onClick={() => subtractRepsAgain()}><TiMinusOutline /></button></p>}</td>
                         </tr>
                         <tr>
                             <td>3</td>

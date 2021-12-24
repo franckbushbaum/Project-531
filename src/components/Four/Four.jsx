@@ -20,18 +20,18 @@ function Four() {
         dispatch({ type: 'REMOVE_WORKOUT', payload: id });
         dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id});
 
-        Swal.fire({
-            title: 'Workout Deleted!',
-            icon: 'success',
-            confirmButtonText: 'Cool',
-            background: 'black',
-            backdrop: `
-                rgba(0,0,123,0.4)
-                url("https://c.tenor.com/pK1P6r1kCV4AAAAC/the-dude.gif")
-                left top
-                no-repeat
-                        `
-        });
+        // Swal.fire({
+        //     title: 'Workout Deleted!',
+        //     icon: 'success',
+        //     confirmButtonText: 'Cool',
+        //     background: 'black',
+        //     backdrop: `
+        //         rgba(0,0,123,0.4)
+        //         url("https://c.tenor.com/pK1P6r1kCV4AAAAC/the-dude.gif")
+        //         left top
+        //         no-repeat
+        //                 `
+        // });
     };
 
     // useEffect(() => {

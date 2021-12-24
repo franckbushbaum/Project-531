@@ -100,9 +100,11 @@
 - [x] History page has a delete function
 - [x] Link up the remaining 3 bodyparts to also be able to post a workout.
 
-In the future:
-- [] Dress up your GitHub for visitors.
-- [] Deploy to Heroku.
+In the future/ Quality of life issues:
+- [x] Dress up your GitHub for visitors.
+- [x] Deploy to Heroku.
+- [] Page Four: hitting the delete button dispatches REMOVE_WORKOUT and ARCHIVE_INITIATE; try adding an async wait or setTimeout so they don't fire simultaneously.
+- [] Page Four: fire off ARCHIVE_INITIATE on page load?
 
 
 # EDA Project

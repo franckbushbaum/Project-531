@@ -107,10 +107,6 @@ function Three() {
         }, 1000);
         //Clear input field.
         setInputValue({ ...inputValue, one_rep_max: '', week: '' });
-
-
-
-
     }
 
     const goBack = () => {
