@@ -4,6 +4,11 @@
 
 ### A workout app for the popular workout template, [Jim Wendler's 5/3/1](https://www.jimwendler.com/collections/books-programs/products/5-3-1-second-edition-hard-copy) !
 ---
+### Sprint duration <br />
+
+- 2 weeks
+---
+
 ### Prerequisites <br />
 
 - Internet browser (e.g. Chrome, Firefox, Safari)<br />
@@ -12,21 +17,13 @@
 
 ---
 
-<!-- # Installation -->
+### Installation
 ---
-<!-- - Create a database using the provided .sql file (title the DB <b>`magic_beans`</b>)
+Create a database using the provided .sql file (title the DB <b>`project_531`</b>)
 - Run the queries in the included `database.sql` file
 - Run `npm install` from the project root directory
 - Run `npm run server` to run the node server
 - In a separate terminal tab, run `npm run client` to launch the React app
-<br />
-<br /> -->
-
----
-
-### Time <br />
-
-- 2 weeks
 
 ---
 
@@ -47,20 +44,20 @@
 ---
 
 ### Final
-### Page 1 - Choose a workout! This variation of 5/3/1 has 4 options (4 bodyparts, each trained once a week)
+ - <b>Page 1 - Choose a workout! This variation of 5/3/1 has 4 options (4 bodyparts, each trained once a week)</b>
 <img src="./pics/page1.png" style="float: left; margin-right: 5px">
 
-### Page 2 - User sees his/her last workout, the week they are in the cycle, and the date they worked out the bodypart last. (for this example, lets imagine it the one rep max was 150lbs in week 1.)
+ - <b>Page 2 - User sees his/her last workout, the week they are in the cycle, and the date they worked out the bodypart last. (for this example, lets imagine it the one rep max was 150lbs in week 1.)</b>
 
 ![Alt Text](https://media0.giphy.com/media/517d0YECnGOW5cp3j5/giphy.gif?cid=790b7611e57929580c441ea3f37b1b388a3e9c91652fa4e0&rid=giphy.gif)
 
-### Page 3 - User inputs the data of the next workout; 150 lbs for week 2. The workout generates and they are able to update a new PR. I discovered it was more user-friendly to also have a delete workout button on this table as well.
+ - <b>Page 3 - User inputs the data of the next workout; 150 lbs for week 2. The workout generates and they are able to update a new PR. I discovered it was more user-friendly to also have a delete workout button on this table as well.</b>
 
 ![Alt Text](https://media.giphy.com/media/p2ZXVOUL0qg7LSL5pq/giphy.gif)
 
 ![Alt Text](https://media.giphy.com/media/Radng7gYfKKWeFw98E/giphy.gif)
 
-### Page 4 - History page. The user can see their past workouts for that bodypart. (Only 1 available workout for me so far, but many more to come!) Users can also delete workouts from this page. 
+ - <b>Page 4 - History page. The user can see their past workouts for that bodypart. (Only 1 available workout for me so far, but many more to come!) Users can also delete workouts from this page.</b> 
 
 ![Alt Text](https://media.giphy.com/media/HWb7zFeQcK85WZKKN8/giphy.gif)
 
@@ -100,11 +97,8 @@
 - [x] History page has a delete function
 - [x] Link up the remaining 3 bodyparts to also be able to post a workout.
 
-In the future/ Quality of life issues:
-- [x] Dress up your GitHub for visitors.
-- [x] Deploy to Heroku.
-- [] Page Four: hitting the delete button dispatches REMOVE_WORKOUT and ARCHIVE_INITIATE; try adding an async wait or setTimeout so they don't fire simultaneously.
-- [] Page Four: fire off ARCHIVE_INITIATE on page load?
+In the future:
+- [] Deploy to Heroku.
 
 
 # EDA Project
