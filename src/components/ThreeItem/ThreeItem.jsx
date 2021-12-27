@@ -54,6 +54,7 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
         dispatch({
             type: 'EDIT_REPS', 
             payload: {
+                'reps_two': repsTwo,
                 'reps_three': calcReps,
                 'workout_id': workout_id
             }
