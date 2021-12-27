@@ -65,12 +65,13 @@ router.put('/:id', rejectUnauthenticated, (req, res) => {
     const userId = req.user.id;
     console.log('what is req.body?', req.body)
     const workoutId=req.body.workout_id;
+    const reps_one = req.body.reps_one;
     const reps_two = req.body.reps_two;
     const reps_three = req.body.reps_three;
-     const queryText = `UPDATE "workout" SET "reps_three" = $1, "reps_two" = $2
-                                            WHERE "user_id" = $3 
-                                            AND "workout_id" = $4`;
-    pool.query(queryText, [reps_three, reps_two, userId, workoutId])
+     const queryText = `UPDATE "workout" SET "reps_three" = $1, "reps_two" = $2, "reps_one" = $3
+                                            WHERE "user_id" = $4 
+                                            AND "workout_id" = $5`;
+    pool.query(queryText, [reps_three, reps_two, reps_one, userId, workoutId])
     .then ((result) => {
         res.sendStatus(201);
     })

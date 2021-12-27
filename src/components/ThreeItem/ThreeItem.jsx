@@ -16,6 +16,7 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
 
     const [editMode, setEditMode] = useState(true);
 
+    const [repsOne, setRepsOne] = useState(reps_one);
     const [repsTwo, setRepsTwo] = useState(reps_two);
     const [calcReps, setCalcReps] = useState(reps_three);
 
@@ -26,6 +27,27 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
         setEditMode(!editMode);
     }
 
+//For the first set.
+    const addRepsForFirstSet = () => {
+        setRepsOne(repsOne + 1);
+    }
+
+    const subtractRepsForFirstSet = () => {
+        setRepsOne(repsOne - 1);
+    }
+
+//For the second set.
+    const addRepsAgain = (y) => {
+        console.log('what is reps_two', reps_two)
+        setRepsTwo(repsTwo + 1);
+    };
+
+    const subtractRepsAgain = () => {
+        console.log('what is reps_two', reps_two)
+        setRepsTwo(repsTwo - 1);
+    };
+
+// For the third set.
     const addReps = (x) => {
         // console.log(reps_three);
         // console.log('so what is action?', x);
@@ -38,15 +60,6 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
         setCalcReps(calcReps - 1);
     };
 
-    const addRepsAgain = (y) => {
-        console.log('what is reps_two', reps_two)
-        setRepsTwo(repsTwo + 1);
-    };
-
-    const subtractRepsAgain = () => {
-        console.log('what is reps_two', reps_two)
-        setRepsTwo(repsTwo - 1);
-    };
 
     const handleUpdate = () => {
         console.log('what is calcReps', calcReps);
@@ -54,6 +67,7 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
         dispatch({
             type: 'EDIT_REPS', 
             payload: {
+                'reps_one': repsOne,
                 'reps_two': repsTwo,
                 'reps_three': calcReps,
                 'workout_id': workout_id
@@ -125,8 +139,9 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
                         <tr>
                             <td>1</td>
                             <td>{weight_one}</td>
-                            <td>{reps_one}</td>
-                            {/* <td>{ editMode ? <p></p> : <p>+</p>}</td> */}
+                            <td>{repsOne}</td>
+                            <td>{editMode ? <p></p> : <p><button className="edit-buttons" onClick={() => addRepsForFirstSet()}><TiPlusOutline /></button>
+                                <button className="edit-buttons" onClick={() => subtractRepsForFirstSet()}><TiMinusOutline /></button></p>}</td>
                         </tr>
                         <tr>
                             <td>2</td>
