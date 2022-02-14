@@ -69,6 +69,7 @@ function Three() {
             weight_three: '',
             set_three: 3,
             reps_three: '',
+            volume: '',
         }
 
 
@@ -81,6 +82,7 @@ function Three() {
             objectData.reps_one = 5;
             objectData.reps_two = 5;
             objectData.reps_three = 5;
+            objectData.volume = parseInt(inputValue.one_rep_max * .65) * 5 + parseInt(inputValue.one_rep_max * .75) * 5 + parseInt(inputValue.one_rep_max * .85) * 5
         } else if (inputValue.week === 2) {
             objectData.weight_one = parseInt(inputValue.one_rep_max * .7);
             objectData.weight_two = parseInt(inputValue.one_rep_max * .8);
@@ -88,6 +90,7 @@ function Three() {
             objectData.reps_one = 3;
             objectData.reps_two = 3;
             objectData.reps_three = 3;
+            objectData.volume = parseInt(inputValue.one_rep_max * .7) * 3 + parseInt(inputValue.one_rep_max * .8) * 3 + parseInt(inputValue.one_rep_max * .9) * 3
         } else if (inputValue.week === 3) {
             objectData.weight_one = parseInt(inputValue.one_rep_max * .75);
             objectData.weight_two = parseInt(inputValue.one_rep_max * .85);
@@ -95,6 +98,7 @@ function Three() {
             objectData.reps_one = 5;
             objectData.reps_two = 3;
             objectData.reps_three = 1;
+            objectData.volume = parseInt(inputValue.one_rep_max * .75) * 5 + parseInt(inputValue.one_rep_max * .85) * 3 + parseInt(inputValue.one_rep_max * .95) * 1
         };
 
 
@@ -178,6 +182,7 @@ function Three() {
                         reps_two={workout.reps_two}
                         reps_three={workout.reps_three}
                         workout_type_id={workout.workout_type_id}
+                        volume={workout.volume}
                     />);
                 })}
 

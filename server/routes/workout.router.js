@@ -17,10 +17,11 @@ router.post('/', rejectUnauthenticated, (req, res) => {
     const weight3= req.body.weight_three;
     const set3= req.body.set_three;
     const reps3= req.body.reps_three;
-    let sqlText =`INSERT INTO workout ("user_id", "workout_type_id", "one_rep_max", "week", "weight_one", "set_one", "reps_one", "weight_two", "set_two", "reps_two", "weight_three", "set_three", "reps_three")
-                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13)
+    const volume = req.body.volume;
+    let sqlText =`INSERT INTO workout ("user_id", "workout_type_id", "one_rep_max", "week", "weight_one", "set_one", "reps_one", "weight_two", "set_two", "reps_two", "weight_three", "set_three", "reps_three", "volume")
+                    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14)
                     RETURNING "workout_id";`;
-    pool.query(sqlText, [user, workoutId, oneRepMax, week, weight1, set1, reps1, weight2, set2, reps2, weight3, set3, reps3])
+    pool.query(sqlText, [user, workoutId, oneRepMax, week, weight1, set1, reps1, weight2, set2, reps2, weight3, set3, reps3, volume])
     .then((result) => {       
         res.sendStatus(200) 
     })
@@ -68,10 +69,11 @@ router.put('/:id', rejectUnauthenticated, (req, res) => {
     const reps_one = req.body.reps_one;
     const reps_two = req.body.reps_two;
     const reps_three = req.body.reps_three;
-     const queryText = `UPDATE "workout" SET "reps_three" = $1, "reps_two" = $2, "reps_one" = $3
-                                            WHERE "user_id" = $4 
-                                            AND "workout_id" = $5`;
-    pool.query(queryText, [reps_three, reps_two, reps_one, userId, workoutId])
+    const volume = req.body.volume;
+     const queryText = `UPDATE "workout" SET "reps_three" = $1, "reps_two" = $2, "reps_one" = $3, "volume" = $4
+                                            WHERE "user_id" = $5 
+                                            AND "workout_id" = $6`;
+    pool.query(queryText, [reps_three, reps_two, reps_one, volume, userId, workoutId])
     .then ((result) => {
         res.sendStatus(201);
     })

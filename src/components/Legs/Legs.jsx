@@ -49,39 +49,28 @@ function Legs() {
                 </div>
                 <div className="last-workout">
                 <p>Last Workout: {moment(recentWorkout.created_at).startOf('day').fromNow()}</p>
-                    <table key={recentWorkout.workout_id}>
-                        <thead>
-                            <tr>
-                                <th colSpan="3"><p>{moment(recentWorkout.created_at).format('MMM Do YY')}</p></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Set</td>
-                                <td>Weight</td>
-                                <td>Reps</td>
-                            </tr>
-                            <tr>
-                                <td>1</td>
-                                <td>{recentWorkout.weight_one}</td>
-                                <td>{recentWorkout.reps_one}</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>{recentWorkout.weight_two}</td>
-                                <td>{recentWorkout.reps_two}</td>
-                            </tr>
-                            <tr>
-                                <td>3</td>
-                                <td>{recentWorkout.weight_three}</td>
-                                <td>{recentWorkout.reps_three}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div className="current">
-                    ONE REP MAX: {recentWorkout.one_rep_max}<br/>
-                    WEEK: {recentWorkout.week}
+                    <span className="sprint-container">
+                        <div className="solo-one">
+                            MPH<br/>
+                            <input></input>
+                        </div>
+                        <div className="solo-two">
+                            INCLINE<br />
+                            <input></input>
+                        </div>
+                        <div className="solo-three">
+                            ON<br />
+                            <input></input>
+                        </div>
+                        <div className="solo-four">
+                            OFF<br />
+                            <input></input>
+                        </div>
+                        <div className="solo-five">
+                            REPS<br />
+                            <input></input>
+                        </div>
+                    </span> 
                 </div>
                 <div className="nav-buttons">
                     <button onClick={handleClick} className="back-button"><CgArrowLeftR text="continue" size={40} />&nbsp;Back</button>

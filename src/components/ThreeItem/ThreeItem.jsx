@@ -10,7 +10,7 @@ import './ThreeItem.css';
 import { TiPlusOutline, TiMinusOutline, TiChevronRightOutline } from "react-icons/ti";
 import moment from 'moment';
 
-function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one, reps_two, reps_three, created_at, workout_type_id }) {
+function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one, reps_two, reps_three, created_at, workout_type_id, volume }) {
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -60,6 +60,10 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
         setCalcReps(calcReps - 1);
     };
 
+    let newVolume = repsOne * weight_one + repsTwo * weight_two + calcReps * weight_three
+
+    console.log('what is new volume?', newVolume)
+
 
     const handleUpdate = () => {
         console.log('what is calcReps', calcReps);
@@ -70,6 +74,7 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
                 'reps_one': repsOne,
                 'reps_two': repsTwo,
                 'reps_three': calcReps,
+                'volume': newVolume,
                 'workout_id': workout_id
             }
         });
