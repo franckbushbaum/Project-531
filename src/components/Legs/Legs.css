@@ -194,5 +194,10 @@ table, th, td {
 .sprint-container{
     width: auto;
     display: flex;
-    outline: 2px solid red;
+    /* outline: 2px solid red; */
+}
+
+.sprint-container > *{
+    text-align: center;
+    outline: 1px solid green;
 }
