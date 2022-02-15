@@ -42,6 +42,21 @@ function Legs() {
         }
     };
 
+    const sendValues = () => {
+        dispatch({ type: 'SEND_SPRINT', payload: {
+            mph: mph,
+            incline: incline,
+            on: on,
+            off: off,
+            reps: reps
+        }})
+        setMph(null);
+        setIncline(null);
+        setOn(null);
+        setOff(null)
+        setReps(null)
+    }
+
     const toArchive = () => {
         history.push('/four');
         dispatch({ type: 'ARCHIVE_INITIATE', payload: 2 })
@@ -51,8 +66,6 @@ function Legs() {
         dispatch({ type: 'FETCH_BODYPART_WORKOUT', payload: 2 });
     }, []);
 
-    console.log('mph is', mph);
-    console.log('incline is', incline)
 
     return (
         <>
@@ -67,7 +80,7 @@ function Legs() {
                         <h1>Legs</h1>
                     </div>
                 </div>
-                <div className="last-workout">
+                <div className="last-workout-legs">
                     <p>Last Workout: {moment(recentWorkout.created_at).startOf('day').fromNow()}</p>
                     <span className="sprint-container">
                         <div className="solo-one">
@@ -199,6 +212,9 @@ function Legs() {
                             {on === null ? <div>this</div> : <div> {on} seconds duration</div>}
                             {off === null ? <div>this</div> : <div> {off} seconds break</div>}
                             {reps === null ? <div>this</div> : <div> {reps} times</div>}
+                        </div>
+                        <div className="confirm-button">
+                            {reps === null ? <div></div> : <button onClick={()=> sendValues()}>Confirm</button>}
                         </div>
                     </div>
                 </div>
