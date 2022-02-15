@@ -20,11 +20,13 @@ function Legs() {
 
     //Data for state.
 
-    const [mph, setMph] = useState('');
-    const [incline, setIncline] = useState('');
-    const [on, setOn] = useState('');
-    const [off, setOff] = useState('');
-    const [reps, setReps] = useState('');
+    const [mph, setMph] = useState(null);
+    const [incline, setIncline] = useState(null);
+    const [on, setOn] = useState(null);
+    const [off, setOff] = useState(null);
+    const [reps, setReps] = useState(null);
+
+    console.log(`mph:`, mph, `incline:`, incline, `on:`, on, `off:`,off,`reps:`, reps)
 
     const recentWorkout = useSelector(store => store.recentWorkout);
 
@@ -70,121 +72,135 @@ function Legs() {
                     <span className="sprint-container">
                         <div className="solo-one">
                             MPH<br />
-                            <Box sx={{ minWidth: 120, backgroundColor: "white", borderRadius: 3, padding: .3 }}>
+                            <Box sx={{ fontFamily: 'JetBrains Mono', color: 'rgba(211, 78, 78, 0.781)', minWidth: 120, backgroundColor: "transparent", borderRadius: 3, padding: .3 }}>
                                 <FormControl fullWidth>
-                                    <InputLabel id="select">mph</InputLabel>
+                                    <InputLabel style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} id="select">mph</InputLabel>
                                     <Select
+                                        style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}}
                                         labelId="select"
                                         id="levels"
                                         value={mph}
                                         label="levels"
                                         onChange={(event) => setMph(event.target.value)}
                                     >
-                                        <MenuItem value={7}>7 mph</MenuItem>
-                                        <MenuItem value={8}>8 mph</MenuItem>
-                                        <MenuItem value={9}>9 mph</MenuItem>
-                                        <MenuItem value={10}>10 mph</MenuItem>
-                                        <MenuItem value={11}>11 mph</MenuItem>
-                                        <MenuItem value={12}>12 mph</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={7}>7 mph</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={8}>8 mph</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={9}>9 mph</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={10}>10 mph</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={11}>11 mph</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={12}>12 mph</MenuItem>
                                     </Select>
                                 </FormControl>
                             </Box>
                         </div>
                         <div className="solo-two">
                             INCLINE<br />
-                            <Box sx={{ minWidth: 120, backgroundColor: "white", borderRadius: 3, padding: .3 }}>
+                            <Box sx={{ minWidth: 120, backgroundColor: "transparent", borderRadius: 3, padding: .3 }}>
                                 <FormControl fullWidth>
-                                    <InputLabel id="select">Incline</InputLabel>
+                                    <InputLabel style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} id="select">Incline</InputLabel>
                                     <Select
+                                        style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}}
                                         labelId="select"
                                         id="levels"
                                         value={incline}
                                         label="levels"
                                         onChange={(event) => setIncline(event.target.value)}
                                     >
-                                        <MenuItem value={8}>8%</MenuItem>
-                                        <MenuItem value={9}>9%</MenuItem>
-                                        <MenuItem value={10}>10%</MenuItem>
-                                        <MenuItem value={11}>11%</MenuItem>
-                                        <MenuItem value={12}>12%</MenuItem>
-                                        <MenuItem value={13}>13%</MenuItem>
-                                        <MenuItem value={14}>14%</MenuItem>
-                                        <MenuItem value={15}>15%</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={8}>8%</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={9}>9%</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={10}>10%</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={11}>11%</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={12}>12%</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={13}>13%</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={14}>14%</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={15}>15%</MenuItem>
                                     </Select>
                                 </FormControl>
                             </Box>
                         </div>
                         <div className="solo-three">
                             ON<br />
-                            <Box sx={{ minWidth: 120, backgroundColor: "white", borderRadius: 3, padding: .3 }}>
+                            <Box sx={{ minWidth: 120, backgroundColor: "transparent", borderRadius: 3, padding: .3 }}>
                                 <FormControl fullWidth>
-                                    <InputLabel id="select">seconds</InputLabel>
+                                    <InputLabel style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} id="select">seconds</InputLabel>
                                     <Select
+                                        style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}}
                                         labelId="select"
                                         id="levels"
                                         value={on}
                                         label="levels"
                                         onChange={(event) => setOn(event.target.value)}
                                     >
-                                        <MenuItem value={10}>10</MenuItem>
-                                        <MenuItem value={20}>20</MenuItem>
-                                        <MenuItem value={30}>30</MenuItem>
-                                        <MenuItem value={45}>45</MenuItem>
-                                        <MenuItem value={1}>1 min</MenuItem>
-                                        <MenuItem value={90}>1.5 min</MenuItem>
-                                        <MenuItem value={120}>2 min</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={10}>10</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={20}>20</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={30}>30</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={45}>45</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={60}>1 min</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={90}>1.5 min</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={120}>2 min</MenuItem>
                                     </Select>
                                 </FormControl>
                             </Box>
                         </div>
                         <div className="solo-four">
                             OFF<br />
-                            <Box sx={{ minWidth: 120, backgroundColor: "white", borderRadius: 3, padding: .3 }}>
+                            <Box sx={{ minWidth: 120, backgroundColor: "transparent", borderRadius: 3, padding: .3 }}>
                                 <FormControl fullWidth>
-                                    <InputLabel id="select">seconds</InputLabel>
+                                    <InputLabel style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} id="select">seconds</InputLabel>
                                     <Select
+                                        style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}}
                                         labelId="select"
                                         id="levels"
                                         value={off}
                                         label="levels"
                                         onChange={(event) => setOff(event.target.value)}
                                     >
-                                        <MenuItem value={10}>10</MenuItem>
-                                        <MenuItem value={20}>20</MenuItem>
-                                        <MenuItem value={30}>30</MenuItem>
-                                        <MenuItem value={45}>45</MenuItem>
-                                        <MenuItem value={1}>1 min</MenuItem>
-                                        <MenuItem value={90}>1.5 min</MenuItem>
-                                        <MenuItem value={120}>2 min</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={10}>10</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={20}>20</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={30}>30</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={45}>45</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={60}>1 min</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={90}>1.5 min</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={120}>2 min</MenuItem>
                                     </Select>
                                 </FormControl>
                             </Box>
                         </div>
                         <div className="solo-five">
                             REPS<br />
-                            <Box sx={{ minWidth: 120, backgroundColor: "white", borderRadius: 3, padding: .3 }}>
+                            <Box sx={{ minWidth: 120, backgroundColor: "transparent", borderRadius: 3, padding: .3 }}>
                                 <FormControl fullWidth>
-                                    <InputLabel id="select">reps</InputLabel>
+                                    <InputLabel style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} id="select">reps</InputLabel>
                                     <Select
+                                        style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}}
                                         labelId="select"
                                         id="levels"
                                         value={reps}
                                         label="levels"
                                         onChange={(event) => setReps(event.target.value)}
                                     >
-                                        <MenuItem value={3}>3</MenuItem>
-                                        <MenuItem value={4}>4</MenuItem>
-                                        <MenuItem value={5}>5</MenuItem>
-                                        <MenuItem value={6}>6</MenuItem>
-                                        <MenuItem value={7}>7</MenuItem>
-                                        <MenuItem value={8}>8</MenuItem>
-                                        <MenuItem value={9}>9</MenuItem>
-                                        <MenuItem value={10}>10</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={3}>3</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={4}>4</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={5}>5</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={6}>6</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={7}>7</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={8}>8</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={9}>9</MenuItem>
+                                        <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={10}>10</MenuItem>
                                     </Select>
                                 </FormControl>
                             </Box>
                         </div>
                     </span>
+                    <div className="sending-data-window">
+                        <div className="window-response">
+                            {mph === null ? <div>this</div> : <div> {mph} mph</div>}
+                            {incline === null ? <div>this</div> : <div> {incline} %</div>}
+                            {on === null ? <div>this</div> : <div> {on} seconds duration</div>}
+                            {off === null ? <div>this</div> : <div> {off} seconds break</div>}
+                            {reps === null ? <div>this</div> : <div> {reps} times</div>}
+                        </div>
+                    </div>
                 </div>
                 <div className="nav-buttons">
                     <button onClick={handleClick} className="back-button"><CgArrowLeftR text="continue" size={40} />&nbsp;Back</button>

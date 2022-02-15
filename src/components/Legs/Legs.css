@@ -104,8 +104,14 @@ table, th, td {
 
 .last-workout:hover {
     cursor: pointer;
-    transform: scale(1.05);
-    transition: all 1s ease;
+}
+
+.sending-data-window {
+    margin: 10px;
+    outline: 2px solid  #0cfff4;
+    border-radius: 4px;
+    height: 11em;
+    width: 23em;
 }
 
 
@@ -122,8 +128,6 @@ table, th, td {
 
 .current:hover {
     cursor: pointer;
-    transform: scale(1.05);
-    transition: all 1s ease;
 }
 
 .nav-buttons{
@@ -193,11 +197,20 @@ table, th, td {
 
 .sprint-container{
     width: auto;
+    font-size: 2em;
+    margin-top: 20px;
     display: flex;
     /* outline: 2px solid red; */
 }
 
 .sprint-container > *{
     text-align: center;
-    outline: 1px solid green;
+    margin: 10px;
+    outline: 1px solid rgba(211,78,78,0.91);
+}
+
+.window-response{
+    margin: .7em;
+    padding: .45em;
+    outline: 1px solid rgba(78, 211, 89, 0.91);
 }
