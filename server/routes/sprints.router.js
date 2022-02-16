@@ -28,6 +28,7 @@ router.post('/', (req,res) => {
 
 router.get('/get', rejectUnauthenticated, (req ,res) => {
     const queryText = `SELECT * FROM sprints
+                       ORDER BY id ASC
                         `;
     pool.query(queryText)
     .then(result => {

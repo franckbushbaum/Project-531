@@ -100,7 +100,6 @@ table, th, td {
     background-size: 100%;
     opacity:1;
     /* background-color: rgb(42, 165, 165); */ 
-
 }
 
 .last-workout:hover {
@@ -187,9 +186,7 @@ table, th, td {
 .back-button:hover,
 .back-button:hover::after{
     color: #00d3f8;
-
     transition: color 0.23s linear;
-
     /* background, blends nicely if this is a button and the button is customized.., otherwise leave it out. */
     /* background: rgb(0,0,0,0.25)*/ 
 }
@@ -205,16 +202,43 @@ table, th, td {
 
 .sprint-container > *{
     text-align: center;
-    background-color: gray;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--red-scanline) 1px,
+      var(--red-scanline) 3px,
+      var(--red-scanline) 5px,
+      var(--red-scanline) 4px,
+      transparent 0.5%
+    ),
+    repeating-linear-gradient(
+      to left,
+      var(--black-scanline) 100%,
+      var(--black-scanline) 100%
+    );
     opacity: 1;
     margin: 23px;
     padding: 15px;
-    border-radius: 4pxp;
-    outline: 1px solid rgba(211,78,78,0.91);
+    border-radius: 6px;
+    outline: 1px solid rgba(83, 22, 22, 0.91);
 }
 
 .window-response{
     position: relative;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--red-scanline) 1px,
+      var(--red-scanline) 3px,
+      var(--red-scanline) 5px,
+      var(--red-scanline) 4px,
+      transparent 0.5%
+    ),
+    repeating-linear-gradient(
+      to left,
+      var(--black-scanline) 100%,
+      var(--black-scanline) 100%
+    );
     width: 80%;
     height: 80%;
     margin: 35px 35px 35px 35px;

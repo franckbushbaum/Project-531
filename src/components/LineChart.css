@@ -1,0 +1,30 @@
+.sprints-container{
+    align-items: center;
+    width: auto;
+    height: auto;
+    margin-left: 25vw;
+    margin-right: 25vw;
+    outline: 1px solid rgba(78, 206, 211, 0.91);
+    border-radius: 15px;
+    padding: 50px;
+    display: flex;
+    flex-direction:column;
+    /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent 0%,
+        var(--red-scanline) 1px,
+        var(--red-scanline) 3px,
+        var(--red-scanline) 5px,
+        var(--red-scanline) 4px,
+        transparent 0.5%
+      ),
+      repeating-linear-gradient(
+        to left,
+        var(--black-scanline) 100%,
+        var(--black-scanline) 100%
+      );;
+    background-size: 100%;
+    opacity:1;
+    /* background-color: rgb(42, 165, 165); */ 
+}

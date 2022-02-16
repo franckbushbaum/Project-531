@@ -1,16 +1,19 @@
 import React from 'react';
 import { useState } from 'react';
-import { Bar } from 'react-chartjs-2';
-import {Chart as ChartJS} from 'chart.js/auto';
+import { Line } from 'react-chartjs-2';
+import './LineChart.css';
+import { Chart as ChartJS } from 'chart.js/auto';
 
-function LineChart({sprintsData}){
+function LineChart({ sprintsData }) {
 
-    return(
+    return (
         <>
-        <div><h1>In Line Chart</h1></div>
-        <div className="linechart" style={{width: '700px'}}>
-            <Bar data={sprintsData} />
-        </div>
+            <div><h1>In Line Chart</h1></div>
+            <div className="sprints-container">
+                <div className="linechart" style={{ width: '900px' }}>
+                    <Line data={sprintsData} />
+                </div>
+            </div>
         </>
     );
 }

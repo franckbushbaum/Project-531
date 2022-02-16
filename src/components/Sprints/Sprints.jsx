@@ -31,7 +31,21 @@ function Sprints(){
         labels: allSprints.map((sprint) => sprint.id),
         datasets: [{
             label: "Miles per Hour",
-            data: allSprints.map((sprint) => sprint.mph)
+            data: allSprints.map((sprint) => sprint.mph),
+            pointBackgroundColor: ["#4D4DFF"],
+            borderColor:  ["#4D4DFF"],
+            color: ["#4D4DFF"],
+        }]
+    });
+
+    const [sprintsIncline, setSprintsIncline] = useState({
+        labels: allSprints.map((sprint) => sprint.id),
+        datasets: [{
+            label: "Incline",
+            data: allSprints.map((sprint) => sprint.incline),
+            pointBackgroundColor: ["#FF6700"],
+            borderColor:  ["#FF6700"],
+            color: ["#FF6700"],
         }]
     });
 
@@ -41,15 +55,10 @@ function Sprints(){
 
     return(
         <>
-        <><div>In sprints</div>
-        <div>{JSON.stringify(allSprints)}</div></>
-        <div>{allSprints.map(sprint => {
-            return(
-            <div><h5>{sprint.mph}</h5></div>)
-        })}</div>
+        <h1>In Sprints</h1>
         <LineChart sprintsData={sprintsData} />
+        <LineChart sprintsData={sprintsIncline} />
         </>
-
     )
 } 
 
