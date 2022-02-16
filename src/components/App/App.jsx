@@ -26,6 +26,7 @@ import Shoulders from '../Shoulders/Shoulders.jsx';
 import Back from '../Back/Back.jsx';
 import Three from '../Three/Three.jsx';
 import Four from '../Four/Four.jsx';
+import Sprints from '../Sprints/Sprints.jsx'
 
 import './App.css';
 
@@ -160,6 +161,13 @@ function App() {
             path="/four"
           >
             <Four />
+          </Route>
+
+          <Route
+            exact
+            path="/sprints"
+          >
+            <Sprints />
           </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}

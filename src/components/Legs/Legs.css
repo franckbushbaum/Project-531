@@ -209,7 +209,7 @@ table, th, td {
     opacity: 1;
     margin: 23px;
     padding: 15px;
-    border-radius: 4px;
+    border-radius: 4pxp;
     outline: 1px solid rgba(211,78,78,0.91);
 }
 

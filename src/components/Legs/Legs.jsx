@@ -29,6 +29,7 @@ function Legs() {
     console.log(`mph:`, mph, `incline:`, incline, `on:`, on, `off:`,off,`reps:`, reps)
 
     const recentWorkout = useSelector(store => store.recentWorkout);
+    const allSprints = useSelector(store => store.fetchSprints)
 
     const handleClick = (event) => {
         console.log('in handleClick', event.target.className)
@@ -55,6 +56,7 @@ function Legs() {
         setOn(null);
         setOff(null)
         setReps(null)
+        
     }
 
     const toArchive = () => {
@@ -66,10 +68,11 @@ function Legs() {
         dispatch({ type: 'FETCH_BODYPART_WORKOUT', payload: 2 });
     }, []);
 
-
+    console.log('look its here:', JSON.stringify(allSprints))
     return (
         <>
             <div className="container">
+                
                 <div className="archive-button">
                     <p className="corner"></p>
                     <button onClick={toArchive} className="archive-child" >Archive    <IoFingerPrintOutline /></button>

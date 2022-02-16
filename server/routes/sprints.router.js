@@ -8,7 +8,6 @@ router.get('/', (req,res) => {
 });
 
 router.post('/', (req,res) => {
-    console.log('In request, REQUEST IS', req)
     const mph = req.body.mph
     const incline = req.body.incline
     const on = req.body.on
@@ -24,6 +23,20 @@ router.post('/', (req,res) => {
     .catch((error) => {
         console.log('SERVER SIDE DOWN', error)
         res.sendStatus(500);
+    })
+});
+
+router.get('/get', rejectUnauthenticated, (req ,res) => {
+    const queryText = `SELECT * FROM sprints
+                        `;
+    pool.query(queryText)
+    .then(result => {
+        console.log('Results from GET', result)
+        res.send(result.rows);
+    })
+    .catch((error) => {
+        console.log('ERROR COMPLETING REQUEST', error);
+        res.sendStatus
     })
 });
 
