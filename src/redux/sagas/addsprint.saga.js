@@ -17,8 +17,21 @@ function* addSprint(action){
 function* getSprints(){
   try{
     const sprints = yield axios.get('/api/sprints/get');
-    console.log('ALL SPRINTS FOR MODAL', sprints.data)
+    // console.log('ALL SPRINTS FOR MODAL', sprints.data)
     yield put({ type: 'SPRINTS_4_MODAL', payload: sprints.data})
+  } catch (err){
+    console.log(err)
+  }
+}
+
+function* getSingleGraph(action){
+  try{
+    console.log('action.payload', action.payload)
+    const graph = action.payload
+    const single = yield axios.get(`/api/sprints/get/${graph}`);
+    console.log('single graphs data', single.data);
+    yield put({ type: 'SINGLE', payload: single.data})
+
   } catch (err){
     console.log(err)
   }
@@ -27,6 +40,7 @@ function* getSprints(){
 function* addSprintSaga(){
     yield takeLatest('SEND_SPRINT', addSprint)
     yield takeLatest('SEND_SPRINTS', getSprints)
+    yield takeLatest('GET_SINGLE_GRAPH', getSingleGraph)
 
 }
 

@@ -5,6 +5,8 @@ const fetchSprints = (state = [], action) => {
             return action.payload;
         case 'SPRINTS_4_MODAL':
             return action.payload;
+        case 'SINGLE':
+            return action.payload;
         default:
             return state;
     }

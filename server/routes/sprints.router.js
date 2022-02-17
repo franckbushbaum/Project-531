@@ -41,6 +41,81 @@ router.get('/get', rejectUnauthenticated, (req ,res) => {
     })
 });
 
+router.get('/get/incline', rejectUnauthenticated, (req, res) => {
+    const queryText = `SELECT incline, id from "sprints"
+                        ORDER by id ASC;
+                        `;
+    pool.query(queryText)
+    .then(result => {
+        console.log('Results from GET/INCLINE', result)
+        res.send(result.rows);
+    })
+    .catch((error) => {
+        console.log('ERROR COMPLETING SINGLES REQUEST', error);
+        res.sendStatus;
+    })
+})
+
+router.get('/get/mph', rejectUnauthenticated, (req, res) => {
+    const queryText = `SELECT mph, id from "sprints"
+                        ORDER by id ASC;
+                        `;
+    pool.query(queryText)
+    .then(result => {
+        console.log('Results from GET/MPH', result)
+        res.send(result.rows);
+    })
+    .catch((error) => {
+        console.log('ERROR COMPLETING SINGLES REQUEST', error);
+        res.sendStatus;
+    })
+});
+
+router.get('/get/on', rejectUnauthenticated, (req, res) => {
+    const queryText = `SELECT on, id from "sprints"
+                        ORDER by id ASC;
+                        `;
+    pool.query(queryText)
+    .then(result => {
+        console.log('Results from GET/ON', result)
+        res.send(result.rows);
+    })
+    .catch((error) => {
+        console.log('ERROR COMPLETING SINGLES REQUEST', error);
+        res.sendStatus;
+    })
+});
+
+router.get('/get/off', rejectUnauthenticated, (req, res) => {
+    const queryText = `SELECT off, id from "sprints"
+                        ORDER by id ASC;
+                        `;
+    pool.query(queryText)
+    .then(result => {
+        console.log('Results from GET/OFF', result)
+        res.send(result.rows);
+    })
+    .catch((error) => {
+        console.log('ERROR COMPLETING SINGLES REQUEST', error);
+        res.sendStatus;
+    })
+});
+
+router.get('/get/reps', rejectUnauthenticated, (req, res) => {
+    const queryText = `SELECT reps, id from "sprints"
+                        ORDER by id ASC;
+                        `;
+    pool.query(queryText)
+    .then(result => {
+        console.log('Results from GET/OFF', result)
+        res.send(result.rows);
+    })
+    .catch((error) => {
+        console.log('ERROR COMPLETING SINGLES REQUEST', error);
+        res.sendStatus;
+    })
+});
+
 
 
 module.exports = router;

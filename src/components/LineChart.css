@@ -1,9 +1,11 @@
+
+
 .sprints-container{
     align-items: center;
     width: auto;
     height: auto;
-    margin-left: 25vw;
-    margin-right: 25vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     outline: 1px solid rgba(78, 206, 211, 0.91);
     border-radius: 15px;
     padding: 50px;

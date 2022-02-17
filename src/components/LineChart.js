@@ -8,7 +8,6 @@ function LineChart({ sprintsData }) {
 
     return (
         <>
-            <div><h1>In Line Chart</h1></div>
             <div className="sprints-container">
                 <div className="linechart" style={{ width: '900px' }}>
                     <Line data={sprintsData} />
