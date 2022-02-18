@@ -17,9 +17,11 @@ function InclineChart() {
         datasets: [{
             label: "Incline",
             data: inclineSprints.map((sprint) => sprint.incline),
-            pointBackgroundColor: ["#4D4DFF"],
+            pointBackgroundColor: ["#FFF"],
             borderColor: ["#4D4DFF"],
             color: ["#4D4DFF"],
+            tension: 0.4,
+            hitRadius: 50,
         }]
     };
 
@@ -30,7 +32,7 @@ function InclineChart() {
         <>
         {/* {JSON.stringify(inclineData)} */}
             <div className="sprints-container">
-                <div className="mph-chart" style={{ width: '900px' }}>
+                <div className="mph-chart">
                      <Line data={inclineData} /> 
                 </div>
             </div>

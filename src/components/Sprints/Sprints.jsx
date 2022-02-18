@@ -7,11 +7,13 @@ import {
     FormControl,
     InputLabel,
     Select,
-    MenuItem
+    MenuItem,
+    stepButtonClasses,
+    getListItemSecondaryActionClassesUtilityClass
 } from '@mui/material';
 import moment from 'moment';
 import { IoFingerPrintOutline, IoArrowForwardSharp } from "react-icons/io5";
-import { CgArrowRightR, CgArrowLeftR } from "react-icons/cg";
+import { CgArrowRightR, CgArrowLeftR, CgDesignmodo } from "react-icons/cg";
 import MphChart from '../MphChart';
 import InclineChart from '../InclineChart';
 import OnChart from '../OnChart';
@@ -40,6 +42,11 @@ function Sprints() {
     });
 
     const [view, setView] = useState(1)
+    const [mphColor, setMphColor] = useState('screen-button-selected')
+    const [inclineColor, setInclineColor] = useState('screen-button')
+    const [onColor, setOnColor] = useState('screen-button')
+    const [offColor, setOffColor] = useState('screen-button')
+    const [repsColor, setRepsColor] = useState('screen-button')
 
 
     const toChart = (destination) => {
@@ -47,23 +54,48 @@ function Sprints() {
         switch (destination){
             case 'mph':
                 setView(1);
+                setMphColor('screen-button-selected')
+                setInclineColor('screen-button')
+                setOnColor('screen-button')
+                setOffColor('screen-button')
+                setRepsColor('screen-button')
                 break;
             case 'incline':
-                console.log('in incline')
+                setInclineColor('screen-button-selected')
+                setMphColor('screen-button')
+                setOnColor('screen-button')
+                setOffColor('screen-button')
+                setRepsColor('screen-button')
                 // history.push('/incline')
                 setView(2);
                 break;
             case 'on':
                 setView(3);
+                setOnColor('screen-button-selected')
+                setMphColor('screen-button')
+                setInclineColor('screen-button')
+                setOffColor('screen-button')
+                setRepsColor('screen-button')
                 break;
             case 'off':
                 setView(4);
+                setOffColor('screen-button-selected')
+                setMphColor('screen-button')
+                setInclineColor('screen-button')
+                setOnColor('screen-button')
+                setRepsColor('screen-button')
                 break;
             case 'reps':
                 setView(5);
+                setRepsColor('screen-button-selected')
+                setMphColor('screen-button')
+                setInclineColor('screen-button')
+                setOnColor('screen-button')
+                setOffColor('screen-button')
                 break;
         }
     }
+
 
     const showIncline = () => {
         dispatch({type: 'GET_SINGLE_GRAPH', payload: 'incline'})
@@ -78,11 +110,11 @@ function Sprints() {
             <h1>In Sprints</h1>
             <div className="phone-cover">
                 <div className="buttons">
-                    <button className="screen-button" onClick={() => toChart('mph')}>MPH</button>
-                    <button className="screen-button" onClick={() => toChart('incline')}>INCLINE</button>
-                    <button className="screen-button" onClick={() => toChart('on')}>ON</button>
-                    <button className="screen-button" onClick={() => toChart('off')}>OFF</button>
-                    <button className="screen-button" onClick={() => toChart('reps')}>REPS</button>
+                    <button className={mphColor} onClick={() => toChart('mph')}>MPH</button>
+                    <button className={inclineColor} onClick={() => toChart('incline')}>INCLINE</button>
+                    <button className={onColor} onClick={() => toChart('on')}>ON</button>
+                    <button className={offColor} onClick={() => toChart('off')}>OFF</button>
+                    <button className={repsColor} onClick={() => toChart('reps')}>REPS</button>
                 </div>
                 {view === 1 && <MphChart />}
                 {view === 2 && <InclineChart />}

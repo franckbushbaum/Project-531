@@ -20,6 +20,7 @@ function OnChart() {
             pointBackgroundColor: ["#1FFF0F"],
             borderColor: ["#1FFF0F"],
             color: ["#1FFF0F"],
+            hitRadius: 50,
         }]
     };
 
@@ -29,7 +30,7 @@ function OnChart() {
     return (
         <>
             <div className="sprints-container">
-                <div className="mph-chart" style={{ width: '900px' }}>
+                <div className="mph-chart" >
                      <Line data={onData} /> 
                 </div>
             </div>

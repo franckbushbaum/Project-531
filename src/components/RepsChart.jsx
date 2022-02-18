@@ -20,6 +20,7 @@ function RepsChart() {
             pointBackgroundColor: ["#FBFFFF"],
             borderColor: ["#FBFFFF"],
             color: ["#FBFFFF"],
+            hitRadius: 50,
         }]
     };
 
@@ -31,7 +32,7 @@ function RepsChart() {
     return (
         <>
             <div className="sprints-container">
-                <div className="mph-chart" style={{ width: '900px' }}>
+                <div className="mph-chart" >
                      <Line data={repsData} /> 
                 </div>
             </div>

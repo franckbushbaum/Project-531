@@ -20,6 +20,7 @@ function OffChart() {
             pointBackgroundColor: ["#F72119"],
             borderColor: ["#F72119"],
             color: ["#F72119"],
+            hitRadius: 50,
         }]
     };
 
@@ -29,7 +30,7 @@ function OffChart() {
     return (
         <>
             <div className="sprints-container">
-                <div className="off-chart" style={{ width: '900px' }}>
+                <div className="mph-chart">
                      <Line data={offData} /> 
                 </div>
             </div>
