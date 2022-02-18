@@ -12,107 +12,65 @@ import {
 import moment from 'moment';
 import { IoFingerPrintOutline, IoArrowForwardSharp } from "react-icons/io5";
 import { CgArrowRightR, CgArrowLeftR } from "react-icons/cg";
-import LineChart from '../LineChart';
+import MphChart from '../MphChart';
+import InclineChart from '../InclineChart';
+import OnChart from '../OnChart';
+import OffChart from '../OffChart';
+import RepsChart from  '../RepsChart';
+import { BiStreetView } from 'react-icons/bi';
 
 function Sprints() {
 
     const dispatch = useDispatch();
+    const history = useHistory();
 
-    const allSprints = useSelector(store => store.fetchSprints)
+    const mphSprints = useSelector(store => store.fetchSprints)
 
-    const [props, setProps] = useState(1)
+    console.log('what is all sprints in sprints?', mphSprints)
 
-    //3 Going to remove sprintsArray 
-
-    // const sprintsArray = allSprints.map((indiv) => {
-    //     return { id:indiv.id, mph:indiv.mph}
-    // })
-
-    // console.log('sprintsArray:', sprintsArray)
-
-    const [sprintsData, setSprintsData] = useState({
-        labels: allSprints.map((sprint) => sprint.id),
+    const [mphData, setMphData] = useState({
+        labels: mphSprints.map((sprint) => sprint.id),
         datasets: [{
             label: "Miles per Hour",
-            data: allSprints.map((sprint) => sprint.mph),
-            pointBackgroundColor: ["#4D4DFF"],
-            borderColor: ["#4D4DFF"],
-            color: ["#4D4DFF"],
-        }]
-    });
-
-    const [sprintsIncline, setSprintsIncline] = useState({
-        labels: allSprints.map((sprint) => sprint.id),
-        datasets: [{
-            label: "Incline",
-            data: allSprints.map((sprint) => sprint.incline),
-            pointBackgroundColor: ["#FF6700"],
-            borderColor: ["#FF6700"],
-            color: ["#FF6700"],
-        }]
-    });
-
-    const [sprintsDuration, setSprintsDuration] = useState({
-        labels: allSprints.map((sprint) => sprint.id),
-        datasets: [{
-            label: "Duration",
-            data: allSprints.map((sprint) => sprint.on),
-            pointBackgroundColor: ["#FFF01F"],
-            borderColor: ["#FFF01F"],
-            color: ["#FFF01F"],
-        }]
-    });
-
-    const [sprintsBreak, setBreakDuration] = useState({
-        labels: allSprints.map((sprint) => sprint.id),
-        datasets: [{
-            label: "Duration",
-            data: allSprints.map((sprint) => sprint.off),
+            data: mphSprints.map((sprint) => sprint.mph),
             pointBackgroundColor: ["#F72119"],
             borderColor: ["#F72119"],
             color: ["#F72119"],
         }]
     });
 
-    const [sprintsReps, setRepsDuration] = useState({
-        labels: allSprints.map((sprint) => sprint.id),
-        datasets: [{
-            label: "Duration",
-            data: allSprints.map((sprint) => sprint.reps),
-            pointBackgroundColor: ["#39FF14"],
-            borderColor: ["#39FF14"],
-            color: ["#39FF14"],
-        }]
-    });
+    const [view, setView] = useState(1)
 
-    const showMph = () => {
-        setProps(1)
-        dispatch({type: 'GET_SINGLE_GRAPH', payload: 'mph'})
+
+    const toChart = (destination) => {
+        console.log('what is destination?', destination)
+        switch (destination){
+            case 'mph':
+                setView(1);
+                break;
+            case 'incline':
+                console.log('in incline')
+                // history.push('/incline')
+                setView(2);
+                break;
+            case 'on':
+                setView(3);
+                break;
+            case 'off':
+                setView(4);
+                break;
+            case 'reps':
+                setView(5);
+                break;
+        }
     }
 
     const showIncline = () => {
-        setProps(2)
         dispatch({type: 'GET_SINGLE_GRAPH', payload: 'incline'})
     }
 
-    const showDuration = () => {
-        setProps(3)
-        dispatch({type: 'GET_SINGLE_GRAPH', payload: 'on'})
-    }
-
-    const showBreak = () => {
-        setProps(4)
-        dispatch({type: 'GET_SINGLE_GRAPH', payload: 'off'})
-    }
-
-    const showReps = () => {
-        setProps(5)
-        dispatch({type: 'GET_SINGLE_GRAPH', payload: 'reps'})
-    }
-
-
     useEffect(() => {
-        dispatch({ type: 'SEND_SPRINTS' });
+        dispatch({type: 'GET_SINGLE_GRAPH', payload: 'mph'})
     }, []);
 
     return (
@@ -120,17 +78,17 @@ function Sprints() {
             <h1>In Sprints</h1>
             <div className="phone-cover">
                 <div className="buttons">
-                    <button className="screen-button" onClick={() => showMph()}>MPH</button>
-                    <button className="screen-button" onClick={() => showIncline()}>Incline</button>
-                    <button className="screen-button" onClick={() => showDuration()}>Duration</button>
-                    <button className="screen-button" onClick={() => showBreak()}>Rest</button>
-                    <button className="screen-button" onClick={() => showReps()}>Reps</button>
+                    <button className="screen-button" onClick={() => toChart('mph')}>MPH</button>
+                    <button className="screen-button" onClick={() => toChart('incline')}>INCLINE</button>
+                    <button className="screen-button" onClick={() => toChart('on')}>ON</button>
+                    <button className="screen-button" onClick={() => toChart('off')}>OFF</button>
+                    <button className="screen-button" onClick={() => toChart('reps')}>REPS</button>
                 </div>
-                {props == 1 ? <LineChart sprintsData={sprintsData} /> : <div></div>}
-                {props == 2 ? <LineChart sprintsData={sprintsIncline} /> : <div></div>}
-                {props == 3 ? <LineChart sprintsData={sprintsDuration} /> : <div></div>}
-                {props == 4 ? <LineChart sprintsData={sprintsBreak} /> : <div></div>}
-                {props == 5 ? <LineChart sprintsData={sprintsReps} /> : <div></div>}
+                {view === 1 && <MphChart />}
+                {view === 2 && <InclineChart />}
+                {view === 3 && <OnChart />}
+                {view === 4 && <OffChart />}
+                {view === 5 && <RepsChart />}
             </div>
 
         </>

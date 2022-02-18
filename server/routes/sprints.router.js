@@ -72,7 +72,7 @@ router.get('/get/mph', rejectUnauthenticated, (req, res) => {
 });
 
 router.get('/get/on', rejectUnauthenticated, (req, res) => {
-    const queryText = `SELECT on, id from "sprints"
+    const queryText = `SELECT "on", id from "sprints"
                         ORDER by id ASC;
                         `;
     pool.query(queryText)

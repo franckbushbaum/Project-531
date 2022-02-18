@@ -29,7 +29,7 @@ function* getSingleGraph(action){
     console.log('action.payload', action.payload)
     const graph = action.payload
     const single = yield axios.get(`/api/sprints/get/${graph}`);
-    console.log('single graphs data', single.data);
+    console.log('data coming back is: ', single.data);
     yield put({ type: 'SINGLE', payload: single.data})
 
   } catch (err){

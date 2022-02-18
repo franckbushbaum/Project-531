@@ -27,6 +27,11 @@ import Back from '../Back/Back.jsx';
 import Three from '../Three/Three.jsx';
 import Four from '../Four/Four.jsx';
 import Sprints from '../Sprints/Sprints.jsx'
+import MphChart from '../MphChart';
+import InclineChart from '../InclineChart';
+import OnChart from '../OnChart';
+import OffChart from '../OffChart';
+import RepsChart from '../RepsChart';
 
 import './App.css';
 
@@ -168,6 +173,41 @@ function App() {
             path="/sprints"
           >
             <Sprints />
+          </Route>
+
+          <Route
+            exact
+            path="/mph"
+          >
+            <MphChart />
+          </Route>
+
+          <Route
+            exact
+            path="/incline"
+          >
+            <InclineChart />
+          </Route>
+
+          <Route
+            exact
+            path="/on"
+          >
+            <OnChart />
+          </Route>
+
+          <Route
+            exact
+            path="/off"
+          >
+            <OffChart />
+          </Route>
+
+          <Route
+            exact
+            path="/reps"
+          >
+            <RepsChart />
           </Route>
 
           {/* If none of the other routes matched, we will show a 404. */}
