@@ -30,9 +30,9 @@ function RepsChart() {
 
     return (
         <>
-            <div className="sprints-container">
-                     <Line data={repsData} /> 
-            </div>
+         <div className="mph-chart">
+                <Line data={repsData} />
+            </div>          
         </>
     );
 }

@@ -116,6 +116,38 @@ router.get('/get/reps', rejectUnauthenticated, (req, res) => {
     })
 });
 
+router.delete('/get/delete/:id', rejectUnauthenticated, (req, res) => {
+    console.log('req.params in delete run is', req.params)
+    const runId = req.params.id
+    const queryText = `DELETE from "sprints"
+                       WHERE id = $1;
+                        `;
+    pool.query(queryText, [runId])
+    .then(result => {
+        res.sendStatus(201);;
+    })
+    .catch((error) => {
+        console.log('ERROR COMPLETING SINGLES REQUEST', error);
+        res.sendStatus;
+    })
+});
+
+// router.delete('/:id', rejectUnauthenticated, (req, res) => {
+//     console.log('delete req is',req.params)
+//     // console.log('delete req user is',req.user)
+//     const workoutId = req.params.id;
+//     const userId= req.user.id;
+//     const queryText =  `DELETE from "workout" WHERE 
+//                         ("workout_id" = $1 AND "user_id" = $2)`;
+//     pool.query(queryText, [workoutId, userId])
+//         .then((result) => {
+//             res.sendStatus(201);
+//         })
+//         .catch((error) => {
+//             console.log('Error deleting workout', error);
+//             res.sendStatus(500);
+//         })
+// });
 
 
 module.exports = router;

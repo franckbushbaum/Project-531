@@ -14,12 +14,12 @@ import {
 import moment from 'moment';
 import { IoFingerPrintOutline, IoArrowForwardSharp } from "react-icons/io5";
 import { CgArrowRightR, CgArrowLeftR, CgDesignmodo } from "react-icons/cg";
-import MphChart from './MphChart';
-import InclineChart from './InclineChart';
-import OnChart from './OnChart';
-import OffChart from './OffChart';
-import RepsChart from './RepsChart';
-import UpdateWindow from './UpdateWindow';
+import MphChart from '../MphChart/MphChart';
+import InclineChart from '../InclineChart/InclineChart';
+import OnChart from '../OnChart/OnChart';
+import OffChart from '../OffChart/OffChart';
+import RepsChart from '../RepsChart/RepsChart';
+import UpdateWindow from '../UpdateWindow';
 import { BiStreetView } from 'react-icons/bi';
 
 function Sprints() {
@@ -114,7 +114,7 @@ function Sprints() {
     return (
         <>
             <h1>In Sprints</h1>
-            <div className="phone-cover">
+            <div className="screen">
                 <div className="buttons">
                     <button className={mphColor} onClick={() => toChart('mph')}>MPH</button>
                     <button className={inclineColor} onClick={() => toChart('incline')}>INCLINE</button>
@@ -122,28 +122,31 @@ function Sprints() {
                     <button className={offColor} onClick={() => toChart('off')}>OFF</button>
                     <button className={repsColor} onClick={() => toChart('reps')}>REPS</button>
                 </div>
-                {!updateWindow ? <div>
-                    {view === 1 && <MphChart />}
-                    {view === 2 && <InclineChart />}
-                    {view === 3 && <OnChart />}
-                    {view === 4 && <OffChart />}
-                    {view === 5 && <RepsChart />}
-                </div> :<>
-                    {view === 1 && <MphChart />}
-                    {view === 2 && <InclineChart />}
-                    {view === 3 && <OnChart />}
-                    {view === 4 && <OffChart />}
-                    {view === 5 && <RepsChart />}
-                    <div/>
-                    <div className='small-container'>
-                        {updateWindow && <UpdateWindow />}
-                    </div></> }
+                <div className="field-chart">
+                    {!updateWindow ? <div>
+                        {view === 1 && <MphChart />}
+                        {view === 2 && <InclineChart />}
+                        {view === 3 && <OnChart />}
+                        {view === 4 && <OffChart />}
+                        {view === 5 && <RepsChart />}
+                    </div> : <>
+                        {view === 1 && <MphChart />}
+                        {view === 2 && <InclineChart />}
+                        {view === 3 && <OnChart />}
+                        {view === 4 && <OffChart />}
+                        {view === 5 && <RepsChart />}
+                        <div />
+                        <div className="update-field">
+                            {updateWindow && <>{mphSprints.map((sprint) => {
+                                return(<UpdateWindow key={sprint.id}
+                                                    id={sprint.id} />)
+                            })}</>}
+                        </div></>}
+                </div>
             </div>
-            <div className="buttons-bottom">
+            <div className="unmoving-bottom-button">
                 <button className={updateColor} onClick={() => setUpdateWindow(!updateWindow)}>Update</button>
             </div>
-
-
         </>
     )
 }

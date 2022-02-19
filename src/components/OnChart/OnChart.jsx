@@ -28,9 +28,10 @@ function OnChart() {
     }, [])
     return (
         <>
-            <div className="sprints-container">
-                     <Line data={onData} /> 
+             <div className="mph-chart">
+                <Line data={onData} />
             </div>
+          
         </>
     );
 }

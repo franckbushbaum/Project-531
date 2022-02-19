@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
 import { useDispatch, useSelector } from 'react-redux';
-import '/Sprints.css';
 
 function MphChart() {
 
@@ -25,12 +24,12 @@ function MphChart() {
     };
 
     useEffect(() => {
-     dispatch({type: 'GET_SINGLE_GRAPH', payload: 'mph'})
+        dispatch({ type: 'GET_SINGLE_GRAPH', payload: 'mph' })
     }, [])
     return (
         <>
-            <div className="sprints-container">
-                     <Line data={mphData} /> 
+            <div className="mph-chart">
+                <Line data={mphData} />
             </div>
         </>
     );

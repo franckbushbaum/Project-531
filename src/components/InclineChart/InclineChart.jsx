@@ -30,8 +30,8 @@ function InclineChart() {
     return (
         <>
         {/* {JSON.stringify(inclineData)} */}
-            <div className="sprints-container">
-                     <Line data={inclineData} /> 
+        <div className="mph-chart">
+                <Line data={inclineData} />
             </div>
         </>
     );

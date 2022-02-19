@@ -24,12 +24,12 @@ function OffChart() {
     };
 
     useEffect(() => {
-     dispatch({type: 'GET_SINGLE_GRAPH', payload: 'off'})
+        dispatch({ type: 'GET_SINGLE_GRAPH', payload: 'off' })
     }, [])
     return (
         <>
-            <div className="sprints-container">
-                     <Line data={offData} />            
+            <div className="mph-chart">
+                <Line data={offData} />
             </div>
         </>
     );
