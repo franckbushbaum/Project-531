@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
-import './LineChart.css';
 import { Chart as ChartJS } from 'chart.js/auto';
 import { useDispatch, useSelector } from 'react-redux';
 
@@ -32,9 +31,7 @@ function InclineChart() {
         <>
         {/* {JSON.stringify(inclineData)} */}
             <div className="sprints-container">
-                <div className="mph-chart">
                      <Line data={inclineData} /> 
-                </div>
             </div>
         </>
     );

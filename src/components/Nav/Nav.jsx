@@ -10,9 +10,13 @@ function Nav() {
   return (
     <div className="nav">
       <Link to="/home">
-        <h2 className="nav-title"><p className="glitch"><span aria-hidden="true">Project531</span><span>Project531</span><span aria-hidden="true">Project531</span></p></h2>
+        <h1 className="nav-title">
+          <p className="glitch">
+            <span aria-hidden="true" className="project">Project531</span>
+            <span className="project">Project531</span>
+            <span  className="project" aria-hidden="true">Project531</span></p></h1>
       </Link>
-      <div>
+      <div className="nav-button-wrapper">
         {/* If no user is logged in, show these links */}
         {user.id === null &&
           // If there's no user, show login/registration links
@@ -27,11 +31,6 @@ function Nav() {
             <Link className="navLink" to="/user">
               Page 1
             </Link>
-
-            <Link className="navLink" to="/info">
-             
-            </Link>
-
             <LogOutButton className="navLink" />
           </>
         )}

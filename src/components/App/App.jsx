@@ -26,7 +26,7 @@ import Shoulders from '../Shoulders/Shoulders.jsx';
 import Back from '../Back/Back.jsx';
 import Three from '../Three/Three.jsx';
 import Four from '../Four/Four.jsx';
-import Sprints from '../Sprints/Sprints.jsx'
+import Sprints from '../Sprints.jsx'
 import MphChart from '../MphChart.jsx';
 import InclineChart from '../InclineChart';
 import OnChart from '../OnChart';

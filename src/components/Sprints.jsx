@@ -14,11 +14,12 @@ import {
 import moment from 'moment';
 import { IoFingerPrintOutline, IoArrowForwardSharp } from "react-icons/io5";
 import { CgArrowRightR, CgArrowLeftR, CgDesignmodo } from "react-icons/cg";
-import MphChart from '../MphChart';
-import InclineChart from '../InclineChart';
-import OnChart from '../OnChart';
-import OffChart from '../OffChart';
-import RepsChart from  '../RepsChart';
+import MphChart from './MphChart';
+import InclineChart from './InclineChart';
+import OnChart from './OnChart';
+import OffChart from './OffChart';
+import RepsChart from './RepsChart';
+import UpdateWindow from './UpdateWindow';
 import { BiStreetView } from 'react-icons/bi';
 
 function Sprints() {
@@ -42,16 +43,19 @@ function Sprints() {
     });
 
     const [view, setView] = useState(1)
-    const [mphColor, setMphColor] = useState('screen-button-selected')
-    const [inclineColor, setInclineColor] = useState('screen-button')
-    const [onColor, setOnColor] = useState('screen-button')
-    const [offColor, setOffColor] = useState('screen-button')
-    const [repsColor, setRepsColor] = useState('screen-button')
+    const [mphColor, setMphColor] = useState('screen-button-selected');
+    const [inclineColor, setInclineColor] = useState('screen-button');
+    const [onColor, setOnColor] = useState('screen-button');
+    const [offColor, setOffColor] = useState('screen-button');
+    const [repsColor, setRepsColor] = useState('screen-button');
+    const [updateColor, setUpdateColor] = useState('screen-button');
+    const [updateWindow, setUpdateWindow] = useState(false);
+    const [changeSize, setChangeSize] = useState(false);
+
 
 
     const toChart = (destination) => {
-        console.log('what is destination?', destination)
-        switch (destination){
+        switch (destination) {
             case 'mph':
                 setView(1);
                 setMphColor('screen-button-selected')
@@ -93,16 +97,18 @@ function Sprints() {
                 setOnColor('screen-button')
                 setOffColor('screen-button')
                 break;
+            case 'shrink':
+
         }
     }
 
 
     const showIncline = () => {
-        dispatch({type: 'GET_SINGLE_GRAPH', payload: 'incline'})
+        dispatch({ type: 'GET_SINGLE_GRAPH', payload: 'incline' })
     }
 
     useEffect(() => {
-        dispatch({type: 'GET_SINGLE_GRAPH', payload: 'mph'})
+        dispatch({ type: 'GET_SINGLE_GRAPH', payload: 'mph' })
     }, []);
 
     return (
@@ -116,12 +122,27 @@ function Sprints() {
                     <button className={offColor} onClick={() => toChart('off')}>OFF</button>
                     <button className={repsColor} onClick={() => toChart('reps')}>REPS</button>
                 </div>
-                {view === 1 && <MphChart />}
-                {view === 2 && <InclineChart />}
-                {view === 3 && <OnChart />}
-                {view === 4 && <OffChart />}
-                {view === 5 && <RepsChart />}
+                {!updateWindow ? <div>
+                    {view === 1 && <MphChart />}
+                    {view === 2 && <InclineChart />}
+                    {view === 3 && <OnChart />}
+                    {view === 4 && <OffChart />}
+                    {view === 5 && <RepsChart />}
+                </div> :<>
+                    {view === 1 && <MphChart />}
+                    {view === 2 && <InclineChart />}
+                    {view === 3 && <OnChart />}
+                    {view === 4 && <OffChart />}
+                    {view === 5 && <RepsChart />}
+                    <div/>
+                    <div className='small-container'>
+                        {updateWindow && <UpdateWindow />}
+                    </div></> }
             </div>
+            <div className="buttons-bottom">
+                <button className={updateColor} onClick={() => setUpdateWindow(!updateWindow)}>Update</button>
+            </div>
+
 
         </>
     )
