@@ -9,7 +9,7 @@ function InclineChart() {
     const dispatch = useDispatch();
     const inclineSprints = useSelector(store => store.fetchSprints)
 
-    console.log('what is all sprints in Incline?', inclineSprints)
+    
 
    let inclineData = {
         labels: inclineSprints.map((sprint) => sprint.id),

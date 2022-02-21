@@ -3,13 +3,12 @@ import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
 import { useDispatch, useSelector } from 'react-redux';
 
-function MphChart() {
+function MphChart({ updateWindow }) {
 
 
     const dispatch = useDispatch();
     const mphSprints = useSelector(store => store.fetchSprints)
 
-    console.log('what is all sprints in MPH?', mphSprints)
 
     const mphData = {
         labels: mphSprints.map((sprint) => sprint.id),

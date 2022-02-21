@@ -29,7 +29,7 @@ function Sprints() {
 
     const mphSprints = useSelector(store => store.fetchSprints)
 
-    console.log('what is all sprints in sprints?', mphSprints)
+    // console.log('what is all sprints in sprints?', mphSprints)
 
     const [mphData, setMphData] = useState({
         labels: mphSprints.map((sprint) => sprint.id),
@@ -51,8 +51,6 @@ function Sprints() {
     const [updateColor, setUpdateColor] = useState('screen-button');
     const [updateWindow, setUpdateWindow] = useState(false);
     const [changeSize, setChangeSize] = useState(false);
-
-
 
     const toChart = (destination) => {
         switch (destination) {
@@ -113,7 +111,6 @@ function Sprints() {
 
     return (
         <>
-            <h1>In Sprints</h1>
             <div className="screen">
                 <div className="buttons">
                     <button className={mphColor} onClick={() => toChart('mph')}>MPH</button>
@@ -123,29 +120,26 @@ function Sprints() {
                     <button className={repsColor} onClick={() => toChart('reps')}>REPS</button>
                 </div>
                 <div className="field-chart">
-                    {!updateWindow ? <div>
-                        {view === 1 && <MphChart />}
-                        {view === 2 && <InclineChart />}
-                        {view === 3 && <OnChart />}
-                        {view === 4 && <OffChart />}
-                        {view === 5 && <RepsChart />}
-                    </div> : <>
-                        {view === 1 && <MphChart />}
-                        {view === 2 && <InclineChart />}
-                        {view === 3 && <OnChart />}
-                        {view === 4 && <OffChart />}
-                        {view === 5 && <RepsChart />}
-                        <div />
-                        <div className="update-field">
-                            {updateWindow && <>{mphSprints.map((sprint) => {
-                                return(<UpdateWindow key={sprint.id}
-                                                    id={sprint.id} />)
-                            })}</>}
-                        </div></>}
+                    {view === 1 && <MphChart updateWindow={updateWindow} />}
+                    {view === 2 && <InclineChart />}
+                    {view === 3 && <OnChart />}
+                    {view === 4 && <OffChart />}
+                    {view === 5 && <RepsChart />}
                 </div>
-            </div>
-            <div className="unmoving-bottom-button">
-                <button className={updateColor} onClick={() => setUpdateWindow(!updateWindow)}>Update</button>
+                <div className="update-field">
+                    {mphSprints.map((sprint) => {
+                        return (<UpdateWindow key={sprint.id}
+                            id={sprint.id} />)
+                    })}
+                </div>
+                <div className="unmoving-bottom-button">
+                    <button className={mphColor} onClick={() => setUpdateWindow(!updateWindow)}>Update</button>
+                </div>
+                <div className="trigger">
+                    <div className="the-box">
+
+                    </div>
+                </div>
             </div>
         </>
     )
