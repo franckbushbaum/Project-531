@@ -45,7 +45,7 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 
 
 ---
-
+# Part 1
 ### Step 1. Design
 
 <img src="./pics/pageonemockup.png" style="float: left; margin-right: 5px"> 
