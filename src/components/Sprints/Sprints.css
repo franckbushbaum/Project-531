@@ -5,6 +5,7 @@
   height: 70vh;
   width: 70vw;
   margin-top: 10vh;
+
 }
 
 
@@ -47,24 +48,34 @@
   position: absolute;
   display: flex;
   flex-direction: column;
-  top: -40vh;
+  top: 7vh;
   right:5vw;
   width: 10vw;
   height: 65vh;
-  outline: 1px dotted rgb(0, 47, 255);
-  transition-duration: 1500ms;
-  transition-property: transform, outline;
+  opacity: 1;
+  -webkit-transition: opacity .7s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out;
+  -o-transition: opacity .7s ease-in-out;
+  transition: opacity .7s ease-in-out;
+
+  opacity: 1;
 }
 
-.update-field:active{
-  transform: translateY(72%);
-  outline: 1px dotted rgb(0, 255, 128);
+.close-it{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 7vh;
+  right:5vw;
+  width: 10vw;
+  height: 65vh;
+  opacity: 1;
+  -webkit-transition: opacity .7s ease-in-out;
+  -moz-transition: opacity .7s ease-in-out;
+  -o-transition: opacity .7s ease-in-out;
+  transition: opacity .7s ease-in-out;
+  opacity: 0;
 }
-
-/* This just moved the button : / */
-/* .unmoving-bottom-button:active{
-  transform: translateY(72%);
-} */
 
 
 .update-window-individual-container{

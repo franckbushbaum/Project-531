@@ -24,10 +24,10 @@ function UpdateWindow({id}) {
 
     return (
         <>
-            <div className="update-window">
+            <div id="update" className="update-window">
             <span className="update-window-individual-container">{id}:&nbsp;<button className='update-window-buttons' onClick={() => deleteRun(id)}>DELETE</button></span>
             </div>
-            
+
         </>
     )
 }

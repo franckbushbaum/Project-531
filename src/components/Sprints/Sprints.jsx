@@ -29,8 +29,6 @@ function Sprints() {
 
     const mphSprints = useSelector(store => store.fetchSprints)
 
-    // console.log('what is all sprints in sprints?', mphSprints)
-
     const [mphData, setMphData] = useState({
         labels: mphSprints.map((sprint) => sprint.id),
         datasets: [{
@@ -51,6 +49,8 @@ function Sprints() {
     const [updateColor, setUpdateColor] = useState('screen-button');
     const [updateWindow, setUpdateWindow] = useState(false);
     const [changeSize, setChangeSize] = useState(false);
+
+    console.log('Update window??', updateWindow)
 
     const toChart = (destination) => {
         switch (destination) {
@@ -126,12 +126,11 @@ function Sprints() {
                     {view === 4 && <OffChart />}
                     {view === 5 && <RepsChart />}
                 </div>
-                <div className="update-field">
+                <div id ="update-field" className={updateWindow ? 'update-field' : 'close-it'}>
                     {mphSprints.map((sprint) => {
                         return (<UpdateWindow key={sprint.id}
                             id={sprint.id} />)
-                    })}
-                </div>
+                    })}</div>
                 <div className="unmoving-bottom-button">
                     <button className={mphColor} onClick={() => setUpdateWindow(!updateWindow)}>Update</button>
                 </div>
