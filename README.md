@@ -35,6 +35,14 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
  #### Record your sprint
 <img src="./pics/pickSprint2.png" style="float: left; margin-right: 5px"> 
 
+#### Sprint display.
+
+<img src="./pics/sprintDisplay2.png" style="float: left; margin-right: 5px"> 
+
+#### Sprint display with update button off. 
+
+<img src="./pics/sprintNoDisplay2.png" style="float: left; margin-right: 5px"> 
+
 
 ---
 
