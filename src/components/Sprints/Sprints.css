@@ -5,6 +5,9 @@
   height: 70vh;
   width: 70vw;
   margin-top: 10vh;
+  margin-right: 0;
+  align-items: center;
+  align-content: center;
 
 }
 
@@ -127,6 +130,7 @@
         var(--black-scanline) 100%
       );;
   position: relative;
+  margin: 0;
   padding: 10px;
   top: 0vh;
   display: flex;
