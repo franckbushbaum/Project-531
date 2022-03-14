@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function* fetchAirQuality(action){
     try{
-        const { lon, lat } = action.payload
+        const { lon, lat, user } = action.payload
 
         const coordinate = { lat, lon}
 
@@ -12,7 +12,9 @@ function* fetchAirQuality(action){
         console.log('lat is always positive', lat)
         console.log('lon is negative', lon)
 
-        const airQuality = yield axios.get(`/api/air-quality/${coordinate}`);
+        const airQuality = yield axios.get(`/api/air-quality/`, { params: coordinate});
+
+        // yield axios.put(`/api/workout/${workoutId}`, action.payload);
 
         console.log('is this in Terminal? Nah..', airQuality)
     } catch(error) {

@@ -13,6 +13,7 @@ const userRouter = require('./routes/user.router');
 const workoutRouter= require ('./routes/workout.router');
 const bodypartRouter= require ('./routes/bodypart.router');
 const sprintsRouter= require ('./routes/sprints.router');
+const airQualityRouter= require ('./routes/airquality.router');
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -30,6 +31,7 @@ app.use('/api/user', userRouter);
 app.use('/api/workout', workoutRouter);
 app.use ('/api/bodypart', bodypartRouter);
 app.use('/api/sprints', sprintsRouter)
+app.use('/api/air-quality', airQualityRouter)
 // Serve static files
 app.use(express.static('build'));
 
