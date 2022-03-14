@@ -16,6 +16,7 @@ function One() {
     const [workoutType, setWorkoutType] = useState([]);
 
     const handleChange = (event) => {
+        console.log('what is event.target.value?', event.target.value)
         setWorkoutType(event.target.value);
         if (event.target.value === 1) {
             history.push('/chest');
@@ -33,8 +34,10 @@ function One() {
     };
 
     const openModal = (event) => {
+//5 These are the hardcoded coordinates for White Bear Lake, MN.
         event.preventDefault();
-        history.push('/air');
+        dispatch({ type: 'FETCH_AIR_QUALITY',
+                    payload: {lat: '45.085', lon: '-93.008', user: 'Franck'} })
     }
 
 
@@ -61,7 +64,7 @@ function One() {
                         </FormControl>
                     </Box>
 
-                    <button className="air-quality-button" onClick={openModal}>Your Air Quality Report</button>
+                    <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>
                 </div>
             </div>
 
