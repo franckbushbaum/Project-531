@@ -26,12 +26,16 @@ function One() {
         } else if (event.target.value === 4) {
             history.push('/back');
         }
-        // To one.reducer.js.
         dispatch({
             type: 'SET_WORKOUT_TYPE_ID',
             payload: event.target.value
         })
     };
+
+    const openModal = (event) => {
+        event.preventDefault();
+        history.push('/air');
+    }
 
 
     return (
@@ -56,6 +60,8 @@ function One() {
                             </Select>
                         </FormControl>
                     </Box>
+
+                    <button className="air-quality-button" onClick={openModal}>Your Air Quality Report</button>
                 </div>
             </div>
 
