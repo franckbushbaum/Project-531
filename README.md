@@ -6,12 +6,14 @@
 ---
 ### Sprint duration <br />
 
-- 2 weeks
+- Part 1: 2 weeks.
+- Part 2: 5 days.
 ---
 
 ### Prerequisites <br />
 
 - Internet browser (e.g. Chrome, Firefox, Safari)<br />
+- Chart.js<br />
 - Node.js<br />
 - PostgreSQL<br />
 
@@ -27,6 +29,23 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 
 ---
 
+### Start Here.
+ Let me start with Part 2, since it's the newest! 
+ 
+ #### Record your sprint
+<img src="./pics/pickSprint2.png" style="float: left; margin-right: 5px"> 
+
+#### Sprint display.
+
+<img src="./pics/sprintDisplay2.png" style="float: left; margin-right: 5px"> 
+
+#### Sprint display with update button off. 
+
+<img src="./pics/sprintNoDisplay2.png" style="float: left; margin-right: 5px"> 
+
+
+---
+# Part 1
 ### Step 1. Design
 
 <img src="./pics/pageonemockup.png" style="float: left; margin-right: 5px"> 
