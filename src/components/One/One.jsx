@@ -16,9 +16,10 @@ function One() {
     const [workoutType, setWorkoutType] = useState([]);
 
     const handleChange = (event) => {
-        console.log('what is event.target.value?', event.target.value)
+        console.log('what is event.target.value testest?', event.target.value)
         setWorkoutType(event.target.value);
         if (event.target.value === 1) {
+            console.log('I mean if I do chest..HERE')
             history.push('/chest');
         } else if (event.target.value === 2) {
             history.push('/legs');
@@ -26,19 +27,21 @@ function One() {
             history.push('/shoulders');
         } else if (event.target.value === 4) {
             history.push('/back');
+        } else if (event.target.value === '5'){
+        console.log('why doesnt it get here?')
+//5 These are the hardcoded coordinates for White Bear Lake, MN.
+            return dispatch ({
+                type: 'FETCH_AIR_QUALITY',
+                payload: {lat: '45.085',
+                          lon: '-93.008',
+                          user: 'FFRANCK'}
+            })
         }
         dispatch({
             type: 'SET_WORKOUT_TYPE_ID',
             payload: event.target.value
         })
     };
-
-    const openModal = (event) => {
-//5 These are the hardcoded coordinates for White Bear Lake, MN.
-        event.preventDefault();
-        dispatch({ type: 'FETCH_AIR_QUALITY',
-                    payload: {lat: '45.085', lon: '-93.008', user: 'Franck'} })
-    }
 
 
     return (

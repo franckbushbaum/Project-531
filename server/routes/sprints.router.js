@@ -6,6 +6,7 @@ const router = express.Router();
 router.get('/', (req,res) => {
     res.json('hi there')
 });
+//1 This needs to be big time dryer code. 
 
 router.post('/', (req,res) => {
     const mph = req.body.mph
