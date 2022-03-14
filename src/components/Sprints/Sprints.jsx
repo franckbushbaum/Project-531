@@ -68,7 +68,6 @@ function Sprints() {
                 setOnColor('screen-button')
                 setOffColor('screen-button')
                 setRepsColor('screen-button')
-                // history.push('/incline')
                 setView(2);
                 break;
             case 'on':
@@ -119,6 +118,7 @@ function Sprints() {
                     <button className={offColor} onClick={() => toChart('off')}>OFF</button>
                     <button className={repsColor} onClick={() => toChart('reps')}>REPS</button>
                 </div>
+{/* Future project: Why not one component and pass down mph, incline, on, off or reps as props? Would also require passing down different styles? */}
                 <div className="field-chart">
                     {view === 1 && <MphChart updateWindow={updateWindow} />}
                     {view === 2 && <InclineChart />}
