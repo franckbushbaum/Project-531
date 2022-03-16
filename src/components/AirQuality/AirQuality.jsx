@@ -2,15 +2,19 @@ import React from 'react';
 import './AirQuality.css';
 
 
-function AirQuality() {
+function AirQuality(props) {
 
+console.log('props:', props)
 
+const {newProps} = props
+
+console.log('newProps is', newProps)
 
   return (
     <>
     <div className="air-quality-box">
       <div>
-        <p>This about page is for anyone to read!</p>
+        <p>TODAY'S AIR QUALITY REPORT</p>
       </div>
     </div> 
 
@@ -18,4 +22,4 @@ function AirQuality() {
   );
 }
 
-export default AboutPage;
+export default AirQuality;

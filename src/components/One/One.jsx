@@ -1,12 +1,13 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
+import AirQuality from '../AirQuality/AirQuality.jsx'
 import './One.css';
 
 function One() {
@@ -16,6 +17,9 @@ function One() {
     const [workoutType, setWorkoutType] = useState([]);
 
     const data = useSelector(store => store.workoutTypeId.slice(-1));
+
+    //2 Put this function inside new component
+
 
     const handleChange = (event) => {
         console.log('what is event.target.value testest?', event.target.value)
@@ -71,9 +75,7 @@ function One() {
                     </Box>
 
                     <Box className="air-quality-box" sx={{minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, color: 'secondary'}}>
-                       <h5>{data.map((params) => (
-                           <div>{params.aqi}</div>
-                       ))}</h5>
+                     <AirQuality props={data} />
                     </Box>
 
                     <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>
