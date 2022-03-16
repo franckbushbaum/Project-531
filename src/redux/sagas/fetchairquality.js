@@ -6,7 +6,7 @@ function* fetchAirQuality(action){
         const { lon, lat, user } = action.payload
         const coordinate = { lat, lon}
         const airQuality = yield axios.get(`/api/air-quality/`, { params: coordinate});
-        yield put({type: 'SET_AIR_QUALITY', payload: airQuality.data })
+        yield put({type: 'SET_AIR_QUALITY', payload: airQuality.data.data })
     } catch(error) {
         console.log('fetchAirQuality error', error);
     }
