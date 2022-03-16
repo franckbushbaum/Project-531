@@ -2,18 +2,32 @@ const express = require('express');
 const { rejectUnauthenticated } = require('../modules/authentication-middleware');
 const pool = require('../modules/pool');
 const router = express.Router();
+const cors = require('cors');
+
+router.use(cors());
+
+var axios = require("axios").default;
+
+// router.get('/', (req, res) => {
+//   res.json('hi there');
+// })
 
 router.get('/', (req, res) => {
-
-    console.log('what is req?', req);
-
     const {lat ,lon} = req.query;
-    
-    console.log('what is lat?..', lat);
-    console.log('heres is lon, put them in request to rapidApi', lon);
-    // const {lat , lon} = req.body
-    // console.log('is this lat, the positive one?', lat);
-    // console.log('is this lon, the negative one?', lon)
+    var options = {
+      method: 'GET',
+      url: 'https://air-quality.p.rapidapi.com/forecast/airquality',
+      params: {lat: lat, lon: lon, hours: '24'},
+      headers: {
+        'x-rapidapi-host': 'air-quality.p.rapidapi.com',
+        'x-rapidapi-key': 'bb38151e24msha271fe5e90f5b03p151d27jsnabf027f0721e'
+      }
+    };   
+    axios.request(options).then(function (response) {
+      res.json(response.data);
+    }).catch(function (error) {
+      console.error(error);
+    });
   });
 
   module.exports = router;

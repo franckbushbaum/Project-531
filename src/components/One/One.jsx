@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import { useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -14,6 +14,8 @@ function One() {
     const dispatch = useDispatch();
 
     const [workoutType, setWorkoutType] = useState([]);
+
+    const airQualityInCity = useSelector(store => store.workoutTypeId);
 
     const handleChange = (event) => {
         console.log('what is event.target.value testest?', event.target.value)
@@ -47,6 +49,7 @@ function One() {
     return (
         <>
             <div className="container">
+                <h3>{JSON.stringify(airQualityInCity)}</h3>
                 <div className="card">
                     <Box className="select-menu" sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, color: 'secondary'  }} >
                         <FormControl sx={{ m: 7, minWidth: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
