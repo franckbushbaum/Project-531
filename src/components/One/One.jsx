@@ -15,14 +15,15 @@ function One() {
     const dispatch = useDispatch();
 
     const [workoutType, setWorkoutType] = useState([]);
+    const [airQualityBox, setAirQualityBox] = useState();
 
-    const data = useSelector(store => store.workoutTypeId.slice(-1));
+    // const data = useSelector(store => store.workoutTypeId.toString().slice(-1));
 
-    //2 Put this function inside new component
-
+    const data = useSelector(store => store.workoutTypeId);
 
     const handleChange = (event) => {
         console.log('what is event.target.value testest?', event.target.value)
+        setAirQualityBox(!airQualityBox)
         setWorkoutType(event.target.value);
         if (event.target.value === 1) {
             console.log('I mean if I do chest..HERE')
@@ -34,7 +35,6 @@ function One() {
         } else if (event.target.value === 4) {
             history.push('/back');
         } else if (event.target.value === '5'){
-        console.log('why doesnt it get here?')
 //5 These are the hardcoded coordinates for White Bear Lake, MN.
             return dispatch ({
                 type: 'FETCH_AIR_QUALITY',
@@ -49,11 +49,14 @@ function One() {
         })
     };
 
+    console.log('what is data?', data)
+
+
 
     return (
         <>
             <div className="container">
-                <h3>{JSON.stringify(data)}</h3>
+                {/* <h3>{JSON.stringify(data)}</h3> */}
                 <div className="card">
                     <Box className="select-menu" sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, color: 'secondary'  }} >
                         <FormControl sx={{ m: 7, minWidth: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
@@ -74,9 +77,9 @@ function One() {
                         </FormControl>
                     </Box>
 
-                    <Box className="air-quality-box" sx={{minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, color: 'secondary'}}>
-                     <AirQuality props={data} />
-                    </Box>
+                    {!airQualityBox && <Box className="air-quality-box" sx={{minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, color: 'secondary'}}>
+                     <AirQuality data={data} />
+                    </Box>}
 
                     <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>
                 </div>
