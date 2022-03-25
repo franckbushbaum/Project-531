@@ -1,0 +1,14 @@
+.first-span{
+    outline: 2px dotted rgb(255, 192, 247);
+    /* Did you want to put a  */
+}
+
+.hours{
+    outline: 4px dotted rgb(17, 0, 255);
+    display: flex;
+    font-size: 2rem;
+}
+
+li{
+    margin: 1.5rem;
+}

@@ -2,12 +2,6 @@
     /* outline: 2px solid red; */
 }
 
-.air-quality-box{
-    outline: 2px solid rgb(43, 226, 156);
-    padding-left: 100px;
-    display: flex;
-    align-items: center;
-}
 
 .select-menu{
     /* background-color: aqua; */

@@ -77,7 +77,7 @@ function One() {
                         </FormControl>
                     </Box>
 
-                    {!airQualityBox && <Box className="air-quality-box" sx={{minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, color: 'secondary'}}>
+                    {!airQualityBox && <Box className="air-quality-box" sx={{minWidth: 100, maxWidth: 1200, minHeight: 50, borderRadius: 7, color: 'secondary'}}>
                      <AirQuality data={data} />
                     </Box>}
 
