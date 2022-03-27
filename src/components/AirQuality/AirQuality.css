@@ -6,7 +6,8 @@
 .hours{
     outline: 4px dotted rgb(17, 0, 255);
     display: flex;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    height: 100vh;
 }
 
 li{

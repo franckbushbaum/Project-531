@@ -1,8 +1,9 @@
 import React from 'react';
 import './AirQuality.css';
-//import { CgArrowRightR, CgArrowLeftR } from "react-icons/cg";
 
 import { BsFillCloudDrizzleFill, BsFillBrightnessHighFill } from "react-icons/bs";
+
+import moment from 'moment';
 
 
 function AirQuality({ data }) {
@@ -22,7 +23,7 @@ function AirQuality({ data }) {
             {data.map((hour) => {
               //2  Air Quality Index [US - EPA standard 0 - +500]
               return <li><span className="first-span">
-              <BsFillCloudDrizzleFill />  On {hour.timestamp_local} we had:{hour.aqi} aqi. < BsFillBrightnessHighFill />
+              <BsFillCloudDrizzleFill />  On {(moment(hour.timestamp_local).format('MMM Do YY'))} we had:{hour.aqi} aqi. < BsFillBrightnessHighFill />
               </span></li>
             })}
           </ul>
