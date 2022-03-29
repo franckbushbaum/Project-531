@@ -1,14 +1,20 @@
-.first-span{
-    outline: 2px dotted rgb(255, 192, 247);
-    /* Did you want to put a  */
+/* Parent */
+.hours{
+    display: flex;
+    outline: 2px dotted #B026FF;
+    background: #00000083;
+
 }
 
-.hours{
-    outline: 4px dotted rgb(17, 0, 255);
-    display: flex;
-    font-size: 1.5rem;
-    color: purple;
-    height: 100vh;
+/* Child  */
+.modal-title{
+    outline: 2px solid red;
+}
+
+/* In .map method */
+.first-span{
+    outline: 2px dotted rgb(255, 192, 247);
+    color: #B026FF;
 }
 
 li{
