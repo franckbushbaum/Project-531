@@ -23,7 +23,13 @@ function AirQuality({ data }) {
             {data.map((hour) => {
               //2  Air Quality Index [US - EPA standard 0 - +500]
               return <li><span className="first-span">
-              <BsFillCloudDrizzleFill />  On {(moment(hour.timestamp_local).format('MMM Do YY'))} we had:{hour.aqi} aqi. < BsFillBrightnessHighFill />
+              <BsFillCloudDrizzleFill />  On {(moment(hour.timestamp_local).format('MMM Do YY'))}<br />
+                                        we had: {hour.aqi} aqi. <br /> 
+                                        pm10: concentration of particulate matter smaller than 10 microns : {hour.pm10}.<br />
+                                        pm25: concentration of particulate matter small than 25 micros: {hour.pm25}.<br />
+                                        03: Trioxygen, the layer of ozone protecting the Earth from harmful rays.<br />
+                                        NO2: More dangerous than Carbion Dioxide for the environment? 300% more potent.<br />
+                                        CO: Carbon Monoxodie.{hour.co}  <BsFillBrightnessHighFill />
               </span></li>
             })}
           </ul>
