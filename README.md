@@ -8,6 +8,7 @@
 
 - Part 1: 2 weeks.
 - Part 2: 5 days.
+- Part 3: April 1st - 5th 2022
 ---
 
 ### Prerequisites <br />
