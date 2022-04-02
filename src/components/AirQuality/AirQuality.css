@@ -20,3 +20,16 @@
 li{
     margin: 1.5rem;
 }
+
+/* Air Quality Colors */
+.aqi-low{
+    color: #B026FF;
+}
+
+.aqi-moderate{
+    color: #FF6700;    
+}
+
+.aqi-high{
+    color: red;
+}

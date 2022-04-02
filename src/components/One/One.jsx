@@ -15,7 +15,7 @@ function One() {
     const dispatch = useDispatch();
 
     const [workoutType, setWorkoutType] = useState([]);
-    const [airQualityBox, setAirQualityBox] = useState();
+    const [airQualityBox, setAirQualityBox] = useState(true);
 
     // const data = useSelector(store => store.workoutTypeId.toString().slice(-1));
 
@@ -49,6 +49,7 @@ function One() {
         })
     };
 
+    console.log('what is airQualityBox?', airQualityBox)
     console.log('what is data?', data)
 
 
@@ -78,7 +79,11 @@ function One() {
                     </Box>
 
                     {!airQualityBox && <Box className="air-quality-box" sx={{minWidth: 100, maxWidth: 1200, minHeight: 50, borderRadius: 7, color: 'secondary'}}>
-                     <AirQuality data={data} />
+                        {data.map((hour) => {
+                            return (
+                                <AirQuality hour={hour} />
+                            );
+                        })}
                     </Box>}
 
                     <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>
