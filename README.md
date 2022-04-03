@@ -50,7 +50,6 @@ Looks like some research about Air Quality measurements is in order; for those c
 - The return path is pink, I began to write down what the data will be called as it is passed along to the next functional component.
 
 <img src="./pics/sprint3lucidupdate.png" style="float: left; margin-right: 5px">
-
 ---
 # Sprint 1
 ### Step 1. Design
