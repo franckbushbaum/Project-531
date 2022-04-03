@@ -30,7 +30,7 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 
 ---
 
-### Start Here.
+### ==Start Here== .
  Let me start with Part 3, since it's the newest! 
 
 ---
@@ -39,7 +39,17 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 #### Design:
 #### Research:
 
-### Step 2. Datapath using [Lucidchart](https://www.lucidchart.com/pages/)
+##### But what do these numbers mean??
+Looks like some research about Air Quality measurements is in order; for those curious, I found out more at [EPA Air Quality Index](https://www.epa.gov/pmcourse/patient-exposure-and-air-quality-index#what)
+
+<img src="./pics/airqualityux1.png" style="float: left; margin-right: 5px"> 
+
+### Step 2. Updating wireframe using [Lucidchart](https://www.lucidchart.com/pages/)
+- A user inputs their coordinates (GPS, in our case, hardcoded to White Bear lake, MN).
+- GPS is placed inside the body of request, headers are added and api request is made to Rapid Api (REQ).
+- The return path is pink, I began to write down what the data will be called as it is passed along to the next functional component.
+
+<img src="./pics/sprint3lucidupdate.png" style="float: left; margin-right: 5px">
 
 ---
 # Sprint 1
