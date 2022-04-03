@@ -31,22 +31,18 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 ---
 
 ### Start Here.
- Let me start with Part 2, since it's the newest! 
- 
- #### Record your sprint
-<img src="./pics/pickSprint2.png" style="float: left; margin-right: 5px"> 
-
-#### Sprint display.
-
-<img src="./pics/sprintDisplay2.png" style="float: left; margin-right: 5px"> 
-
-#### Sprint display with update button off. 
-
-<img src="./pics/sprintNoDisplay2.png" style="float: left; margin-right: 5px"> 
-
+ Let me start with Part 3, since it's the newest! 
 
 ---
-# Part 1
+# Sprint 3
+### Step 1. Project Planning
+#### Design:
+#### Research:
+
+### Step 2. Datapath using [Lucidchart](https://www.lucidchart.com/pages/)
+
+---
+# Sprint 1
 ### Step 1. Design
 
 <img src="./pics/pageonemockup.png" style="float: left; margin-right: 5px"> 
@@ -54,14 +50,11 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 <img src="./pics/pagethreemockup.png" style="float: left; margin-right: 5px">
 <img src="./pics/pagefourmockup.png" style="float: left; margin-right: 5px">
 
----
 
 ### Step 2. Datapath using [Lucidchart](https://www.lucidchart.com/pages/)
 
 - This was the original concept schematic for how the data would flow behind the scenes.  I was confident I had all the data routes figured out, and was impressed by how wrong I actually was. As of writing, there are twice as many GET, POST, and DELETE routes as originally planned (and more are coming.) This is forgiveable on such a small, linear solo project; I would find it invaluable to do multiple iterations in group projects to keep everyone on the same page and speaking the same language.
 <img src="./pics/Datapath.png" style="float: left; margin-right: 5px">
-
----
 
 ### Final
  - <b>Page 1 - Choose a workout! This variation of 5/3/1 has 4 options (4 bodyparts, each trained once a week)</b>
@@ -81,6 +74,20 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 
 ![Alt Text](https://media.giphy.com/media/HWb7zFeQcK85WZKKN8/giphy.gif)
 
+---
+
+---
+# Sprint 2
+### Step 1. Record your sprint
+<img src="./pics/pickSprint2.png" style="float: left; margin-right: 5px"> 
+
+### Step 2. Sprint display.
+
+<img src="./pics/sprintDisplay2.png" style="float: left; margin-right: 5px"> 
+
+### Step 3. Sprint display with update button off. 
+
+<img src="./pics/sprintNoDisplay2.png" style="float: left; margin-right: 5px"> 
 ---
 
 
