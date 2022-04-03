@@ -39,6 +39,8 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 #### Design:
 #### Research:
 
+<img src="./pics/airqualityux1.png" style="float: left; margin-right: 5px"> 
+
 ### Step 2. Datapath using [Lucidchart](https://www.lucidchart.com/pages/)
 
 ---
