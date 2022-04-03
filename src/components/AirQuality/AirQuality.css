@@ -1,20 +1,45 @@
-/* Parent */
+/* Container */
 .hours{
     display: flex;
-    outline: 2px dotted #B026FF;
+    /* outline: 2px dotted #B026FF; */
     background: #00000083;
+    padding: 50px;
+    /* margin-bottom: 30px; */
 
 }
 
-/* Child  */
+/* item  */
 .modal-title{
-    outline: 2px solid red;
+    /* display: block; */
+    /* outline: 2px solid red; */
+    margin-left: 30vw;
+    width: 40%;
 }
 
 /* In .map method */
 .first-span{
-    outline: 2px dotted rgb(255, 192, 247);
+    display: block;
+    /* outline: 2px dotted rgb(127, 118, 220); */
+    padding-left: 6vw;
     color: #B026FF;
+
+}
+
+.aqi-display{
+    outline: 2px solid yellowgreen;
+    width: 42%;
+    height: 42%;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    align-items: center;
+}
+
+.aqi-display > *{
+    margin-left: 9rem;
+    font-size: 3rem;
+    color: green;
 }
 
 li{
