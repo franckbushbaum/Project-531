@@ -30,7 +30,7 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 
 ---
 
-### ==Start Here== .
+### Start Here.
  Let me start with Part 3, since it's the newest! 
 
 ---
@@ -40,7 +40,11 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 #### Research:
 
 ##### But what do these numbers mean??
-Looks like some research about Air Quality measurements is in order; for those curious, I found out more at [EPA Air Quality Index](https://www.epa.gov/pmcourse/patient-exposure-and-air-quality-index#what)
+Looks like some research about Air Quality measurements is in order. For those curious, I found out more at [EPA Air Quality Index](https://www.epa.gov/pmcourse/patient-exposure-and-air-quality-index#what)
+
+> *The AQI is a nationally uniform color-coded index for reporting and forecasting daily air quality. It is used to report on the most common ambient air pollutants that are regulated under the Clean Air Act: ground-level ozone, particle pollution (PM10 and PM2.5), carbon monoxide (CO), nitrogen dioxide (NO2), and sulfur dioxide (SO2). The AQI tells the public how clean or polluted the air is and how to avoid health effects associated with poor air quality.
+
+The AQI focuses on health effects that may be experienced within a few hours or days after breathing polluted air and uses a normalized scale from 0 to 500; the higher the AQI value, the greater the level of pollution and the greater the health concern. An AQI value of 100 generally corresponds to the level of the short-term National Ambient Air Quality Standard for the pollutant. AQI values at and below 100 are generally considered to be satisfactory. When AQI values are above 100, air quality is considered to be unhealthy, at first for members of populations at greatest risk of a health effect, then for the entire population as AQI values get higher (greater than 150).*
 
 <img src="./pics/airqualityux1.png" style="float: left; margin-right: 5px"> 
 
