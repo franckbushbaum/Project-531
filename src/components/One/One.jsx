@@ -21,6 +21,8 @@ function One() {
 
     const data = useSelector(store => store.workoutTypeId);
 
+    const topHour = data.slice(-1)
+
     const handleChange = (event) => {
         console.log('what is event.target.value testest?', event.target.value)
         setAirQualityBox(!airQualityBox)
@@ -49,7 +51,7 @@ function One() {
         })
     };
 
-    console.log('what is airQualityBox?', airQualityBox)
+    // console.log('what is airQualityBox?', airQualityBox)
     console.log('what is data?', data)
 
 
@@ -78,10 +80,11 @@ function One() {
                         </FormControl>
                     </Box>
 
-                    {!airQualityBox && <Box className="air-quality-box" sx={{borderRadius: 7, color: 'secondary'}}>
-                        {data.map((hour) => {
+                    {!airQualityBox && <Box className="air-quality-box">
+                        {topHour.map((hour) => {
                             return (
-                                <AirQuality hour={hour} />
+                                <AirQuality hour={hour}
+                                                     />
                             );
                         })}
                     </Box>}

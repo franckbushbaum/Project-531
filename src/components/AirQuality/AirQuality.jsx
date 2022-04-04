@@ -33,8 +33,9 @@ function AirQuality({ hour }) {
       <div className="hours">
         <div>
           <div className="modal-title">{(moment(hour.timestamp_local).calendar())}</div>
-            <div className="aqi-display">The aqi at the bottom of the hour: 
-                <div classname="aqi-display-number">{hour.aqi}</div>
+            <div className="aqi-display">
+                <div className="aqi-display-text">AQI:</div>
+                <div className="aqi-display-number">{hour.aqi}</div>
             </div>
               {/* //2  Air Quality Index [US - EPA standard 0 - +500] */}
               <span className="first-span">
@@ -49,7 +50,6 @@ function AirQuality({ hour }) {
          
         </div>
       </div>
-                {/* className={limit ? 'aqi-moderate': 'aqi-low'} */}
     </>
   );
 }
