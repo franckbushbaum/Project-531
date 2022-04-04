@@ -8,6 +8,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import AirQuality from '../AirQuality/AirQuality.jsx'
+import AqiChart from '../AqiChart/AqiChart.jsx'
 import './One.css';
 
 function One() {
@@ -21,7 +22,7 @@ function One() {
 
     const data = useSelector(store => store.workoutTypeId);
 
-    const topHour = data.slice(-1)
+    const topHour = data.slice(-1);
 
     const handleChange = (event) => {
         console.log('what is event.target.value testest?', event.target.value)
@@ -87,6 +88,7 @@ function One() {
                                                      />
                             );
                         })}
+                        <AqiChart hours={data} />
                     </Box>}
 
                     <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>

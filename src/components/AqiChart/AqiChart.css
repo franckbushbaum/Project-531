@@ -1,0 +1,10 @@
+.aqi-chart{
+    display: flex;
+    width: 90%;
+    height: 50%;
+    outline: 2px dotted #B026FF;
+    background: #00000083;
+    border-radius: 25px;
+    padding: 50px;
+    /* margin-bottom: 30px; */
+}

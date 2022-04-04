@@ -8,7 +8,6 @@
     border-radius: 25px;
     padding: 50px;
     /* margin-bottom: 30px; */
-
 }
 
 /* item  */
@@ -30,14 +29,15 @@
 
 .aqi-display{
     display:grid;
+    align-content: center;
     grid-template-columns: 1;
     /* outline: 2px solid rgb(71, 205, 50); */
-    width: 30%;
-    height: 30%;
+    width: 24%;
+    height: 24%;
     margin-left: 45%;
     margin-right: 45%;
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 8%;
     align-items: center;
 }
 
@@ -45,10 +45,7 @@
     border-radius: 10px;
     position: relative;
     align-self: stretch;
-    padding-left: 2rem;
-    margin-left: 2rem;
-    margin-right: 2rem;
-    margin-bottom: 0.7rem;
+    padding: 30px 0px 30px 55px;
     font-size: 3.4rem;
     /* color:rgba(211,78,78,0.91); */
     outline: 2px solid rgba(211,78,78,0.91);;

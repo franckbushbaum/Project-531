@@ -11,7 +11,7 @@ function AirQuality({ hour }) {
 
 //1 destructured was in an object. 
 
-  console.log('destructured data?', hour);
+  // console.log('destructured data?', hour);
 
 //2 We have a value, in this case we will attempt to 
 //2 use conditional styling to change an element's className when a value is above 50.
@@ -19,8 +19,8 @@ function AirQuality({ hour }) {
   const [limit, setLimit] = useState(false);
 
   const setColor = () => {
-    console.log('what is hour.aqi?', hour.aqi);
-    console.log('what is limit?', limit);
+    // console.log('what is hour.aqi?', hour.aqi);
+    // console.log('what is limit?', limit);
     hour.aqi > 50 ? setLimit(true) : setLimit(false);
 }
 
@@ -34,8 +34,9 @@ function AirQuality({ hour }) {
         <div>
           <div className="modal-title">{(moment(hour.timestamp_local).calendar())}</div>
             <div className="aqi-display">
-                <div className="aqi-display-text">AQI:</div>
-                <div className="aqi-display-number">{hour.aqi}</div>
+                <div className="aqi-display-number">
+                  AQI<br />{hour.aqi}
+            </div>
             </div>
               {/* //2  Air Quality Index [US - EPA standard 0 - +500] */}
               <span className="first-span">
