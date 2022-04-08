@@ -80,8 +80,8 @@ function One() {
                             </Select>
                         </FormControl>
                     </Box>
-
-                    {!airQualityBox && <Box className="air-quality-box">
+                    {!airQualityBox && 
+                    <Box className="air-quality-box">
                         {topHour.map((hour) => {
                             return (
                                 <AirQuality hour={hour}
@@ -90,7 +90,6 @@ function One() {
                         })}
                         <AqiChart hours={data} />
                     </Box>}
-
                     <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>
                 </div>
             </div>

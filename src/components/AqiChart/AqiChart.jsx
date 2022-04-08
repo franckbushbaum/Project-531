@@ -27,7 +27,7 @@ function AqiChart({ hours }) {
 
     return (
         <>
-        <h3>In Chart : begins here..</h3>
+        <h3>--------------------- CHART COMPONENT -------------------------------  ------------------------------     ---------------------------</h3>
              <div className="aqi-chart">
                 <Line data={onData} />
             </div>       

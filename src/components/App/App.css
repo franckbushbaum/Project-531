@@ -8,7 +8,7 @@ body,
 body {
   display:flex;
   justify-content: center;
-  width: 120%;
+  width: 100vw;
   font-family: 'JetBrains Mono', monospace;
   margin: 0px;
 }
@@ -34,7 +34,9 @@ Container
 -------------------------------------------------------------------------------- */
 
 .container {
+  width: auto;
   padding-top: 40px;
+  margin: auto;
 }
 
 /* --------------------------------------------------------------------------------

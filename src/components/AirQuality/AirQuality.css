@@ -1,14 +1,18 @@
 /* Container */
 .hours{
+        outline: 2px dotted #26ff26;
+    margin: 0px;
     display: grid;
     gap: 1.5rem;
     grid-template-rows: 3fr;
-    width: 100em;
-    height: 50vh;
-    outline: 2px dotted #26ff26;
-    background: #00000083;
-    border-radius: 25px;
-    /* margin-bottom: 30px; */
+    width: 80em;
+    height: auto;
+    position: relative;
+    top: 5em;
+    margin: 0px auto 0px auto;
+    left: auto;
+    right: auto;
+    bottom: 5em;
 }
 
 
@@ -16,22 +20,24 @@
 .modal-title{
     outline: 2px solid blue;
     margin-top: 1em;
-    justify-self: center;
+    margin-left: 45em;
+    justify-self: right;
     width: auto;
     padding: auto;
 }
 
 /* item */
 .next-five-container{
+    /* outline: 2px solid rgb(0, 179, 255); */
     display: flex;
     justify-content: center;
-    width: 100em;
+    width: 80em;
     height: 10em;
-    outline: 2px solid red;
+
 }
 
 .next-five-display-number{
-    outline: 2px solid greenyellow;
+    outline: 2px solid rgba(211,78,78,0.91);
     padding: 1rem;    
     border-radius: 10px;
     font-size: 2.5rem;
@@ -58,7 +64,25 @@
     justify-self: center;
 }
 
-.aqi-display > *{
+/* .aqi-display > *{
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); 
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+} */
+
+
+li{
+    margin: 1.5rem;
+}
+
+/* Air Quality Colors begin */
+.ten{
+    color: #B026FF;
+
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
@@ -68,20 +92,111 @@
     margin-bottom: 40px;
 }
 
-
-li{
-    margin: 1.5rem;
+.twenty{
+    color: #FF6700;
+    
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-/* Air Quality Colors */
-.aqi-low{
-    color: #B026FF;
+.thirty{
+    color: rgb(136, 255, 0);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-.aqi-moderate{
-    color: #FF6700;    
+.forty{
+    color: rgb(0, 255, 85);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 
-.aqi-high{
-    color: red;
+.fifty{
+    color: rgb(0, 255, 195);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
+
+.sixty{
+    color: rgb(111, 0, 255);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.seventy{
+    color: rgb(0, 38, 255);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.eighty{
+    color: rgb(72, 0, 255);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.ninety{
+    color: rgb(251, 0, 255);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.hundred{
+    color: rgb(89, 255, 0);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/* Air Quality Colors end */
