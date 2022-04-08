@@ -22,11 +22,11 @@ function One() {
 
     const data = useSelector(store => store.workoutTypeId);
 
-    const topHour = data.slice(-1);
+    const topHour = data?.slice(-1);
 
     const handleChange = (event) => {
         console.log('what is event.target.value testest?', event.target.value)
-        setAirQualityBox(!airQualityBox)
+        setAirQualityBox(!true)
         setWorkoutType(event.target.value);
         if (event.target.value === 1) {
             console.log('I mean if I do chest..HERE')
@@ -55,7 +55,19 @@ function One() {
     // console.log('what is airQualityBox?', airQualityBox)
     console.log('what is data?', data)
 
+    const requestThreeDaysData = (event) => {
+        console.log('what is event?', event);
+        const hours = event;
+        dispatch({
+            type: 'FETCH_LONG_AIR_QUALITY',
+            payload: {lat: '45.085',
+                      lon: '-93.008',
+                      user: 'Franck',
+                      hours}
+        })
+    };
 
+    console.log('what is airQualityBox?', airQualityBox);
 
     return (
         <>
@@ -89,6 +101,8 @@ function One() {
                             );
                         })}
                         <AqiChart hours={data} />
+                        <button className='' value={5} onClick={handleChange}>24HR</button>
+                        <button className='' onClick={() => requestThreeDaysData('72')}>72HR</button>
                     </Box>}
                     <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>
                 </div>

@@ -30,4 +30,23 @@ router.get('/', (req, res) => {
     });
   });
 
+  router.get('/:hours', (req, res) => {
+    console.log('IN HOURS, req.query,', req.query);
+    const {lat ,lon, hours} = req.query;
+    var options = {
+      method: 'GET',
+      url: 'https://air-quality.p.rapidapi.com/forecast/airquality',
+      params: {lat: lat, lon: lon, hours: hours},
+      headers: {
+        'x-rapidapi-host': 'air-quality.p.rapidapi.com',
+        'x-rapidapi-key': 'bb38151e24msha271fe5e90f5b03p151d27jsnabf027f0721e'
+      }
+    };   
+    axios.request(options).then(function (response) {
+      res.json(response.data);
+    }).catch(function (error) {
+      console.error(error);
+    });
+  });
+
   module.exports = router;

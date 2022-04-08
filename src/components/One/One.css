@@ -26,22 +26,28 @@
 
 
 
-html{
+/* html{
     background-image: url(https://images.unsplash.com/photo-1610322231968-31322d42851f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2836&q=80);
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; 
     /* background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(110,36,68,0.8057598039215687) 50%, rgba(2,16,19,1) 100%); */
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(110,36,68,0.8057598039215687) 50%, rgba(2,16,19,1) 100%); 
+}*/ 
+
+html{
+    background-image: url(https://images.unsplash.com/photo-1610322231968-31322d42851f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2836&q=80);
 }
 
 .air-quality-button{
     background-color: transparent;
     border: none;
-    margin-top: 19px;
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
     text-transform: uppercase;
-    font-size: 19px;
+    font-size: 13px;
     color: rgba(211, 78, 78, 0.781);
     text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
     cursor:pointer;

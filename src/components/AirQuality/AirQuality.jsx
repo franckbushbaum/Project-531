@@ -11,18 +11,15 @@ function AirQuality({ hour }) {
 
   //1 destructured was in an object. 
 
-  console.log('destructured data?', hour);
+  // console.log('destructured data?', hour);
 
   const aqi = hour.aqi;
-
-  //2 We have a value, in this case we will attempt to 
-  //2 use conditional styling to change an element's className when a value is above 50.
 
   const [grade, setGrade] = useState();
 
   const setColor = () => {
-    console.log('setColor fires:')
-    console.log('what is aqi?', aqi);
+    // console.log('setColor fires:')
+    // console.log('what is aqi?', aqi);
       if(0 < aqi && aqi < 20){
         setGrade('ten')
       } else if (20 < aqi && aqi < 30){
@@ -43,10 +40,10 @@ function AirQuality({ hour }) {
       } else if (90 < aqi && aqi < 100){
         setGrade('ninety')
       }
-    console.log('what is grade?', grade);
+    // console.log('what is grade?', grade);
   }
 
-  console.log('what is GRADE?', grade);
+  // console.log('what is GRADE?', grade);
 
   useEffect(() => {
     if(!grade){
@@ -67,23 +64,23 @@ function AirQuality({ hour }) {
       </div>
       <div className='next-five-container'>
         <span className="next-five-display-number">
-          pm10<br />{hour.pm10}
+          pm10:<br />{hour.pm10}
         </span>
         <span className="next-five-display-number">
-          pm25<br />{hour.pm25}
+          pm25:<br />{hour.pm25}
         </span>
         <span className="next-five-display-number">
-          C0 <br /> {hour.co}
+          C0: <br /> {hour.co}
         </span>
         <span className="next-five-display-number">
-          N02 <br /> {hour.no2}
+          N02: <br /> {hour.no2}
         </span>
         <span className="next-five-display-number">
-          03 <br /> {hour.o3}
+          03: <br /> {hour.o3}
         </span>
       </div>
       {/* //2  Air Quality Index [US - EPA standard 0 - +500] */}
-      <span className="first-span">
+      {/* <span className="first-span">
         <BsFillCloudDrizzleFill />  On {(moment(hour.timestamp_local).format('MMMM Do YYYY, h:mm:ss a'))} <BsFillBrightnessHighFill /><br />
         Air Quality Index : <span className={grade}>{aqi}</span> <br />
         pm10: concentration of particulate matter smaller than 10 microns : {hour.pm10}.<br />
@@ -91,7 +88,7 @@ function AirQuality({ hour }) {
         03: Trioxygen, the layer of ozone protecting the Earth from harmful rays.<br />
         NO2: More dangerous than Carbon Dioxide for the environment? 300% more potent.<br />
         CO: Carbon Monoxodie.{hour.co}
-      </span>
+      </span> */}
     </div>
 
   );

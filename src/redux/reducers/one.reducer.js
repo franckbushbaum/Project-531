@@ -4,6 +4,8 @@ const workoutTypeId = (state = [], action) => {
             return action.payload;
         case 'SET_AIR_QUALITY':
             return action.payload;
+        case 'SET_LONG_AIR_QUALITY':
+            return action.payload;
         default:
             return state;
     }
