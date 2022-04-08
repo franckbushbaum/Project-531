@@ -18,53 +18,39 @@ function AirQuality({ hour }) {
   //2 We have a value, in this case we will attempt to 
   //2 use conditional styling to change an element's className when a value is above 50.
 
-  const [grade, setGrade] = useState('');
+  const [grade, setGrade] = useState();
 
   const setColor = () => {
     console.log('setColor fires:')
-    // console.log('what is hour.aqi?', hour.aqi);
-    // console.log('what is limit?', limit);
-    console.log('what is hour.aqi?', aqi);
-    switch (aqi) {
-      case aqi <= 10:
+    console.log('what is aqi?', aqi);
+      if(0 < aqi && aqi < 20){
         setGrade('ten')
-        break;
-      case aqi <= 20:
+      } else if (20 < aqi && aqi < 30){
         setGrade('twenty')
-        break;
-      case aqi <= 30:
+      } else if (30 < aqi && aqi < 40){
         setGrade('thirty')
-        break;
-      case aqi <= 40:
+      } else if (40 < aqi && aqi < 50){
+        console.log('FUNCTION SHOULD HIT HERE??!')
         setGrade('forty')
-        break;
-      case aqi <= 50:
+      } else if (50 < aqi && aqi < 60){
         setGrade('fifty')
-        break;
-      // case hour.aqi <= 60:
-      //   setGrade('sixty')
-      //   break;
-      // case hour.aqi <= 70:
-      //   setGrade('seventy')
-      //   break;
-      // case hour.aqi <= 80:
-      //   setGrade('eighty')
-      //   break;
-      // case hour.aqi <= 90:
-      //   setGrade('ninety')
-      //   break;
-      // case hour.aqi <= 100:
-      //   setGrade('hundred')
-      //   break;
-    };
+      } else if (60 < aqi && aqi < 70){
+        setGrade('sixty')
+      } else if (70 < aqi && aqi < 80){
+        setGrade('seventy')
+      } else if (80 < aqi && aqi < 90){
+        setGrade('eighty')
+      } else if (90 < aqi && aqi < 100){
+        setGrade('ninety')
+      }
     console.log('what is grade?', grade);
   }
 
-  console.log('what is THE FUCKIING grade?', grade);
+  console.log('what is GRADE?', grade);
 
   useEffect(() => {
     if(!grade){
-      setColor()
+      setColor();
     }
   }, [grade])
 
