@@ -5,9 +5,142 @@
     background: #00000083;
     border-radius: 25px;
     padding: 50px;
-    margin-top: 5rem;
+    margin-top: 0rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
     /* margin-bottom: 30px; */
 }
+
+.chart-header{
+    outline: 2px dotted #B026FF;
+    display: inline-block;
+    width: auto;
+    position:relative;
+    margin: 8rem 1rem 0rem 1rem;
+    padding: 1rem;
+    top: 20%;
+    left: 45%;
+}
+
+/* Air Quality Colors begin */
+.ten{
+    color: #B026FF;
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.twenty{
+    color: #FF6700;
+    
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.thirty{
+    color: rgb(136, 255, 0);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.forty{
+    color: rgb(0, 255, 85);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.fifty{
+    color: rgb(0, 255, 195);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.sixty{
+    color: rgb(111, 0, 255);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.seventy{
+    color: rgb(0, 38, 255);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.eighty{
+    color: rgb(72, 0, 255);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.ninety{
+    color: rgb(251, 0, 255);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.hundred{
+    color: rgb(89, 255, 0);
+
+    padding: 1rem;    
+    border-radius: 10px;
+    font-size: 3.4rem;
+    /* color:rgba(211,78,78,0.91); */
+    outline: 2px solid rgba(211,78,78,0.91);
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+/* Air Quality Colors end */

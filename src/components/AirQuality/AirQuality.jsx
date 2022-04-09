@@ -13,13 +13,15 @@ function AirQuality({ hour }) {
 
   // console.log('destructured data?', hour);
 
-  const aqi = hour.aqi;
+  const {aqi} = hour;
 
-  const [grade, setGrade] = useState();
+  console.log('what is the aqi??', aqi)
+
+  const [grade, setGrade] = useState('ten');
 
   const setColor = () => {
     // console.log('setColor fires:')
-    // console.log('what is aqi?', aqi);
+    console.log('what is aqi?', aqi);
       if(0 < aqi && aqi < 20){
         setGrade('ten')
       } else if (20 < aqi && aqi < 30){
@@ -27,11 +29,11 @@ function AirQuality({ hour }) {
       } else if (30 < aqi && aqi < 40){
         setGrade('thirty')
       } else if (40 < aqi && aqi < 50){
-        console.log('FUNCTION SHOULD HIT HERE??!')
         setGrade('forty')
       } else if (50 < aqi && aqi < 60){
         setGrade('fifty')
       } else if (60 < aqi && aqi < 70){
+        console.log('FUNCTION SHOULD HIT HERE??!')
         setGrade('sixty')
       } else if (70 < aqi && aqi < 80){
         setGrade('seventy')
@@ -40,16 +42,16 @@ function AirQuality({ hour }) {
       } else if (90 < aqi && aqi < 100){
         setGrade('ninety')
       }
-    // console.log('what is grade?', grade);
+     console.log('what is grade?', grade);
   }
 
-  // console.log('what is GRADE?', grade);
+  console.log('what is GRADE?', grade);
 
   useEffect(() => {
-    if(!grade){
+    if(!aqi){
       setColor();
     }
-  }, [grade])
+  }, [aqi])
 
   return (
 

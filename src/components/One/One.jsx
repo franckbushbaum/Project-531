@@ -20,7 +20,11 @@ function One() {
 
     // const data = useSelector(store => store.workoutTypeId.toString().slice(-1));
 
-    const data = useSelector(store => store.workoutTypeId);
+    const data = useSelector(store => store.workoutTypeId);  
+
+    const [allAirData, setAllAirData] = useState(data);
+
+    console.log('allAirData is', allAirData);
 
     const topHour = data?.slice(-1);
 

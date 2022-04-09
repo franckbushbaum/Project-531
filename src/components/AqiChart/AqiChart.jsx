@@ -11,23 +11,26 @@ function AqiChart({ hours }) {
     // const onSprints = useSelector(store => store.fetchSprints)
 
 
+
     const onData = {
         labels: hours.map((hour) => hour.timestamp_local),
         datasets: [{
             label: "Air Quality Index",
             data: hours.map((hour) => hour.aqi),
-            pointBackgroundColor: ["#1FFF0F"],
-            borderColor: ["#1FFF0F"],
-            color: ["#1FFF0F"],
+            pointBackgroundColor: [hours.length < 50 ? "#1FFF0F" : "#FF5F1F" ],
+            borderColor: [hours.length < 50 ? "#1FFF0F" : "#FF5F1F"],
+            color: [hours.length < 50 ? "#1FFF0F" : "#FF5F1F"],
             hitRadius: 50,
         }]
     };
 
-    console.log('What is hours?', hours)
+    console.log('What is hours?', hours.length)
 
     return (
         <>
-        <h3>--------------------- CHART COMPONENT -------------------------------  ------------------------------     ---------------------------</h3>
+            <header>
+                <h2 className='chart-header'>{hours.length} CHART</h2>
+            </header>
              <div className="aqi-chart">
                 <Line data={onData} />
             </div>       

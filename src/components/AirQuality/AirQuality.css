@@ -1,6 +1,6 @@
 /* Container */
 .hours{
-        outline: 2px dotted #26ff26;
+    outline: 2px dotted #26ff26;
     margin: 0px;
     display: grid;
     gap: 1.5rem;
