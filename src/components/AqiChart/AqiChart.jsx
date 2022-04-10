@@ -24,12 +24,12 @@ function AqiChart({ hours }) {
         }]
     };
 
-    console.log('What is hours?', hours.length)
+    // console.log('What is hours?', hours.length)
 
     return (
         <>
             <header>
-                <h2 className='chart-header'>{hours.length} CHART</h2>
+                <h2 className={hours.length < 50 ? 'green' : 'orange'}>{hours.length} CHART</h2>
             </header>
              <div className="aqi-chart">
                 <Line data={onData} />

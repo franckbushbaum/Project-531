@@ -22,18 +22,13 @@ function One() {
 
     const data = useSelector(store => store.workoutTypeId);  
 
-    const [allAirData, setAllAirData] = useState(data);
-
-    console.log('allAirData is', allAirData);
-
+//4 Data for Air Quality Component
     const topHour = data?.slice(-1);
 
     const handleChange = (event) => {
-        console.log('what is event.target.value testest?', event.target.value)
         setAirQualityBox(!true)
         setWorkoutType(event.target.value);
         if (event.target.value === 1) {
-            console.log('I mean if I do chest..HERE')
             history.push('/chest');
         } else if (event.target.value === 2) {
             history.push('/legs');
@@ -47,7 +42,7 @@ function One() {
                 type: 'FETCH_AIR_QUALITY',
                 payload: {lat: '45.085',
                           lon: '-93.008',
-                          user: 'FFRANCK'}
+                          user: 'Franck'}
             })
         }
         dispatch({
@@ -56,7 +51,6 @@ function One() {
         })
     };
 
-    // console.log('what is airQualityBox?', airQualityBox)
     console.log('what is data?', data)
 
     const requestThreeDaysData = (event) => {
@@ -71,13 +65,11 @@ function One() {
         })
     };
 
-    console.log('what is airQualityBox?', airQualityBox);
-
     return (
         <>
             <div className="container">
                 {/* <h3>{JSON.stringify(data)}</h3> */}
-                <div className="card">
+                
                     <Box className="select-menu" sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, color: 'secondary'  }} >
                         <FormControl sx={{ m: 7, minWidth: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
                             <InputLabel  color="secondary">Pick a workout</InputLabel>
@@ -109,7 +101,7 @@ function One() {
                         <button className='' onClick={() => requestThreeDaysData('72')}>72HR</button>
                     </Box>}
                     <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>
-                </div>
+                
             </div>
 
         </>

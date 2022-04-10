@@ -11,13 +11,12 @@
 
 .nav {
   /* flex box layout */
-  position: relative;
-  top: 50px;
+
   padding-left: 355px;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 0 30px;
+  margin: 2rem;
   background: repeating-linear-gradient(
       to bottom,
       transparent 0%,

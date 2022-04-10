@@ -8,9 +8,9 @@
      display: flex;
      border-radius: 15px;
      width: 750px;
+     height: 16vh;
      margin-left: auto;
      margin-right: auto;
-     margin-bottom: 1vh;
      /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
      background: #00000083;
      /* background-color: rgb(42, 165, 165); */
@@ -69,7 +69,7 @@ html{
 
 .card{
     width: 100vw;
-    height: 200vh;
+    height: 100vh;
     margin: 0px;
 }
 
@@ -78,8 +78,9 @@ html{
     outline: 2px solid red;
     border-radius: 20px;
     background: #00000083;
-    margin: 80px 100px;
-    width: 90%;
-    height: 90%;
+    margin: auto;
+    width: auto;
+    height: auto;
+    padding: 3rem;
 }
 

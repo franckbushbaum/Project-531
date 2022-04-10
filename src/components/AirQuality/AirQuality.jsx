@@ -9,49 +9,59 @@ import { AirlineSeatReclineNormalOutlined } from '@mui/icons-material';
 
 function AirQuality({ hour }) {
 
-  //1 destructured was in an object. 
+//1 destructured was in an object. 
+console.log('destructured data?', hour);
 
-  // console.log('destructured data?', hour);
-
+//2 Option A:
   const {aqi} = hour;
+  // console.log('what is the aqi??', aqi)
 
-  console.log('what is the aqi??', aqi)
+//3 Option B:
 
   const [grade, setGrade] = useState('ten');
 
   const setColor = () => {
     // console.log('setColor fires:')
-    console.log('what is aqi?', aqi);
+    // console.log('what is aqi?', aqi);
       if(0 < aqi && aqi < 20){
         setGrade('ten')
-      } else if (20 < aqi && aqi < 30){
+      } else if (20 <= aqi && aqi < 30){
         setGrade('twenty')
-      } else if (30 < aqi && aqi < 40){
+      } else if (30 <= aqi && aqi < 40){
         setGrade('thirty')
-      } else if (40 < aqi && aqi < 50){
+      } else if (40 <= aqi && aqi < 50){
         setGrade('forty')
-      } else if (50 < aqi && aqi < 60){
+      } else if (50 <= aqi && aqi < 60){
         setGrade('fifty')
-      } else if (60 < aqi && aqi < 70){
+      } else if (60 <= aqi && aqi < 70){
         console.log('FUNCTION SHOULD HIT HERE??!')
         setGrade('sixty')
-      } else if (70 < aqi && aqi < 80){
+      } else if (70 <= aqi && aqi < 80){
         setGrade('seventy')
-      } else if (80 < aqi && aqi < 90){
+      } else if (80 <= aqi && aqi < 90){
         setGrade('eighty')
-      } else if (90 < aqi && aqi < 100){
+      } else if (90 <= aqi && aqi < 100){
         setGrade('ninety')
       }
-     console.log('what is grade?', grade);
+      for (const key of Object.keys(hour)){
+        console.log(`${key} has a value of ${hour[key]}`)
+      }
+    //  console.log('what is grade?', grade);
   }
 
-  console.log('what is GRADE?', grade);
+  // console.log('what is GRADE?', grade);
+
+  console.log('what is hour?', hour)
 
   useEffect(() => {
-    if(!aqi){
+    if(aqi){
       setColor();
     }
   }, [aqi])
+
+  // useEffect(() => {
+  //     setColor();
+  // }, [])
 
   return (
 
@@ -65,19 +75,19 @@ function AirQuality({ hour }) {
         </div>
       </div>
       <div className='next-five-container'>
-        <span className="next-five-display-number">
+        <span className="nfdn-active">
           pm10:<br />{hour.pm10}
         </span>
-        <span className="next-five-display-number">
+        <span className="nfdn-active">
           pm25:<br />{hour.pm25}
         </span>
-        <span className="next-five-display-number">
+        <span className="nfdn-active">
           C0: <br /> {hour.co}
         </span>
-        <span className="next-five-display-number">
+        <span className="nfdn-active">
           N02: <br /> {hour.no2}
         </span>
-        <span className="next-five-display-number">
+        <span className="nfdn-active">
           03: <br /> {hour.o3}
         </span>
       </div>

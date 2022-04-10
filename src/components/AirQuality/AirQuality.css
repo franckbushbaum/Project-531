@@ -36,12 +36,13 @@
 
 }
 
-.next-five-display-number{
+.nfdn-active{
     outline: 2px solid rgba(211,78,78,0.91);
-    padding: 1rem;    
+    padding: 1rem;  
+    min-width: 4em; 
     border-radius: 10px;
-    font-size: 2.5rem;
-    margin: 10px;
+    font-size: 2.1rem;
+    margin: 1%;
     /* outline: 2px solid rgb(71, 205, 50); */
 
 }

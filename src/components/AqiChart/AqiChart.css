@@ -1,6 +1,6 @@
 .aqi-chart{
     width: 80%;
-    height: 50em;
+    height: 40em;
     outline: 2px dotted #B026FF;
     background: #00000083;
     border-radius: 25px;
@@ -12,7 +12,22 @@
     /* margin-bottom: 30px; */
 }
 
-.chart-header{
+.green{
+    color: #1FFF0F;
+
+    outline: 2px dotted #B026FF;
+    display: inline-block;
+    width: auto;
+    position:relative;
+    margin: 8rem 1rem 0rem 1rem;
+    padding: 1rem;
+    top: 20%;
+    left: 45%;
+}
+
+.orange{
+    color: #FF6700;
+
     outline: 2px dotted #B026FF;
     display: inline-block;
     width: auto;
@@ -25,7 +40,7 @@
 
 /* Air Quality Colors begin */
 .ten{
-    color: #B026FF;
+    color: #26ffff;
 
     padding: 1rem;    
     border-radius: 10px;
@@ -37,7 +52,7 @@
 }
 
 .twenty{
-    color: #FF6700;
+    color: #00ff95;
     
     padding: 1rem;    
     border-radius: 10px;
@@ -49,7 +64,7 @@
 }
 
 .thirty{
-    color: rgb(136, 255, 0);
+    color: rgb(0, 255, 145);
 
     padding: 1rem;    
     border-radius: 10px;
@@ -61,7 +76,7 @@
 }
 
 .forty{
-    color: rgb(0, 255, 85);
+    color: rgb(255, 196, 0);
 
     padding: 1rem;    
     border-radius: 10px;
@@ -73,7 +88,7 @@
 }
 
 .fifty{
-    color: rgb(0, 255, 195);
+    color: rgb(255, 166, 0);
 
     padding: 1rem;    
     border-radius: 10px;
@@ -85,7 +100,7 @@
 }
 
 .sixty{
-    color: rgb(111, 0, 255);
+    color: rgb(255, 123, 0);
 
     padding: 1rem;    
     border-radius: 10px;
@@ -97,7 +112,7 @@
 }
 
 .seventy{
-    color: rgb(0, 38, 255);
+    color: rgb(255, 47, 0);
 
     padding: 1rem;    
     border-radius: 10px;
@@ -109,7 +124,7 @@
 }
 
 .eighty{
-    color: rgb(72, 0, 255);
+    color: rgb(255, 4, 0);
 
     padding: 1rem;    
     border-radius: 10px;
@@ -121,7 +136,7 @@
 }
 
 .ninety{
-    color: rgb(251, 0, 255);
+    color: rgb(255, 0, 0);
 
     padding: 1rem;    
     border-radius: 10px;
