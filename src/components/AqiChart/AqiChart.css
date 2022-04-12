@@ -1,6 +1,6 @@
 .aqi-chart{
     width: 80%;
-    height: 40em;
+    height: 32em;
     outline: 2px dotted #B026FF;
     background: #00000083;
     border-radius: 25px;
@@ -23,6 +23,7 @@
     padding: 1rem;
     top: 20%;
     left: 45%;
+    font-size: 2.4rem;
 }
 
 .orange{
@@ -36,6 +37,7 @@
     padding: 1rem;
     top: 20%;
     left: 45%;
+    font-size: 2.4rem;
 }
 
 /* Air Quality Colors begin */

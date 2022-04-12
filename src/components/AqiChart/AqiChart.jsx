@@ -29,7 +29,7 @@ function AqiChart({ hours }) {
     return (
         <>
             <header>
-                <h2 className={hours.length < 50 ? 'green' : 'orange'}>{hours.length} CHART</h2>
+                <h2 className={hours.length < 50 ? 'green' : 'orange'}>{hours.length}HR</h2>
             </header>
              <div className="aqi-chart">
                 <Line data={onData} />
