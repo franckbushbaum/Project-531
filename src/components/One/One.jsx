@@ -7,8 +7,9 @@ import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
-import AirQuality from '../AirQuality/AirQuality.jsx'
-import AqiChart from '../AqiChart/AqiChart.jsx'
+import AirQuality from '../AirQuality/AirQuality.jsx';
+import AqiChart from '../AqiChart/AqiChart.jsx';
+import BarChartLabel from '../BarChart/BarChartLabel.jsx';
 import './One.css';
 
 function One() {
@@ -96,6 +97,7 @@ function One() {
                                                      />
                             );
                         })}
+                        <BarChartLabel hours={data} />
                         <AqiChart hours={data} />
                         <button className='' value={5} onClick={handleChange}>24HR</button>
                         <button className='' onClick={() => requestThreeDaysData('72')}>72HR</button>

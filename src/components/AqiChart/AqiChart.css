@@ -1,11 +1,10 @@
 .aqi-chart{
     width: 80%;
-    height: 32em;
+    height: 30em;
     outline: 2px dotted #B026FF;
     background: #00000083;
     border-radius: 25px;
     padding: 50px;
-    margin-top: 0rem;
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 2rem;
@@ -19,7 +18,7 @@
     display: inline-block;
     width: auto;
     position:relative;
-    margin: 8rem 1rem 0rem 1rem;
+    margin: 4rem 1rem 0rem 1rem;
     padding: 1rem;
     top: 20%;
     left: 45%;
@@ -33,7 +32,7 @@
     display: inline-block;
     width: auto;
     position:relative;
-    margin: 8rem 1rem 0rem 1rem;
+    margin: 4rem 1rem 0rem 1rem;
     padding: 1rem;
     top: 20%;
     left: 45%;

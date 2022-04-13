@@ -1,0 +1,11 @@
+.bar-chart{
+    outline: 2px dotted #26b3ff;
+    background: #3c3b3b83;
+    border-radius: 25px;
+    padding: 3.2em;
+    margin-top: 10em;
+    margin-left: auto;
+    margin-right: auto;
+    /* margin-bottom: 30px; */
+}
+
