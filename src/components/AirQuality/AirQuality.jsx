@@ -10,7 +10,7 @@ import { AirlineSeatReclineNormalOutlined } from '@mui/icons-material';
 function AirQuality({ hour }) {
 
 //1 destructured was in an object. 
-console.log('destructured data?', hour);
+// console.log('destructured data?', hour);
 
 //2 Option A:
   const {aqi} = hour;
@@ -44,14 +44,14 @@ console.log('destructured data?', hour);
         setGrade('ninety')
       }
       for (const key of Object.keys(hour)){
-        console.log(`${key} has a value of ${hour[key]}`)
+        // console.log(`${key} has a value of ${hour[key]}`)
       }
     //  console.log('what is grade?', grade);
   }
 
-  // console.log('what is GRADE?', grade);
+  //  console.log('what is GRADE?', grade);
 
-  console.log('what is hour?', hour)
+  // console.log('what is hour?', hour)
 
   useEffect(() => {
     if(aqi){

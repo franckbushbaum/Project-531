@@ -82,7 +82,7 @@ li{
 
 /* Air Quality Colors begin */
 .ten{
-    color: #B026FF;
+    color: #ff8b26;
 
     padding: 1rem;    
     border-radius: 10px;
@@ -94,7 +94,7 @@ li{
 }
 
 .twenty{
-    color: #FF6700;
+    color: #ffe600;
     
     padding: 1rem;    
     border-radius: 10px;
@@ -106,7 +106,7 @@ li{
 }
 
 .thirty{
-    color: rgb(136, 255, 0);
+    color: rgb(34, 255, 0);
 
     padding: 1rem;    
     border-radius: 10px;
@@ -118,7 +118,7 @@ li{
 }
 
 .forty{
-    color: rgb(0, 255, 85);
+    color: rgb(216, 226, 28);
 
     padding: 1rem;    
     border-radius: 10px;
@@ -130,7 +130,7 @@ li{
 }
 
 .fifty{
-    color: rgb(0, 255, 195);
+    color: rgb(235, 178, 47);
 
     padding: 1rem;    
     border-radius: 10px;
@@ -142,7 +142,7 @@ li{
 }
 
 .sixty{
-    color: rgb(111, 0, 255);
+    color: rgb(255, 140, 0);
 
     padding: 1rem;    
     border-radius: 10px;
@@ -166,7 +166,7 @@ li{
 }
 
 .eighty{
-    color: rgb(72, 0, 255);
+    color: rgb(204, 0, 255);
 
     padding: 1rem;    
     border-radius: 10px;
@@ -178,7 +178,7 @@ li{
 }
 
 .ninety{
-    color: rgb(251, 0, 255);
+    color: rgb(255, 0, 162);
 
     padding: 1rem;    
     border-radius: 10px;
