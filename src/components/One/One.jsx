@@ -27,7 +27,7 @@ function One() {
     const topHour = data?.slice(-1);
 
     const handleChange = (event) => {
-        setAirQualityBox(!true)
+        setAirQualityBox(false)
         setWorkoutType(event.target.value);
         if (event.target.value === 1) {
             history.push('/chest');

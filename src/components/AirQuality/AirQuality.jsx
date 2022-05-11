@@ -6,6 +6,8 @@ import { BsFillCloudDrizzleFill, BsFillBrightnessHighFill } from "react-icons/bs
 import moment from 'moment';
 import { AirlineSeatReclineNormalOutlined } from '@mui/icons-material';
 
+import PopUp from '../PopUp/PopUp.jsx'
+
 
 function AirQuality({ hour }) {
 
@@ -44,7 +46,7 @@ function AirQuality({ hour }) {
         setGrade('ninety')
       }
       for (const key of Object.keys(hour)){
-        // console.log(`${key} has a value of ${hour[key]}`)
+       console.log(`${key} has a value of ${hour[key]}`)
       }
     //  console.log('what is grade?', grade);
   }
@@ -91,6 +93,7 @@ function AirQuality({ hour }) {
           03: <br /> {hour.o3}
         </span>
       </div>
+      <PopUp />
       {/* //2  Air Quality Index [US - EPA standard 0 - +500] */}
       {/* <span className="first-span">
         <BsFillCloudDrizzleFill />  On {(moment(hour.timestamp_local).format('MMMM Do YYYY, h:mm:ss a'))} <BsFillBrightnessHighFill /><br />
