@@ -22,6 +22,9 @@ function AirQuality({ hour }) {
 
   const [grade, setGrade] = useState('ten');
 
+  const [isHovering, setIsHovering] = useState(false)
+  const [currentTarget, setCurrentTarget] = useState('')
+
   const setColor = () => {
     // console.log('setColor fires:')
     // console.log('what is aqi?', aqi);
@@ -65,6 +68,20 @@ function AirQuality({ hour }) {
   //     setColor();
   // }, [])
 
+  const handleMouseEnter = (e) => {
+    console.log('in mouseEnter, id is: ', e.target.id)
+    setIsHovering(true)
+    setCurrentTarget(e.target.id)
+  }
+
+  const handleMouseLeave = (e) => {
+    console.log('in mouseLeave, id is: ', e.target.id)
+    setIsHovering(false)
+    setCurrentTarget('')
+  }
+
+  console.log('current target is: ', currentTarget)
+
   return (
 
     <div className="hours">
@@ -77,23 +94,23 @@ function AirQuality({ hour }) {
         </div>
       </div>
       <div className='next-five-container'>
-        <span className="nfdn-active">
+        <span className="nfdn-active" id="pm10" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}>
           pm10:<br />{hour.pm10}
         </span>
-        <span className="nfdn-active">
+        <span className="nfdn-active" id="pm25" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}>
           pm25:<br />{hour.pm25}
         </span>
-        <span className="nfdn-active">
+        <span className="nfdn-active" id="co" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}>
           C0: <br /> {hour.co}
         </span>
-        <span className="nfdn-active">
+        <span className="nfdn-active" id="no2" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}>
           N02: <br /> {hour.no2}
         </span>
-        <span className="nfdn-active">
+        <span className="nfdn-active" id="o3" onMouseEnter={(e) => handleMouseEnter(e)} onMouseLeave={(e) => handleMouseLeave(e)}>
           03: <br /> {hour.o3}
         </span>
       </div>
-      <PopUp />
+      {isHovering ? <PopUp target={currentTarget} /> : <></>}
       {/* //2  Air Quality Index [US - EPA standard 0 - +500] */}
       {/* <span className="first-span">
         <BsFillCloudDrizzleFill />  On {(moment(hour.timestamp_local).format('MMMM Do YYYY, h:mm:ss a'))} <BsFillBrightnessHighFill /><br />

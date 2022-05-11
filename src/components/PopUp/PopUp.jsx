@@ -7,9 +7,12 @@ import './PopUp.css';
 // It doesn't dispatch any redux actions or display any part of redux state
 // or even care what the redux state is, so it doesn't need 'connect()'
 
-function PopUp() {
+function PopUp({ target }) {
+
+    console.log('Target in popup is: ', target)
+
   return (
-      <div className="info-popup">empty box</div>
+      <div className="info-popup">{target}</div>
   )
 }
 
