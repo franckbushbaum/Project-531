@@ -110,7 +110,8 @@ function AirQuality({ hour }) {
           03: <br /> {hour.o3}
         </span>
       </div>
-      {isHovering ? <PopUp target={currentTarget} /> : <></>}
+      <div className={currentTarget ||'pop-up-inactive'}>{isHovering ?  <PopUp target={currentTarget} /> : <></>}</div>
+      
       {/* //2  Air Quality Index [US - EPA standard 0 - +500] */}
       {/* <span className="first-span">
         <BsFillCloudDrizzleFill />  On {(moment(hour.timestamp_local).format('MMMM Do YYYY, h:mm:ss a'))} <BsFillBrightnessHighFill /><br />

@@ -5,6 +5,7 @@
     display: grid;
     gap: 1.5rem;
     grid-template-rows: 3fr;
+    grid-template-columns: 5fr;
     width: 80em;
     height: auto;
     position: relative;
@@ -201,3 +202,21 @@ li{
     margin-bottom: 40px;
 }
 /* Air Quality Colors end */
+
+/* Pop-up Windows Begin */
+
+.pm10{
+    outline: 2px dotted rgb(127, 118, 220);
+    position: relative;
+    left: 10em;
+    bottom: 10em;
+}
+
+.pm25{
+    outline: 2px dotted rgb(210, 220, 118);
+    position: relative;
+    left: 25em;
+    bottom: 10em;
+}
+
+/* Pop-up Windows End */

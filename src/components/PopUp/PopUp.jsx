@@ -12,7 +12,7 @@ function PopUp({ target }) {
     console.log('Target in popup is: ', target)
 
   return (
-      <div className="info-popup">{target}</div>
+      <div>{target}</div>
   )
 }
 
