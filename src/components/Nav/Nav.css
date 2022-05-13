@@ -11,12 +11,14 @@
 
 .nav {
   /* flex box layout */
-  position: sticky;
+  position: fixed;
   height: 10vh;
   width: 100vw !important;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding-bottom: 2vh;
+  z-index: 1000;
   background: repeating-linear-gradient(
       to bottom,
       transparent 0%,

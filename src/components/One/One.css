@@ -11,6 +11,7 @@
      height: 20vh;
      margin-left: auto;
      margin-right: auto;
+     margin-top: 20vh;
      /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
      background: #00000083;
      /* background-color: rgb(42, 165, 165); */
@@ -23,8 +24,6 @@
      cursor: pointer;
      /* transition: all 1s ease; */
  }
-
-
 
 /* html{
     background-image: url(https://images.unsplash.com/photo-1610322231968-31322d42851f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2836&q=80);
