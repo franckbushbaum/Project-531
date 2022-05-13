@@ -14,7 +14,9 @@ function Nav() {
           <p className="glitch">
             <span aria-hidden="true" className="project">Project531</span>
             <span className="project">Project531</span>
-            <span  className="project" aria-hidden="true">Project531</span></p></h1>
+            <span  className="project" aria-hidden="true">Project531</span>
+          </p>
+        </h1>
       </Link>
       <div className="nav-button-wrapper">
         {/* If no user is logged in, show these links */}
@@ -24,7 +26,6 @@ function Nav() {
             Login / Register
           </Link>
         }
-
         {/* If a user is logged in, show these links */}
         {user.id && (
           <>
@@ -34,7 +35,6 @@ function Nav() {
             <LogOutButton className="navLink" />
           </>
         )}
-
         <Link className="navLink" to="/about">
           About
         </Link>

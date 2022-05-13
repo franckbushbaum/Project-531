@@ -11,12 +11,12 @@
 
 .nav {
   /* flex box layout */
-
-  padding-left: 355px;
+  position: sticky;
+  height: 10vh;
+  width: 100vw !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 2rem;
   background: repeating-linear-gradient(
       to bottom,
       transparent 0%,
@@ -43,12 +43,7 @@
 
 .nav-title {
   display: flex;
-  height: 30px;
-  font-size: 28px;
-  font-weight: 700;
   color: #f2f2f2;
-  padding-left: 10px;
-  justify-content: center;
 }
 
 .project{
@@ -59,8 +54,6 @@
 }
 
 .glitch {
-  position: relative;
-  left: 700px;
   font-size: 50px;
   font-weight: 700;
   text-transform: uppercase;
@@ -75,8 +68,8 @@
 
 .glitch span {
   position: absolute;
-  top: 3vh;
-  left:0;
+  top: 1.9vh;
+  left: 0vw;
 }
 
 .glitch span:first-child {
@@ -139,7 +132,9 @@
 }
 
 .navLink {
-  display: inline-block;
+  margin-top: 2%;
+  margin-bottom: 6%;
+  margin-right: 5%;
   font-family: 'JetBrains Mono', monospace;
   color: #f2f2f2;
   background: repeating-linear-gradient(
@@ -156,17 +151,16 @@
       var(--black-scanline) 100%,
       var(--black-scanline) 100%
     );
-  margin-left: 15px;
-  text-align: right;
-  padding: 24px 10px;
   text-decoration: none;
   font-size: 20px;
-
+  padding: 0px !important;
   /* these last two make the logout button in
   the nav bar look like another link */
   border: none;
   cursor: pointer;
-  outline: 0;
+  /* outline: solid red 2px; */
+  right: 0;
+  align-items: center;
 }
 
 .navLink:hover {
@@ -174,5 +168,11 @@
 }
 
 .nav-button-wrapper {
-  padding-left: 335px;
+  /* outline: solid rgb(255, 191, 0) 2px; */
+  width: 50%;
+  height: 35%;
+  display: flex;
+  justify-content: flex-end;
+  position: absolute;
+  right: 0;
 }

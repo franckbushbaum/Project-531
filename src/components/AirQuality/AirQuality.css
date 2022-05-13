@@ -206,16 +206,39 @@ li{
 /* Pop-up Windows Begin */
 
 .pm10{
-    outline: 2px dotted rgb(127, 118, 220);
+    outline: 2px solid rgba(211,78,78,0.91);
+    padding: 1rem;
+    min-width: 3rem;
     position: relative;
-    left: 10em;
-    bottom: 10em;
+    left: 15em;
+    bottom: 14em;
 }
 
 .pm25{
     outline: 2px dotted rgb(210, 220, 118);
     position: relative;
     left: 25em;
+    bottom: 10em;
+}
+
+.co{
+    outline: 2px dotted rgb(132, 220, 118);
+    position: relative;
+    left: 35em;
+    bottom: 10em;
+}
+
+.no2{
+    outline: 2px dotted rgb(118, 217, 220);
+    position: relative;
+    left: 45em;
+    bottom: 10em;
+}
+
+.o3{
+    outline: 2px dotted rgb(220, 118, 181);
+    position: relative;
+    left: 55em;
     bottom: 10em;
 }
 

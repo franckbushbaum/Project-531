@@ -12,7 +12,7 @@ function PopUp({ target }) {
     console.log('Target in popup is: ', target)
 
   return (
-      <div>{target}</div>
+      <div>{target}:concentration of particulate matter smaller than 10 microns</div>
   )
 }
 
