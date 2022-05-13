@@ -15,13 +15,12 @@ function AirQuality({ hour }) {
 // console.log('destructured data?', hour);
 
 //2 Option A:
-  const {aqi} = hour;
+  const { aqi } = hour;
   // console.log('what is the aqi??', aqi)
 
 //3 Option B:
 
   const [grade, setGrade] = useState('ten');
-
   const [isHovering, setIsHovering] = useState(false)
   const [currentTarget, setCurrentTarget] = useState('')
 
