@@ -36,10 +36,6 @@
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(110,36,68,0.8057598039215687) 50%, rgba(2,16,19,1) 100%); 
 }*/ 
 
-html{
-    background-image: url(https://images.unsplash.com/photo-1610322231968-31322d42851f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2836&q=80);
-}
-
 .air-quality-button{
     background-color: transparent;
     border: none;
@@ -82,5 +78,6 @@ html{
     width: auto;
     height: auto;
     padding: 3rem;
+    margin-bottom: 1%;
 }
 
