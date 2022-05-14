@@ -119,7 +119,7 @@ function AirQuality({ hour }) {
         pm25: concentration of particulate matter small than 25 micros: {hour.pm25}.<br />
         03: Trioxygen, the layer of ozone protecting the Earth from harmful rays.<br />
         NO2: More dangerous than Carbon Dioxide for the environment? 300% more potent.<br />
-        CO: Carbon Monoxodie.{hour.co}
+        CO: Carbon Monoxide.{hour.co}
       </span> */}
     </div>
 

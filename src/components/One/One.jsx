@@ -19,9 +19,18 @@ function One() {
     const [workoutType, setWorkoutType] = useState([]);
     const [airQualityBox, setAirQualityBox] = useState(true);
 
+    const popUp = {
+                pm10: "concentration of particulate matter smaller than 10 microns.",
+                pm25:  "concentration of particulate matter smaller than 25 microns.",
+                o3: "Trioxygen, the layer of ozone protecting the Earth from harmful rays.",
+                no2: "More dangerous than Carbon Dioxide for the environment? 300% more potent.",
+                co: "Carbon Monoxide"
+    }
+
     // const data = useSelector(store => store.workoutTypeId.toString().slice(-1));
 
-    const data = useSelector(store => store.workoutTypeId);  
+    const data = useSelector(store => store.workoutTypeId);
+
 
 //4 Data for Air Quality Component
     const topHour = data?.slice(-1);
@@ -41,9 +50,11 @@ function One() {
 //5 These are the hardcoded coordinates for White Bear Lake, MN.
             return dispatch ({
                 type: 'FETCH_AIR_QUALITY',
-                payload: {lat: '45.085',
+                payload: {                          
+                          lat: '45.085',
                           lon: '-93.008',
-                          user: 'Franck'}
+                          user: 'Franck'
+                         }
             })
         }
         dispatch({
@@ -52,17 +63,21 @@ function One() {
         })
     };
 
-    console.log('what is data?', data)
+    const newData = { ...data, ...popUp}
+
+    console.log('what is NEW data? ', newData)
 
     const requestThreeDaysData = (event) => {
-        console.log('what is event?', event);
+        // console.log('what is event?', event);
         const hours = event;
         dispatch({
             type: 'FETCH_LONG_AIR_QUALITY',
-            payload: {lat: '45.085',
+            payload: {
+                      lat: '45.085',
                       lon: '-93.008',
                       user: 'Franck',
-                      hours}
+                      hours
+                     }
         })
     };
 
