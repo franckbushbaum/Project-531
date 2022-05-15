@@ -4,8 +4,6 @@ import './PopUp.css';
 
 function PopUp({ target }) {
 
-    console.log('Target in popup is: ', target)
-
   return (
       <div>{target}:concentration of particulate matter smaller than 10 microns</div>
   )

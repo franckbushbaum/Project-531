@@ -15,8 +15,10 @@ function AirQuality({ hour }) {
 // console.log('destructured data?', hour);
 
 //2 Option A:
-  const { aqi } = hour;
-  // console.log('what is the aqi??', aqi)
+  const { aqi, pm10desc, pm25desc } = hour;
+   console.log('what is the aqi??', aqi)
+   console.log('what is the pm10desc??', pm10desc)
+   console.log('what is the pm25desc??', pm25desc)
 
 //3 Option B:
 
@@ -48,7 +50,7 @@ function AirQuality({ hour }) {
         setGrade('ninety')
       }
       for (const key of Object.keys(hour)){
-       console.log(`${key} has a value of ${hour[key]}`)
+      //  console.log(`${key} has a value of ${hour[key]}`)
       }
     //  console.log('what is grade?', grade);
   }
@@ -68,18 +70,16 @@ function AirQuality({ hour }) {
   // }, [])
 
   const handleMouseEnter = (e) => {
-    console.log('in mouseEnter, id is: ', e.target.id)
     setIsHovering(true)
     setCurrentTarget(e.target.id)
   }
 
   const handleMouseLeave = (e) => {
-    console.log('in mouseLeave, id is: ', e.target.id)
     setIsHovering(false)
     setCurrentTarget('')
   }
 
-  console.log('current target is: ', currentTarget)
+  // console.log('current target is: ', currentTarget)
 
   return (
 

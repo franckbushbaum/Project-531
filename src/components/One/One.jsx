@@ -20,20 +20,28 @@ function One() {
     const [airQualityBox, setAirQualityBox] = useState(true);
 
     const popUp = {
-                pm10: "concentration of particulate matter smaller than 10 microns.",
-                pm25:  "concentration of particulate matter smaller than 25 microns.",
-                o3: "Trioxygen, the layer of ozone protecting the Earth from harmful rays.",
-                no2: "More dangerous than Carbon Dioxide for the environment? 300% more potent.",
-                co: "Carbon Monoxide"
-    }
+                    pm10desc: "concentration of particulate matter smaller than 10 microns.",
+                    pm25desc:  "concentration of particulate matter smaller than 25 microns.",
+                    o3desc: "Trioxygen, the layer of ozone protecting the Earth from harmful rays.",
+                    no2desc: "More dangerous than Carbon Dioxide for the environment? 300% more potent.",
+                    codesc: "Carbon Monoxide"
+                  }
 
     // const data = useSelector(store => store.workoutTypeId.toString().slice(-1));
+
+    //6 Change data, which changes topHour ect... ect...
 
     const data = useSelector(store => store.workoutTypeId);
 
 
-//4 Data for Air Quality Component
-    const topHour = data?.slice(-1);
+    // Data for Air Quality Component.
+
+    // Destructure object @ data[0]
+    const [firstvalue, ...rest] = data
+
+    const topHour = {...firstvalue, ...popUp}
+
+    // const newData = {...topHour, ...popUp }
 
     const handleChange = (event) => {
         setAirQualityBox(false)
@@ -63,9 +71,7 @@ function One() {
         })
     };
 
-    const newData = { ...data, ...popUp}
-
-    console.log('what is NEW data? ', newData)
+    // console.log('what is NEW data? ', newData)
 
     const requestThreeDaysData = (event) => {
         // console.log('what is event?', event);
@@ -106,12 +112,7 @@ function One() {
                     </Box>
                     {!airQualityBox && 
                     <Box className="air-quality-box">
-                        {topHour.map((hour) => {
-                            return (
-                                <AirQuality hour={hour}
-                                                     />
-                            );
-                        })}
+                        <AirQuality hour={topHour} />
                         <BarChartLabel hours={data} />
                         <AqiChart hours={data} />
                         <button className='' value={5} onClick={handleChange}>24HR</button>
