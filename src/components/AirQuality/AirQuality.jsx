@@ -15,10 +15,7 @@ function AirQuality({ hour }) {
 // console.log('destructured data?', hour);
 
 //2 Option A:
-  const { aqi, pm10desc, pm25desc } = hour;
-   console.log('what is the aqi??', aqi)
-   console.log('what is the pm10desc??', pm10desc)
-   console.log('what is the pm25desc??', pm25desc)
+  const { aqi } = hour;
 
 //3 Option B:
 
@@ -40,7 +37,6 @@ function AirQuality({ hour }) {
       } else if (50 <= aqi && aqi < 60){
         setGrade('fifty')
       } else if (60 <= aqi && aqi < 70){
-        console.log('FUNCTION SHOULD HIT HERE??!')
         setGrade('sixty')
       } else if (70 <= aqi && aqi < 80){
         setGrade('seventy')
@@ -109,7 +105,8 @@ function AirQuality({ hour }) {
           03: <br /> {hour.o3}
         </span>
       </div>
-      <div className={currentTarget ||'pop-up-inactive'}>{isHovering ?  <PopUp target={currentTarget} /> : <></>}</div>
+      <div className={currentTarget ||'pop-up-inactive'}>{isHovering ?  <PopUp   target={currentTarget}
+                                                                                 hour={hour} /> : <></>}</div>
       
       {/* //2  Air Quality Index [US - EPA standard 0 - +500] */}
       {/* <span className="first-span">
