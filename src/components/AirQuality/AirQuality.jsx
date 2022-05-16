@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './AirQuality.css';
-
 import { BsFillCloudDrizzleFill, BsFillBrightnessHighFill } from "react-icons/bs";
-
 import moment from 'moment';
 import { AirlineSeatReclineNormalOutlined } from '@mui/icons-material';
-
 import PopUp from '../PopUp/PopUp.jsx'
 
 

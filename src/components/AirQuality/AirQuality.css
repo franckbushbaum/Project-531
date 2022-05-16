@@ -1,9 +1,9 @@
 /* Container */
 .hours{
-    outline: 2px dotted #26ff26;
+    /* outline: 2px dotted #26ff26; */
     margin: 0px;
     display: grid;
-    gap: 1.5rem;
+    gap: 0.5rem;
     grid-template-rows: 3fr;
     grid-template-columns: 5fr;
     width: 80em;
@@ -19,7 +19,7 @@
 
 /* item  */
 .modal-title{
-    outline: 2px solid blue;
+    /* outline: 2px solid blue; */
     margin-top: 1em;
     margin-left: 45em;
     justify-self: right;
@@ -29,7 +29,7 @@
 
 /* item */
 .next-five-container{
-    outline: 2px solid rgb(0, 179, 255);
+    /* outline: 2px solid rgb(0, 179, 255); */
     display: flex;
     justify-content: center;
     width: 80em;
@@ -84,7 +84,6 @@ li{
 /* Air Quality Colors begin */
 .ten{
     color: #26e6ff;
-
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
@@ -95,8 +94,7 @@ li{
 }
 
 .twenty{
-    color: #ffe600;
-    
+    color: #ffe600;    
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
@@ -108,7 +106,6 @@ li{
 
 .thirty{
     color: rgb(34, 255, 0);
-
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
@@ -120,7 +117,6 @@ li{
 
 .forty{
     color: rgb(216, 226, 28);
-
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
@@ -132,7 +128,6 @@ li{
 
 .fifty{
     color: rgb(235, 178, 47);
-
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
@@ -144,7 +139,6 @@ li{
 
 .sixty{
     color: rgb(255, 140, 0);
-
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
@@ -156,7 +150,6 @@ li{
 
 .seventy{
     color: rgb(0, 38, 255);
-
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
@@ -168,7 +161,6 @@ li{
 
 .eighty{
     color: rgb(204, 0, 255);
-
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
@@ -180,7 +172,6 @@ li{
 
 .ninety{
     color: rgb(255, 0, 162);
-
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
@@ -192,7 +183,6 @@ li{
 
 .hundred{
     color: rgb(89, 255, 0);
-
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
@@ -206,48 +196,63 @@ li{
 /* Pop-up Windows Begin */
 
 .pm10{
-    outline: 2px solid rgba(211,78,78,0.91);
-    padding: 1rem;
-    min-width: 3rem;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1.5px solid rgb(211, 78, 78, 0.912);
+    margin: 5px;
+    background: #0000008d;
     position: absolute;
     top: 56%;
     left: 20%;
 }
 
 .pm25{
-    outline: 2px dotted rgb(210, 220, 118);
-    padding: 1rem;
-    min-width: 3rem;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1.5px solid rgb(211, 78, 78, 0.912);
+    margin: 5px;
+    background: #0000008d;
     position: absolute;
     top: 60%;
-    left: 30%;
+    left: 35%;
 }
 
 .co{
-    outline: 2px dotted rgb(132, 220, 118);
-    padding: 1rem;
-    min-width: 3rem;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1.5px solid rgb(211, 78, 78, 0.912);
+    margin: 5px;
+    background: #0000008d;
     position: absolute;
-    top: 63%;
-    left: 43%;
+    top: 58%;
+    left: 53%;
 }
 
 .no2{
-    outline: 2px dotted rgb(118, 217, 220);
-    padding: 1rem;
-    min-width: 3rem;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1.5px solid rgb(211, 78, 78, 0.912);
+    margin: 5px;
+    background: #0000008d;
     position: absolute;
-    top: 61%;
-    left: 55%;
+    top: 55%;
+    left: 69%;
 }
 
 .o3{
-    outline: 2px dotted rgb(220, 118, 181);
-    padding: 1rem;
-    min-width: 3rem;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 10px;
+    border: 1.5px solid rgb(211, 78, 78, 0.912);
+    margin: 5px;
+    background: #0000008d;
     position: absolute;
-    top: 55%;
-    left: 65%;
+    top: 50%;
+    left: 80%;
 }
 
 /* Pop-up Windows End */

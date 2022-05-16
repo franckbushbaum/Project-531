@@ -5,15 +5,13 @@ import './PopUp.css';
 
 function PopUp({ target, hour }) {
 
-  console.log('In Popup: what is hour again?', hour);
-
   const {codesc , no2desc, pm10desc, pm25desc, o3desc} = hour
 
   const [description, setDescription] = useState(pm10desc)
 
 //7 the destrutured descriptions are passed to this function, useEffect is used to call that function every time the hovered target changes.
+
   const findDescription = (target) => {
-    console.log('in findDescription', target)
     switch (target) {
         case 'pm10':
             setDescription(pm10desc)
@@ -29,18 +27,16 @@ function PopUp({ target, hour }) {
             break;
         case 'o3':
           setDescription(o3desc)
-           break;
+            break;
     }
 };
-
-console.log('what is description?', description )
 
 useEffect(() => {
   findDescription(target)
  }, [target])
 
   return (
-      <div>{target}: {description} </div>
+      <div>{target} : {description} </div>
   )
 }
 
