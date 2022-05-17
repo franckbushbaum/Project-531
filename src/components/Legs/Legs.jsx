@@ -210,11 +210,11 @@ function Legs() {
                     </span>
                     <div className="sending-data-window">
                         <div className="window-response">
-                            {mph === null ? <div>this</div> : <div> {mph} mph</div>}
-                            {incline === null ? <div>this</div> : <div> {incline} %</div>}
-                            {on === null ? <div>this</div> : <div> {on} seconds duration</div>}
-                            {off === null ? <div>this</div> : <div> {off} seconds break</div>}
-                            {reps === null ? <div>this</div> : <div> {reps} times</div>}
+                            {mph === null ? <div></div> : <div> {mph} mph</div>}
+                            {incline === null ? <div></div> : <div> {incline} %</div>}
+                            {on === null ? <div></div> : <div> {on} seconds duration</div>}
+                            {off === null ? <div></div> : <div> {off} seconds break</div>}
+                            {reps === null ? <div></div> : <div> {reps} times</div>}
                         </div>
                         <div className="confirm-button">
                             {reps === null ? <div></div> : <button onClick={()=> sendValues()}>Confirm</button>}

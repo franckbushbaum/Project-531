@@ -110,14 +110,16 @@ function One() {
                             </Select>
                         </FormControl>
                     </Box>
-                    {!airQualityBox && 
+                    { !airQualityBox && 
                     <Box className="air-quality-box">
                         <AirQuality hour={topHour} />
                         <BarChartLabel hours={data} />
                         <AqiChart hours={data} />
                         <button className='' value={5} onClick={handleChange}>24HR</button>
                         <button className='' onClick={() => requestThreeDaysData('72')}>72HR</button>
-                    </Box>}
+                    </Box>
+                    
+                    }
                     <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>
                 
             </div>

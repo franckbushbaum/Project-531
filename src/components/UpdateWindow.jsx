@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import moment from 'moment';
 
 
@@ -16,7 +16,7 @@ function UpdateWindow({id}) {
     }
 
     const deleteRun =  (id) => {
-        dispatch({type: 'DELETE', payload: id});
+        dispatch({ type: 'DELETE', payload: id });
     }
 
     useEffect(() => {
@@ -25,7 +25,7 @@ function UpdateWindow({id}) {
     return (
         <>
             <div id="update" className="update-window">
-            <span className="update-window-individual-container">{id}:&nbsp;<button className='update-window-buttons' onClick={() => deleteRun(id)}>DELETE</button></span>
+            <span className="update-window-individual-container">{id}:&nbsp;<button className='update-window-buttons' onClick={(id) => deleteRun(id)}>DELETE</button></span>
             </div>
 
         </>
