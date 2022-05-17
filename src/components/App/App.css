@@ -1,13 +1,14 @@
-html,
+/* html,
 body,
 #react-root {
   display: flex;
   justify-content: center;
-}
+} */
 
 body {
   display:flex;
   justify-content: center;
+  position: relative;
   width: 100vw;
   font-family: 'JetBrains Mono', monospace;
   margin: 0px;
@@ -25,17 +26,6 @@ body {
   justify-content: center;
 }
 
-
-/* --------------------------------------------------------------------------------
-Container
--------------------------------------------------------------------------------- */
-
-.container {
-  width: 100vw;
-  height: 100vh;
-  padding-top: 2rem;
-  margin: auto;
-}
 
 /* --------------------------------------------------------------------------------
 Button

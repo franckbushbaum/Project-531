@@ -1,7 +1,13 @@
-.select-menu{
-    /* outline: 2px solid red; */
-}
 
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding-top: 2rem;
+    margin: auto;
+  }
 
 .select-menu{
     /* background-color: aqua; */
@@ -9,10 +15,11 @@
      border-radius: 15px;
      width: 750px;
      height: 20vh;
-     margin-left: auto;
-     margin-right: auto;
-     margin-top: 20vh;
-     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+     position: absolute;
+     top: 20vh;
+     left: 40vw;
+     margin: auto;
+     /* Concerning the Weather App, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
      background: #00000083;
      /* background-color: rgb(42, 165, 165); */
      transition-property: all;
@@ -37,10 +44,10 @@
 
 .air-quality-button{
     background-color: transparent;
+    position: relative;
+    top: 50vh;
+    height: 5vh;
     border: none;
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
     text-transform: uppercase;
     font-size: 13px;
     color: rgba(211, 78, 78, 0.781);
@@ -73,8 +80,8 @@
     border-radius: 20px;
     background: #00000083;
     margin: auto;
-    width: auto;
-    height: auto;
+    width: 95%;
+    max-height: 85%;
     padding: 0rem 3rem 3rem 3rem;
     margin-bottom: 1%;
 }

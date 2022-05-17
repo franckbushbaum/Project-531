@@ -120,8 +120,7 @@ function One() {
                     </Box>
                     
                     }
-                    <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>
-                
+                    <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>                
             </div>
 
         </>

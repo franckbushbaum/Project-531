@@ -47,7 +47,6 @@ function App() {
 
   return (
     <Router>
-      <div className="all-the-things">
         <Nav />
 
         <Switch>
@@ -216,7 +215,6 @@ function App() {
           </Route>
         </Switch>
         <Footer />
-      </div>
     </Router>
   );
 }
