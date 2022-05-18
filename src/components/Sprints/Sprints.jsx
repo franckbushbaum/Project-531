@@ -129,7 +129,7 @@ function Sprints() {
                 <div id ="update-field" className={updateWindow ? 'update-field' : 'close-it'}>
                     {mphSprints.map((sprint) => {
                         return (<UpdateWindow key={sprint.id}
-                            id={sprint.id} />)
+                                               id={sprint.id} />)
                     })}</div>
                 <div className="unmoving-bottom-button">
                     <button className={mphColor} onClick={() => setUpdateWindow(!updateWindow)}>Update</button>

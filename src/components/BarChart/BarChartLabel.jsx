@@ -142,7 +142,7 @@ function BarChartLabel({ hours }) {
 
     return (
         <>
-             <div className="bar-chart" style={{ height: "9em", width: "92%"}}>
+             <div className="bar-chart" style={{ height: "10em", width: "92%"}}>
                 <Bar options={options} data={onData} width={100} height={18} />
             </div>       
         </>

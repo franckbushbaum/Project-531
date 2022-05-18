@@ -1,7 +1,7 @@
 
 .container {
     position: relative;
-    display: flex;
+    display: block;
     justify-content: center;
     width: 100vw;
     height: 100vh;
@@ -44,8 +44,10 @@
 
 .air-quality-button{
     background-color: transparent;
+    display: block;
+    margin: auto;
     position: relative;
-    top: 50vh;
+    top: 36vh;
     height: 5vh;
     border: none;
     text-transform: uppercase;
@@ -80,8 +82,9 @@
     border-radius: 20px;
     background: #00000083;
     margin: auto;
-    width: 95%;
-    max-height: 85%;
+    max-width: 95%;
+    max-height: auto;
+    margin: 27em 9em 1em 9em;
     padding: 0rem 3rem 3rem 3rem;
     margin-bottom: 1%;
 }
