@@ -1,36 +1,31 @@
-
 .container {
     position: relative;
-    display: block;
+    display: flex;
     justify-content: center;
     width: 100vw;
     height: 100vh;
     padding-top: 2rem;
-    margin: auto;
-  }
+}
 
-.select-menu{
-    /* background-color: aqua; */
-     display: flex;
-     border-radius: 15px;
-     width: 750px;
-     height: 20vh;
-     position: absolute;
-     top: 20vh;
-     left: 40vw;
-     margin: auto;
-     /* Concerning the Weather App, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
-     background: #00000083;
-     /* background-color: rgb(42, 165, 165); */
-     transition-property: all;
-     transition-duration: 500ms;
- }
- 
- .select-menu:hover,
- .select-menu:hover::after {
-     cursor: pointer;
-     /* transition: all 1s ease; */
- }
+.select-menu {
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    border-radius: 25px;
+    width: 30vw;
+    height: 20vh;
+    /* Concerning the Weather App, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+    background: #00000083;
+    /* background-color: rgb(42, 165, 165); */
+    transition-property: all;
+    transition-duration: 500ms;
+}
+
+.select-menu:hover,
+.select-menu:hover::after {
+    cursor: pointer;
+    /* transition: all 1s ease; */
+}
 
 /* html{
     background-image: url(https://images.unsplash.com/photo-1610322231968-31322d42851f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2836&q=80);
@@ -40,28 +35,25 @@
     background-size: cover; 
     /* background: rgb(2,0,36);
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(110,36,68,0.8057598039215687) 50%, rgba(2,16,19,1) 100%); 
-}*/ 
+}*/
 
-.air-quality-button{
+.air-quality-button {
     background-color: transparent;
     display: block;
-    margin: auto;
-    position: relative;
-    top: 36vh;
     height: 5vh;
     border: none;
     text-transform: uppercase;
     font-size: 13px;
     color: rgba(211, 78, 78, 0.781);
-    text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
-    cursor:pointer;
+    text-shadow: 0px 0px 3px rgba(211, 78, 78, 0.91);
+    cursor: pointer;
 
     /* Animation */
     transition: color .4s linear;
 }
 
 .air-quality-button:hover,
-.air-quality-button:hover::after{
+.air-quality-button:hover::after {
     color: #00d3f8;
     border-color: #00d3f8;
 
@@ -71,13 +63,13 @@
     /* background: rgb(0,0,0,0.25) */
 }
 
-.card{
+.card {
     width: 100vw;
     height: 100vh;
     margin: 0px;
 }
 
-.air-quality-box{
+.air-quality-box {
     display: block;
     border-radius: 20px;
     background: #00000083;
@@ -88,4 +80,3 @@
     padding: 0rem 3rem 3rem 3rem;
     margin-bottom: 1%;
 }
-

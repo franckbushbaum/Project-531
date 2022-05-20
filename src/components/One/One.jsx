@@ -90,9 +90,8 @@ function One() {
     return (
         <>
             <div className="container">
-                {/* <h3>{JSON.stringify(data)}</h3> */}
-                
-                    <Box className="select-menu" sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, borderRadius: 7, color: 'secondary'  }} >
+                {/* <h3>{JSON.stringify(data)}</h3> */}              
+                    <Box className="select-menu" >
                         <FormControl sx={{ m: 7, minWidth: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
                             <InputLabel  color="secondary">Pick a workout</InputLabel>
                             <Select
