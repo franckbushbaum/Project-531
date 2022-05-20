@@ -1,7 +1,6 @@
-/* Container */
+/* Container of everything */
 .hours{
     /* outline: 2px dotted #26ff26; */
-    margin: 0px;
     display: grid;
     gap: 0.5rem;
     grid-template-rows: 3fr;
@@ -10,7 +9,6 @@
     height: auto;
     position: relative;
     top: 5em;
-    margin: 0px auto 0px auto;
     left: auto;
     right: auto;
     bottom: 5em;
@@ -19,12 +17,9 @@
 
 /* item  */
 .modal-title{
-    /* outline: 2px solid blue; */
-    margin-top: 1em;
-    margin-left: 45em;
+    outline: 2px solid blue;
     justify-self: right;
-    width: auto;
-    padding: auto;
+    padding-right: 5vw;
 }
 
 /* item */
