@@ -36,11 +36,9 @@ function Chest() {
 
     return (
         <>
-            <div className="container">
+            <div className="chest-container">
                 <div className="archive-button">
-                    <p className="corner"></p>
                     <button onClick={toArchive} className="archive-child" >Archive    <IoFingerPrintOutline /></button>
-                    <div className="move"></div>
                 </div>
                 <div className="header">
                         <div className="header-title">

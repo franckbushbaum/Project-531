@@ -118,7 +118,7 @@ function Sprints() {
                     <button className={offColor} onClick={() => toChart('off')}>OFF</button>
                     <button className={repsColor} onClick={() => toChart('reps')}>REPS</button>
                 </div>
-{/* Future project: Why not one component and pass down mph, incline, on, off or reps as props? Would also require passing down different styles? */}
+                {/* Future project: Why not one component and pass down mph, incline, on, off or reps as props? Would also require passing down different styles? */}
                 <div className="field-chart">
                     {view === 1 && <MphChart updateWindow={updateWindow} />}
                     {view === 2 && <InclineChart />}
@@ -126,17 +126,16 @@ function Sprints() {
                     {view === 4 && <OffChart />}
                     {view === 5 && <RepsChart />}
                 </div>
-                <div id ="update-field" className={updateWindow ? 'update-field' : 'close-it'}>
+                <div id="update-field" className={updateWindow ? 'update-field' : 'close-it'}>
                     {mphSprints.map((sprint) => {
                         return (<UpdateWindow key={sprint.id}
-                                               id={sprint.id} />)
+                            id={sprint.id} />)
                     })}</div>
                 <div className="unmoving-bottom-button">
                     <button className={mphColor} onClick={() => setUpdateWindow(!updateWindow)}>Update</button>
                 </div>
                 <div className="trigger">
                     <div className="the-box">
-
                     </div>
                 </div>
             </div>

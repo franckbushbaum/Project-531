@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './Shoulders.css';
+import '/Users/franckbushbaum/Desktop/Project-531/src/components/Chest/Chest.css';
 import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';

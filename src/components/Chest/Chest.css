@@ -7,23 +7,21 @@ body {
 }
 
 table, th, td {
-    border: 1px solid rgba(211,78,78,0.91);
+    border: 2px solid rgba(211,78,78,0.91);
     color: rgba(211,78,78,0.91);
     text-align: center;
     height:60px;
-    width: 520px;
+    width: 40vw;
   }
 
   .archive-button {
     border: solid;
     border-radius: 15px;
-    resize: none;
-    height:65px;
+    width: 45vw;
     border-width: 2px;
     border-color: #00d3f8;
     display: flex;
     justify-content: right;
-
 }
 
 
@@ -68,7 +66,7 @@ table, th, td {
     display: flex;
     justify-content: center;
     border-radius: 15px;
-    margin: 30px;
+    width: 45vw;
     background: #00000083;
 }
 
@@ -77,14 +75,20 @@ table, th, td {
 }
 
 
-
+.chest-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20vh;
+}
 
 .last-workout{
     border-radius: 15px;
-    padding: 30px;
+    padding: 1vw;
     display: flex;
     flex-direction:column;
-    margin: 30px;
+    align-items: center;
+    width: 45vw;
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
     background: #00000083;
     /* background-color: rgb(42, 165, 165); */ 
@@ -103,8 +107,10 @@ table, th, td {
     border-radius: 15px;
     display: flex;
     flex-direction:column;
-    padding: 30px;
-    margin: 10px;
+    align-items: center;
+    width: 45vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
     background: #00000083;
     /* background-color: rgb(42, 165, 165); */

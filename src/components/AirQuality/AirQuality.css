@@ -1,13 +1,14 @@
 /* Container of everything */
 .hours{
-    /* outline: 2px dotted #26ff26; */
+    outline: 2px dotted #26ff26;
     display: grid;
     gap: 0.5rem;
     grid-template-rows: 3fr;
     grid-template-columns: 5fr;
-    width: 80em;
+    width: 100%;
     height: auto;
     position: relative;
+    margin: 0;
     top: 5em;
     left: auto;
     right: auto;
@@ -18,8 +19,8 @@
 /* item  */
 .modal-title{
     outline: 2px solid blue;
-    justify-self: right;
-    padding-right: 5vw;
+    position: absolute;
+    right: 0;
 }
 
 /* item */
@@ -27,7 +28,7 @@
     /* outline: 2px solid rgb(0, 179, 255); */
     display: flex;
     justify-content: center;
-    width: 80em;
+    width: 100em;
     height: 10em;
     position: relative;
 }

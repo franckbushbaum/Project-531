@@ -1,14 +1,16 @@
-.container {
+/* PARENT */
+.one-container {
     position: relative;
     outline: 2px dotted #B026FF;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100vw;
+    width: 99vw;
     height: auto;
     padding-top: 14rem;
 }
 
+/* CHILD */
 .select-menu {
     display: flex;
     outline: 2px dotted #26ff47;
@@ -17,10 +19,8 @@
     justify-content: center;
     border-radius: 25px;
     width: 30vw;
-    height: 20vh;
-    /* Concerning the Weather App, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+    height: 14vh;
     background: #00000083;
-    /* background-color: rgb(42, 165, 165); */
     transition-property: all;
     transition-duration: 500ms;
 }
@@ -31,7 +31,7 @@
     /* transition: all 1s ease; */
 }
 
-
+/* CHILD */
 .air-quality-button {
     background-color: transparent;
     border: none;
@@ -49,11 +49,7 @@
 .air-quality-button:hover::after {
     color: #00d3f8;
     border-color: #00d3f8;
-
     transition: color 0.23s linear;
-
-    /* background, blends nicely if this is a button, otherwise leave it out. */
-    /* background: rgb(0,0,0,0.25) */
 }
 
 .card {
@@ -62,26 +58,67 @@
     margin: 0px;
 }
 
-/* Container of everything inside AirQuality.jsx */
+/* CHILD - Container of everything inside AirQuality.jsx */
 .air-quality-box {
     display: block;
     border-radius: 20px;
     background: #00000083;
     margin: auto;
-    max-width: 95%;
-    min-width: 95%;
-    max-height: auto;
-    margin: 10em 5em 1em 5em;
+    max-width: 85%;
+    margin: 10em auto auto auto;
     padding: 0rem 3rem 3rem 3rem;
     margin-bottom: 1%;
 }
 
-/* html{
-    background-image: url(https://images.unsplash.com/photo-1610322231968-31322d42851f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2836&q=80);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; 
-    /* background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(110,36,68,0.8057598039215687) 50%, rgba(2,16,19,1) 100%); 
-}*/
+.aqi-chart-buttons {
+    display: inline-block;
+    /* This relative positive with 2px bump, with z-index at 1 lifts the buttons above the aqi-chart to give necessary effect */
+    position: relative;
+    bottom: 2px;
+    margin-left: 80%;
+    border-top: none;
+    border-right: 1px solid #00d3f8;
+    border-bottom: 1px solid #00d3f8;
+    border-left: 1px solid #00d3f8;
+    background: repeating-linear-gradient(to bottom,
+            transparent 0%,
+            var(--red-scanline) 1px,
+            var(--red-scanline) 3px,
+            var(--red-scanline) 5px,
+            var(--red-scanline) 4px,
+            transparent 0.5%),
+        repeating-linear-gradient(to left,
+            var(--black-scanline) 100%,
+            var(--black-scanline) 100%);
+    ;
+    opacity: 1;
+    z-index: 1;
+    border-radius: 9px;
+}
+
+.individual-aqi-chart-buttons {
+    background-color: transparent;
+    padding: 1rem;
+    margin: 0;
+    border: none;
+    height: 30%;
+    text-transform: uppercase;
+    font-size: 19px;
+    color: rgba(211, 78, 78, 0.781);
+    text-shadow: 0px 0px 3px rgba(211, 78, 78, 0.91);
+    cursor: pointer;
+    /* Animation */
+    transition: color .4s linear;
+}
+
+.individual-aqi-chart-buttons:hover,
+.individual-aqi-chart-buttons:hover::after {
+    color: #00d3f8;
+    border-color: #00d3f8;
+
+    transition: color 0.23s linear;
+
+    /* background, blends nicely if this is a button, otherwise leave it out. */
+    /* background: rgb(0,0,0,0.25) */
+
+}

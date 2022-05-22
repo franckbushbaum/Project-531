@@ -20,12 +20,12 @@ function One() {
     const [airQualityBox, setAirQualityBox] = useState(true);
 
     const popUp = {
-                    pm10desc: "concentration of particulate matter smaller than 10 microns.",
-                    pm25desc:  "concentration of particulate matter smaller than 25 microns.",
-                    o3desc: "Trioxygen, the layer of ozone protecting the Earth from harmful rays.",
-                    no2desc: "More dangerous than Carbon Dioxide for the environment? 300% more potent.",
-                    codesc: "Carbon Monoxide"
-                  }
+        pm10desc: "concentration of particulate matter smaller than 10 microns.",
+        pm25desc: "concentration of particulate matter smaller than 25 microns.",
+        o3desc: "Trioxygen, the layer of ozone protecting the Earth from harmful rays.",
+        no2desc: "More dangerous than Carbon Dioxide for the environment? 300% more potent.",
+        codesc: "Carbon Monoxide"
+    }
 
     // const data = useSelector(store => store.workoutTypeId.toString().slice(-1));
 
@@ -39,7 +39,7 @@ function One() {
     // Destructure object @ data[0]
     const [firstvalue, ...rest] = data
 
-    const topHour = {...firstvalue, ...popUp}
+    const topHour = { ...firstvalue, ...popUp }
 
     // const newData = {...topHour, ...popUp }
 
@@ -54,15 +54,15 @@ function One() {
             history.push('/shoulders');
         } else if (event.target.value === 4) {
             history.push('/back');
-        } else if (event.target.value === '5'){
-//5 These are the hardcoded coordinates for White Bear Lake, MN.
-            return dispatch ({
+        } else if (event.target.value === '5') {
+            //5 These are the hardcoded coordinates for White Bear Lake, MN.
+            return dispatch({
                 type: 'FETCH_AIR_QUALITY',
-                payload: {                          
-                          lat: '45.085',
-                          lon: '-93.008',
-                          user: 'Franck'
-                         }
+                payload: {
+                    lat: '45.085',
+                    lon: '-93.008',
+                    user: 'Franck'
+                }
             })
         }
         dispatch({
@@ -79,47 +79,48 @@ function One() {
         dispatch({
             type: 'FETCH_LONG_AIR_QUALITY',
             payload: {
-                      lat: '45.085',
-                      lon: '-93.008',
-                      user: 'Franck',
-                      hours
-                     }
+                lat: '45.085',
+                lon: '-93.008',
+                user: 'Franck',
+                hours
+            }
         })
     };
 
     return (
         <>
-            <div className="container">
-                {/* <h3>{JSON.stringify(data)}</h3> */}              
-                    <Box className="select-menu" >
-                        <FormControl sx={{ m: 7, minWidth: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
-                            <InputLabel  color="secondary">Pick a workout</InputLabel>
-                            <Select
-                                color="secondary"
-                                labelId="pick"
-                                id="demo-simple-select"
-                                value={''}
-                                label="workout"
-                                onChange={handleChange}
-                            >
-                                <MenuItem value={1}>Chest</MenuItem>
-                                <MenuItem value={2}>Legs</MenuItem>
-                                <MenuItem value={3}>Shoulders</MenuItem>
-                                <MenuItem value={4}>Back</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </Box>
-                    { !airQualityBox && 
+            <div className="one-container">
+                {/* <h3>{JSON.stringify(data)}</h3> */}
+                <Box className="select-menu" >
+                    <FormControl sx={{ m: 7, minWidth: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
+                        <InputLabel color="secondary">Pick a workout</InputLabel>
+                        <Select
+                            color="secondary"
+                            labelId="pick"
+                            id="demo-simple-select"
+                            value={''}
+                            label="workout"
+                            onChange={handleChange}
+                        >
+                            <MenuItem value={1}>Chest</MenuItem>
+                            <MenuItem value={2}>Legs</MenuItem>
+                            <MenuItem value={3}>Shoulders</MenuItem>
+                            <MenuItem value={4}>Back</MenuItem>
+                        </Select>
+                    </FormControl>
+                </Box>
+                {!airQualityBox &&
                     <Box className="air-quality-box">
                         <AirQuality hour={topHour} />
                         <BarChartLabel hours={data} />
                         <AqiChart hours={data} />
-                        <button className='' value={5} onClick={handleChange}>24HR</button>
-                        <button className='' onClick={() => requestThreeDaysData('72')}>72HR</button>
+                        <div className='aqi-chart-buttons'>
+                            <button className='individual-aqi-chart-buttons' value={5} onClick={handleChange}>24HR</button>
+                            <button className='individual-aqi-chart-buttons' onClick={() => requestThreeDaysData('72')}>72HR</button>
+                        </div>
                     </Box>
-                    
-                    }
-                    <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>                
+                }
+                <button className="air-quality-button" value={5} onClick={handleChange}>Your Air Quality Report</button>
             </div>
 
         </>
