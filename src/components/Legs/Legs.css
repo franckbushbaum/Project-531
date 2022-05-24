@@ -82,6 +82,7 @@ table, th, td {
 .legs-header{
    /* background-color: aqua; */
     display: flex;
+    justify-content: center;
     width: 90%;
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
     background: #00000083;
@@ -92,13 +93,14 @@ table, th, td {
 
 
 .last-workout-legs{
-    width: auto;
+    width: 80%;
     height: auto;
-    outline: 1px solid rgba(78, 206, 211, 0.91);
+    outline: 4px solid rgba(78, 206, 211, 0.91);
     border-radius: 15px;
-    padding: 50px;
+    padding: 4rem;
     display: flex;
     flex-direction:column;
+    justify-content: center;
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
     background: url(/Users/franckbushbaum/Desktop/Project-531/src/pics/beehive2.jpeg) center;
     background-size: 100%;
