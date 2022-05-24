@@ -3,7 +3,11 @@ body,
 #react-root {
   display: flex;
   justify-content: center;
-} */
+} */ 
+
+.html{
+  font-size: 62.5%
+}
 
 body {
   width: 100%;
