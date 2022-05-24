@@ -61,6 +61,7 @@
 /* CHILD - Container of everything inside AirQuality.jsx */
 .air-quality-box {
     display: block;
+    position: relative;
     border-radius: 20px;
     background: #00000083;
     margin: auto;
@@ -69,6 +70,22 @@
     padding: 0rem 3rem 3rem 3rem;
     margin-bottom: 1%;
 }
+
+.exit-air-quality-box{
+    position: absolute;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    transition: all 1s;
+    color: rgba(211, 78, 78, 0.781);
+}
+
+.exit-air-quality-box:hover {
+    -webkit-transform: rotate(90deg) translateZ(0);
+    color: #00d3f8;
+  }
 
 .aqi-chart-buttons {
     display: inline-block;

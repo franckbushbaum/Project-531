@@ -10,6 +10,9 @@ import Select from '@mui/material/Select';
 import AirQuality from '../AirQuality/AirQuality.jsx';
 import AqiChart from '../AqiChart/AqiChart.jsx';
 import BarChartLabel from '../BarChart/BarChartLabel.jsx';
+
+import { FaWindowClose } from "react-icons/fa";
+
 import './One.css';
 
 function One() {
@@ -111,6 +114,7 @@ function One() {
                 </Box>
                 {!airQualityBox &&
                     <Box className="air-quality-box">
+                        <button className="exit-air-quality-box" onClick={() => setAirQualityBox(true)}><FaWindowClose /></button>
                         <AirQuality hour={topHour} />
                         <BarChartLabel hours={data} />
                         <AqiChart hours={data} />
