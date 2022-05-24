@@ -42,6 +42,8 @@ function One() {
     // Destructure object @ data[0]
     const [firstvalue, ...rest] = data
 
+    console.log('what is firstvalue?', firstvalue);
+
     const topHour = { ...firstvalue, ...popUp }
 
     // const newData = {...topHour, ...popUp }

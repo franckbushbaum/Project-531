@@ -6,6 +6,18 @@
     grid-template-rows: .4fr .4fr 3.5fr 0.6fr 0.6fr;
 } */
 
+.legs-container{
+    display: block;
+    margin-top: 10%;
+    padding: 0rem 5rem;
+}
+
+.legs-container > * {
+    margin: 0 auto;
+    margin-top: 2%;
+    border-radius: 15px;
+}
+
 .last-workout {
     color:rgba(211,78,78,0.91);
 }
@@ -18,17 +30,14 @@ table, th, td {
     width: 520px;
   }
 
-  .archive-button {
+.legs-archive-button {
     border: solid;
-    border-radius: 15px;
     resize: none;
-    height:65px;
+    width: 90%;
     border-width: 2px;
     border-color: #00d3f8;
     display: flex;
-    justify-content: right;
-
-   
+    justify-content: right;   
 }
 
 
@@ -70,18 +79,13 @@ table, th, td {
 }
 
 
-.header{
+.legs-header{
    /* background-color: aqua; */
     display: flex;
-    border-radius: 15px;
-    margin: 30px;
+    width: 90%;
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
     background: #00000083;
     /* background-color: rgb(42, 165, 165); */ 
-}
-
-.header-title{
-    justify-content: center;
 }
 
 

@@ -71,17 +71,12 @@ function Legs() {
     console.log('look its here:', JSON.stringify(allSprints))
     return (
         <>
-            <div className="container">
-                
-                <div className="archive-button">
-                    <p className="corner"></p>
-                    <button onClick={toArchive} className="archive-child" >Archive    <IoFingerPrintOutline /></button>
-                    <div className="move"></div>
+            <div className="legs-container">               
+                <div className="legs-archive-button">
+                    <button onClick={toArchive} className="archive-child">Archive<IoFingerPrintOutline /></button>
                 </div>
-                <div className="header">
-                    <div className="header-title">
-                        <h1>Legs</h1>
-                    </div>
+                <div className="legs-header">
+                        <h1>Legs</h1>                   
                 </div>
                 <div className="last-workout-legs">
                     <p>Last Workout: {moment(recentWorkout.created_at).startOf('day').fromNow()}</p>
