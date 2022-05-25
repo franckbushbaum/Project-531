@@ -9,7 +9,7 @@
 .legs-container{
     display: block;
     margin-top: 10%;
-    margin: 14rem 5rem;
+    margin: 14rem 6rem;
     padding: 0rem 5rem;
 }
 
@@ -139,7 +139,7 @@ table, th, td {
 
 .nav-buttons{
     /* outline: 3px solid rgb(255, 115, 0); */
-    margin: auto 9rem;
+    margin: 3rem 9rem;
 }
 
 .new-button{
@@ -225,7 +225,7 @@ table, th, td {
     );
     opacity: 1;
     margin-right: 1.5ch;
-    min-width: 12ch;
+    min-width: 12;
     padding: 1ch;
     border-radius: 6px;
     outline: 1px solid rgba(83, 22, 22, 0.91);
