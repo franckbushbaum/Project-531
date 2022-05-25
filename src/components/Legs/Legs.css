@@ -9,6 +9,7 @@
 .legs-container{
     display: block;
     margin-top: 10%;
+    margin: 14rem 5rem;
     padding: 0rem 5rem;
 }
 
@@ -138,8 +139,7 @@ table, th, td {
 
 .nav-buttons{
     /* outline: 3px solid rgb(255, 115, 0); */
-    display: flex;
-    justify-content: space-between;
+    margin: auto 9rem;
 }
 
 .new-button{
@@ -201,8 +201,9 @@ table, th, td {
 
 .sprint-container{
     font-size: 2em;
-    margin-top: 20px;
+    margin-top: 3ch;
     display: flex;
+    justify-content: start;
     /* outline: 2px solid red; */
 }
 
@@ -223,8 +224,9 @@ table, th, td {
       var(--black-scanline) 100%
     );
     opacity: 1;
-    margin: 23px;
-    padding: 15px;
+    margin-right: 1.5ch;
+    min-width: 12ch;
+    padding: 1ch;
     border-radius: 6px;
     outline: 1px solid rgba(83, 22, 22, 0.91);
 }
