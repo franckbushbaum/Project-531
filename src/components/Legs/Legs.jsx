@@ -76,7 +76,7 @@ function Legs() {
                     <button onClick={toArchive} className="archive-child">Archive<IoFingerPrintOutline /></button>
                 </div>
                 <div className="legs-header">
-                        <h1>Legs</h1>                   
+                        <span>SPRINTS</span>                   
                 </div>
                 <div className="last-workout-legs">
                     <p>Last Workout: {moment(recentWorkout.created_at).startOf('day').fromNow()}</p>
@@ -217,8 +217,8 @@ function Legs() {
                     </div>
                 </div>
                 <div className="nav-buttons">
-                    <button onClick={handleClick} className="back-button"><CgArrowLeftR text="continue" size={40} />&nbsp;Back</button>
-                    <button onClick={handleClick} className="new-button">continue&nbsp;<CgArrowRightR text="continue" size={40} /></button>
+                    <button onClick={handleClick} className="back-button"><CgArrowLeftR text="continue" size={42} />&nbsp;Back</button>
+                    <button onClick={handleClick} className="new-button">continue&nbsp;<CgArrowRightR text="continue" size={42} /></button>
                 </div>
             </div>
         </>

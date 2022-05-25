@@ -84,6 +84,8 @@ table, th, td {
    /* background-color: aqua; */
     display: flex;
     justify-content: center;
+    font-size: 3rem;
+    padding: 0.8rem;
     width: 90%;
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
     background: #00000083;
@@ -146,7 +148,7 @@ table, th, td {
     width: 20vw;
     padding: 1em 1.5em;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 2rem;
     color: rgba(211, 78, 78, 0.781);
     text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
     cursor:pointer;
@@ -169,7 +171,7 @@ table, th, td {
     width: 20vw;
     padding: 1em 1.5em;
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 2rem;
     color: rgba(211, 78, 78, 0.781);
     text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
     cursor:pointer;
