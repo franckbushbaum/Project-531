@@ -94,7 +94,7 @@ table, th, td {
 
 
 .last-workout-legs{
-    width: 80%;
+    width: 85%;
     height: auto;
     outline: 4px solid rgba(78, 206, 211, 0.91);
     border-radius: 15px;
@@ -103,7 +103,7 @@ table, th, td {
     flex-direction:column;
     justify-content: center;
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
-    background: url(/Users/franckbushbaum/Desktop/Project-531/src/pics/beehive2.jpeg) center;
+    background: #00000083;
     background-size: 100%;
     opacity:1;
     /* background-color: rgb(42, 165, 165); */ 
@@ -113,13 +113,7 @@ table, th, td {
     cursor: pointer;
 }
 
-.sending-data-window {
-    margin: 1.1em;
-    outline: 2px solid  #0cfff4;
-    border-radius: 4px;
-    height: 25em;
-    width: 50em;
-}
+
 
 
 .current{
@@ -228,7 +222,16 @@ table, th, td {
     min-width: 12;
     padding: 1ch;
     border-radius: 6px;
-    outline: 1px solid rgba(83, 22, 22, 0.91);
+    outline: 3px solid rgba(83, 22, 22, 0.91);
+}
+
+.sending-data-window {
+    background: #000000da;
+    margin: 3rem 1.1rem 1.1rem 0rem;
+    outline: 2px solid  #0cfff4;
+    border-radius: 4px;
+    width: 95%;
+    min-height: 18rem;
 }
 
 .window-response{
@@ -247,9 +250,9 @@ table, th, td {
       var(--black-scanline) 100%,
       var(--black-scanline) 100%
     );
-    width: 80%;
-    height: 80%;
-    margin: 35px 35px 35px 35px;
+    width: 95%;
+    min-height: 20rem;
+    margin: 1rem;
     padding: .5em;
     outline: 1px solid rgba(78, 206, 211, 0.91);
 }
