@@ -36,7 +36,11 @@ Create a database using the provided .sql file (title the DB <b>`project_531`</b
 ---
 # Sprint 3
 ### Step 1. Project Planning
-#### Design:
+#### Design: 
+ Simple enough; the challenge and beauty of it will be how the colors of the graphs, individual bars and numbers will all be conditionally rendered depending on the quality of the air, in real time, fully responsive.
+ 
+ <img src="./pics/AQI-Mock.png" style="float: left; margin-right: 5px; height: 900px;"> 
+ 
 #### Research:
 
 ##### But what do these numbers mean??
@@ -53,9 +57,15 @@ The AQI focuses on health effects that may be experienced within a few hours or 
 - GPS is placed inside the body of request, headers are added and api request is made to Rapid Api (REQ).
 - The return path is pink, I began to write down what the data will be called as it is passed along to the next functional component.
 
-<img src="./pics/sprint3lucidupdate.png" style="float: left; margin-right: 5px">
+<img src="./pics/Project531Sprint3Final.png" style="float: left; margin-right: 5px">
+
+- This unexpectedly led to more components being created than I originally thought. 
+ 
+<img src="./pics/Project531Sprint3FinalZoom.png" style="float: left; margin-right: 5px">
 ---
+
 # Sprint 1
+
 ### Step 1. Design
 
 <img src="./pics/pageonemockup.png" style="float: left; margin-right: 5px"> 
@@ -101,6 +111,8 @@ The AQI focuses on health effects that may be experienced within a few hours or 
 ### Step 3. Sprint display with update button off. 
 
 <img src="./pics/sprintNoDisplay2.png" style="float: left; margin-right: 5px"> 
+---
+# The End
 ---
 
 
