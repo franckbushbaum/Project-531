@@ -179,3 +179,21 @@
   position: absolute;
   right: 0;
 }
+
+/*-----------Hamburger-----------*/
+.hamburger {
+  display: none;
+}
+/* ----------------------------- */
+
+@media screen and (max-width: 414px){ 
+  .hamburger {
+    display: block;
+    padding-right: 1rem;
+  }
+
+  .navLink {
+    display: none;
+  }
+}
+

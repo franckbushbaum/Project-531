@@ -101,11 +101,7 @@
 .back-button:hover,
 .back-button:hover::after{
     color: #00d3f8;
-
     transition: color 0.23s linear;
-
-    /* background, blends nicely if this is a button and the button is customized.., otherwise leave it out. */
-    /* background: rgb(0,0,0,0.25)*/ 
 }
 
 body {
