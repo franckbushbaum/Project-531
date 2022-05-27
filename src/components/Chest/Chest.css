@@ -17,7 +17,7 @@
 
 .last-workout{
     border-radius: 15px;
-    padding: 1.5rem 0rem;
+    padding: 2.5rem 0rem;
     display: flex;
     flex-direction:column;
     align-items: center;
@@ -25,14 +25,10 @@
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
     background: #00000083;
     /* background-color: rgb(42, 165, 165); */ 
-
-    transition: scale(1.00) .8s ease;
 }
 
 .last-workout:hover {
     cursor: pointer;
-    transform: scale(1.05);
-    transition: all 1s ease;
 }
 
 
@@ -41,7 +37,7 @@
     display: flex;
     flex-direction:column;
     align-items: center;
-    width: 45vw;
+    width: 80vw;
     padding-top: 2vh;
     padding-bottom: 2vh;
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
@@ -52,8 +48,6 @@
 
 .current:hover {
     cursor: pointer;
-    transform: scale(1.05);
-    transition: all 1s ease;
 }
 
 .nav-buttons{
@@ -84,11 +78,7 @@
 .new-button:hover,
 .new-button:hover::after{
     color: #00d3f8;
-
     transition: color 0.23s linear;
-
-    /* background, blends nicely if this is a button and the button is customized.., otherwise leave it out. */
-    /* background: rgb(0,0,0,0.25)*/ 
 }
 
 .back-button{
