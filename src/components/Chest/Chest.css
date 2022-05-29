@@ -51,8 +51,9 @@
 
 .nav-buttons{
     /* outline: 3px solid rgb(255, 115, 0); */
+    margin: 0 !important;
+    width: 100%;
     display: flex;
-    justify-content: space-between;
 }
 
 .new-button{
@@ -130,18 +131,7 @@ table, th, td {
     justify-content: right;
 }
 
-
-
-
-
 .archive-child{
-        /* color:#fff;
-        border:none;
-        padding:10px 30px;
-        background:
-        linear-gradient(143deg,green 70%,transparent 72%) 100% 0/20px 100% no-repeat,
-        linear-gradient(-37deg,green 70%,transparent 72%) 0 0/20px 100% no-repeat,
-        linear-gradient(green,green) 20px 0/calc(100% - 40px) 100% no-repeat; */
     background-color: transparent;
     border: none;
     height:30%;
@@ -160,10 +150,6 @@ table, th, td {
 .archive-child:hover::after{
     color: #00d3f8;
     border-color: #00d3f8;
-
     transition: color 0.23s linear;
-
-    /* background, blends nicely if this is a button, otherwise leave it out. */
-    /* background: rgb(0,0,0,0.25) */
 }
 

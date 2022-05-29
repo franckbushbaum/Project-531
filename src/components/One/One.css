@@ -5,8 +5,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 99vw;
-    height: auto;
+    gap: 4rem;
     padding-top: 14rem;
 }
 
@@ -18,8 +17,8 @@
     margin-bottom: 5vh;
     justify-content: center;
     border-radius: 25px;
-    width: 30vw;
-    height: 14vh;
+    width: 30%;
+    padding: 2em;
     background: #00000083;
     transition-property: all;
     transition-duration: 500ms;
@@ -132,10 +131,11 @@
 .individual-aqi-chart-buttons:hover::after {
     color: #00d3f8;
     border-color: #00d3f8;
-
     transition: color 0.23s linear;
-
-    /* background, blends nicely if this is a button, otherwise leave it out. */
-    /* background: rgb(0,0,0,0.25) */
-
 }
+
+@media screen and (max-width: 414px){ 
+    .select-menu{
+        width: 80%;
+    }
+  }

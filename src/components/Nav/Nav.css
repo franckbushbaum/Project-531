@@ -187,9 +187,21 @@
 /* ----------------------------- */
 
 @media screen and (max-width: 414px){ 
+
+  .glitch {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  
+  .glitch span {
+    position: absolute;
+    top: 3vh;
+    left: 0vw;
+  }
+
   .hamburger {
     display: block;
-    padding-right: 1rem;
+    padding-right: 2rem;
   }
 
   .navLink {

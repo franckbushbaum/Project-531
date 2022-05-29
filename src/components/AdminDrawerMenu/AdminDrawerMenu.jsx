@@ -63,21 +63,20 @@ const AdminDrawerMenu = () => {
         </div>
         <Divider style={{ marginBottom: "16px" }} />
 
-        <div className="drawerLinkColumn">
+        <div className="drawerLinkColumn" style={{backgroundColor: "transparent"}}>
           <ListItem className="drawerListItem" onClick={() => setOpen(false)}>
-            <Link className="drawerLink" to="/home">
-              <h3>Home</h3>
+            <Link className="drawerLink" to="/user">
+              <h3>HOME</h3>
             </Link>
           </ListItem>
           <ListItem className="drawerListItem" onClick={() => setOpen(false)}>
-            <Link className="drawerLink" to="/adminjoblist">
-              <h3>Jobs</h3>
+            <Link className="drawerLink" to="/about">
+              <h3>ABOUT</h3>
             </Link>
           </ListItem>
-
           <ListItem className="drawerListItem" onClick={() => setOpen(false)}>
-            <Link className="drawerLink" to="/adminhub">
-              <h3>Admin Hub</h3>
+            <Link className="drawerLink" to="/sprints">
+              <h3>SPRINTS</h3>
             </Link>
           </ListItem>
 
