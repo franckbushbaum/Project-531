@@ -186,6 +186,19 @@
 }
 /* ----------------------------- */
 
+@media screen and (max-width: 800px){ 
+
+.hamburger {
+  display: block;
+  padding-right: 2rem;
+}
+
+.navLink {
+  display: none;
+}
+
+}
+
 @media screen and (max-width: 414px){ 
 
   .glitch {
@@ -199,13 +212,5 @@
     left: 0vw;
   }
 
-  .hamburger {
-    display: block;
-    padding-right: 2rem;
-  }
-
-  .navLink {
-    display: none;
-  }
 }
 
