@@ -1,12 +1,7 @@
 /* Container of everything. It's "parent" will also have a width of 90vw, the children will probably have % dimensions. */
 .hours{
-    outline: 2px dotted #26ff26;
-    display: grid;
+    outline: 2px dotted #26f8ff;
     gap: 0.5rem;
-    grid-template-rows: 3fr;
-    grid-template-columns: 5fr;
-    width: 90vw;
-    height: auto;
     position: relative;
     margin: 0;
     top: 5em;
@@ -18,7 +13,6 @@
 
 /* item  */
 .modal-title{
-    outline: 2px solid blue;
     padding: 1%;
     position: absolute;
     right: 0;
@@ -29,23 +23,25 @@
 .aqi-display{
     /* outline: 2px solid rgb(205, 192, 50); */
     text-align: center;
-    justify-self: center;
+    margin: 0 auto;
 }
 
 .next-five-container{
     outline: 2px solid rgb(0, 179, 255);
+    margin: 0 auto;
+    padding: auto;
+    width: 90%;
     display: flex;
     justify-content: center;
-    position: relative;
 }
 
 .next-five-container > .nfdn-active{
     outline: 2px solid rgba(211,78,78,0.91);
-    padding: 1rem;  
-    border-radius: 10px;
+    padding: 1rem;
+    border-radius: 10px; 
     /* font-size: 2.1rem; */
-    font-size: 2rem;
-    margin: 1rem;
+    /* font-size: 1rem;
+    margin: 1rem; */
     /* outline: 2px solid rgb(71, 205, 50); */
 }
 
