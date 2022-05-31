@@ -5,8 +5,8 @@ body,
   justify-content: center;
 } */ 
 
-
 /* Root em (rem) looks at html font-sizes, not body. */
+
 .html{
   font-size: 62.5%
 }

@@ -1,10 +1,9 @@
 /* PARENT */
 .one-container {
-    outline: 2px dotted #B026FF;
+    outline: 2px dotted #ffdb26;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 95vw;
     gap: 1rem;
     margin: 30% auto 0 auto;
 }
