@@ -13,13 +13,10 @@
   /* flex box layout */
   position: fixed;
   top: 0px;
-  height: 10vh;
-  width: 100vw !important;
+  width: 99.9%;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 2vh;
-
   z-index: 1000;
   background: repeating-linear-gradient(
       to bottom,
@@ -45,6 +42,7 @@
 }
 
 .nav-title {
+  padding-top: 1em;
   display: flex;
   color: #f2f2f2;
 }
@@ -71,7 +69,7 @@
 
 .glitch span {
   position: absolute;
-  top: 1.9vh;
+  top: 1em;
   left: 0vw;
 }
 

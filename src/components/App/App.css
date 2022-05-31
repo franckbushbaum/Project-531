@@ -1,19 +1,23 @@
-/* html,
+html,
 body,
 #react-root {
-  display: flex;
-  justify-content: center;
-} */ 
+  /* outline: 3px solid blue; */
+  width: 100vw;
+  height: 100vh;
+}
+
 
 /* Root em (rem) looks at html font-sizes, not body. */
 
-.html{
-  font-size: 62.5%
+.html {
+  width: 100vw;
+  outline: 3px solid blue;
 }
 
 body {
   font-family: 'JetBrains Mono', monospace;
   margin: 0px;
+  outline: 3px solid blue;
   background-image: url(https://images.unsplash.com/photo-1610322231968-31322d42851f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2836&q=80);
   -webkit-background-size: cover;
   -moz-background-size: cover;
