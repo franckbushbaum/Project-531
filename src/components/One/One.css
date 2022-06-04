@@ -54,10 +54,9 @@
     position: relative;
     border-radius: 20px;
     background: #00000083;
-    width: 100%;
-    margin: auto;
+    width: 90%;
     margin: 10em auto auto auto;
-    padding: 0rem 3rem 3rem 3rem;
+    /* padding: 0rem 3rem 3rem 3rem; */
     margin-bottom: 1%;
 }
 
