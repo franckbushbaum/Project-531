@@ -39,8 +39,8 @@ function One() {
 
     // Data for Air Quality Component.
 
-    // Destructure object @ data[0]
-    const [firstvalue, ...rest] = data
+    // Destructure the data ARRAY
+    const [ firstvalue, ...rest ] = data
 
     console.log('what is firstvalue?', firstvalue);
 
