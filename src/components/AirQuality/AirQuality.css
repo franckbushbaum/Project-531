@@ -37,23 +37,28 @@
     outline: 2px solid rgb(0, 179, 255);
     display: flex;
     justify-content: center;
-    width: 100%;
+    /* width: 100%; */
     height: 10em;
     position: relative;
 }
 
-.next-five-container > .nfdn-active{
+.nfdn-active{
     outline: 2px solid rgba(211,78,78,0.91);
     padding: 1rem;  
     border-radius: 10px;
-    /* font-size: 2.1rem; */
     font-size: 2rem;
     margin: 1%;
-    /* outline: 2px solid rgb(71, 205, 50); */
+
+    transition: color 4s linear;
 }
 
-.next-five-container > *:hover{
-    outline: 2px solid double rgba(78, 211, 133, 0.91);
+.nfdn-active:hover,
+.nfdn-active:hover::after{
+    cursor: pointer;
+    outline: 2px solid #00d3f8;
+    border-color: #00d3f8;
+
+    transition: color 0.23s linear;
 }
 
 
