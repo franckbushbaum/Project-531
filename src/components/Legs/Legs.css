@@ -111,6 +111,8 @@ table, th, td {
     /* background-color: rgb(42, 165, 165); */ 
 }
 
+
+/* PARENT */
 .last-workout-legs > p {
     display:flex;
     justify-content: right;
@@ -188,7 +190,7 @@ table, th, td {
     /* background: rgb(0,0,0,0.25)*/ 
 }
 
-/* UPDATE */
+/* 2022 UPDATE, all are CHILDREN of .last-workout-legs. I lost my notebook >:( */
 
 .sprint-container{
     font-size: 2em;

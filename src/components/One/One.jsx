@@ -19,6 +19,7 @@ function One() {
     const history = useHistory();
     const dispatch = useDispatch();
 
+    
     const [workoutType, setWorkoutType] = useState([]);
     const [airQualityBox, setAirQualityBox] = useState(true);
 
