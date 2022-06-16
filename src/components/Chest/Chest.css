@@ -54,9 +54,10 @@
 
 .nav-buttons{
     /* outline: 3px solid rgb(255, 115, 0); */
-    margin: 0 !important;
+    margin: 0 auto;
     width: 100%;
     display: flex;
+    justify-content: center;
 }
 
 .new-button{

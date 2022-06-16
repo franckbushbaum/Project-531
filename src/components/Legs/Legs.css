@@ -94,7 +94,7 @@ table, th, td {
 
 
 
-
+/* PARENT */
 .last-workout-legs{
     width: 85%;
     height: auto;
@@ -112,7 +112,6 @@ table, th, td {
 }
 
 
-/* PARENT */
 .last-workout-legs > p {
     display:flex;
     justify-content: right;
@@ -139,7 +138,10 @@ table, th, td {
 
 .nav-buttons{
     /* outline: 3px solid rgb(255, 115, 0); */
-    margin: 3rem 9rem;
+    margin: 0 auto;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .new-button{
@@ -191,7 +193,6 @@ table, th, td {
 }
 
 /* 2022 UPDATE, all are CHILDREN of .last-workout-legs. I lost my notebook >:( */
-
 .sprint-container{
     font-size: 2em;
     margin-top: 3ch;
@@ -226,11 +227,11 @@ table, th, td {
 
 .sending-data-window {
     background: #000000da;
-    margin: 3rem 1.1rem 1.1rem 0rem;
+    margin: 3rem 1.8rem 1.1rem 0rem;
     padding: 3rem 3rem 2rem 3rem;
     outline: 2px solid  #0cfff4;
     border-radius: 4px;
-    width: 95%;
+    width: 80%;
     min-height: 18rem;
 }
 
