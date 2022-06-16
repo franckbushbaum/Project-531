@@ -123,12 +123,6 @@ table, th, td {
     transition: all 1s ease;
 }
 
-.nav-buttons{
-    /* outline: 3px solid rgb(255, 115, 0); */
-    display: flex;
-    justify-content: space-between;
-}
-
 .new-button{
     background-color: transparent;
     display: flex;

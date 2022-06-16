@@ -136,14 +136,6 @@ table, th, td {
     cursor: pointer;
 }
 
-.nav-buttons{
-    /* outline: 3px solid rgb(255, 115, 0); */
-    margin: 0 auto;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-}
-
 .new-button{
     background-color: transparent;
     display: flex;
