@@ -136,6 +136,13 @@ table, th, td {
     cursor: pointer;
 }
 
+.nav-buttons-legs{
+    /* outline: 3px solid rgb(255, 115, 0); */
+    width: 99%;
+    display: flex;
+    justify-content: space-between;
+}
+
 .new-button{
     background-color: transparent;
     display: flex;

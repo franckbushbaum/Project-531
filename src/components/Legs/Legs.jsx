@@ -216,7 +216,7 @@ function Legs() {
                         </div>
                     </div>
                 </div>
-                <div className="nav-buttons">
+                <div className="nav-buttons-legs">
                     <button onClick={handleClick} className="back-button"><CgArrowLeftR text="continue" size={42} />&nbsp;Back</button>
                     <button onClick={handleClick} className="new-button">continue&nbsp;<CgArrowRightR text="continue" size={42} /></button>
                 </div>
