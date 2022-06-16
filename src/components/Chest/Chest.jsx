@@ -82,8 +82,8 @@ function Chest() {
                     WEEK: {recentWorkout.week}
                 </div>
                 <div className="nav-buttons">
-                    <button onClick={handleClick} className="back-button"><CgArrowLeftR text="continue" size={45}/>&nbsp;Back</button>
-                    <button onClick={handleClick} className="new-button">continue&nbsp;<CgArrowRightR text="continue" size={45} /></button>
+                    <button onClick={handleClick} className="chest-shoulders-back-button"><CgArrowLeftR text="continue" size={45}/>&nbsp;Back</button>
+                    <button onClick={handleClick} className="chest-shoulders-back-new-button">continue&nbsp;<CgArrowRightR text="continue" size={45} /></button>
                 </div>
             </div>
         </>

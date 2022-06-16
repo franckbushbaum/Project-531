@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import { IoFingerPrintOutline, IoArrowForwardSharp } from "react-icons/io5";
 import { CgArrowRightR, CgArrowLeftR } from "react-icons/cg";
+import './Shoulders.css'
 
 function Shoulders() {
 
@@ -36,11 +37,9 @@ function Shoulders() {
 
     return (
         <>
-            <div className="container">
+            <div className="chest-container">
                 <div className="archive-button">
-                    <p className="corner"></p>
                     <button onClick={toArchive} className="archive-child" >Archive    <IoFingerPrintOutline /></button>
-                    <div className="move"></div>
                 </div>
                 <div className="header">
                         <div className="header-title">
@@ -84,8 +83,8 @@ function Shoulders() {
                     WEEK: {recentWorkout.week}
                 </div>
                 <div className="nav-buttons">
-                    <button onClick={handleClick} className="back-button"><CgArrowLeftR text="continue" size={40} />&nbsp;Back</button>
-                    <button onClick={handleClick} className="new-button">continue&nbsp;<CgArrowRightR text="continue" size={40} /></button>
+                    <button onClick={handleClick} className="chest-shoulders-back-button"><CgArrowLeftR text="continue" size={45}/>&nbsp;Back</button>
+                    <button onClick={handleClick} className="chest-shoulders-back-new-button">continue&nbsp;<CgArrowRightR text="continue" size={45} /></button>
                 </div>
             </div>
         </>

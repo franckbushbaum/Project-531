@@ -55,12 +55,12 @@
 .nav-buttons{
     /* outline: 3px solid rgb(255, 115, 0); */
     margin: 0 auto;
-    width: 70%;
+    width: 64%;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
-.new-button{
+.chest-shoulders-back-new-button{
     background-color: transparent;
     display: flex;
     justify-content: flex-end;
@@ -79,13 +79,13 @@
     transition: color .4s linear;
 }
 
-.new-button:hover,
-.new-button:hover::after{
+.chest-shoulders-back-new-button:hover,
+.chest-shoulders-back-new-button::after{
     color: #00d3f8;
     transition: color 0.23s linear;
 }
 
-.back-button{
+.chest-shoulders-back-button{
     background-color: transparent;
     display: flex;
     align-items: center;
@@ -103,8 +103,8 @@
     transition: color .4s linear;
 }
 
-.back-button:hover,
-.back-button:hover::after{
+.chest-shoulders-back-button:hover,
+.chest-shoulders-back-button:hover::after{
     color: #00d3f8;
     transition: color 0.23s linear;
 }
@@ -117,7 +117,7 @@ body {
     color:rgba(211,78,78,0.91);
 }
 
-table, th, td {
+th, td {
     border: 2px solid rgba(211,78,78,0.91);
     color: rgba(211,78,78,0.91);
     text-align: center;
