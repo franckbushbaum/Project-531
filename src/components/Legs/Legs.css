@@ -263,8 +263,7 @@ table, th, td {
     text-align:left;
     align-items: center;
     border: none;
-    width: 20vw;
-    padding: 0;
+    padding: 0 1rem;
     margin-left: 85%;
     text-transform: uppercase;
     font-size: 1.3rem;
