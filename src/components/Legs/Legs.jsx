@@ -32,13 +32,12 @@ function Legs() {
     const allSprints = useSelector(store => store.fetchSprints)
 
     const handleClick = (event) => {
-        console.log('in handleClick', event.target.className)
         switch (event.target.className) {
             case 'back-button':
                 return history.push('/user')
                 break;
             case 'new-button':
-                history.push('/three')
+                history.push('/sprints')
                 break;
         }
     };
@@ -60,8 +59,7 @@ function Legs() {
     }
 
     const toArchive = () => {
-        history.push('/four');
-        dispatch({ type: 'ARCHIVE_INITIATE', payload: 2 })
+        history.push('/sprints');
     }
 
     useEffect(() => {
