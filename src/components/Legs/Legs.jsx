@@ -211,9 +211,7 @@ function Legs() {
                             {off === null ? <div></div> : <div> {off} seconds break</div>}
                             {reps === null ? <div></div> : <div> {reps} times</div>}
                         </div>
-                        <div className="confirm-button">
-                            {reps === null ? <div></div> : <button onClick={()=> sendValues()}>Confirm</button>}
-                        </div>
+                            {reps === null ? <div></div> : <button className='sprints-confirm-button' onClick={()=> sendValues()}>Confirm</button>}                       
                     </div>
                 </div>
                 <div className="nav-buttons-legs">
