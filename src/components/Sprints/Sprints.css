@@ -2,13 +2,11 @@
 .screen{
   /* outline: 5px solid rgb(7, 150, 102); */
   position: relative;
-  height: 70vh;
+  height: 90vh;
   width: 70vw;
-  margin-top: 10vh;
-  margin-right: 0;
+  margin: 10% auto;
   align-items: center;
   align-content: center;
-
 }
 
 
@@ -80,6 +78,9 @@
   opacity: 0;
 }
 
+.update-window{
+  height: 100%;
+}
 
 .update-window-individual-container{
   font-size: 1.2em;
@@ -175,7 +176,7 @@
 
 
 
-/* BUTTONS SHIT */
+/* BUTTONS STUFF */
 .screen-button,
 .update-window-buttons {
         display: flex;
