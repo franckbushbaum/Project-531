@@ -12,49 +12,34 @@
     justify-content: center;
 }
 
-.individual-table-container{
-    border: 25px;
-    border-radius: 15px;
-    display: flex;
-    flex-direction:column;
-    margin: 0 auto;
-    /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
-    background: #00000083;
-    
-    transition: color 0.4s linear;
-}
-
-
-.individual-table-container:hover {
-    border: 1px solid rgba(128, 238, 3, 0.91);
-    transition: all 1s ease;
-}
-
-.page-four-table th,
-.page-four-table td,
-.page-four-table{
-    border: 1px solid rgba(128, 238, 3, 0.91);
-    color: rgba(0, 243, 41, 0.91);
-}
-
 .individual-table{
     display: flex;
     flex-direction:column;
     margin: 0 auto;
+    justify-content: center;
+    background: #00000083;
 
-     /* Animation */
-     transition: color .4s linear;
 }
+
+
+.page-four-table th,
+.page-four-table td,
+.page-four-table{
+    margin: 0 auto;
+    border: 1px solid rgba(128, 238, 3, 0.91);
+    color: rgba(0, 243, 41, 0.91);
+}
+
+
 
 .fresh {
     position: relative;
-    margin-top: 10px;
-    margin-left: 245px;
+    margin: 0 auto;
     justify-content: center;
     cursor: pointer;
     color: rgba(211,78,78,0.91);
-    height: 40px;
-    width: 40px;
+    height: 60px;
+    width: 60px;
     border: none;
     background-color: transparent;
 }

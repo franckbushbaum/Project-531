@@ -48,7 +48,7 @@ function Four() {
 
             {archivedWorkouts.map((workout) => {
                 return (
-                    <div className="individual-table-container">
+                    
                         <div className="individual-table">
                             <p>{JSON.stringify(workout.workout_id)}</p>
                             <table key={workout.workout_id} className="page-four-table">
@@ -88,7 +88,7 @@ function Four() {
                             </table>
                             <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
                         </div>
-                    </div>)
+                    )
             })}
 
 
