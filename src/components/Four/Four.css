@@ -17,12 +17,13 @@
     border-radius: 15px;
     display: flex;
     flex-direction:column;
-    margin: 33px;
+    margin: 0 auto;
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
     background: #00000083;
     
     transition: color 0.4s linear;
 }
+
 
 .individual-table-container:hover {
     border: 1px solid rgba(128, 238, 3, 0.91);
@@ -39,7 +40,7 @@
 .individual-table{
     display: flex;
     flex-direction:column;
-    margin: 30px;
+    margin: 0 auto;
 
      /* Animation */
      transition: color .4s linear;
