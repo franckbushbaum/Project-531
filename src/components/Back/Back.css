@@ -1,45 +1,151 @@
+/* On every stylesheet */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.chest-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    margin: 14rem auto;
+}
+
+
+.header{
+    display: flex;
+    justify-content: center;
+    border-radius: 15px;
+    width: 80vw;
+    max-width: 600px;
+    background: #00000083;
+}
+
+.last-workout{
+    border-radius: 15px;
+    padding: 2.5rem 0rem;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    width: 80vw;
+    max-width: 600px;
+    /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+    background: #00000083;
+    /* background-color: rgb(42, 165, 165); */ 
+}
+
+.last-workout:hover {
+    cursor: pointer;
+}
+
+
+.current{
+    border-radius: 15px;
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start !important;
+    width: 75vw;
+    max-width: 520px;
+    padding: 2rem 0rem 2rem 5vw;
+    /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
+    background: #00000083;
+    /* background-color: rgb(42, 165, 165); */
+   
+}
+
+.current:hover {
+    cursor: pointer;;
+}
+
+.nav-buttons{
+    /* outline: 3px solid rgb(255, 115, 0); */
+    margin: 0 auto;
+    width: 64%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.chest-shoulders-back-new-button{
+    background-color: transparent;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    border: none;
+    height:68%;
+    margin: 2px;
+    padding: 3px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgba(211, 78, 78, 0.781);
+    text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
+    cursor:pointer;
+
+    /* Animation */
+    transition: color .4s linear;
+}
+
+.chest-shoulders-back-new-button:hover,
+.chest-shoulders-back-new-button::after{
+    color: #00d3f8;
+    transition: color 0.23s linear;
+}
+
+.chest-shoulders-back-button{
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    border: none;
+    height:68%;
+    margin: 2px;
+    padding: 3px;
+    text-transform: uppercase;
+    font-size: 20px;
+    color: rgba(211, 78, 78, 0.781);
+    text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
+    cursor:pointer;
+
+    /* Animation */
+    transition: color .4s linear;
+}
+
+.chest-shoulders-back-button:hover,
+.chest-shoulders-back-button:hover::after{
+    color: #00d3f8;
+    transition: color 0.23s linear;
+}
+
+body {
+    color: rgba(211,78,78,0.91);
+}
 
 .last-workout {
     color:rgba(211,78,78,0.91);
 }
 
-table, th, td {
-    border: 1px solid rgba(211,78,78,0.91);
+th, td {
+    border: 2px solid rgba(211,78,78,0.91);
     color: rgba(211,78,78,0.91);
     text-align: center;
     height:60px;
-    width: 520px;
+    width: 40vw;
   }
 
   .archive-button {
     border: solid;
     border-radius: 15px;
-    resize: none;
-    height:65px;
+    width: 80vw;
+    max-width: 600px;
     border-width: 2px;
     border-color: #00d3f8;
     display: flex;
     justify-content: right;
 }
 
-
-
-
-
-
-
 .archive-child{
-        /* color:#fff;
-        border:none;
-        padding:10px 30px;
-        background:
-        linear-gradient(143deg,green 70%,transparent 72%) 100% 0/20px 100% no-repeat,
-        linear-gradient(-37deg,green 70%,transparent 72%) 0 0/20px 100% no-repeat,
-        linear-gradient(green,green) 20px 0/calc(100% - 40px) 100% no-repeat; */
     background-color: transparent;
     border: none;
     height:30%;
-    margin: 22px;
+    margin: 12px;
     text-transform: uppercase;
     font-size: 19px;
     color: rgba(211, 78, 78, 0.781);
@@ -54,128 +160,6 @@ table, th, td {
 .archive-child:hover::after{
     color: #00d3f8;
     border-color: #00d3f8;
-
     transition: color 0.23s linear;
-
-    /* background, blends nicely if this is a button, otherwise leave it out. */
-    /* background: rgb(0,0,0,0.25) */
 }
 
-
-.header{
-   /* background-color: aqua; */
-    display: flex;
-    border-radius: 15px;
-    /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
-    background: #00000083;
-    /* background-color: rgb(42, 165, 165); */
-}
-
-.header:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: all 1s ease;
-}
-
-.header-title{
-    justify-content: center;
-}
-
-
-
-
-.last-workout{
-    border-radius: 15px;
-    font-size: 20px;
-    padding: 30px;
-    display: flex;
-    flex-direction:column;
-    margin: 30px;
-    /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
-    background: #00000083;
-    /* background-color: rgb(42, 165, 165); */ 
-
-    transition: scale(1.00) .8s ease;
-}
-
-.last-workout:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: all 1s ease;
-}
-
-
-.current{
-    border-radius: 15px;
-    font-size: 19px;
-    display: flex;
-    flex-direction:column;
-    margin: 30px;
-    /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
-    background: #00000083;
-    /* background-color: rgb(42, 165, 165); */
-   
-}
-
-.current:hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    transition: all 1s ease;
-}
-
-.new-button{
-    background-color: transparent;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border: none;
-    height:68%;
-    margin: 2px;
-    padding: 3px;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: rgba(211, 78, 78, 0.781);
-    text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
-    cursor:pointer;
-
-    /* Animation */
-    transition: color .4s linear;
-}
-
-.new-button:hover,
-.new-button:hover::after{
-    color: #00d3f8;
-
-    transition: color 0.23s linear;
-
-    /* background, blends nicely if this is a button and the button is customized.., otherwise leave it out. */
-    /* background: rgb(0,0,0,0.25)*/ 
-}
-
-.back-button{
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    border: none;
-    height:68%;
-    margin: 2px;
-    padding: 3px;
-    text-transform: uppercase;
-    font-size: 20px;
-    color: rgba(211, 78, 78, 0.781);
-    text-shadow: 0px 0px 3px rgba(211,78,78,0.91);
-    cursor:pointer;
-
-    /* Animation */
-    transition: color .4s linear;
-}
-
-.back-button:hover,
-.back-button:hover::after{
-    color: #00d3f8;
-
-    transition: color 0.23s linear;
-
-    /* background, blends nicely if this is a button and the button is customized.., otherwise leave it out. */
-    /* background: rgb(0,0,0,0.25)*/ 
-}

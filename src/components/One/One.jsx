@@ -38,7 +38,7 @@ function One() {
     // const data = useSelector(store => store.workoutTypeId);
 
     const data = useSelector(state => {
-        if(state.workoutTypeId === undefined) {
+        if(state.workoutTypeId === 1 || 2 || 3 || 4 || '5') {
             return []
         }
         return state.workoutTypeId;
