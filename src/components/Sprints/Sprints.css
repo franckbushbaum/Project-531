@@ -150,9 +150,7 @@
   align-items: center;
   padding-left: 20px;
   padding-right: 30px;
-  height: 4vh;
-  width: 65px;
-  border-radius: 4px;
+  border-radius: 10px;
   border-right: 1px solid  #00d3f8;
   border-bottom: 1px solid  #00d3f8;
   border-left: 1px solid  #00d3f8;
