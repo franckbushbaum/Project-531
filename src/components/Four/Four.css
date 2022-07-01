@@ -2,7 +2,7 @@
     display: flex;
     justify-content: center;
     border-radius: 15px;
-    margin: 30px;
+    margin-top: 15%;
     color:rgba(0, 243, 41, 0.91);
     background: #00000083;
 }
@@ -12,34 +12,42 @@
     justify-content: center;
 }
 
+.workouts-container{
+    margin: 0 auto;
+    outline: 2px solid red;
+}
+
+/* Flex container */
 .individual-table{
     display: flex;
     flex-direction:column;
-    margin: 0 auto;
     justify-content: center;
     background: #00000083;
+    outline: 2px solid green;
 
 }
 
+.individual-table > * {
+    margin: 0.5rem auto;
+}
 
+/* Flex item */
 .page-four-table th,
 .page-four-table td,
 .page-four-table{
-    margin: 0 auto;
     border: 1px solid rgba(128, 238, 3, 0.91);
     color: rgba(0, 243, 41, 0.91);
 }
 
 
-
+/* Flex item */
 .fresh {
     position: relative;
-    margin: 0 auto;
     justify-content: center;
     cursor: pointer;
     color: rgba(211,78,78,0.91);
-    height: 60px;
-    width: 60px;
+    height: 80px;
+    width: 80px;
     border: none;
     background-color: transparent;
 }

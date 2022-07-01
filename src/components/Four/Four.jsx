@@ -45,10 +45,9 @@ function Four() {
                     <h1>ARCHIVE</h1>
                 </div>
             </div>
-
+            <div className="workouts-container">
             {archivedWorkouts.map((workout) => {
-                return (
-                    
+                return (                   
                         <div className="individual-table">
                             <p>{JSON.stringify(workout.workout_id)}</p>
                             <table key={workout.workout_id} className="page-four-table">
@@ -90,7 +89,7 @@ function Four() {
                         </div>
                     )
             })}
-
+        </div>
 
         </>
     );
