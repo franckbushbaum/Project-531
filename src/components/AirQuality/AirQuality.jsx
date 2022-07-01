@@ -9,7 +9,7 @@ import PopUp from '../PopUp/PopUp.jsx'
 function AirQuality({ hour }) {
 
 //1 destructured was in an object. 
-// console.log('destructured data?', hour);
+console.log('destructured data?', hour);
 
 //2 Option A:
   const { aqi } = hour;

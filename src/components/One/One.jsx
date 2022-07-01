@@ -35,7 +35,14 @@ function One() {
 
     //6 Change data, which changes topHour ect... ect...
 
-    const data = useSelector(store => store.workoutTypeId);
+    // const data = useSelector(store => store.workoutTypeId);
+
+    const data = useSelector(state => {
+        if(state.workoutTypeId) {
+            return []
+        }
+        return [];
+     })
 
 
     // Data for Air Quality Component.
@@ -48,8 +55,6 @@ function One() {
     console.log('what is firstvalue?', firstvalue);
 
     const topHour = { ...firstvalue, ...popUp }
-
-    // const newData = {...topHour, ...popUp }
 
     const handleChange = (event) => {
         setAirQualityBox(false)
