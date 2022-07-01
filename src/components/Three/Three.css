@@ -1,4 +1,5 @@
 .page-three-actual{
+  margin-top: 20vh;
   display: grid;
   grid-template-rows: 1fr 11fr;
   gap: 2em;

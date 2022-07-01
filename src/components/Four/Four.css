@@ -1,15 +1,20 @@
+/* On every stylesheet */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+.four-container{
+    margin-top: 15vh;
+}
+
 .archive-header{
     display: flex;
     justify-content: center;
     border-radius: 15px;
-    margin-top: 15%;
+    margin: 0 auto;
+    width: 35vw;
     color:rgba(0, 243, 41, 0.91);
     background: #00000083;
-}
-
-.archive-header-title{
-    color:rgba(0, 243, 41, 0.91);
-    justify-content: center;
 }
 
 .workouts-container{
@@ -19,11 +24,17 @@
 
 /* Flex container */
 .individual-table{
-    display: flex;
-    flex-direction:column;
-    justify-content: center;
     background: #00000083;
     outline: 2px solid green;
+    display: flex;
+    width: 35%;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 2rem 4rem;
 
 }
 

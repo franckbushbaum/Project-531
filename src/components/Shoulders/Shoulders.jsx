@@ -17,10 +17,10 @@ function Shoulders() {
     const handleClick = (event) => {
         console.log('in handleClick', event.target.className)
         switch (event.target.className) {
-            case 'back-button':
+            case 'chest-shoulders-back-button':
                 return history.push('/user')
                 break;
-            case 'new-button':
+            case 'chest-shoulders-back-new-button':
                 history.push('/three')
                 break;
         }

@@ -16,10 +16,10 @@ function Back() {
     const handleClick = (event) => {
         console.log('in handleClick', event.target.className)
         switch (event.target.className) {
-            case 'back-button':
+            case 'chest-shoulders-back-button':
                 return history.push('/user')
                 break;
-            case 'new-button':
+            case 'chest-shoulders-back-new-button':
                 history.push('/three')
                 break;
         }
@@ -84,8 +84,8 @@ function Back() {
                     WEEK: {recentWorkout.week}
                 </div>
                 <div className="nav-buttons">
-                    <button onClick={handleClick} className="back-button"><CgArrowLeftR text="continue" size={40} />&nbsp;Back</button>
-                    <button onClick={handleClick} className="new-button">continue&nbsp;<CgArrowRightR text="continue" size={40} /></button>
+                    <button onClick={handleClick} className="chest-shoulders-back-button"><CgArrowLeftR text="continue" size={40} />&nbsp;Back</button>
+                    <button onClick={handleClick} className="chest-shoulders-back-new-button">continue&nbsp;<CgArrowRightR text="continue" size={40} /></button>
                 </div>
             </div>
         </>

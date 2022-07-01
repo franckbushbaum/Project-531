@@ -40,6 +40,8 @@ function One() {
 
     // Data for Air Quality Component.
 
+    console.log('what is data?', data)
+
     // Destructure the data ARRAY
     const [ firstvalue, ...rest ] = data
 

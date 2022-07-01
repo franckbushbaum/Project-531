@@ -40,10 +40,9 @@ function Four() {
 
     return (
         <>
+        <div className="four-container">
             <div className="archive-header">
-                <div className="archive-header-title">
                     <h1>ARCHIVE</h1>
-                </div>
             </div>
             <div className="workouts-container">
             {archivedWorkouts.map((workout) => {
@@ -89,6 +88,7 @@ function Four() {
                         </div>
                     )
             })}
+        </div>
         </div>
 
         </>
