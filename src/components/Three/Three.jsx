@@ -134,7 +134,7 @@ function Three() {
                 <button className="the-button" onClick={goBack}><FaHome size="40px" /></button>
                 <div className="container-page-three">
                     <form className="container-forms" onSubmit={handleSubmit}>
-                        <TextField style={{ m: 5, backgroundColor: 'gray', color: 'gray', minWidth: 180, }}
+                        <TextField style={{ m: 5, backgroundColor: 'gray', color: 'gray', width: 220 }}
                             className="input-field"
                             label="Enter One Rep Max"
                             variant="outlined"
@@ -145,8 +145,8 @@ function Three() {
                             onChange={setValues}
                         />
                         <div className="select-week">
-                            <Box sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, height: 150, borderRadius: 7, color: 'secondary' }} >
-                                <FormControl sx={{ minWidth: 180, width: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
+                            <Box sx={{borderRadius: 7, color: 'secondary', marginTop: '2em', marginBottom: '2em' }} >
+                                <FormControl sx={{ width: 220, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
                                     <InputLabel >Select Week</InputLabel>
                                     <Select
                                         label="Select Week"
@@ -162,16 +162,11 @@ function Three() {
                                         <MenuItem value={4}>Deload</MenuItem>
                                     </Select>
                                 </FormControl>
-                            </Box>
-
-
-                        
+                            </Box>                 
                         <input className="submit-form-button" type='submit' value='Submit' />
                         </div>
                     </form>
                 </div>
-
-
             </div>
             <p>{JSON.stringify(workoutTypeId)}</p>
             <p>{JSON.stringify(theWorkouts.created_at)}</p>
