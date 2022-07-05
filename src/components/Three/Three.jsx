@@ -19,7 +19,12 @@ function Three() {
 
     const history = useHistory();
     const dispatch = useDispatch();
-    const workoutTypeId = useSelector(store => store.workoutTypeId);
+    const workoutTypeId = useSelector(store =>  {
+        if (store.workoutTypeId.length < 0) {
+            return 1
+        }
+        return store.workoutTypeId
+    });
     const theWorkouts = useSelector(store => store.fetchWorkout);
 
     const [inputValue, setInputValue] = useState({ one_rep_max: '', week: '' });
@@ -155,7 +160,7 @@ function Three() {
                                 <MenuItem value={1}>Week 1</MenuItem>
                                 <MenuItem value={2}>Week 2</MenuItem>
                                 <MenuItem value={3}>Week 3</MenuItem>
-                                <MenuItem value={4}>UGH</MenuItem>
+                                <MenuItem value={4}>Deload</MenuItem>
                             </Select>
                         </FormControl>
                     </Box>  
@@ -169,10 +174,9 @@ function Three() {
 
             </div>
             <p>{JSON.stringify(workoutTypeId)}</p>
-            {JSON.stringify(theWorkouts.created_at)}
+            <p>{JSON.stringify(theWorkouts.created_at)}</p>
             <div className="display">
                 {theWorkouts.map(workout => {
-
                     return (<ThreeItem workout_id={workout.workout_id}
                         created_at ={workout.created_at}
                         weight_one={workout.weight_one}
@@ -185,7 +189,6 @@ function Three() {
                         volume={workout.volume}
                     />);
                 })}
-
             </div>
             <div className="nav-page-three"></div>
         </>

@@ -31,17 +31,10 @@ function One() {
         codesc: "Carbon Monoxide"
     }
 
-    // const data = useSelector(store => store.workoutTypeId.toString().slice(-1));
-
-    //6 Change data, which changes topHour ect... ect...
-
-    // const data = useSelector(store => store.workoutTypeId);
-
     const dummyData = [{aqi: 100}, {pm10: 100}, {pm25: 100}, {co: 100}, {o3: 100}, {no2: 100}]
 
-
-    // data stored in this reducer was changed from holding only integers to holding integers, strings, and objects.
-    // This caused an error when user pressed the back button because the first index of data could not be destructured.
+    // Version 3 of this app changed this reducer from holding single digit integers to array of multiple objects.
+    // The following if/else statement prevents error when user hits the back button.
     const data = useSelector(state => {
         if (state.workoutTypeId.length > 2) {
             return state.workoutTypeId
