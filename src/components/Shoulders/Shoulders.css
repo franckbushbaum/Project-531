@@ -39,7 +39,7 @@
     display: flex;
     flex-direction:column;
     align-items: flex-start !important;
-    width: 75vw;
+    width: 80vw;
     max-width: 520px;
     padding: 2rem 0rem 2rem 5vw;
     /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
