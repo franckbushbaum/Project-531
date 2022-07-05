@@ -19,7 +19,7 @@ function One() {
     const history = useHistory();
     const dispatch = useDispatch();
 
-    
+
     const [workoutType, setWorkoutType] = useState([]);
     const [airQualityBox, setAirQualityBox] = useState(true);
 
@@ -37,20 +37,26 @@ function One() {
 
     // const data = useSelector(store => store.workoutTypeId);
 
-    const data = useSelector(state => {
-        if(state.workoutTypeId === 1 || 2 || 3 || 4 || '5') {
-            return []
-        }
-        return state.workoutTypeId;
-     })
+    const dummyData = [{aqi: 100}, {pm10: 100}, {pm25: 100}, {co: 100}, {o3: 100}, {no2: 100}]
 
+
+    // data stored in this reducer was changed from holding only integers to holding integers, strings, and objects.
+    // This caused an error when user pressed the back button because the first index of data could not be destructured.
+    const data = useSelector(state => {
+        if (state.workoutTypeId.length > 2) {
+            return state.workoutTypeId
+        } 
+        return dummyData
+    })
+
+    // const data = useSelector(state => state.workoutTypeId)
 
     // Data for Air Quality Component.
 
-    console.log('what is data?', data)
+    console.log('what is data.length?', data.length)
 
     // Destructure the data ARRAY
-    const [ firstvalue, ...rest ] = data
+    const [firstvalue, ...rest] = data
 
     console.log('what is firstvalue?', firstvalue);
 
