@@ -19,7 +19,7 @@ function Three() {
 
     const history = useHistory();
     const dispatch = useDispatch();
-    const workoutTypeId = useSelector(store =>  {
+    const workoutTypeId = useSelector(store => {
         if (store.workoutTypeId.length < 0) {
             return 1
         }
@@ -60,7 +60,6 @@ function Three() {
         console.log('in function this is inputValue', inputValue);
         console.log('in function this is inputValue.week', inputValue.week);
         console.log('in function this is inputValue.one_rep_max', inputValue.one_rep_max);
-        //objectData will be dispatched to index.js, it is the completed workout.
         objectData = {
             workout_type_id: workoutTypeId,
             one_rep_max: parseInt(inputValue.one_rep_max),
@@ -131,45 +130,46 @@ function Three() {
         <>
             {/* { updateButton ? <p></p> : <button>Edit</button>}
         <button className="testing">test button</button> */}
-        <div className="page-three-actual">
-            <button className="the-button" onClick={goBack}><FaHome size="40px" /></button>
-            <div className="container-page-three">
-                <form className="container-forms" onSubmit={handleSubmit}>
-                    <TextField style={{m: 5, backgroundColor: 'gray', color: 'gray', minWidth: 180, }}
-                        className="input-field"
-                        label="Enter One Rep Max"
-                        variant="outlined"
-                        id="number"
-                        required
-                        placeholder="One Rep Max"
-                        value={inputValue.one_rep_max}
-                        onChange={setValues}
-                    />
-                    <div className="select-week">
-                    <Box sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, height: 150, borderRadius: 7, color: 'secondary'  }} >
-                        <FormControl sx={{ minWidth: 180, width: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
-                            <InputLabel >Select Week</InputLabel>
-                            <Select
-                                label="Select Week"
-                                placeholder="Select Week"
-                                id="week"
-                                value={inputValue.week}
-                                label="workout"
-                                onChange={setValuesToo}
-                            >
-                                <MenuItem value={1}>Week 1</MenuItem>
-                                <MenuItem value={2}>Week 2</MenuItem>
-                                <MenuItem value={3}>Week 3</MenuItem>
-                                <MenuItem value={4}>Deload</MenuItem>
-                            </Select>
-                        </FormControl>
-                    </Box>  
+            <div className="page-three-actual">
+                <button className="the-button" onClick={goBack}><FaHome size="40px" /></button>
+                <div className="container-page-three">
+                    <form className="container-forms" onSubmit={handleSubmit}>
+                        <TextField style={{ m: 5, backgroundColor: 'gray', color: 'gray', minWidth: 180, }}
+                            className="input-field"
+                            label="Enter One Rep Max"
+                            variant="outlined"
+                            id="number"
+                            required
+                            placeholder="One Rep Max"
+                            value={inputValue.one_rep_max}
+                            onChange={setValues}
+                        />
+                        <div className="select-week">
+                            <Box sx={{ minWidth: 100, maxWidth: 400, minHeight: 50, height: 150, borderRadius: 7, color: 'secondary' }} >
+                                <FormControl sx={{ minWidth: 180, width: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
+                                    <InputLabel >Select Week</InputLabel>
+                                    <Select
+                                        label="Select Week"
+                                        placeholder="Select Week"
+                                        id="week"
+                                        value={inputValue.week}
+                                        label="workout"
+                                        onChange={setValuesToo}
+                                    >
+                                        <MenuItem value={1}>Week 1</MenuItem>
+                                        <MenuItem value={2}>Week 2</MenuItem>
+                                        <MenuItem value={3}>Week 3</MenuItem>
+                                        <MenuItem value={4}>Deload</MenuItem>
+                                    </Select>
+                                </FormControl>
+                            </Box>
 
 
-                    </div>
-                    <input className="submit-form-button" type='submit' value='Submit' />
-                </form>
-        </div>
+                        
+                        <input className="submit-form-button" type='submit' value='Submit' />
+                        </div>
+                    </form>
+                </div>
 
 
             </div>
@@ -178,7 +178,7 @@ function Three() {
             <div className="display">
                 {theWorkouts.map(workout => {
                     return (<ThreeItem workout_id={workout.workout_id}
-                        created_at ={workout.created_at}
+                        created_at={workout.created_at}
                         weight_one={workout.weight_one}
                         weight_two={workout.weight_two}
                         weight_three={workout.weight_three}

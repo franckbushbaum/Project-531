@@ -1,12 +1,10 @@
 .table-container{
   border-radius: 15px;
-  padding: 30px;
+  padding: 30px 50px;
   display: flex;
   flex-direction:column;
   justify-content: center;
-  margin: 20px;
-  height: 450px;
-  width: 560px;
+  margin: 0 auto;
   /* Concerning the Weather App tutorial, which had a color of #000000d0 "Lets make the color 000000 with a transparency of d0" */
   background: #00000083;
   /* background-color: rgb(42, 165, 165); */ 
