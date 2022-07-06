@@ -1,0 +1,9 @@
+/* On every stylesheet */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.test-slider{
+    outline: 2px solid white;
+}

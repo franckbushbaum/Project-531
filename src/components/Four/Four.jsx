@@ -39,6 +39,8 @@ function Four() {
     //     dispatch({type: 'ARCHIVE_INITIATE', payload: workout.workout_type_id})
     // }, []);
 
+    let slides = [1,2,3,45,542]
+
     return (
         <>
         <div className="four-container">
