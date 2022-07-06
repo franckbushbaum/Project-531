@@ -4,6 +4,7 @@ import { useHistory } from 'react-router';
 import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import Swal from 'sweetalert2';
+import ImageSlider from '../ImageSlider/ImageSlider';
 import { BsArrowRightShort, BsTrashFill } from "react-icons/bs";
 
 function Four() {
@@ -45,6 +46,7 @@ function Four() {
                     <h1>ARCHIVE</h1>
             </div>
             <div className="workouts-container">
+            <ImageSlider slides={slides} />
             {archivedWorkouts.map((workout) => {
                 return (                   
                         <div className="individual-table">
