@@ -31,10 +31,21 @@ const ImageSlider = ({ slides }) => {
     cursor: "pointer"
   }
 
+  const goToPrevious = () => {
+    const firstSlide = currentIndex === 0;
+    const newIndex = firstSlide ? slides.length - 1 : currentIndex - 1;
+    setCurrentIndex(newIndex);
+  }
+
+  const goToNext = () => {
+    const lastSlide = currentIndex === slides.length - 1
+    
+  }
+
   return (
     <div className="test-slide">
-      <div style={leftArrowStyles}> H </div>
-      <div style={rightArrowStyles}> H </div>
+      <div style={leftArrowStyles} onClick={goToPrevious}> H </div>
+      <div style={rightArrowStyles} onClick={goToNext}> H </div>
       <h2>Monsterlessons slider</h2>
     </div>
   );
