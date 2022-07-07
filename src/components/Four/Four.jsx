@@ -39,65 +39,20 @@ function Four() {
     //     dispatch({type: 'ARCHIVE_INITIATE', payload: workout.workout_type_id})
     // }, []);
 
-    let slides = [1,2,3,45,542]
 
     console.log('What are archived workouts?', archivedWorkouts)
 
     return (
-        <>
         <div className="four-container">
             <div className="archive-header">
                     <h1>ARCHIVE</h1>
             </div>
             <div className="workouts-container">
-            <ImageSlider slides={archivedWorkouts} />
-            {archivedWorkouts.map((workout) => {
-                return (                   
-                        <div className="individual-table">
-                            <p>{JSON.stringify(workout.workout_id)}</p>
-                            <table key={workout.workout_id} className="page-four-table">
-                                <thead>
-                                    <tr>
-                                        <th colSpan="4"><p>{moment(workout.created_at).format('MMM Do YY')}</p></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th>Set</th>
-                                        <th>Weight</th>
-                                        <th>Reps</th>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>{workout.weight_one}</td>
-                                        <td>{workout.reps_one}</td>
-                                        {/* <td>{ editMode ? <p></p> : <p>+</p>}</td> */}
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>{workout.weight_two}</td>
-                                        <td>{workout.reps_two}</td>
-                                        {/* <td>{ editMode ? <p></p> : <p>+</p>}</td> */}
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>{workout.weight_three}</td>
-                                        <td>{workout.reps_three}</td>
-                                        {/* <td>{addToReps}</td> */}
-                                        {/* <td>{editMode ? <p></p> : <p><button onClick={() => addReps()}>+</button>
-                                <button onClick={() => subtractReps()}>-</button>
-                                <button onClick={handleUpdate}>Submit</button></p>}</td> */}
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
-                        </div>
-                    )
-            })}
+                hi yes i am here
+          <ImageSlider slides={archivedWorkouts}                       
+                       /> 
+            </div>            
         </div>
-        </div>
-
-        </>
     );
 }
 

@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
+import moment from 'moment';
+import { BsArrowRightShort, BsTrashFill } from "react-icons/bs";
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ slides, index}) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   //   const [heading, setHeading] = useState("Functional Component");
 
-  console.log("in ImageSlider, what are props?", slides)
+  console.log("in ImageSlider, what are slides?", slides)
+  console.log('in ImageSlider, what is slides.length?', slides.length)
+
+  // Do you want the CSS inside the Slider?
 
   const leftArrowStyles = {
     position: "absolute",
@@ -43,13 +48,100 @@ const ImageSlider = ({ slides }) => {
     setCurrentIndex(newIndex)
   }
 
+  console.log('what is current index?', currentIndex);
+
   return (
-    <div className="test-slide">
-      <div style={leftArrowStyles} onClick={goToPrevious}> H </div>
-      <div style={rightArrowStyles} onClick={goToNext}> H </div>
-      <h2>Monsterlessons slider</h2>
-    </div>
+    <>
+      <div style={leftArrowStyles} onClick={goToPrevious}>
+        H
+      </div>
+      <div className="slides-map-test">
+        hi yes I am over there now
+      {slides.map((workout, index) => {
+        if (index == currentIndex){
+        return(
+          <>
+         <div className="individual-table">
+                            <p>{JSON.stringify(workout.workout_id)}</p>
+                            <table key={workout.workout_id} className="page-four-table">
+                                <thead>
+                                    <tr>
+                                        <th colSpan="4"><p>{moment(workout.created_at).format('MMM Do YY')}</p></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Set</th>
+                                        <th>Weight</th>
+                                        <th>Reps</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>{workout.weight_one}</td>
+                                        <td>{workout.reps_one}</td>
+                                       
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>{workout.weight_two}</td>
+                                        <td>{workout.reps_two}</td>
+                                      
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>{workout.weight_three}</td>
+                                        <td>{workout.reps_three}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
+                        </div>
+        </>
+        // { index === currentIndex ? <div className="individual-table"> the index shown is: {index} </div> : <div></div> }
+        )}})} 
+      </div>
+      <div style={rightArrowStyles} onClick={goToNext}> 
+        H 
+      </div>
+      </>
   );
 }
 
 export default ImageSlider;
+
+
+/* <div className="individual-table">
+                            <p>{JSON.stringify(workout.workout_id)}</p>
+                            <table key={workout.workout_id} className="page-four-table">
+                                <thead>
+                                    <tr>
+                                        <th colSpan="4"><p>{moment(workout.created_at).format('MMM Do YY')}</p></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>Set</th>
+                                        <th>Weight</th>
+                                        <th>Reps</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>{workout.weight_one}</td>
+                                        <td>{workout.reps_one}</td>
+                                       
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>{workout.weight_two}</td>
+                                        <td>{workout.reps_two}</td>
+                                      
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>{workout.weight_three}</td>
+                                        <td>{workout.reps_three}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
+                        </div> */

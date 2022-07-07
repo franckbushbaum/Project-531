@@ -7,3 +7,31 @@
 .test-slider{
     outline: 2px solid white;
 }
+
+/* Flex container */
+.individual-table{
+    background: #00000083;
+    outline: 2px solid green;
+    display: flex;
+    width: 35%;
+    border-radius: 15px;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    align-items: center;
+    margin: 1rem auto;
+    padding: 2rem 4rem;
+
+}
+
+.individual-table > * {
+    margin: 0.5rem auto;
+}
+
+/* Flex item */
+.page-four-table th,
+.page-four-table td,
+.page-four-table{
+    border: 1px solid rgba(128, 238, 3, 0.91);
+    color: rgba(0, 243, 41, 0.91);
+}
