@@ -41,6 +41,8 @@ function Four() {
 
     let slides = [1,2,3,45,542]
 
+    console.log('What are archived workouts?', archivedWorkouts)
+
     return (
         <>
         <div className="four-container">
@@ -48,7 +50,7 @@ function Four() {
                     <h1>ARCHIVE</h1>
             </div>
             <div className="workouts-container">
-            <ImageSlider slides={slides} />
+            <ImageSlider slides={archivedWorkouts} />
             {archivedWorkouts.map((workout) => {
                 return (                   
                         <div className="individual-table">
