@@ -5,7 +5,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import Swal from 'sweetalert2';
 import ImageSlider from '../ImageSlider/ImageSlider';
-import { BsArrowRightShort, BsTrashFill } from "react-icons/bs";
 
 function Four() {
 

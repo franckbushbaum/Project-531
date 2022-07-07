@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import moment from 'moment';
-import { BsArrowRightShort, BsTrashFill } from "react-icons/bs";
+import { BsArrowRightShort, BsArrowLeftShort, BsTrashFill } from "react-icons/bs";
 
 const ImageSlider = ({ slides, index}) => {
 
@@ -13,27 +13,28 @@ const ImageSlider = ({ slides, index}) => {
   console.log('in ImageSlider, what is slides.length?', slides.length)
 
   // Do you want the CSS inside the Slider?
-
   const leftArrowStyles = {
     position: "absolute",
     top: "50%",
     transform: "translate(0, -50%)",
-    left: "32px",
+    left: "19%",
     fontSize: "45px",
     color: "#fff",
     zIndex: 1,
-    cursor: "pointer"
+    cursor: "pointer",
+    color: "rgba(211, 78, 78, 0.781)",
   }
 
   const rightArrowStyles = {
     position: "absolute",
     top: "50%",
     transform: "translate(0, -50%)",
-    right: "32px",
+    right: "19%",
     fontSize: "45px",
     color: "#fff",
     zIndex: 1,
-    cursor: "pointer"
+    cursor: "pointer",
+    color: "rgba(211, 78, 78, 0.781)",
   }
 
   const goToPrevious = () => {
@@ -53,7 +54,7 @@ const ImageSlider = ({ slides, index}) => {
   return (
     <>
       <div style={leftArrowStyles} onClick={goToPrevious}>
-        H
+       <BsArrowLeftShort />
       </div>
       <div className="slides-map-test">
         hi yes I am over there now
@@ -101,7 +102,7 @@ const ImageSlider = ({ slides, index}) => {
         )}})} 
       </div>
       <div style={rightArrowStyles} onClick={goToNext}> 
-        H 
+      <BsArrowRightShort />
       </div>
       </>
   );
