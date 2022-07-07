@@ -39,7 +39,8 @@ const ImageSlider = ({ slides }) => {
 
   const goToNext = () => {
     const lastSlide = currentIndex === slides.length - 1
-    
+    const newIndex = lastSlide ? 0 : currentIndex + 1;
+    setCurrentIndex(newIndex)
   }
 
   return (
