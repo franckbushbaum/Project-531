@@ -12,34 +12,14 @@ function Four() {
     const dispatch = useDispatch();
 
     const archivedWorkouts = useSelector(store => store.archiveStorage);
-
-    const removeFromArchive = (id, workout_type_id) => {
-        // console.log('in remove from archive..');
-        // console.log('whut is id..', id);
-        // console.log('whut is workout_type..', workout_type_id);
-        dispatch({ type: 'REMOVE_WORKOUT', payload: id });
-        dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id});
-
-        // Swal.fire({
-        //     title: 'Workout Deleted!',
-        //     icon: 'success',
-        //     confirmButtonText: 'Cool',
-        //     background: 'black',
-        //     backdrop: `
-        //         rgba(0,0,123,0.4)
-        //         url("https://c.tenor.com/pK1P6r1kCV4AAAAC/the-dude.gif")
-        //         left top
-        //         no-repeat
-        //                 `
-        // });
-    };
+    const length = useSelector(store => {
+        return store.archiveStorage.length
+    })
+    const [ first ] = useSelector(store => store.archiveStorage.slice(0, store.archiveStorage.length-1))
 
     // useEffect(() => {
-    //     dispatch({type: 'ARCHIVE_INITIATE', payload: workout.workout_type_id})
-    // }, []);
-
-
-    console.log('What are archived workouts?', archivedWorkouts)
+    //     dispatch({type: 'ARCHIVE_INITIATE', payload: archivedWorkouts[0].workout_type_id})
+    //  }, []);
 
     return (
         <div className="four-container">
@@ -49,7 +29,8 @@ function Four() {
             <div className="workouts-container">
                 hi yes i am here
           <ImageSlider slides={archivedWorkouts}                       
-                       /> 
+                       length={length}
+                       first={first}/> 
             </div>            
         </div>
     );

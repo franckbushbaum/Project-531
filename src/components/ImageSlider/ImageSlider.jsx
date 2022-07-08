@@ -1,16 +1,19 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import moment from 'moment';
 import { BsArrowRightShort, BsArrowLeftShort, BsTrashFill } from "react-icons/bs";
 
-const ImageSlider = ({ slides, index}) => {
+const ImageSlider = ({ slides, length }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slideLength, setSlideLength] = useState(length)
 
-  //   const [heading, setHeading] = useState("Functional Component");
+  const dispatch = useDispatch();
 
-  console.log("in ImageSlider, what are slides?", slides)
-  console.log('in ImageSlider, what is slides.length?', slides.length)
+  console.log('what are slides?', length)
+  // console.log('i think if i send slides[0].workout_type_id', slides[0].workout_type_id)
+
+  console.log('what is slideLength?', slideLength)
 
   // Do you want the CSS inside the Slider?
   const leftArrowStyles = {
@@ -36,6 +39,32 @@ const ImageSlider = ({ slides, index}) => {
     cursor: "pointer",
     color: "rgba(211, 78, 78, 0.781)",
   }
+
+  const removeFromArchive = (id, workout_type_id) => {
+     console.log('in remove from archive..');
+     console.log('whut is id..', id);
+     console.log('whut is workout_type..', workout_type_id);
+    dispatch({ type: 'REMOVE_WORKOUT', payload: id });
+    // setSlideLength(slides.length - 1)
+    // dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id});
+
+    // Swal.fire({
+    //     title: 'Workout Deleted!',
+    //     icon: 'success',
+    //     confirmButtonText: 'Cool',
+    //     background: 'black',
+    //     backdrop: `
+    //         rgba(0,0,123,0.4)
+    //         url("https://c.tenor.com/pK1P6r1kCV4AAAAC/the-dude.gif")
+    //         left top
+    //         no-repeat
+    //                 `
+    // });
+};
+
+//  useEffect(() => {
+//     dispatch({type: 'ARCHIVE_INITIATE', payload: first.workout_type_id})
+//  }, [length]);
 
   const goToPrevious = () => {
     const firstSlide = currentIndex === 0;

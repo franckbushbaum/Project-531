@@ -122,6 +122,7 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
 
     const toArchive = () => {
         history.push('/four');
+        console.log('in page three, workout_type_id', workout_type_id)
         dispatch({type: 'ARCHIVE_INITIATE', payload: workout_type_id})
     }
 
