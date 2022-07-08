@@ -17,9 +17,10 @@ function Four() {
     })
     const [ first ] = useSelector(store => store.archiveStorage.slice(0, store.archiveStorage.length-1))
 
-    // useEffect(() => {
+    //  useEffect(() => {
+
     //     dispatch({type: 'ARCHIVE_INITIATE', payload: archivedWorkouts[0].workout_type_id})
-    //  }, []);
+    //   }, []);
 
     return (
         <div className="four-container">

@@ -6,7 +6,7 @@ import { BsArrowRightShort, BsArrowLeftShort, BsTrashFill } from "react-icons/bs
 const ImageSlider = ({ slides, length }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [slideLength, setSlideLength] = useState(length)
+  const [slideLength, setSlideLength] = useState(0)
 
   const dispatch = useDispatch();
 
@@ -46,7 +46,7 @@ const ImageSlider = ({ slides, length }) => {
      console.log('whut is workout_type..', workout_type_id);
     dispatch({ type: 'REMOVE_WORKOUT', payload: id });
     // setSlideLength(slides.length - 1)
-    // dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id});
+    dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id});
 
     // Swal.fire({
     //     title: 'Workout Deleted!',
@@ -62,9 +62,10 @@ const ImageSlider = ({ slides, length }) => {
     // });
 };
 
-//  useEffect(() => {
+  useEffect(() => {
+    setSlideLength(length)
 //     dispatch({type: 'ARCHIVE_INITIATE', payload: first.workout_type_id})
-//  }, [length]);
+  }, [length]);
 
   const goToPrevious = () => {
     const firstSlide = currentIndex === 0;
