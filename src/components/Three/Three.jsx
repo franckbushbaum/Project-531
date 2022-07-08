@@ -112,9 +112,9 @@ function Three() {
             confirmButtonText: 'OK',
             background: 'rgba(211,78,78,0.781)',
             backdrop: `
-                rgba(211,78,78,0.781)
+                rgba(0, 0, 0, 0.5);
                 url("https://c.tenor.com/LoXuYGcyMxgAAAAC/just-do-it-shia-la-beouf.gif")
-                center center
+                center right
                 no-repeat
                         `
         });
