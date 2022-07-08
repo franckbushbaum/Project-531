@@ -13,6 +13,7 @@ import Box from '@mui/material/Box';
 import { FaHome } from "react-icons/fa";
 import ThreeItem from '../ThreeItem/ThreeItem.jsx'
 import './Three.css';
+import Swal from 'sweetalert2';
 
 
 function Three() {
@@ -104,6 +105,19 @@ function Three() {
             objectData.reps_three = 1;
             objectData.volume = parseInt(inputValue.one_rep_max * .75) * 5 + parseInt(inputValue.one_rep_max * .85) * 3 + parseInt(inputValue.one_rep_max * .95) * 1
         };
+
+        Swal.fire({
+            title: 'Workout Added!',
+            icon: 'success',
+            confirmButtonText: 'OK',
+            background: 'rgba(211,78,78,0.781)',
+            backdrop: `
+                rgba(211,78,78,0.781)
+                url("https://c.tenor.com/LoXuYGcyMxgAAAAC/just-do-it-shia-la-beouf.gif")
+                center center
+                no-repeat
+                        `
+        });
 
 
         //Dispatch to POST data to database, wait 3 seconds, GET workout from database.           

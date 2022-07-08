@@ -41,9 +41,6 @@ const ImageSlider = ({ slides, length }) => {
   }
 
   const removeFromArchive = (id, workout_type_id) => {
-     console.log('in remove from archive..');
-     console.log('whut is id..', id);
-     console.log('whut is workout_type..', workout_type_id);
     dispatch({ type: 'REMOVE_WORKOUT', payload: id });
     // setSlideLength(slides.length - 1)
     dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id});
@@ -65,7 +62,7 @@ const ImageSlider = ({ slides, length }) => {
   useEffect(() => {
     setSlideLength(length)
 //     dispatch({type: 'ARCHIVE_INITIATE', payload: first.workout_type_id})
-  }, [length]);
+  }, []);
 
   const goToPrevious = () => {
     const firstSlide = currentIndex === 0;
@@ -79,7 +76,6 @@ const ImageSlider = ({ slides, length }) => {
     setCurrentIndex(newIndex)
   }
 
-  console.log('what is current index?', currentIndex);
 
   return (
     <>
@@ -92,7 +88,7 @@ const ImageSlider = ({ slides, length }) => {
         if (index == currentIndex){
         return(
           <>
-         <div className="individual-table">
+         <div className="individual-table" key={index}>
                             <p>{JSON.stringify(workout.workout_id)}</p>
                             <table key={workout.workout_id} className="page-four-table">
                                 <thead>
