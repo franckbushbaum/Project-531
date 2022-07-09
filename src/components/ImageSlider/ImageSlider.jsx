@@ -124,9 +124,9 @@ const ImageSlider = ({ slides, length }) => {
                   </table>
                   <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
                 </div>
-                <div className="dot-container">
+                <div className="dots-container">
                 {slides.map((slide, slideIndex) => (
-                  <div key={slideIndex} id={slideIndex} className="dot-item"><BsFillBrightnessLowFill /></div>
+                  <span key={slideIndex} id={slideIndex} className="dot-item"><BsFillBrightnessLowFill /></span>
                 ))}
                 </div>
               </>

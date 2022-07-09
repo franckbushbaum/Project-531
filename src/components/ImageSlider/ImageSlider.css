@@ -8,12 +8,15 @@
 .dots-container{
     display: flex;
     justify-content: center;
+    margin: 0 auto;
 }
 
 /* items */
 .dot-item{
-    display: inline-block;
-    outline: 2px solid white;
+    font-size: 2rem;
+    color: rgba(211,78,78,0.781);
+    background: transparent;
+    margin: 0 1rem;
 }
 
 
