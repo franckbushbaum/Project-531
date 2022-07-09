@@ -77,6 +77,10 @@ const ImageSlider = ({ slides, length }) => {
     setCurrentIndex(newIndex)
   }
 
+  const goToSlide = (index) => {
+    setCurrentIndex(index)
+  }
+
 
   return (
     <>
@@ -126,7 +130,7 @@ const ImageSlider = ({ slides, length }) => {
                 </div>
                 <div className="dots-container">
                 {slides.map((slide, slideIndex) => (
-                  <span key={slideIndex} id={slideIndex} className="dot-item"><BsFillBrightnessLowFill /></span>
+                  <span key={slideIndex} id={slideIndex} className={ currentIndex == slideIndex ? 'dot-selected' : 'dot-item'} onClick={() => {goToSlide(slideIndex)}}><BsFillBrightnessLowFill /></span>
                 ))}
                 </div>
               </>

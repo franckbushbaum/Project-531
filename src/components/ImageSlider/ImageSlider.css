@@ -15,6 +15,15 @@
 .dot-item{
     font-size: 2rem;
     color: rgba(211,78,78,0.781);
+    cursor: pointer;
+    background: transparent;
+    margin: 0 1rem;
+}
+
+.dot-selected{
+    font-size: 2rem;
+    color: #00d3f8;
+    cursor: pointer;
     background: transparent;
     margin: 0 1rem;
 }
