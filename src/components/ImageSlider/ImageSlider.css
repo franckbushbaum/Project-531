@@ -7,3 +7,12 @@
 .test-slider{
     outline: 2px solid white;
 }
+
+/* container */
+.dots-container{
+    display: flex;
+}
+
+/* items */
+
+

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import moment from 'moment';
-import { BsArrowRightShort, BsArrowLeftShort, BsTrashFill } from "react-icons/bs";
+import { BsArrowRightShort, BsArrowLeftShort, BsTrashFill, BsFillBrightnessLowFill } from "react-icons/bs";
 
 const ImageSlider = ({ slides, length }) => {
 
@@ -43,7 +43,7 @@ const ImageSlider = ({ slides, length }) => {
   const removeFromArchive = (id, workout_type_id) => {
     dispatch({ type: 'REMOVE_WORKOUT', payload: id });
     // setSlideLength(slides.length - 1)
-    dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id});
+    dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id });
 
     // Swal.fire({
     //     title: 'Workout Deleted!',
@@ -57,11 +57,11 @@ const ImageSlider = ({ slides, length }) => {
     //         no-repeat
     //                 `
     // });
-};
+  };
 
   useEffect(() => {
     setSlideLength(length)
-//     dispatch({type: 'ARCHIVE_INITIATE', payload: first.workout_type_id})
+    //     dispatch({type: 'ARCHIVE_INITIATE', payload: first.workout_type_id})
   }, []);
 
   const goToPrevious = () => {
@@ -80,57 +80,64 @@ const ImageSlider = ({ slides, length }) => {
   return (
     <>
       <div style={leftArrowStyles} onClick={goToPrevious}>
-       <BsArrowLeftShort />
+        <BsArrowLeftShort />
       </div>
       <div className="slides-map-test">
         hi yes I am over there now
-      {slides.map((workout, index) => {
-        if (index == currentIndex){
-        return(
-          <>
-         <div className="individual-table" key={index}>
-                            <p>{JSON.stringify(workout.workout_id)}</p>
-                            <table key={workout.workout_id} className="page-four-table">
-                                <thead>
-                                    <tr>
-                                        <th colSpan="4"><p>{moment(workout.created_at).format('MMM Do YY')}</p></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th>Set</th>
-                                        <th>Weight</th>
-                                        <th>Reps</th>
-                                    </tr>
-                                    <tr>
-                                        <td>1</td>
-                                        <td>{workout.weight_one}</td>
-                                        <td>{workout.reps_one}</td>
-                                       
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td>{workout.weight_two}</td>
-                                        <td>{workout.reps_two}</td>
-                                      
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
-                                        <td>{workout.weight_three}</td>
-                                        <td>{workout.reps_three}</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
-                        </div>
-        </>
-        // { index === currentIndex ? <div className="individual-table"> the index shown is: {index} </div> : <div></div> }
-        )}})} 
+        {slides.map((workout, index) => {
+          if (index == currentIndex) {
+            return (
+              <>
+                <div className="individual-table" key={index}>
+                  <p>{JSON.stringify(workout.workout_id)}</p>
+                  <table key={workout.workout_id} className="page-four-table">
+                    <thead>
+                      <tr>
+                        <th colSpan="4"><p>{moment(workout.created_at).format('MMM Do YY')}</p></th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th>Set</th>
+                        <th>Weight</th>
+                        <th>Reps</th>
+                      </tr>
+                      <tr>
+                        <td>1</td>
+                        <td>{workout.weight_one}</td>
+                        <td>{workout.reps_one}</td>
+
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td>{workout.weight_two}</td>
+                        <td>{workout.reps_two}</td>
+
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td>{workout.weight_three}</td>
+                        <td>{workout.reps_three}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
+                </div>
+                <div className="dot-container">
+                {slides.map((slide, slideIndex) => (
+                  <div key={slideIndex} id={slideIndex}><BsFillBrightnessLowFill /></div>
+                ))}
+                </div>
+              </>
+              // { index === currentIndex ? <div className="individual-table"> the index shown is: {index} </div> : <div></div> }
+            )
+          }
+        })}
       </div>
-      <div style={rightArrowStyles} onClick={goToNext}> 
-      <BsArrowRightShort />
+      <div style={rightArrowStyles} onClick={goToNext}>
+        <BsArrowRightShort />
       </div>
-      </>
+    </>
   );
 }
 
