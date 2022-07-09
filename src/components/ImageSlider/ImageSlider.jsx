@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import moment from 'moment';
 import { BsArrowRightShort, BsArrowLeftShort, BsTrashFill, BsFillBrightnessLowFill } from "react-icons/bs";
+import './ImageSlider.css'
 
 const ImageSlider = ({ slides, length }) => {
 
@@ -125,7 +126,7 @@ const ImageSlider = ({ slides, length }) => {
                 </div>
                 <div className="dot-container">
                 {slides.map((slide, slideIndex) => (
-                  <div key={slideIndex} id={slideIndex}><BsFillBrightnessLowFill /></div>
+                  <div key={slideIndex} id={slideIndex} className="dot-item"><BsFillBrightnessLowFill /></div>
                 ))}
                 </div>
               </>

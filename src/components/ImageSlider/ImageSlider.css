@@ -1,18 +1,19 @@
 /* On every stylesheet */
-*, *::before, *::after {
+/* *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
-}
-
-.test-slider{
-    outline: 2px solid white;
-}
+} */
 
 /* container */
 .dots-container{
     display: flex;
+    justify-content: center;
 }
 
 /* items */
+.dot-item{
+    display: inline-block;
+    outline: 2px solid white;
+}
 
 
