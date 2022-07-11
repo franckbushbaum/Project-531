@@ -17,29 +17,29 @@ const ImageSlider = ({ slides, length }) => {
   console.log('what is slideLength?', slideLength)
 
   // Do you want the CSS inside the Slider?
-  const leftArrowStyles = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    left: "19%",
-    fontSize: "45px",
-    color: "#fff",
-    zIndex: 1,
-    cursor: "pointer",
-    color: "rgba(211, 78, 78, 0.781)",
-  }
+  // const leftArrowStyles = {
+  //   position: "absolute",
+  //   top: "50%",
+  //   transform: "translate(0, -50%)",
+  //   left: "19%",
+  //   fontSize: "45px",
+  //   color: "#fff",
+  //   zIndex: 1,
+  //   cursor: "pointer",
+  //   color: "rgba(211, 78, 78, 0.781)",
+  // }
 
-  const rightArrowStyles = {
-    position: "absolute",
-    top: "50%",
-    transform: "translate(0, -50%)",
-    right: "19%",
-    fontSize: "45px",
-    color: "#fff",
-    zIndex: 1,
-    cursor: "pointer",
-    color: "rgba(211, 78, 78, 0.781)",
-  }
+  // const rightArrowStyles = {
+  //   position: "absolute",
+  //   top: "50%",
+  //   transform: "translate(0, -50%)",
+  //   right: "19%",
+  //   fontSize: "45px",
+  //   color: "#fff",
+  //   zIndex: 1,
+  //   cursor: "pointer",
+  //   color: "rgba(211, 78, 78, 0.781)",
+  // }
 
   const removeFromArchive = (id, workout_type_id) => {
     dispatch({ type: 'REMOVE_WORKOUT', payload: id });
@@ -84,7 +84,7 @@ const ImageSlider = ({ slides, length }) => {
 
   return (
     <>
-      <div style={leftArrowStyles} onClick={goToPrevious}>
+      <div className="left-arrow-styles" onClick={goToPrevious}>
         <BsArrowLeftShort />
       </div>
       <div className="slides-map-test">
@@ -139,7 +139,7 @@ const ImageSlider = ({ slides, length }) => {
           }
         })}
       </div>
-      <div style={rightArrowStyles} onClick={goToNext}>
+      <div className="right-arrow-styles" onClick={goToNext}>
         <BsArrowRightShort />
       </div>
     </>
