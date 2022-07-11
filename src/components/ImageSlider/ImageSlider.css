@@ -14,7 +14,7 @@
    z-Index: 1;
    cursor: pointer;
    color: rgba(211, 78, 78, 0.781);
-   transition: color 4s linear;
+   transition: color .4s linear;
 }
 
 .left-arrow-styles:hover,
@@ -35,7 +35,7 @@
     z-Index: 1;
     cursor: pointer;
     color: rgba(211, 78, 78, 0.781);
-    transition: color 4s linear;
+    transition: color .4s linear;
  }
  
  .right-arrow-styles:hover,

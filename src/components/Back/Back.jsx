@@ -40,7 +40,7 @@ function Back() {
         <>
             <div className="chest-container">
                 <div className="archive-button">
-                    <button onClick={toArchive} className="archive-child" >Archive    <IoFingerPrintOutline /></button>
+                    <button onClick={toArchive} className="archive-child" >Archive<IoFingerPrintOutline /></button>
                 </div>
                 <div className="header">
                         <div className="header-title">
