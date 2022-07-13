@@ -17,6 +17,8 @@ function Four() {
     })
     const [ first ] = useSelector(store => store.archiveStorage.slice(0, store.archiveStorage.length-1))
 
+    console.log('what is first?', first)
+
     //  useEffect(() => {
 
     //     dispatch({type: 'ARCHIVE_INITIATE', payload: archivedWorkouts[0].workout_type_id})
@@ -28,7 +30,6 @@ function Four() {
                     <h1>ARCHIVE</h1>
             </div>
             <div className="workouts-container">
-                hi yes i am here
           <ImageSlider slides={archivedWorkouts}                       
                        length={length}
                        first={first}/> 

@@ -11,9 +11,6 @@ const ImageSlider = ({ slides, length }) => {
 
   const dispatch = useDispatch();
 
-  console.log('what are slides?', length)
-  // console.log('i think if i send slides[0].workout_type_id', slides[0].workout_type_id)
-
   console.log('what is slideLength?', slideLength)
 
   // Do you want the CSS inside the Slider?
@@ -43,7 +40,7 @@ const ImageSlider = ({ slides, length }) => {
 
   const removeFromArchive = (id, workout_type_id) => {
     dispatch({ type: 'REMOVE_WORKOUT', payload: id });
-    // setSlideLength(slides.length - 1)
+    setSlideLength(slides.length - 1)
     dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id });
 
     // Swal.fire({
