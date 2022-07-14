@@ -104,7 +104,7 @@ function One() {
             <div className="one-container">
                 {/* <h3>{JSON.stringify(data)}</h3> */}
                 <Box className="select-menu" >
-                    <FormControl sx={{ m: 3, minWidth: 180, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
+                    <FormControl sx={{ m: 3, minWidth: 180, borderRadius: 3}}>
                         <InputLabel style={{fontFamily: 'JetBrains Mono',color: 'black'}}>Pick a workout</InputLabel>
                         <Select
                             style={{fontFamily: 'JetBrains Mono', color: 'rgba(211, 78, 78, 0.781)', backgroundColor: 'rgba(211, 78, 78, 0.781)'}}
@@ -115,9 +115,9 @@ function One() {
                             onChange={handleChange}
                         >
                             <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)', backgroundColor: 'rgba(211,78,78,0.781)'}} value={1}>Chest</MenuItem>
-                            <MenuItem value={2}>Legs</MenuItem>
-                            <MenuItem value={3}>Shoulders</MenuItem>
-                            <MenuItem value={4}>Back</MenuItem>
+                            <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={2}>Legs</MenuItem>
+                            <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={3}>Shoulders</MenuItem>
+                            <MenuItem style={{fontFamily: 'JetBrains Mono',color: 'rgba(211, 78, 78, 0.781)'}} value={4}>Back</MenuItem>
                         </Select>
                     </FormControl>
                 </Box>

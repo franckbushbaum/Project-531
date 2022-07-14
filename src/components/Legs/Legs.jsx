@@ -44,6 +44,7 @@ function Legs() {
 
     const sendValues = () => {
         dispatch({ type: 'SEND_SPRINT', payload: {
+    // ES6 syntax shortens this, but keep for now.
             mph: mph,
             incline: incline,
             on: on,
