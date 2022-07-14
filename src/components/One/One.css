@@ -15,6 +15,30 @@
     transition-duration: 500ms;
 }
 
+.select-menu-two{
+    text-align: center;
+    background: repeating-linear-gradient(
+      to bottom,
+      transparent 0%,
+      var(--red-scanline) 1px,
+      var(--red-scanline) 3px,
+      var(--red-scanline) 5px,
+      var(--red-scanline) 4px,
+      transparent 0.5%
+    ),
+    repeating-linear-gradient(
+      to left,
+      var(--black-scanline) 100%,
+      var(--black-scanline) 100%
+    );
+    opacity: 1;
+    margin: 14rem auto 2rem auto;
+    min-width: 12;
+    padding: 1ch;
+    border-radius: 6px;
+    outline: 3px solid rgba(83, 22, 22, 0.91);
+}
+
 .select-menu:hover,
 .select-menu:hover::after {
     cursor: pointer;
