@@ -39,7 +39,7 @@ const ImageSlider = ({ slides, length }) => {
   // }
 
   const removeFromArchive = (id, workout_type_id) => {
-    dispatch({ type: 'REMOVE_WORKOUT', payload: id });
+    dispatch({ type: 'REMOVE_WORKOUT', payload: {id, workout_type_id }});
     setSlideLength(slides.length - 1)
     dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id });
 

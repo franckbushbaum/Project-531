@@ -1,5 +1,9 @@
 /* PARENT is "one-container"*/
 
+.one-container{
+    margin-top: 20%;
+}
+
 /* CHILD */
 .select-menu {
     display: flex;
@@ -81,7 +85,6 @@
     background: #00000083;
     width: 90%;
     margin: 10em auto auto auto;
-    /* padding: 0rem 3rem 3rem 3rem; */
     margin-bottom: 1%;
 }
 
@@ -138,6 +141,7 @@
     color: rgba(211, 78, 78, 0.781);
     text-shadow: 0px 0px 3px rgba(211, 78, 78, 0.91);
     cursor: pointer;
+
     /* Animation */
     transition: color .4s linear;
 }

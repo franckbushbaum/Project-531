@@ -16,6 +16,7 @@ import { FaWindowClose } from "react-icons/fa";
 import './One.css';
 
 function One() {
+    
     const history = useHistory();
     const dispatch = useDispatch();
 
