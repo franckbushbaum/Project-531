@@ -3,7 +3,6 @@
 /* CHILD */
 .select-menu {
     display: flex;
-    outline: 2px dotted #26ff47;
     margin: 14rem auto 2rem auto;
     justify-content: center;
     border-radius: 25px;

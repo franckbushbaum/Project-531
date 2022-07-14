@@ -17,7 +17,6 @@ body,
 body {
   font-family: 'JetBrains Mono', monospace;
   margin: 0px;
-  outline: 3px solid blue;
   background-image: url(https://images.unsplash.com/photo-1610322231968-31322d42851f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2836&q=80);
   -webkit-background-size: cover;
   -moz-background-size: cover;
