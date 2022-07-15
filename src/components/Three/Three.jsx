@@ -159,8 +159,7 @@ function Three() {
                             onChange={setValues}
                         />
                         <div className="select-week">
-                            <Box sx={{borderRadius: 7, color: 'secondary', marginTop: '2em', marginBottom: '2em' }} >
-                                <FormControl sx={{ width: 220, borderRadius: 3, backgroundColor: 'gray', color: 'secondary' }}>
+                                <FormControl sx={{ m: 5, backgroundColor: 'gray', color: 'gray', width: 220 }}>
                                     <InputLabel >Select Week</InputLabel>
                                     <Select
                                         label="Select Week"
@@ -175,8 +174,7 @@ function Three() {
                                         <MenuItem value={3}>Week 3</MenuItem>
                                         <MenuItem value={4}>Deload</MenuItem>
                                     </Select>
-                                </FormControl>
-                            </Box>                 
+                                </FormControl>                     
                         <input className="submit-form-button" type='submit' value='Submit' />
                         </div>
                     </form>
