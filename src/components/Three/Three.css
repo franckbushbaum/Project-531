@@ -36,7 +36,6 @@
 /* 1 */
 .input-field {
   justify-self: center;
-  outline: 2px solid purple;
   border-radius: 15px;
   margin: 0 auto;
 }
