@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import moment from 'moment';
 import Swal from 'sweetalert2';
 import ImageSlider from '../ImageSlider/ImageSlider';
+import VolumeChart from '../VolumeChart/VolumeChart';
 
 function Four() {
 
@@ -15,7 +16,7 @@ function Four() {
     const length = useSelector(store => {
         return store.archiveStorage.length
     })
-    const [ first ] = useSelector(store => store.archiveStorage.slice(0, store.archiveStorage.length-1))
+    const [first] = useSelector(store => store.archiveStorage.slice(0, store.archiveStorage.length - 1))
 
     console.log('what is first?', first)
 
@@ -27,13 +28,14 @@ function Four() {
     return (
         <div className="four-container">
             <div className="archive-header">
-                    <h1>ARCHIVE</h1>
+                <h1>ARCHIVE</h1>
             </div>
             <div className="workouts-container">
-          <ImageSlider slides={archivedWorkouts}                       
-                       length={length}
-                       first={first}/> 
-            </div>            
+                <VolumeChart />
+                <ImageSlider slides={archivedWorkouts}
+                    length={length}
+                    first={first} />
+            </div>
         </div>
     );
 }
