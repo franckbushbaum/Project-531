@@ -5,7 +5,7 @@
 
 .table-container{
   border-radius: 15px;
-  padding: 30px 50px;
+  padding: 125px 150px 150px 150px;
   display: flex;
   flex-direction:column;
   justify-content: center;
@@ -14,7 +14,6 @@
   background: #00000083;
   /* background-color: rgb(42, 165, 165); */ 
 
-  transition: scale(1.00) .8s ease;
 }
 
 
@@ -69,15 +68,13 @@
 
 .page-three-archive-button{
 position:relative;
-top: 90%;
+top: -290%;
 left: 56%;
 background-color: transparent;
 align-items: center;
 justify-content: center;
 border: none;
 width:300px;
-height:35%;
-margin: 6px;
 text-transform: uppercase;
 font-size: 23px;
 color: rgba(211, 78, 78, 0.781);
