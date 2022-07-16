@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import moment from 'moment';
 import { BsArrowRightShort, BsArrowLeftShort, BsTrashFill, BsFillBrightnessLowFill } from "react-icons/bs";
-import './ImageSlider.css'
+import './ImageSlider.css';
+import Swal from 'sweetalert2';
 
 const ImageSlider = ({ slides, length }) => {
 
@@ -91,7 +92,7 @@ const ImageSlider = ({ slides, length }) => {
             return (
               <>
                 <div className="individual-table" key={index}>
-                  <p>{JSON.stringify(workout.workout_id)}</p>
+                  <p className="workout-number-style">WORKOUT NUMBER: {workout.workout_id}</p>
                   <table key={workout.workout_id} className="page-four-table">
                     <thead>
                       <tr>
