@@ -4,13 +4,17 @@
     margin: 0;
 } */
 
+.workout-number-style{
+    font-size: 2rem;
+}
+
 .left-arrow-styles {
    color: rgba(211,78,78,0.781);
    position: absolute;
-   top: 50%;
+   top: 60%;
    transform: translate(0, -50%);
-   left: 19%;
-   font-size: 45px;
+   left: 24%;
+   font-size: 65px;
    z-Index: 1;
    cursor: pointer;
    color: rgba(211, 78, 78, 0.781);
@@ -28,10 +32,10 @@
 .right-arrow-styles {
     color: rgba(211,78,78,0.781);
     position: absolute;
-    top: 50%;
+    top: 60%;
     transform: translate(0, -50%);
-    right: 19%;
-    font-size: 45px;
+    right: 24%;
+    font-size: 65px;
     z-Index: 1;
     cursor: pointer;
     color: rgba(211, 78, 78, 0.781);

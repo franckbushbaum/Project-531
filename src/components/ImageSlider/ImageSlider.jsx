@@ -44,18 +44,18 @@ const ImageSlider = ({ slides, length }) => {
     setSlideLength(slides.length - 1)
     dispatch({ type: 'ARCHIVE_INITIATE', payload: workout_type_id });
 
-    // Swal.fire({
-    //     title: 'Workout Deleted!',
-    //     icon: 'success',
-    //     confirmButtonText: 'Cool',
-    //     background: 'black',
-    //     backdrop: `
-    //         rgba(0,0,123,0.4)
-    //         url("https://c.tenor.com/pK1P6r1kCV4AAAAC/the-dude.gif")
-    //         left top
-    //         no-repeat
-    //                 `
-    // });
+    Swal.fire({
+        title: 'Workout Deleted!',
+        icon: 'success',
+        confirmButtonText: 'OK',
+        background: 'black',
+        backdrop: `
+            rgba(0,0,123,0.4)
+            url("https://c.tenor.com/pK1P6r1kCV4AAAAC/the-dude.gif")
+            center top
+            no-repeat
+                    `
+    });
   };
 
   useEffect(() => {
@@ -101,9 +101,9 @@ const ImageSlider = ({ slides, length }) => {
                     </thead>
                     <tbody>
                       <tr>
-                        <th>Set</th>
-                        <th>Weight</th>
-                        <th>Reps</th>
+                        <th>SET</th>
+                        <th>WEIGHT</th>
+                        <th>REPS</th>
                       </tr>
                       <tr>
                         <td>1</td>
