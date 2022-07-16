@@ -82,8 +82,14 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
         Swal.fire({
             title: 'Workout Submitted!',
             icon: 'success',
-            confirmButtonText: 'Cool',
-            background: 'white',
+            confirmButtonText: 'Thanks!',
+            background: 'black',
+            backdrop: `
+                rgba(211,78,78,0.91)
+                url("https://c.tenor.com/LoXuYGcyMxgAAAAC/just-do-it-shia-la-beouf.gif")
+                center top
+                no-repeat
+                        `
 
         });
     }
@@ -108,7 +114,7 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
         Swal.fire({
             title: 'Workout Deleted!',
             icon: 'success',
-            confirmButtonText: 'Cool',
+            confirmButtonText: 'Thanks!',
             background: 'black',
             backdrop: `
                 rgba(0,0,123,0.4)
