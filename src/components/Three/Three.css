@@ -25,18 +25,19 @@
 .container-page-three {
   display: grid;
   grid-template-columns: 3fr;
-  gap: 2rem;
   background: #00000083;
   border-radius: 15px;
   margin: 15px auto;
-  max-width: 55%;
-  padding: 50px 100px;
+  width: 80%;
+  max-width: 85%;
+  padding: 50px 0px 50px 150px;
 }
 
 .input-field {
-  border-color: rgba(211,78,78,0.91);
+  justify-self: center;
+  outline: 2px solid purple;
   border-radius: 15px;
-  margin-bottom: 2rem;
+  margin: 0 auto;
 }
 
 .submit-form-button{
