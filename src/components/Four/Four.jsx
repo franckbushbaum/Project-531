@@ -18,9 +18,17 @@ function Four() {
     })
     const [first] = useSelector(store => store.archiveStorage.slice(0, store.archiveStorage.length - 1))
 
+    
     const volumes = useSelector(store => store.archiveStorage.map((workout) => {
-        return workout.volume
+        const volume = workout.volume;
+        const id = workout.workout_id;
+        return { 
+                volume,
+                id 
+               }
     }))
+
+
 
     console.log('what is first?', first)
     console.log('what are archivedWorkouts?', archivedWorkouts)
@@ -39,7 +47,7 @@ function Four() {
                 <h1>ARCHIVE</h1>
             </div>
             <div className="workouts-container">
-                <VolumeChart />
+                <VolumeChart volumeArray={volumes}/>
                 <ImageSlider slides={archivedWorkouts}
                     length={length}
                     first={first} />
