@@ -18,7 +18,15 @@ function Four() {
     })
     const [first] = useSelector(store => store.archiveStorage.slice(0, store.archiveStorage.length - 1))
 
+    const volumes = useSelector(store => store.archiveStorage.map((workout) => {
+        return workout.volume
+    }))
+
     console.log('what is first?', first)
+    console.log('what are archivedWorkouts?', archivedWorkouts)
+    console.log('what are volumes?', volumes)
+
+    
 
     //  useEffect(() => {
 
