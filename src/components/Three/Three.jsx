@@ -148,7 +148,7 @@ function Three() {
                 <button className="the-button" onClick={goBack}><FaHome size="40px" /></button>
                 <div className="container-page-three">
                     <form className="container-forms" onSubmit={handleSubmit}>
-                        <TextField style={{ m: 5, backgroundColor: 'gray', color: 'gray', width: '20%', margin: '0 0 2rem 34%'}}
+                        <TextField style={{ m: 5, backgroundColor: 'gray', color: 'black', width: '20%', margin: '0 0 2rem 40%'}}
                             className="input-field"
                             label="Enter One Rep Max"
                             variant="outlined"
@@ -159,7 +159,7 @@ function Three() {
                             onChange={setValues}
                         />
                         <div className="select-week">
-                                <FormControl sx={{ m: 5, backgroundColor: 'gray', color: 'gray', width: '20%', borderRadius: '15px' }}>
+                                <FormControl style={{ m: 5, backgroundColor: 'gray', color: 'black', width: '20%', borderRadius: '15px', margin: '0 0 2rem 40%' }}>
                                     <InputLabel >Select Week</InputLabel>
                                     <Select
                                         label="Select Week"
