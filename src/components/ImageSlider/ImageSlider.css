@@ -11,7 +11,7 @@
 .left-arrow-styles {
    color: rgba(211,78,78,0.781);
    position: absolute;
-   top: 60%;
+   top: 100%;
    transform: translate(0, -50%);
    left: 24%;
    font-size: 65px;
@@ -32,7 +32,7 @@
 .right-arrow-styles {
     color: rgba(211,78,78,0.781);
     position: absolute;
-    top: 60%;
+    top: 100%;
     transform: translate(0, -50%);
     right: 24%;
     font-size: 65px;

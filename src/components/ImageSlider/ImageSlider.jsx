@@ -86,7 +86,6 @@ const ImageSlider = ({ slides, length }) => {
         <BsArrowLeftShort />
       </div>
       <div className="slides-map-test">
-        hi yes I am over there now
         {slides.map((workout, index) => {
           if (index == currentIndex) {
             return (

@@ -1,0 +1,21 @@
+.volume-chart {
+    width: 40%;
+    background: #00000083;
+    padding: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    background: repeating-linear-gradient(to bottom,
+            transparent 0%,
+            var(--red-scanline) 1px,
+            var(--red-scanline) 3px,
+            var(--red-scanline) 5px,
+            var(--red-scanline) 4px,
+            transparent 0.5%),
+        repeating-linear-gradient(to left,
+            var(--black-scanline) 100%,
+            var(--black-scanline) 100%);
+    ;
+    outline: 2px solid rgba(0, 243, 41, 0.91);
+    border-radius: 25px;
+}

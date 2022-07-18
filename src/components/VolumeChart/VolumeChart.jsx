@@ -2,15 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Line } from 'react-chartjs-2';
 import { Chart as ChartJS } from 'chart.js/auto';
 import { useDispatch, useSelector } from 'react-redux';
-// import './AqiChart.css';
+import './VolumeChart.css';
 
 function VolumeChart({ volumeArray }) {
-
-
-    // const dispatch = useDispatch();
-    // const onSprints = useSelector(store => store.fetchSprints)
-
-    console.log('in VolumeChart, what is volumeArray here?', volumeArray)
 
     const onData = {
         labels: volumeArray.map((workout) => workout.id),
@@ -24,15 +18,12 @@ function VolumeChart({ volumeArray }) {
         }]
     };
 
-    // console.log('What is hours?', hours.length)
-
     return (
         <>
-        <p>IN VOLUME CHART</p>
             <header>
                 <h2 >VOLUMES</h2>
             </header>
-             <div className="aqi-chart">
+             <div className="volume-chart">
                 <Line data={onData} />
             </div>        
         </>
