@@ -1,5 +1,16 @@
+:root {
+    --red: rgba(211, 87, 91, 0.81);
+    --red-glow: rgba(211, 87, 91, 0.91);
+    --red-scanline: rgba(204, 94, 98, 0.2);
+    --black-scanline: rgba(1, 1, 1, 0.9);
+    --black-hover-background: rgba(0, 0, 0, 0.25);
+    --blue: #61e4fa;
+    --yellow: #f7f500;
+    --text-shadow: rgb(0, 208, 255);
+  }
+
 .volume-chart {
-    width: 40%;
+    width: 30%;
     background: #00000083;
     padding: 50px;
     margin-left: auto;
@@ -18,4 +29,20 @@
     ;
     outline: 2px solid rgba(0, 243, 41, 0.91);
     border-radius: 25px;
+}
+
+.volume-banner{
+    outline: 2px solid rgba(0, 215, 243, 0.91);
+    width: 100vw;
+    background: repeating-linear-gradient(to bottom,
+    transparent 0%,
+    var(--red-scanline) 1px,
+    var(--red-scanline) 3px,
+    var(--red-scanline) 5px,
+    var(--red-scanline) 4px,
+    transparent 0.5%),
+repeating-linear-gradient(to left,
+    var(--black-scanline) 100%,
+    var(--black-scanline) 100%);
+;
 }

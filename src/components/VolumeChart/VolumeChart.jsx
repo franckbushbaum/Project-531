@@ -20,12 +20,14 @@ function VolumeChart({ volumeArray }) {
 
     return (
         <>
-            <header>
-                <h2 >VOLUMES</h2>
-            </header>
-             <div className="volume-chart">
-                <Line data={onData} />
-            </div>        
+            <div className="volume-banner">
+                <header>
+                    <h2 >VOLUMES</h2>
+                </header>
+                <div className="volume-chart">
+                    <Line data={onData} />
+                </div>
+            </div>
         </>
     );
 }
