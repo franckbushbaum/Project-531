@@ -4,6 +4,7 @@ import moment from 'moment';
 import { BsArrowRightShort, BsArrowLeftShort, BsTrashFill, BsFillBrightnessLowFill } from "react-icons/bs";
 import './ImageSlider.css';
 import Swal from 'sweetalert2';
+import { TiPlusOutline, TiMinusOutline, TiChevronRightOutline } from "react-icons/ti";
 
 const ImageSlider = ({ slides, length }) => {
 
@@ -57,6 +58,19 @@ const ImageSlider = ({ slides, length }) => {
                     `
     });
   };
+
+  const editArchive = (id) => {
+    Swal.fire({
+      title: `EDIT WORKOUT NUMBER ${id} ?`,
+      showCancelButton: true,
+      confirmButtonText: 'YES',
+      background: 'black',
+      backdrop: `
+          rgba(211, 78, 78, 0.781)
+                  `
+  });
+    
+  }
 
   useEffect(() => {
     setSlideLength(length)
@@ -124,6 +138,7 @@ const ImageSlider = ({ slides, length }) => {
                     </tbody>
                   </table>
                   <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
+                  <button className="fresh" onClick={() => editArchive(workout.workout_id)}>EDIT</button>
                 </div>
                 <div className="dots-container">
                 {slides.map((slide, slideIndex) => (
