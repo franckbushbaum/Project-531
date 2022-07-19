@@ -4,12 +4,13 @@ import moment from 'moment';
 import { BsArrowRightShort, BsArrowLeftShort, BsTrashFill, BsFillBrightnessLowFill } from "react-icons/bs";
 import './ImageSlider.css';
 import Swal from 'sweetalert2';
-import { TiPlusOutline, TiMinusOutline, TiChevronRightOutline } from "react-icons/ti";
+import IndividualImage from "../IndividualImage/IndividualImage";
 
 const ImageSlider = ({ slides, length }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [slideLength, setSlideLength] = useState(0)
+  const [slideLength, setSlideLength] = useState(0);
+  const [editMode, setEditMode] = useState(false)
 
   const dispatch = useDispatch();
 
@@ -70,7 +71,11 @@ const ImageSlider = ({ slides, length }) => {
       backdrop: `
           rgba(211, 78, 78, 0.781)
                   `
-  });
+  }).then((result) => {
+    if(result.isConfirmed){
+      setEditMode(true)
+    }
+  })
     
   }
 
@@ -106,42 +111,9 @@ const ImageSlider = ({ slides, length }) => {
           if (index == currentIndex) {
             return (
               <>
-                <div className="individual-table" key={index}>
-                  <p className="workout-number-style">WORKOUT NUMBER: {workout.workout_id}</p>
-                  <table key={workout.workout_id} className="page-four-table">
-                    <thead>
-                      <tr>
-                        <th colSpan="4"><p>{moment(workout.created_at).format('MMM Do YY')}</p></th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <th>SET</th>
-                        <th>WEIGHT</th>
-                        <th>REPS</th>
-                      </tr>
-                      <tr>
-                        <td>1</td>
-                        <td>{workout.weight_one}</td>
-                        <td>{workout.reps_one}</td>
-
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>{workout.weight_two}</td>
-                        <td>{workout.reps_two}</td>
-
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>{workout.weight_three}</td>
-                        <td>{workout.reps_three}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
-                  <button className="fresh" onClick={() => editArchive(workout.workout_id)}>EDIT</button>
-                </div>
+                <IndividualImage workout={workout}
+                                 index={index} 
+                                 removeFromArchive={removeFromArchive}/>
                 <div className="dots-container">
                 {slides.map((slide, slideIndex) => (
                   <span key={slideIndex} id={slideIndex} className={ currentIndex == slideIndex ? 'dot-selected' : 'dot-item'} onClick={() => {goToSlide(slideIndex)}}><BsFillBrightnessLowFill /></span>
