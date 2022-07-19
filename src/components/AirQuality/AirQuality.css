@@ -1,6 +1,5 @@
 /* Container of everything. It's "parent" will also have a width of 90vw, the children will probably have % dimensions. */
 .hours{
-    outline: 2px dotted #26ff26;
     display: grid;
     gap: 0.5rem;
     grid-template-rows: 3fr;
@@ -18,7 +17,6 @@
 
 /* item  */
 .modal-title{
-    outline: 2px solid blue;
     padding: 1%;
     position: absolute;
     right: 0;
@@ -93,7 +91,6 @@ li{
     padding: 1rem;    
     border-radius: 10px;
     font-size: 3.4rem;
-    /* color:rgba(211,78,78,0.91); */
     outline: 2px solid rgba(211,78,78,0.91);
     margin-top: 40px;
     margin-bottom: 40px;

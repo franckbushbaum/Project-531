@@ -8,9 +8,6 @@ import PopUp from '../PopUp/PopUp.jsx'
 
 function AirQuality({ hour }) {
 
-//1 destructured was in an object. 
-console.log('destructured data?', hour);
-
 //2 Option A:
   const { aqi } = hour;
 
@@ -21,8 +18,6 @@ console.log('destructured data?', hour);
   const [currentTarget, setCurrentTarget] = useState('')
 
   const setColor = () => {
-    // console.log('setColor fires:')
-    // console.log('what is aqi?', aqi);
       if(0 < aqi && aqi < 20){
         setGrade('ten')
       } else if (20 <= aqi && aqi < 30){
@@ -45,22 +40,13 @@ console.log('destructured data?', hour);
       for (const key of Object.keys(hour)){
       //  console.log(`${key} has a value of ${hour[key]}`)
       }
-    //  console.log('what is grade?', grade);
   }
-
-  //  console.log('what is GRADE?', grade);
-
-  // console.log('what is hour?', hour)
 
   useEffect(() => {
     if(aqi){
       setColor();
     }
   }, [aqi])
-
-  // useEffect(() => {
-  //     setColor();
-  // }, [])
 
   const handleMouseEnter = (e) => {
     setIsHovering(true)
@@ -72,7 +58,6 @@ console.log('destructured data?', hour);
     setCurrentTarget('')
   }
 
-  // console.log('current target is: ', currentTarget)
 
   return (
 
