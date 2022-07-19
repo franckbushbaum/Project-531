@@ -64,6 +64,8 @@ const ImageSlider = ({ slides, length }) => {
       title: `EDIT WORKOUT NUMBER ${id} ?`,
       showCancelButton: true,
       confirmButtonText: 'YES',
+      cancelButtonColor: '#d33',
+      confirmButtonColor: '#00d3f8',
       background: 'black',
       backdrop: `
           rgba(211, 78, 78, 0.781)
