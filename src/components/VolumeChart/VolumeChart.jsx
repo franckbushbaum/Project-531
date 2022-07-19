@@ -21,7 +21,7 @@ function VolumeChart({ volumeArray }) {
         <>
             <div className="volume-banner">
                 <header>
-                    <h2 >VOLUME</h2>
+                    <h1>TOTAL VOLUME PER WORKOUT</h1>
                 </header>
                 <div className="volume-chart">
                     <Line data={onData} />

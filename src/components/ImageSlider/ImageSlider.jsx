@@ -60,25 +60,6 @@ const ImageSlider = ({ slides, length }) => {
     });
   };
 
-  const editArchive = (id) => {
-    Swal.fire({
-      title: `EDIT WORKOUT NUMBER ${id} ?`,
-      showCancelButton: true,
-      confirmButtonText: 'YES',
-      cancelButtonColor: '#d33',
-      confirmButtonColor: '#00d3f8',
-      background: 'black',
-      backdrop: `
-          rgba(211, 78, 78, 0.781)
-                  `
-  }).then((result) => {
-    if(result.isConfirmed){
-      setEditMode(true)
-    }
-  })
-    
-  }
-
   useEffect(() => {
     setSlideLength(length)
     //     dispatch({type: 'ARCHIVE_INITIATE', payload: first.workout_type_id})

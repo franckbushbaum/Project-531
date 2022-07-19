@@ -1,18 +1,32 @@
 import React from 'react';
 import moment from 'moment';
-import { TiPlusOutline, 
+import {TiPlusOutline, 
         TiMinusOutline, 
         TiChevronRightOutline } from "react-icons/ti";
 import { BsTrashFill} from "react-icons/bs";
 
-// This is one of our simplest components
-// It doesn't have local state, so it can be a function component.
-// It doesn't dispatch any redux actions or display any part of redux state
-// or even care what the redux state is, so it doesn't need 'connect()'
-
 function IndividualImage({workout, index, removeFromArchive}) {
+
+    const editArchive = (id) => {
+        Swal.fire({
+          title: `EDIT WORKOUT NUMBER ${id} ?`,
+          showCancelButton: true,
+          confirmButtonText: 'YES',
+          cancelButtonColor: '#d33',
+          confirmButtonColor: '#00d3f8',
+          background: 'black',
+          backdrop: `
+              rgba(211, 78, 78, 0.781)
+                      `
+      }).then((result) => {
+        if(result.isConfirmed){
+          setEditMode(true)
+        }
+      })
+        
+      }
+      
   return (<>
-    <div>In individual Image</div>
     <div className="individual-table" key={index}>
                   <p className="workout-number-style">WORKOUT NUMBER: {workout.workout_id}</p>
                   <table key={workout.workout_id} className="page-four-table">
@@ -47,7 +61,7 @@ function IndividualImage({workout, index, removeFromArchive}) {
                     </tbody>
                   </table>
                   <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
-                  <button className="fresh" onClick={() => editArchive(workout.workout_id)}>EDIT</button>
+                  <button className="fresh-edit" onClick={() => editArchive(workout.workout_id)}>EDIT</button>
                 </div>
                 </>
   )
