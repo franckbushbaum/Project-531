@@ -22,7 +22,7 @@ function VolumeChart({ volumeArray }) {
         <>
             <div className="volume-banner">
                 <header>
-                    <h2 >VOLUMES</h2>
+                    <h2 >VOLUME</h2>
                 </header>
                 <div className="volume-chart">
                     <Line data={onData} />
