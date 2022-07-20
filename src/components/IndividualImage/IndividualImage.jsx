@@ -1,11 +1,18 @@
-import React from 'react';
+import React, { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import moment from 'moment';
 import {TiPlusOutline, 
         TiMinusOutline, 
         TiChevronRightOutline } from "react-icons/ti";
 import { BsTrashFill} from "react-icons/bs";
+import Swal from 'sweetalert2';
 
 function IndividualImage({workout, index, removeFromArchive}) {
+
+    const [ editMode, setEditMode ] = useState(true)
+    const [repsOne, setRepsOne] = useState(workout.reps_one);
+    // const [repsTwo, setRepsTwo] = useState(reps_two);
+    // const [calcReps, setCalcReps] = useState(reps_three);
 
     const editArchive = (id) => {
         Swal.fire({
@@ -20,12 +27,17 @@ function IndividualImage({workout, index, removeFromArchive}) {
                       `
       }).then((result) => {
         if(result.isConfirmed){
-          setEditMode(true)
+          setEditMode(!editMode)
         }
-      })
-        
+      })       
       }
-      
+
+      const theFunction = (e) => {
+        e === '+' ? setRepsOne(repsOne + 1) : setRepsOne(repsOne - 1)
+      }
+
+
+
   return (<>
     <div className="individual-table" key={index}>
                   <p className="workout-number-style">WORKOUT NUMBER: {workout.workout_id}</p>
@@ -44,8 +56,9 @@ function IndividualImage({workout, index, removeFromArchive}) {
                       <tr>
                         <td>1</td>
                         <td>{workout.weight_one}</td>
-                        <td>{workout.reps_one}</td>
-
+                        <td>{repsOne}</td>
+                        <td>{editMode ? <p></p> : <p><button className="edit-buttons" onClick={() => theFunction('+')}><TiPlusOutline /></button>
+                            <button className="edit-buttons" onClick={() => theFunction('-')}><TiMinusOutline /></button></p>}</td>
                       </tr>
                       <tr>
                         <td>2</td>

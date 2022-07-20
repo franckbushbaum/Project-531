@@ -10,7 +10,6 @@ const ImageSlider = ({ slides, length }) => {
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [slideLength, setSlideLength] = useState(0);
-  const [editMode, setEditMode] = useState(false)
 
   const dispatch = useDispatch();
 
