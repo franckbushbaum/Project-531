@@ -28,12 +28,6 @@ function Four() {
                }
     }))
 
-
-
-    console.log('what is first?', first)
-    console.log('what are archivedWorkouts?', archivedWorkouts)
-    console.log('what are volumes?', volumes)
-
     
 
     //  useEffect(() => {
