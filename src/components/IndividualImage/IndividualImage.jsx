@@ -35,7 +35,16 @@ function IndividualImage({workout, index, removeFromArchive}) {
 
       const theFunction = (e, set) => {
         console.log('what is set?', set)
-        e === '+' ? setRepsOne(repsOne + 1) : setRepsOne(repsOne - 1)
+        switch (set){
+          case 1:
+            e === '+' ? setRepsOne(repsOne + 1) : setRepsOne(repsOne - 1)
+            break;
+          case 2:
+            e === '+' ? setRepsTwo(repsTwo + 1) : setRepsOne(repsTwo - 1)
+            break;
+
+        }
+        
       }
 
 
@@ -65,8 +74,9 @@ function IndividualImage({workout, index, removeFromArchive}) {
                       <tr>
                         <td>2</td>
                         <td>{workout.weight_two}</td>
-                        <td>{workout.reps_two}</td>
-
+                        <td>{repsTwo}</td>
+                        <td>{editMode ? <p></p> : <p><button className="edit-buttons" onClick={() => theFunction('+',2)}><TiPlusOutline /></button>
+                            <button className="edit-buttons" onClick={() => theFunction('-',2)}><TiMinusOutline /></button></p>}</td>
                       </tr>
                       <tr>
                         <td>3</td>
