@@ -16,7 +16,7 @@ function Four() {
     const length = useSelector(store => {
         return store.archiveStorage.length
     })
-    const [first] = useSelector(store => store.archiveStorage.slice(0, store.archiveStorage.length - 1))
+    const [ first ] = useSelector(store => store.archiveStorage.slice(0, store.archiveStorage.length - 1))
 
     
     const volumes = useSelector(store => store.archiveStorage.map((workout) => {

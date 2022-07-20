@@ -11,6 +11,7 @@ function IndividualImage({workout, index, removeFromArchive}) {
 
     const [ editMode, setEditMode ] = useState(true)
     const [repsOne, setRepsOne] = useState(workout.reps_one);
+    const [repsTwo, setRepsTwo] = useState(workout.reps_two);
     // const [repsTwo, setRepsTwo] = useState(reps_two);
     // const [calcReps, setCalcReps] = useState(reps_three);
 
@@ -32,7 +33,8 @@ function IndividualImage({workout, index, removeFromArchive}) {
       })       
       }
 
-      const theFunction = (e) => {
+      const theFunction = (e, set) => {
+        console.log('what is set?', set)
         e === '+' ? setRepsOne(repsOne + 1) : setRepsOne(repsOne - 1)
       }
 
@@ -57,8 +59,8 @@ function IndividualImage({workout, index, removeFromArchive}) {
                         <td>1</td>
                         <td>{workout.weight_one}</td>
                         <td>{repsOne}</td>
-                        <td>{editMode ? <p></p> : <p><button className="edit-buttons" onClick={() => theFunction('+')}><TiPlusOutline /></button>
-                            <button className="edit-buttons" onClick={() => theFunction('-')}><TiMinusOutline /></button></p>}</td>
+                        <td>{editMode ? <p></p> : <p><button className="edit-buttons" onClick={() => theFunction('+',1)}><TiPlusOutline /></button>
+                            <button className="edit-buttons" onClick={() => theFunction('-',1)}><TiMinusOutline /></button></p>}</td>
                       </tr>
                       <tr>
                         <td>2</td>

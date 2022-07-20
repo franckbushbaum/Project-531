@@ -43,16 +43,8 @@ function One() {
         return dummyData
     })
 
-    // const data = useSelector(state => state.workoutTypeId)
-
-    // Data for Air Quality Component.
-
-    console.log('what is data.length?', data.length)
-
     // Destructure the data ARRAY
     const [firstvalue, ...rest] = data
-
-    console.log('what is firstvalue?', firstvalue);
 
     const topHour = { ...firstvalue, ...popUp }
 
