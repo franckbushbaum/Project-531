@@ -11,6 +11,7 @@ import { TiPlusOutline, TiMinusOutline, TiChevronRightOutline } from "react-icon
 import moment from 'moment';
 
 function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one, reps_two, reps_three, created_at, workout_type_id, volume }) {
+    
     const dispatch = useDispatch();
     const history = useHistory();
 
@@ -19,9 +20,6 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
     const [repsOne, setRepsOne] = useState(reps_one);
     const [repsTwo, setRepsTwo] = useState(reps_two);
     const [calcReps, setCalcReps] = useState(reps_three);
-
-
-
 
     const changeState = () => {
         setEditMode(!editMode);

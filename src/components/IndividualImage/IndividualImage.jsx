@@ -37,7 +37,6 @@ function IndividualImage({ workout, index, removeFromArchive }) {
   }
 
   const editRepsInSlider = (e, set) => {
-    console.log('what is set?', set)
     switch (set) {
       case 1:
         e === '+' ? setRepsOne(repsOne + 1) : setRepsOne(repsOne - 1)
@@ -48,8 +47,7 @@ function IndividualImage({ workout, index, removeFromArchive }) {
       case 3:
         e === '+' ? setRepsThree(repsThree + 1) : setRepsThree(repsThree - 1)
         break;
-    }
-
+    };
   }
 
 
