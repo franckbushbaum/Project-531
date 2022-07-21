@@ -13,8 +13,6 @@ const ImageSlider = ({ slides, length }) => {
 
   const dispatch = useDispatch();
 
-  console.log('what is slideLength?', slideLength)
-
   // Do you want the CSS inside the Slider?
   // const leftArrowStyles = {
   //   position: "absolute",

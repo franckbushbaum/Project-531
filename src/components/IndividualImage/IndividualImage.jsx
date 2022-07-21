@@ -50,7 +50,19 @@ function IndividualImage({ workout, index, removeFromArchive }) {
     };
   }
 
-
+  handleUpdateinArchive = () => {
+    let newVolume = repsOne * workout.weight_one + repsTwo * workout.weight_two + repsThree * workout.weight_three
+    dispatch({
+      type: 'EDIT_REPS',
+      payload: {
+        'reps_one': repsOne,
+        'reps_two': repsTwo,
+        'reps_three': repsThree,
+        'volume': newVolume,
+        'workout_id': workout.workout_id
+      }
+    });
+  }
 
   return (<>
     <div className="individual-table" key={index}>
@@ -87,7 +99,7 @@ function IndividualImage({ workout, index, removeFromArchive }) {
             <td>{repsThree}</td>
             <td>{editMode ? <p></p> : <p><button className="edit-buttons" onClick={() => editRepsInSlider('+', 3)}><TiPlusOutline /></button>
               <button className="edit-buttons" onClick={() => editRepsInSlider('-', 3)}><TiMinusOutline /></button>
-              <button className="edit-buttons" onClick={handleUpdate}><TiChevronRightOutline /></button></p>}
+              <button className="edit-buttons" onClick={handleUpdateinArchive}><TiChevronRightOutline /></button></p>}
             </td>
           </tr>
         </tbody>
