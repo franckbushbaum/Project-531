@@ -56,12 +56,7 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
 
     let newVolume = repsOne * weight_one + repsTwo * weight_two + calcReps * weight_three
 
-    console.log('what is new volume?', newVolume)
-
-
     const handleUpdate = () => {
-        console.log('what is calcReps', calcReps);
-        console.log('what is workout_id', workout_id);
         dispatch({
             type: 'EDIT_REPS', 
             payload: {

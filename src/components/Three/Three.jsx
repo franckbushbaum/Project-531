@@ -183,7 +183,7 @@ function Three() {
             <p>{JSON.stringify(workoutTypeId)}</p>
             <p>{JSON.stringify(theWorkouts.created_at)}</p>
             <div className="display">
-                {theWorkouts.map(workout => {
+                {theWorkouts.map( workout => {
                     return (<ThreeItem workout_id={workout.workout_id}
                         created_at={workout.created_at}
                         weight_one={workout.weight_one}

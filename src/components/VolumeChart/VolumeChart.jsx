@@ -9,6 +9,7 @@ function VolumeChart({ volumeArray }) {
     const onData = {
         labels: volumeArray.map((workout) => workout.id),
         datasets: [{
+            label: "LBS",
             data: volumeArray.map((workout) => workout.volume),
             pointBackgroundColor: ["#1FFF0F"],
             borderColor: ["#FF5F1F"],

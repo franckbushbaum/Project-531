@@ -46,8 +46,6 @@ router.get('/', rejectUnauthenticated, (req ,res) => {
 });
 
 router.delete('/:id', rejectUnauthenticated, (req, res) => {
-    console.log('delete req is',req.params)
-    // console.log('delete req user is',req.user)
     const workoutId = req.params.id;
     const userId= req.user.id;
     const queryText =  `DELETE from "workout" WHERE 
@@ -87,7 +85,12 @@ router.put('/archive/:id', rejectUnauthenticated, (req, res) => {
     console.log('what is req.body?', req.body);
     console.log('what is userId?', userId)
     // { repsOne: 5, repsTwo: 4, repsThree: 4, newVolume: 5712, id: 627 }
-    const { repsOne : reps_one, repsTwo : reps_two, repsThree : reps_three, newVolume : volume, id : workoutId } = req.body;
+    // const { repsOne : reps_one, repsTwo : reps_two, repsThree : reps_three, newVolume : volume, id : workoutId } = req.body;
+    const reps_one = req.body.repsOne;
+    const reps_two = req.body.repsTwo;
+    const reps_three = req.body.repsThree;
+    const volume = req.body.newVolume;
+    const workoutId = req.body.id;
     console.log('what is reps_one?', reps_one)
 
     const queryText = `UPDATE "workout" SET "reps_three" = $1, "reps_two" = $2, "reps_one" = $3, "volume" = $4
@@ -98,7 +101,7 @@ router.put('/archive/:id', rejectUnauthenticated, (req, res) => {
         res.sendStatus(201);
     })
     .catch((error) => {
-        console.log('Error updating workout', error);
+        console.log('Error updating archived workout', error);
         res.sendStatus(500);
     })
 });
