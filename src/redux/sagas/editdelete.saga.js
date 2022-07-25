@@ -24,7 +24,7 @@ function* editWorkout(action) {
 
 function* editWorkoutInArchive(action){
     try{
-        const id  = action.payload.id
+        const { id, workout_type_id } = action.payload
         yield axios.put(`/api/workout/archive/${id}`, action.payload);
         yield put({ type: 'ARCHIVE_INITIATE', payload: workout_type_id });
     } catch (error){
