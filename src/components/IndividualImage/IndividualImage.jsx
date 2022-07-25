@@ -37,12 +37,14 @@ function IndividualImage({ workout, index, removeFromArchive }) {
   }
 
   const editRepsInSlider = (e, set) => {
+    console.log('what is event?', e);
+    console.log('what is the set?', set)
     switch (set) {
       case 1:
         e === '+' ? setRepsOne(repsOne + 1) : setRepsOne(repsOne - 1)
         break;
       case 2:
-        e === '+' ? setRepsTwo(repsTwo + 1) : setRepsOne(repsTwo - 1)
+        e === '+' ? setRepsTwo(repsTwo + 1) : setRepsTwo(repsTwo - 1)
         break;
       case 3:
         e === '+' ? setRepsThree(repsThree + 1) : setRepsThree(repsThree - 1)
@@ -66,6 +68,18 @@ function IndividualImage({ workout, index, removeFromArchive }) {
         workout_type_id
       }
     });
+    Swal.fire({
+      title: `WORKOUT NUMBER ${id} UPDATED!`,
+      showCancelButton: true,
+      confirmButtonText: 'THANKS!',
+      cancelButtonColor: '#d33',
+      confirmButtonColor: '#00d3f8',
+      background: 'rgba(211, 78, 78, 0.781)',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        setEditMode(!editMode)
+      }
+    })
   }
 
   return (<>
