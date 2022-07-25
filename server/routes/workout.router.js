@@ -82,8 +82,6 @@ router.put('/:id', rejectUnauthenticated, (req, res) => {
 
 router.put('/archive/:id', rejectUnauthenticated, (req, res) => {
     const userId = req.user.id;
-    console.log('what is req.body?', req.body);
-    console.log('what is userId?', userId)
     // { repsOne: 5, repsTwo: 4, repsThree: 4, newVolume: 5712, id: 627 }
     // const { repsOne : reps_one, repsTwo : reps_two, repsThree : reps_three, newVolume : volume, id : workoutId } = req.body;
     const reps_one = req.body.repsOne;
@@ -91,8 +89,6 @@ router.put('/archive/:id', rejectUnauthenticated, (req, res) => {
     const reps_three = req.body.repsThree;
     const volume = req.body.newVolume;
     const workoutId = req.body.id;
-    console.log('what is reps_one?', reps_one)
-
     const queryText = `UPDATE "workout" SET "reps_three" = $1, "reps_two" = $2, "reps_one" = $3, "volume" = $4
                                             WHERE "user_id" = $5 
                                             AND "workout_id" = $6`;

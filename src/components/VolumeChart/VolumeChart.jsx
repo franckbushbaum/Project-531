@@ -7,10 +7,10 @@ import './VolumeChart.css';
 function VolumeChart({ volumeArray }) {
 
     const onData = {
-        labels: volumeArray.map((workout) => workout.id),
+        labels: volumeArray.slice(0).reverse().map((workout) => workout.id),
         datasets: [{
             label: "LBS",
-            data: volumeArray.map((workout) => workout.volume),
+            data: volumeArray.slice(0).reverse().map((workout) => workout.volume),
             pointBackgroundColor: ["#1FFF0F"],
             borderColor: ["#FF5F1F"],
             color: ["#FF5F1F"],
