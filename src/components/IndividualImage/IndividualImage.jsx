@@ -52,7 +52,7 @@ function IndividualImage({ workout, index, removeFromArchive }) {
 
   const handleUpdateinArchive = () => {
     let newVolume = repsOne * workout.weight_one + repsTwo * workout.weight_two + repsThree * workout.weight_three
-    let workout_id = workout.workout_id
+    let id = workout.workout_id
     dispatch({
       type: 'EDIT_REPS_IN_ARCHIVE',
       payload: {
@@ -60,7 +60,7 @@ function IndividualImage({ workout, index, removeFromArchive }) {
         repsTwo,
         repsThree,
         newVolume,
-        workout_id
+        id
       }
     });
   }

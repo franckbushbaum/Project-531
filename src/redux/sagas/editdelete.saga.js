@@ -14,9 +14,6 @@ function* removeWorkout(action) {
 }
 
 function* editWorkout(action) {
-    // console.log('in Edit Workout', action.payload);
-    // console.log('what is this' ,action.payload.reps_three);
-    // console.log('and this',action.payload.workout_id);
     try {
         const workoutId = action.payload.workout_id;
         yield axios.put(`/api/workout/${workoutId}`, action.payload);
@@ -25,9 +22,20 @@ function* editWorkout(action) {
     }
 }
 
+function* editWorkoutInArchive(action){
+    try{
+        const id  = action.payload.id
+        console.log('what is action.payload here??', action.payload)
+        console.log('destructured id?', id)
+    } catch (error){
+        console.log('ERROR updating Archive!')
+    }
+}
+
 function* editDeleteSaga() {
     yield takeLatest('REMOVE_WORKOUT', removeWorkout)
     yield takeLatest('EDIT_REPS', editWorkout)
+    yield takeLatest('EDIT_REPS_IN_ARCHIVE', editWorkoutInArchive)
 
 }
 
