@@ -64,13 +64,33 @@ router.delete('/:id', rejectUnauthenticated, (req, res) => {
 
 router.put('/:id', rejectUnauthenticated, (req, res) => {
     const userId = req.user.id;
-    console.log('what is req.body?', req.body)
     const workoutId=req.body.workout_id;
     const reps_one = req.body.reps_one;
     const reps_two = req.body.reps_two;
     const reps_three = req.body.reps_three;
     const volume = req.body.volume;
-     const queryText = `UPDATE "workout" SET "reps_three" = $1, "reps_two" = $2, "reps_one" = $3, "volume" = $4
+    const queryText = `UPDATE "workout" SET "reps_three" = $1, "reps_two" = $2, "reps_one" = $3, "volume" = $4
+                                            WHERE "user_id" = $5 
+                                            AND "workout_id" = $6`;
+    pool.query(queryText, [reps_three, reps_two, reps_one, volume, userId, workoutId])
+    .then ((result) => {
+        res.sendStatus(201);
+    })
+    .catch((error) => {
+        console.log('Error updating workout', error);
+        res.sendStatus(500);
+    })
+});
+
+router.put('/archive/:id', rejectUnauthenticated, (req, res) => {
+    const userId = req.user.id;
+    console.log('what is req.body?', req.body);
+    console.log('what is userId?', userId)
+    // { repsOne: 5, repsTwo: 4, repsThree: 4, newVolume: 5712, id: 627 }
+    const { repsOne : reps_one, repsTwo : reps_two, repsThree : reps_three, newVolume : volume, id : workoutId } = req.body;
+    console.log('what is reps_one?', reps_one)
+
+    const queryText = `UPDATE "workout" SET "reps_three" = $1, "reps_two" = $2, "reps_one" = $3, "volume" = $4
                                             WHERE "user_id" = $5 
                                             AND "workout_id" = $6`;
     pool.query(queryText, [reps_three, reps_two, reps_one, volume, userId, workoutId])

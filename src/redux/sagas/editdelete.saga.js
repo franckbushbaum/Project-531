@@ -25,8 +25,8 @@ function* editWorkout(action) {
 function* editWorkoutInArchive(action){
     try{
         const id  = action.payload.id
-        console.log('what is action.payload here??', action.payload)
-        console.log('destructured id?', id)
+        yield axios.put(`/api/workout/archive/${id}`, action.payload);
+        yield put({ type: 'ARCHIVE_INITIATE', payload: workout_type_id });
     } catch (error){
         console.log('ERROR updating Archive!')
     }
