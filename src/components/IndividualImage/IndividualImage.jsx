@@ -122,8 +122,8 @@ function IndividualImage({ workout, index, removeFromArchive }) {
         </tbody>
       </table>
       <div className="fresh-container">
-      <button className="fresh-item" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
-      <button className="fresh-item" onClick={() => editArchive(workout.workout_id)}><BiEdit size="23px" /></button>
+      <button className="fresh-item" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="35" /></button>
+      <button className="fresh-item" onClick={() => editArchive(workout.workout_id)}><BiEdit size="35" /></button>
     </div>
   </div>
   </>
