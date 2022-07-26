@@ -50,24 +50,17 @@
 }
 
 
+.fresh-container{
+    display: flex;
+}
 /* Flex item */
-.fresh {
-    position: relative;
-    justify-content: center;
+.fresh-item {
+    width: 100%;
+    margin: 0.5rem 0 !important;
     cursor: pointer;
     color: rgba(211,78,78,0.91);
-    height: 80px;
-    width: 80px;
+    height: 100px;
     border: none;
     background-color: transparent;
 }
 
-.fresh-edit{
-    justify-content: center;
-    cursor: pointer;
-    color: rgba(211,78,78,0.91);
-    height: 80px;
-    width: 80px;
-    border: none;
-    background-color: transparent;
-}

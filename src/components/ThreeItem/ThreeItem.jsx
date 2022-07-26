@@ -36,12 +36,10 @@ function ThreeItem({ workout_id, weight_one, weight_two, weight_three, reps_one,
 
 //For the second set.
     const addRepsAgain = (y) => {
-        console.log('what is reps_two', reps_two)
         setRepsTwo(repsTwo + 1);
     };
 
     const subtractRepsAgain = () => {
-        console.log('what is reps_two', reps_two)
         setRepsTwo(repsTwo - 1);
     };
 

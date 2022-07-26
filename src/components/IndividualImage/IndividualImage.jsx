@@ -7,6 +7,7 @@ import {
   TiChevronRightOutline
 } from "react-icons/ti";
 import { BsTrashFill } from "react-icons/bs";
+import { BiEdit } from "react-icons/bi";
 import Swal from 'sweetalert2';
 
 function IndividualImage({ workout, index, removeFromArchive }) {
@@ -120,9 +121,11 @@ function IndividualImage({ workout, index, removeFromArchive }) {
           </tr>
         </tbody>
       </table>
-      <button className="fresh" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
-      <button className="fresh-edit" onClick={() => editArchive(workout.workout_id)}>EDIT</button>
+      <div className="fresh-container">
+      <button className="fresh-item" onClick={() => removeFromArchive(workout.workout_id, workout.workout_type_id)}><BsTrashFill size="23px" /></button>
+      <button className="fresh-item" onClick={() => editArchive(workout.workout_id)}><BiEdit size="23px" /></button>
     </div>
+  </div>
   </>
   )
 }
