@@ -37,8 +37,6 @@ function IndividualImage({ workout, index, removeFromArchive }) {
   }
 
   const editRepsInSlider = (e, set) => {
-    console.log('what is event?', e);
-    console.log('what is the set?', set)
     switch (set) {
       case 1:
         e === '+' ? setRepsOne(repsOne + 1) : setRepsOne(repsOne - 1)

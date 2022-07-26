@@ -16,7 +16,6 @@ function Back() {
     const recentWorkout = useSelector(store => store.recentWorkout);
 
     const handleClick = (event) => {
-        console.log('in handleClick', event.target.className)
         switch (event.target.className) {
             case 'chest-shoulders-back-button':
                 return history.push('/user')
@@ -40,7 +39,7 @@ function Back() {
         <>
             <div className="chest-container">
                 <div className="archive-button">
-                    <button onClick={toArchive} className="archive-child" >Archive<IoFingerPrintOutline /></button>
+                    <button onClick={toArchive} className="archive-child">Archive<IoFingerPrintOutline /></button>
                 </div>
                 <div className="header">
                         <div className="header-title">
