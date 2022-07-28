@@ -28,7 +28,7 @@ import InclineChart from '../InclineChart/InclineChart';
 import OnChart from '../OnChart/OnChart';
 import OffChart from '../OffChart/OffChart';
 import RepsChart from '../RepsChart/RepsChart';
-
+import './animations.css';
 import './App.css';
 
 
