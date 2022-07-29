@@ -236,7 +236,7 @@ table, th, td {
 
 .window-response{
     position: relative;
-    background: repeating-linear-gradient(
+    /* background: repeating-linear-gradient(
       to bottom,
       transparent 0%,
       var(--red-scanline) 1px,
@@ -249,13 +249,13 @@ table, th, td {
       to left,
       var(--black-scanline) 100%,
       var(--black-scanline) 100%
-    );
-    font-size: 1rem;
+    ); */
+    font-size: 1.2rem;
     width: 95%;
     min-height: 20rem;
     margin: 1rem;
     padding: .5em;
-    outline: 1px solid rgba(78, 206, 211, 0.91);
+    outline: 2px solid rgba(78, 206, 211, 0.91);
 }
 
 .sprints-confirm-button{
