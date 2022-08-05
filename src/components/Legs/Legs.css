@@ -232,6 +232,7 @@ table, th, td {
     border-radius: 4px;
     width: 80%;
     min-height: 18rem;
+    z-index: 20;
 }
 
 .window-response{
@@ -250,12 +251,13 @@ table, th, td {
       var(--black-scanline) 100%,
       var(--black-scanline) 100%
     ); */
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     width: 95%;
     min-height: 20rem;
     margin: 1rem;
-    padding: .5em;
+    padding: .5em 20em .5em .5em;
     outline: 2px solid rgba(78, 206, 211, 0.91);
+    z-index: 1;
 }
 
 .sprints-confirm-button{

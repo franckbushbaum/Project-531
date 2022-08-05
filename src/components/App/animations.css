@@ -22,6 +22,14 @@
   opacity: 0;
 }
 
+.from-right-show {
+  transition: 1s;
+  transform: translateX(100px);
+  opacity: 1;
+  position: relative;
+  right: 100px;
+}
+
 .from-0 {
   transition: 1s;
   opacity: 0;
