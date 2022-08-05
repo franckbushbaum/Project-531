@@ -204,7 +204,7 @@ function Legs() {
                     </span>
                     <div className="sending-data-window">
                         <div className="window-response">
-                            {mph === null ? <div></div> : <div className="move from-right show"> {mph} mph</div>}
+                            {mph === null ? <div></div> : <div className="from-right-show"> {mph} mph</div>}
                             {incline === null ? <div></div> : <div className="from-right-show"> {incline} incline %</div>}
                             {on === null ? <div></div> : <div className="from-right-show"> {on} seconds duration</div>}
                             {off === null ? <div></div> :<div className="from-right-show"> {off} seconds break</div>}
