@@ -6,6 +6,8 @@
 
 /* CHILD */
 .select-menu {
+    position: relative;
+    bottom: 400px;
     display: flex;
     margin: 14rem auto 2rem auto;
     justify-content: center;

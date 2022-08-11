@@ -1,27 +1,28 @@
 .from-bottom {
   transition: 1s;
   transform: translateY(100px);
-  opacity: 0;
+  opacity: 1;
 }
 
 .from-top {
   transition: 1s;
   transform: translateY(-100px);
-  opacity: 0;
+  opacity: 1;
 }
 
 .from-left {
   transition: 1s;
   transform: translateX(-100px);
-  opacity: 0;
+  opacity: 1;
 }
 
 .from-right {
   transition: 1s;
   transform: translateX(100px);
-  opacity: 0;
+  opacity: 1;
 }
 
+/* For Legs */
 .from-right-show {
   transition: 1s;
   transform: translateX(60px);
@@ -30,6 +31,14 @@
   right: 30px;
   z-index: 19;
 }
+
+/* For Legs */
+.from-top-show {
+  transition: 1s;
+  transform: translateY(400px);
+  opacity: 1;
+}
+
 
 .from-0 {
   transition: 1s;
